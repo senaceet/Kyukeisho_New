@@ -27,5 +27,5 @@ La presente información se enfocará en analizar, investigar, solucionar el pro
 1. Angela Tatiana Rozo Carrillo
 2. Andres Felipe Olaya Cadena
 3. Anderson Dario Quiros Ramirez
-4. Vladimir Alberto Buitrago
+4. Vladimir Alberto Buitrago Rodriguez
 
