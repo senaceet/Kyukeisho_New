@@ -28,7 +28,6 @@ telefono_administrador bigint (10),
 primary key (id_administrador)
 );
 
-
 -- FACTURA_COMPRA --
 create table Kyukeisho.factura_compra(
 id_usuario varchar (10) not null,
