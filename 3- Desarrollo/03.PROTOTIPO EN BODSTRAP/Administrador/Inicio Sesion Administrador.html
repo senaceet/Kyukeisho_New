@@ -77,33 +77,46 @@
             padding: 30px;
           }
         </style>
-
+<center>
         <div class="login-form">
           <h4 class="text-center">
             <p style="color:rgb(255, 255, 255)" ;>Inicio Sesión</p>
           </h4>
           <hr>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Correo Electronico/Nombre Usuario" required="required">
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control" placeholder="Contraseña" required="required">
-          </div>
-          <div class="form-group">
-            <a href="Administrador_inicio.html"><button type="submit" class="btn btn-primary btn-block">Ingresar</button></a>
-          </div>
+          <form action="https://kyukeisho.000webhostapp.com/Administrador/Administrador_inicio.html" method="post">
+            <div class="form-group">
+                <label for="name"></label>
+                <input id="email-iniciar" type="text" class="form-control" placeholder="Correo electrónico"
+                    style="width: 18rem" required="required">
+            </div>
+            <div class="form-group">
+                <input id="contra-iniciar" type="password" class="form-control" placeholder="Contraseña"
+                    style="width: 18rem" required="required">
+            </div>
+            <div class="form-group">
+            <div align="center">
+                    <button class="btn btn-warning btn-block my-4 my-sm-6" type="submit"
+                        style="width: 18rem; background-color:rgb(255, 217, 0) ">
+                        <font size=5>Iniciar sesión</font>
+                    </button>
+            </div>
+            </div>
+
           <div class="clearfix">            
               <p style="color:rgb(255, 255, 255)" ;><label class="pull-left checkbox-inline"><input type="checkbox"> Recordar Cuenta</p>
             </label>
           </div>
           </form>
         </div>
+      </center>
       </div>
+
       <div class="col-xl-6">
+        <center>
         <div class="login-form">
           <div class="col-xl-6">
             <div class="login-form">
-              <form action="/examples/actions/confirmation.php" method="post">
+              <form action="Administrador_inicio.html" method="post">
                 <h2 class="text-center">
                   <p style="color:rgb(255, 255, 255)" ;>Iniciar Sesión</p>
                 </h2>
@@ -119,13 +132,10 @@
           </div>
         </div>
       </div>
+    </center>
     </div>
   </div>
 
-  <br>
-  <br>
-  <br>
-  <br>
   <br>
   <br>
   <br>

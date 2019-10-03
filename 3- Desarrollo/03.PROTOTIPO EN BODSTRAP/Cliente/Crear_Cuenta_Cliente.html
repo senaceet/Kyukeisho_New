@@ -43,11 +43,11 @@
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false" style="color: #ffffff">
-                            ¿Como Registrarme?
+                            Iniciar sesión como:
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:13rem; background-color: #343a40">
-                            <a class="dropdown-item" href="" style="color: #ffffff">Administrador</a>
-                            <a class="dropdown-item" href="" style="color: #ffffff">Usuario</a>
+                            <a class="dropdown-item" href="/Administrador/Inicio Sesion Administrador.html" style="color: #ffffff">Administrador</a>
+                            <a class="dropdown-item" href="/Inicio_Sesion_Cliente.html" style="color: #ffffff">Cliente</a>
                           </div>
                     </li>
                   </ul>
@@ -58,13 +58,12 @@
 <br>
 <br>
 <br>
-<br>
 
 
     <br><br>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-xl-6">
 
                 <style type="text/css">
                     .login-form {
@@ -77,41 +76,61 @@
                         padding: 30px;
                     }
                 </style>
-
-                <div class="login-form">
+<center>
+                <div class="login-form" style="width: 24rem;">
                     <h4 class="text-center">
                         <p style="color:rgb(255, 213, 25)" ;>Crear Cuenta</p>
                     </h4>
-                    <hr>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Primer Nombre"
-                            required="required">
-                    </div>
-                    <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Segundo Nombre">
+                        <form action="https://kyukeisho.000webhostapp.com/index.html" method="post" >
+                        <div class="form-group">
+                            <label for="name"></label>
+                            <input id="primer_nombre_cliente" type="text" class="form-control" placeholder="Primer nombre"
+                                style="width: 20rem" required="required">
+                            </div>
+
+                             <div class="form-group">
+                            <label for="name"></label>
+                            <input id="segundo_nombre_cliente" type="text" class="form-control" placeholder="Segundo nombre"
+                                style="width: 20rem" required="required">
+                            </div>
+
+                            <div class="form-group">
+                            <label for="name"></label>
+                            <input id="primer_apellido_cliente" type="text" class="form-control" placeholder="Primer apellido"
+                                style="width: 20rem" required="required">
+                            </div>
+
+                            <div class="form-group">
+                            <label for="name"></label>
+                            <input id="segundo_apellido_cliente" type="text" class="form-control" placeholder="Segundo apellido"
+                                style="width: 20rem" required="required">
                         </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Primer Apellido"
-                            required="required">
-                    </div>
-                    <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Segundo Apellido">
+
+                        <div class="form-group">
+                            <label for="name"></label>
+                            <input id="email_clientes" type="text" class="form-control" placeholder="Correo electronico"
+                                style="width: 20rem" required="required">
                         </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Correo Electronico"
-                        required="required">
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" class="form-control" placeholder="Telefono">
-                    </div>                    
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Dirección">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Contraseña" required="required">
-                    </div>
-                    <div class="form-group input-group"  >
-                            <div class="input-group-prepend" >
+
+                        <div class="form-group">
+                            <label for="name"></label>
+                            <input id="telefono_cliente" type="text" class="form-control" placeholder="Telefono"
+                                style="width: 20rem" required="required">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name"></label>
+                            <input id="direccion_cliente" type="text" class="form-control" placeholder="Dirección"
+                                style="width: 20rem" required="required">
+                        </div>
+
+                        <div class="form-group">
+                            <input id="contra-cliente" type="password" class="form-control" placeholder="Contraseña"
+                                style="width: 20rem" required="required">
+                        </div>
+
+                        <div class="form-group input-group"  style="width: 20rem;">
+                            <div class="input-group-prepend">
                             </div>
                             <select class="form-control">
                                 <option selected=""> Selecciona tu plataforma favorita</option>
@@ -123,27 +142,21 @@
                             </select>
                         </div> 
 
-                      <hr>
-                    <div class="form-group">
-                       <a href="/Index.html">
-                        <button type="button" class="btn btn-warning" style="width:21rem;">
-                            Siguiente
-                        </button>
-                            </a>
-                    </div>
-                    <div class="clearfix">
-                            <p style="color:rgb(255, 255, 255)" ;>
-                        <a href="#" class="pull-right">
-                            <p style="color:rgb(255, 255, 255)" ;></p>
-                        </a>
-                    </div>
+                        <div class="form-group">
+                            <div align="center">
+                                    <button class="btn btn-warning btn-block my-4 my-sm-6" type="submit"
+                                        style="width: 20rem; background-color:rgb(255, 217, 0); ">
+                                        <font size=5>Crear cuenta</font>
+                                    </button>
+                            </div>
+                        </div>
                     </form>
                 </div>
+            </center>
             </div>
-            <div class="col-lg-2">
 
-            </div>
-            <div class="col-lg-6">
+            <div class="col-xl-6">
+                <center>
                 <div class="login-form">
                     <div class="col-lg-1">
                         <div class="login-form">
@@ -166,13 +179,9 @@
             </div>
         </div>
     </div>
+</center>
+<br>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
 
     <div class="copyright text-center  font-weight-bold p-2" style="background-color:rgb(0, 0, 0)">
