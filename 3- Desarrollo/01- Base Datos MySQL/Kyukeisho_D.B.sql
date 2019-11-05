@@ -1,7 +1,6 @@
 create database Kyukeisho;
 use Kyukeisho;
 
-
 -- USUARIO --
 create table Kyukeisho.usuario(
 id_usuario varchar (10) not null,
@@ -12,9 +11,9 @@ segundo_apellido_usuario varchar (30),
 correo_usuario varchar (30) not null unique,
 telefono_usuario bigint (10),
 direccion varchar (30),
+contraseña_usuario varchar (30) not null,
 primary key (id_usuario)
 );
-
 
 -- ADMINISTRADOR --
 create table Kyukeisho.administrador(
@@ -25,6 +24,7 @@ primer_apellido_administrador varchar (30) not null,
 segundo_apellido_administrador varchar (30),
 correo_administrador varchar (30) unique,
 telefono_administrador bigint (10),
+contraseña_administrador varchar (30) not null,
 primary key (id_administrador)
 );
 
@@ -33,7 +33,6 @@ create table Kyukeisho.factura_compra(
 id_usuario varchar (10) not null,
 id_factura varchar (6) not null
 );
-
 
 -- FACTURA_VENTA --
 create table Kyukeisho.factura_venta(
