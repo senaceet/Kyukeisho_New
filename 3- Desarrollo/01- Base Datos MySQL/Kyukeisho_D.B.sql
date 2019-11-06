@@ -3,7 +3,7 @@ use Kyukeisho;
 
 -- USUARIO --
 create table Kyukeisho.usuario(
-id_usuario varchar (10) not null,
+id_usuario int (10) not null AUTO_INCREMENT,
 primer_nombre_usuario varchar (39) not null,
 segundo_nombre_usuario varchar (30),
 primer_apellido_usuario varchar (30) not null,
@@ -17,7 +17,7 @@ primary key (id_usuario)
 
 -- ADMINISTRADOR --
 create table Kyukeisho.administrador(
-id_administrador varchar (10) not null,
+id_administrador int (10) not null AUTO_INCREMENT,
 primer_nombre_administrador varchar (30) not null,
 segundo_nombre_administrador varchar (30),
 primer_apellido_administrador varchar (30) not null,
@@ -30,13 +30,13 @@ primary key (id_administrador)
 
 -- FACTURA_COMPRA --
 create table Kyukeisho.factura_compra(
-id_usuario varchar (10) not null,
+id_usuario int (10) not null,
 id_factura varchar (6) not null
 );
 
 -- FACTURA_VENTA --
 create table Kyukeisho.factura_venta(
-id_administrador varchar (10) not null,
+id_administrador int (10) not null ,
 id_factura varchar (6) not null
 );
 
@@ -55,7 +55,7 @@ alter table Kyukeisho.factura add primary key (id_factura);
 create table Kyukeisho.juegos(
 codigo_juego varchar (5) not null,
 nombre_juego varchar (100),
-id_usuario varchar (10) not null
+id_usuario int (10) not null 
 );
 
 
@@ -76,7 +76,7 @@ id_categoria_juegos int (10) not null
 
 -- USUARIO_SERVICIOS --
 create table Kyukeisho.usuario_servicios(
-id_usuario varchar (10) not null,
+id_usuario int (10) not null,
 id_servicio tinyint (3) not null
 );
 
@@ -126,7 +126,7 @@ alter table Kyukeisho.tipo_producto add primary key (id_tipo_producto);
 create table Kyukeisho.citas(
 id_cita int (10) not null,
 hora_cita datetime,
-id_usuario varchar (10)
+id_usuario int (10) not null
 );
 
 
