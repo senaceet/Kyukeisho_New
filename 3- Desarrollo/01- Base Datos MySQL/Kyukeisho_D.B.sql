@@ -9,7 +9,7 @@ segundo_nombre_usuario varchar (30),
 primer_apellido_usuario varchar (30) not null,
 segundo_apellido_usuario varchar (30),
 correo_usuario varchar (30) not null unique,
-telefono_usuario bigint (10),
+telefono_usuario bigint (12),
 direccion varchar (30),
 contraseña_usuario varchar (30) not null,
 primary key (id_usuario)
@@ -23,7 +23,7 @@ segundo_nombre_administrador varchar (30),
 primer_apellido_administrador varchar (30) not null,
 segundo_apellido_administrador varchar (30),
 correo_administrador varchar (30) unique,
-telefono_administrador bigint (10),
+telefono_administrador bigint (12),
 contraseña_administrador varchar (30) not null,
 primary key (id_administrador)
 );
