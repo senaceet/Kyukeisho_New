@@ -22,11 +22,17 @@ public class registro_usuario extends HttpServlet {
             throws ServletException, IOException, ClassNotFoundException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         
-        int doc = Integer.parseInt(request.getParameter("doc"));
-        String nom = request.getParameter("nombre");
-        String ape = request.getParameter("apellido");
         
-        usuario_DAO d = new usuario_DAO(nom,ape);
+        String pri_nom_user = request.getParameter("primer_nombre_cliente");
+        String seg_nom_user = request.getParameter("segundo_nombre_cliente");
+        String pri_ape_user = request.getParameter("primer_apellido_cliente");
+        String seg_ape_user = request.getParameter("segundo_apellido_cliente");
+        String email_user = request.getParameter("email_cliente");
+        long tel_user =Long.parseLong(request.getParameter("telefono_cliente"));
+        String direc_user = request.getParameter("direccion_cliente");
+        String contra_user = request.getParameter("contra_cliente");
+        
+        usuario_DAO d = new usuario_DAO(pri_nom_user,seg_nom_user,pri_ape_user,seg_ape_user,email_user,tel_user,direc_user,contra_user);
         String doc1 = d.connection();
         
         conexion c = new conexion();
@@ -34,9 +40,9 @@ public class registro_usuario extends HttpServlet {
         
         Statement st = null;
         st = conn.createStatement();
-        String sql = "insert into usuario values(" + doc + ",'" + nom + "','" + ape + "')";
+        String sql = "insert into usuario (primer_nombre_usuario,segundo_nombre_usuario,primer_apellido_usuario,segundo_apellido_usuario,correo_usuario,telefono_usuario,direccion,contraseña_usuario) values('" + pri_nom_user + "','" + seg_nom_user + "','" + pri_ape_user + "','" + seg_ape_user + "','" + email_user + "'," + tel_user + ",'" + direc_user + "','" + contra_user + "')";
         st.executeUpdate(sql);
-        request.getRequestDispatcher("resultados insertar.jsp").forward(request, response);
+        request.getRequestDispatcher("Cliente/Cliente.html").forward(request, response);
     }
 
     @Override
