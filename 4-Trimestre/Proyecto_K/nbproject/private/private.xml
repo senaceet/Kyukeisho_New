@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="4"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/APRENDIZ/Documents/NetBeansProjects/Proyecto_K/web/Cliente/Recuperar%20contrasena/Recuperar_contrasena_1.html</file>
+            <file>file:/C:/Users/APRENDIZ/Documents/NetBeansProjects/Proyecto_K/web/Cliente/Recuperar%20contrasena/Recuperar_contrasena_2.html</file>
+            <file>file:/C:/Users/APRENDIZ/Documents/NetBeansProjects/Proyecto_K/web/resultado.jsp</file>
             <file>file:/C:/Users/APRENDIZ/Documents/NetBeansProjects/Proyecto_K/src/java/controlador/registro_usuario.java</file>
             <file>file:/C:/Users/APRENDIZ/Documents/NetBeansProjects/Proyecto_K/web/Cliente/Crear_Cuenta_Cliente.html</file>
-            <file>file:/C:/Users/APRENDIZ/Documents/NetBeansProjects/Proyecto_K/web/Cliente/Cliente.html</file>
-            <file>file:/C:/Users/APRENDIZ/Documents/NetBeansProjects/Proyecto_K/src/java/modelo/conexion.java</file>
+            <file>file:/C:/Users/APRENDIZ/Documents/NetBeansProjects/Proyecto_K/src/java/modelo/Email.java</file>
+            <file>file:/C:/Users/APRENDIZ/Documents/NetBeansProjects/Proyecto_K/src/java/controlador/modificar_contraseña.java</file>
+            <file>file:/C:/Users/APRENDIZ/Documents/NetBeansProjects/Proyecto_K/src/java/controlador/envio_correo.java</file>
         </group>
     </open-files>
 </project-private>

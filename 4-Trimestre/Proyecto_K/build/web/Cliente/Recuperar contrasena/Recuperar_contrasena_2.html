@@ -87,11 +87,13 @@
                                     <p>Ingresa el código de recuperación que recibiste en tu correo electronico o telefono celular, si no lo has recibido has click aqui, para reenviarte el código nuevamente.</p>
                                     <hr><a href="#">Reenviar Correo De Recuperación¡¡</a></p>
                                   </div>
+                            <form  method="post" action="../../modificar_contraseña">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Código Recuperación"
+                                <input name="codigo" type="text" class="form-control" placeholder="Código Recuperación"
                                     required="required">
-                            </div>
-                            <a href="Recuperar_contrasena_3.html" class="btn btn-primary btn-block" role="button" aria-pressed="true">Enviar</a>
+                                    <button class="btn btn-primary btn-block my-4 my-sm-6" type="submit">
+                                        <font size=5>Enviar</font>
+                                    </button> 
                             </div>
                             </form>
                         </div>

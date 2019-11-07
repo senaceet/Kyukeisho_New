@@ -87,18 +87,22 @@
             </div>
 
             <div class="col-lg-2">
+                <form  method="post" action="../../envio_correo">
                     <div class="login-form">
                             <h4 class="text-center">
                                 <p style="color:rgb(255, 255, 255)" ;>Recuperar Contraseña</p>
                             </h4>
                             <hr>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Correo Electronico/Número Telefonico"
+                                <input name="correo" type="email" class="form-control" placeholder="Correo Electronico/Número Telefonico"
                                     required="required">
+                                    <button class="btn btn-primary btn-block my-4 my-sm-6" type="submit">
+                                        <font size=5>Enviar</font>
+                                    </button>
                             </div>
-                            <a href="Recuperar_contrasena_2.html" class="btn btn-primary btn-block" role="button" aria-pressed="true">Enviar</a>
-                            </form>
-                        </div>
+                         
+                    </div>
+                    </form>
                     </div>
             </div>
             </div>
