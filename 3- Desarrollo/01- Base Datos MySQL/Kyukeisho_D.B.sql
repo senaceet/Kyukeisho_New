@@ -126,7 +126,7 @@ alter table Kyukeisho.tipo_producto add primary key (id_tipo_producto);
 create table Kyukeisho.citas(
 id_cita int (10) not null,
 hora_cita datetime,
-id_usuario int (10) not null
+id_usuario int (10) not null 
 );
 
 
