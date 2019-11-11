@@ -1,3 +1,10 @@
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="controlador.eliminar_producto"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -13,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>
-        Kuykeisho
+        Kuykeisho_PNV
     </title>
 
 <body>
@@ -194,7 +201,7 @@
                 Productos
             </button>
             <div class="dropdown-menu">
-                    <a class="dropdown-item" href="Crud_Productos_No_Tan_Vendidos.html">Productos No Tan Vendidos</a>
+                    <a class="dropdown-item" href="Crud_Productos_Vendidos.jsp">Productos Vendidos</a>
                   </div>
                 </div>
                 <div class="btn-group">
@@ -536,245 +543,107 @@
         });
     </script>
     </head>
-
-    <body>
-        <div class="container">
-            <div class="table-wrapper">
-                <div class="table-title">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h2>Productos Vendidos</h2>
-                        </div>
-                        <div class="col-sm-6">
-                            <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i
-                                    class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                </i><span>Añadir Nuevo Producto</span></a>
-                            <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i
+   
+         <center>
+             <div class="container" >
+                 <div class="row" >
+                     <table class="table table-striped table-hover text-center "  width="1000" align="center">
+                         <thead>
+                         <tr bgcolor="#088A68">
+                             <th align="center" colspan="5"><h2 style="text-align:left" text="left">Productos</h2>
+                         <th align="right" colspan="5" style="text-align:right">                 
+                            <a  href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i
                                     class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
-                                </i><span>Eliminar Producto</span></a>
-                        </div>
-                    </div>
-                </div>
-                <table class="table table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <th>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="selectAll">
-                                    <label for="selectAll"></label>
-                                </span>
-                            </th>
-                            <th>Nombre</th>
-                            <th>Precio Unitario</th>
-                            <th>Cantidad Producto</th>
-                            <th>Id Producto</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                    <label for="checkbox1"></label>
-                                </span>
-                            </td>
-                            <td>Leche Entera Alquería</td>
-                            <td>$ 2.800</td>
-                            <td>10</td>
-                            <td>00001</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox2" name="options[]" value="1">
-                                    <label for="checkbox2"></label>
-                                </span>
-                            </td>
-                            <td>Tortillas Camote</td>
-                            <td>$ 3.250</td>
-                            <td>55</td>
-                            <td>00002</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox3" name="options[]" value="1">
-                                    <label for="checkbox3"></label>
-                                </span>
-                            </td>
-                            <td>Aceite de Girasol Olisun</td>
-                            <td>$ 17.000</td>
-                            <td>22</td>
-                            <td>00003</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox4" name="options[]" value="1">
-                                    <label for="checkbox4"></label>
-                                </span>
-                            </td>
-                            <td>Azúcar Blanca Riopaila </td>
-                            <td>$ 7.150</td>
-                            <td>12</td>
-                            <td>00004</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
-                                </span>
-                            </td>
-                            <td>Tocinetas Kai</td>
-                            <td>$ 3.350</td>
-                            <td>32</td>
-                            <td>00005</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Eliminar"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
-                                </span>
-                            </td>
-                            <td>Pechuga De Pollo <b>(</b>1200g<b>)</b></td>
-                            <td>$ 15.000</td>
-                            <td>16</td>
-                            <td>00006</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Eliminar"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
-                                </span>
-                            </td>
-                            <td>Acelga <b>(</b>500g<b>)</b></td>
-                            <td>$ 1.100</td>
-                            <td>23</td>
-                            <td>00007</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Eliminar"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
-                                </span>
-                            </td>
-                            <td>Filete De Salmón <b>(</b>500g<b>)</b></td>
-                            <td>$ 25.916</td>
-                            <td>20</td>
-                            <td>00008</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Eliminar"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
-                                </span>
-                            </td>
-                            <td>Helado Popsy Vainilla <b>(</b>4 Litros<b>)</b></td>
-                            <td>$ 49.990</td>
-                            <td>12</td>
-                            <td>00009</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Eliminar"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
-                                </span>
-                            </td>
-                            <td>Pechuga De Pavo <b>(</b>1,1 Kl<b>)</b></td>
-                            <td>$ 147.015</td>
-                            <td>10</td>
-                            <td>00010</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Eliminar"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="clearfix">
-                    <div class="hint-text">Mostrando 10 de 25 entradas</div>
+                                </i><span>Eliminar Productos</span></a>
+                         </th>
+                         <th align="right" colspan="5">  
+                             <a href="insertar producto.jsp" class="btn btn-success" >
+                                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                </i><span>Añadir Nuevo Producto</span></a>
+                         </th>
+                     </th>
+            </tr>
+            
+                     </table>
+                     </div>
+                 </div>
+        <div class="container" >
+            <div class="row" >
+                <div class="container" style="background-color:#FFFFFF">
+        <table class="table table-striped table-hover text-center "  width="1000">
+            <thead>
+            <tr bgcolor="#04B486">
+                    <th>
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="selectAll">
+                            <label for="selectAll"></label>
+                        </span>
+                     </th>
+                <th  colspan="5">id producto</th><th colspan="3">Nombre</th>
+                <th colspan="2">cantidad</th><th colspan="2">precio_u</th>
+                <th colspan="2">editar</th><th colspan="2">eliminar</th>
+            </tr>
+            </thead>
+            <%
+            Connection conn = null;
+            Statement sta = null;
+            ResultSet rs = null;    
+              
+            try{
+                Class.forName("com.mysql.jdbc.Driver");
+                conn = DriverManager.getConnection("jdbc:mysql://localhost:3310/Kyukeisho?user=root&password=");
+            
+            sta = conn.createStatement();
+            rs = sta.executeQuery("select * from productos ORDER BY id_producto asc limit 25");
+            
+            while(rs.next()){
+                %>
+                <tr>
+                    <th>
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="selectAll">
+                            <label for="selectAll"></label>
+                        </span>
+                     </th>
+                    <th colspan="5"> <%=rs.getString(1)%></th>
+                    <th colspan="3" style="text-align:left"> <%=rs.getString(2)%></th>
+                    <th colspan="2"><%=rs.getString(3)%></th>
+                    <th colspan="2"><%=rs.getString(4)%></th>
+                    <th colspan="2">
+                        <a href="editar producto.jsp?cod=<%=rs.getString(1)%>">
+                        <img src="../../IMG/editar.png" width="25"/>
+                        </a>
+                    </th>
+                    
+                    <th colspan="2">
+                        <a href="../../eliminar_producto?cod=<%=rs.getString(1)%>">
+                          <img src="../../IMG/eliminar.png" width="25"/>
+                        </a>                        
+                    </th>
+                    
+                </tr>     
+                
+                <%
+            }
+        sta.close();
+        rs.close();
+        conn.close();
+            }catch(Exception e){
+                
+            }
+             %>   
+        </table>
+        </div>
+        </div>
+        </div>
+                     <div class="container" >
+                 <div class="row" >
+                     <table class="table table-striped table-hover text-center "  width="1000" align="center">
+                         <thead>
+                         <tr bgcolor="#088A68">
+                             <th align="center" colspan="5">
+                        <div class="clearfix">
+                    <div class="hint-text">Mostrando 5 de 25 entradas</div>
                     <ul class="pagination">
                         <li class="page-item disabled"><a href="#">Anterior</a></li>
                         <li class="page-item"><a href="#" class="page-link">1</a></li>
@@ -785,102 +654,14 @@
                         <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
                     </ul>
                 </div>
-            </div>
-        </div>
-
-        <div id="addEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h4 class="modal-title">Añadir Producto</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Nombre</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Precio Unitario</label>
-                                <input type="email" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Cantidad Producto</label>
-                                <textarea class="form-control" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Id Producto</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                            <input type="submit" class="btn btn-success" value="Añadir">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div id="editEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h4 class="modal-title">Editar Producto</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
-                                    class="fa fa-times" aria-hidden="true"></i></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Nombre</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Precio Unitario</label>
-                                <input type="email" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Fecha Vencimiento</label>
-                                <textarea class="form-control" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Código</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                            <input type="submit" class="btn btn-info" value="Guardar">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div id="deleteEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h4 class="modal-title">Eliminar Producto</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
-                                    class="fa fa-times" aria-hidden="true"></i></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>¿Seguro Que Desea Eliminar Producto</p>
-                            <p class="text-warning"><small>Esta acción no se puede deshacer.</small></p>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                            <input type="submit" class="btn btn-danger" value="Eliminar">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
+                     </th>
+            </tr>
+            
+                     </table>
+        <br>
+        </center>
+       
+                
         <div class="copyright text-center  font-weight-bold p-2" style="background-color:#343a40">
             <p style="color:rgb(255, 217, 0)">Desarrollado por Kyukeisho Copyright<i class="fa fa-copyright"
                     aria-hidden="true"></i> 2019</p>
