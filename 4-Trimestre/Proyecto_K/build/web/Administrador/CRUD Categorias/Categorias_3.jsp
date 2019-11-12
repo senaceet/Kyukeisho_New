@@ -217,15 +217,15 @@
                   </ul>
                 </div>
               </nav>
-              <br>
+ <br>
         <center>
                 <div class="btn-group">
                         <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Productos
                         </button>
                         <div class="dropdown-menu">
-                                <a class="dropdown-item" href="../CRUD Productos/Crud_Productos_Vendidos.html">Productos Vendidos</a>
-                                <a class="dropdown-item" href="../CRUD Productos/Crud_Productos_No_Tan_Vendidos.html">Productos No Tan Vendidos</a>
+                                <a class="dropdown-item" href="../CRUD Productos/Crud_Productos_Vendidos.jsp">Productos Vendidos</a>
+                                <a class="dropdown-item" href="../CRUD Productos/Crud_Productos_No_Tan_Vendidos.jsp">Productos No Tan Vendidos</a>
                               </div>
                             </div>
                             <div class="btn-group">
@@ -233,9 +233,9 @@
                                     Juegos
                                   </button>
                                   <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Juegos_Mas_Pedidos.html">Juegos Mas Pedidos</a>
-                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Crud_Juegos_No_Tan_Pedidos.html">Juegos No Tan Pedidos</a>
-                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Todos_Juegos_1.html">Todos los juegos</a>
+                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Juegos_Mas_Pedidos.jsp">Juegos Mas Pedidos</a>
+                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Crud_Juegos_No_Tan_Pedidos.jsp">Juegos No Tan Pedidos</a>
+                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Todos_Juegos_1.jsp">Todos los juegos</a>
                                   </div>
                                 </div>
                                 <div class="btn-group">
@@ -243,9 +243,9 @@
                                         Consolas
                                       </button>
                                       <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Consolas.html">Consolas</a>
-                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Crud_Consolas_Mas_Pedidas.html">Consolas Mas Pedidas</a>
-                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Crud_Consolas_Poco_Pedidas.html">Consolas No Tan Pedidas</a>
+                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Consolas.jsp">Consolas</a>
+                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Crud_Consolas_Mas_Pedidas.jsp">Consolas Mas Pedidas</a>
+                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Crud_Consolas_Poco_Pedidas.jsp">Consolas No Tan Pedidas</a>
                                     </div>
                                   </div>
                                     <div class="btn-group">
@@ -253,14 +253,15 @@
                                             Citas
                                           </button>
                                           <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Activas.html">Citas Activas</a>
-                                            <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Inactivas.html">Citas Inactivas</a>
+                                            <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Activas.jsp">Citas Activas</a>
+                                            <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Inactivas.jsp">Citas Inactivas</a>
                                           </div>
                                         </div>
-                                             <a href="../CRUD Clientes/Clientes_Registrados.html"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
+                                             <a href="../CRUD Clientes/Clientes_Registrados.jsp"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
                                   </div>
         </center>
-    <br>
+        <br>
+  
 
         <center>
             <h3>Categorias</h3>
@@ -606,9 +607,9 @@
                                         <label for="checkbox3"></label>
                                     </span>
                                 </td>
-                                <td>Puzzle</td>
-                                <td>8</td>
-                                <td>011</td>
+                                <td>Aventuras De Rol</td>
+                                <td>7</td>
+                                <td>021</td>
                                 <td>
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Edit"><i
@@ -625,9 +626,9 @@
                                         <label for="checkbox5"></label>
                                     </span>
                                 </td>
-                                <td>Educación</td>
-                                <td>6</td>
-                                <td>012</td>
+                                <td>Cartas</td>
+                                <td>9</td>
+                                <td>022</td>
                                 <td>
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Editar"><i
@@ -643,28 +644,9 @@
                                         <label for="checkbox1"></label>
                                     </span>
                                 </td>
-                                <td>Terror</td>
-                                <td>6</td>
-                                <td>013</td>
-                                <td>
-                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
-                                            class="material-icons" data-toggle="tooltip" title="Edit"><i
-                                                class="fa fa-pencil" aria-hidden="true"></i></a>
-                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                            class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                                class="fa fa-trash" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="custom-checkbox">
-                                        <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                        <label for="checkbox5"></label>
-                                    </span>
-                                </td>
-                                <td>Artísticos</td>
+                                <td>Construcción</td>
                                 <td>8</td>
-                                <td>014</td>
+                                <td>023</td>
                                 <td>
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Edit"><i
@@ -681,28 +663,9 @@
                                         <label for="checkbox5"></label>
                                     </span>
                                 </td>
-                                <td>Infantil</td>
-                                <td>5</td>
-                                <td>015</td>
-                                <td>
-                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
-                                            class="material-icons" data-toggle="tooltip" title="Edit"><i
-                                                class="fa fa-pencil" aria-hidden="true"></i></a>
-                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                            class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                                class="fa fa-trash" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="custom-checkbox">
-                                        <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                        <label for="checkbox5"></label>
-                                    </span>
-                                </td>
-                                <td>Carreras</td>
+                                <td>Cooperación</td>
                                 <td>9</td>
-                                <td>016</td>
+                                <td>024</td>
                                 <td>
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Edit"><i
@@ -719,9 +682,47 @@
                                         <label for="checkbox5"></label>
                                     </span>
                                 </td>
-                                <td>Supervivencia</td>
-                                <td>6</td>
-                                <td>017</td>
+                                <td>Cyberpunk</td>
+                                <td>8</td>
+                                <td>025</td>
+                                <td>
+                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
+                                            class="material-icons" data-toggle="tooltip" title="Edit"><i
+                                                class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
+                                            class="material-icons" data-toggle="tooltip" title="Delete"><i
+                                                class="fa fa-trash" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                                        <label for="checkbox5"></label>
+                                    </span>
+                                </td>
+                                <td>Shooter</td>
+                                <td>8</td>
+                                <td>026</td>
+                                <td>
+                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
+                                            class="material-icons" data-toggle="tooltip" title="Edit"><i
+                                                class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
+                                            class="material-icons" data-toggle="tooltip" title="Delete"><i
+                                                class="fa fa-trash" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                                        <label for="checkbox5"></label>
+                                    </span>
+                                </td>
+                                <td>Interactivos</td>
+                                <td>5</td>
+                                <td>027</td>
                                 <td>
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Edit"><i
@@ -741,9 +742,9 @@
                                     <label for="checkbox5"></label>
                                 </span>
                             </td>
-                            <td>Lucha</td>
-                            <td>7</td>
-                            <td>018</td>
+                            <td>Pinball</td>
+                            <td>8</td>
+                            <td>028</td>
                             <td>
                                 <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
                                         data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
@@ -759,9 +760,9 @@
                                                 <label for="checkbox1"></label>
                                             </span>
                                         </td>
-                                        <td>Guerra</td>
-                                        <td>5</td>
-                                        <td>019</td>
+                                        <td>Antología</td>
+                                        <td>8</td>
+                                        <td>029</td>
                                         <td>
                                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                                     class="material-icons" data-toggle="tooltip" title="Editar"><i
@@ -777,9 +778,9 @@
                                                 <label for="checkbox1"></label>
                                             </span>
                                         </td>
-                                        <td>Agilidad Mental</td>
-                                        <td>9</td>
-                                        <td>020</td>
+                                        <td>Tablero</td>
+                                        <td>5</td>
+                                        <td>030</td>
                                         <td>
                                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                                     class="material-icons" data-toggle="tooltip" title="Editar"><i
@@ -793,12 +794,12 @@
                         <div class="hint-text">Mostrando 5 de 25 entradas</div>
                         <ul class="pagination">
                             <li class="page-item disabled"><a href="#">Anterior</a></li>
-                            <li class="page-item"><a href="Categorias_1.html" class="page-link">1</a></li>
-                            <li class="page-item active"><a href="Categorias_2.html" class="page-link">2</a></li>
-                            <li class="page-item "><a href="Categorias_3.html" class="page-link">3</a></li>
+                            <li class="page-item"><a href="Categorias_1.jsp" class="page-link">1</a></li>
+                            <li class="page-item"><a href="Categorias_2.jsp" class="page-link">2</a></li>
+                            <li class="page-item active"><a href="Categorias_3.jsp" class="page-link">3</a></li>
                             <li class="page-item"><a href="#" class="page-link">4</a></li>
                             <li class="page-item"><a href="#" class="page-link">5</a></li>
-                            <li class="page-item"><a href="Todos_Juegos_2.html" class="page-link">Siguiente</a></li>
+                            <li class="page-item"><a href="Todos_Juegos_2.jsp" class="page-link">Siguiente</a></li>
                         </ul>
                     </div>
                 </div>

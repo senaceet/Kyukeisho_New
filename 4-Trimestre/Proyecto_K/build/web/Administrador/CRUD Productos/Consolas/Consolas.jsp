@@ -193,8 +193,8 @@
                                 Productos
                         </button>
                         <div class="dropdown-menu">
-                                <a class="dropdown-item" href="../../CRUD Productos/Crud_Productos_Vendidos.html">Productos Vendidos</a>
-                                <a class="dropdown-item" href="../../CRUD Productos/Crud_Productos_Vendidos.html">Productos No Tan Vendidos</a>
+                                <a class="dropdown-item" href="../../CRUD Productos/Crud_Productos_Vendidos.jsp">Productos Vendidos</a>
+                                <a class="dropdown-item" href="../../CRUD Productos/Crud_Productos_Vendidos.jsp">Productos No Tan Vendidos</a>
                               </div>
                             </div>
                             <div class="btn-group">
@@ -202,9 +202,9 @@
                                     Juegos
                                   </button>
                                   <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="../Juegos/Juegos_Mas_Pedidos.html">Juegos Mas Pedidos</a>
-                                    <a class="dropdown-item" href="../Juegos/Crud_Juegos_No_Tan_Pedidos.html">Juegos No Tan Pedidos</a>
-                                    <a class="dropdown-item" href="../Juegos/Todos_Juegos_1.html">Todos los juegos</a>
+                                    <a class="dropdown-item" href="../Juegos/Juegos_Mas_Pedidos.jsp">Juegos Mas Pedidos</a>
+                                    <a class="dropdown-item" href="../Juegos/Crud_Juegos_No_Tan_Pedidos.jsp">Juegos No Tan Pedidos</a>
+                                    <a class="dropdown-item" href="../Juegos/Todos_Juegos_1.jsp">Todos los juegos</a>
                                   </div>
                                 </div>
                                 <div class="btn-group">
@@ -212,8 +212,8 @@
                                         Consolas
                                       </button>
                                       <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="Crud_Consolas_Mas_Pedidas.html">Consolas Mas Pedidas</a>
-                                        <a class="dropdown-item" href="Crud_Consolas_Poco_Pedidas.html">Consolas No Tan Pedidas</a>
+                                        <a class="dropdown-item" href="Crud_Consolas_Mas_Pedidas.jsp">Consolas Mas Pedidas</a>
+                                        <a class="dropdown-item" href="Crud_Consolas_Poco_Pedidas.jsp">Consolas No Tan Pedidas</a>
                                     </div>
                                   </div>
                                     <div class="btn-group">
@@ -221,12 +221,12 @@
                                             Citas
                                           </button>
                                           <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="../../CRUD Citas/Crud_Citas_Activas.html">Citas Activas</a>
-                                            <a class="dropdown-item" href="../../CRUD Citas/Crud_Citas_Inactivas.html">Citas Inactivas</a>
+                                            <a class="dropdown-item" href="../../CRUD Citas/Crud_Citas_Activas.jsp">Citas Activas</a>
+                                            <a class="dropdown-item" href="../../CRUD Citas/Crud_Citas_Inactivas.jsp">Citas Inactivas</a>
                                           </div>
                                         </div>
-                                             <a href="../../CRUD Clientes/Clientes_Registrados.html"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
-
+                                             <a href="../../CRUD Clientes/Clientes_Registrados.jsp"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
+                                             <a href="../../CRUD Categorias/Categorias_1.jsp"><button type="button" class="btn btn-outline-info">Categorias</button></a>       
         </center>
      <br>
 

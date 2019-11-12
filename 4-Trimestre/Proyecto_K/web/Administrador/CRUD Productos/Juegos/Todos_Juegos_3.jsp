@@ -18,6 +18,7 @@
 
 <body>
 
+
     <style type="text/css">
         body {
             background: #eeeeee;
@@ -181,7 +182,7 @@
           <body>
             <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
                 <div class="navbar-header d-flex col">
-                    <a href="../../index.html">
+                    <a href="../../../index.html">
                         <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
                         </a>                    
                     <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
@@ -193,7 +194,7 @@
                 </div>
                 <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
                   <ul class="nav navbar-nav">
-                        <li class="nav-item active"><a href="../Administrador_inicio.html" class="nav-link">Página de administración</a></li>
+                        <li class="nav-item active"><a href="../../Administrador_inicio.html" class="nav-link">Página de administración</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Ayuda</a></li>
                     </li>
                   </ul>
@@ -209,63 +210,61 @@
                     <li class="nav-item dropdown">
                       <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://miro.medium.com/max/1024/1*Age2mlAUaGBPNWcLvQPEUA.jpeg" class="avatar" alt="Avatar"> Andres Olaya <b class="caret"></b></a>
                       <ul class="dropdown-menu" style="background-color: #343a40">
-                            <li><a href="../Perfil_Administrador.html" style="color: #ffffff" class="dropdown-item"><i class="fa fa-user-o"></i> Perfil</a></li>
+                            <li><a href="../../Perfil_Administrador.html" style="color: #ffffff" class="dropdown-item"><i class="fa fa-user-o"></i> Perfil</a></li>
                         <li class="divider dropdown-divider"></li>
-                        <li><a href="../../index.html" style="color: #ffffff" class="dropdown-item"><i class="material-icons"></i> Cerrar Sesión</a></li>
+                        <li><a href="../../../index.html" style="color: #ffffff" class="dropdown-item"><i class="material-icons"></i> Cerrar Sesión</a></li>
                     </ul>
                     </li>
                   </ul>
                 </div>
               </nav>
-              <br>
-        <center>
-                <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Productos
-                        </button>
-                        <div class="dropdown-menu">
-                                <a class="dropdown-item" href="../CRUD Productos/Crud_Productos_Vendidos.html">Productos Vendidos</a>
-                                <a class="dropdown-item" href="../CRUD Productos/Crud_Productos_No_Tan_Vendidos.html">Productos No Tan Vendidos</a>
+          <br>
+    <center>
+            <div class="btn-group">
+                    <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Productos
+                    </button>
+                    <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../../CRUD Productos/Crud_Productos_Vendidos.jsp">Productos Vendidos</a>
+                            <a class="dropdown-item" href="../../CRUD Productos/Crud_Productos_No_Tan_Vendidos.jsp">Productos No Tan Vendidos</a>
+                          </div>
+                        </div>
+                        <div class="btn-group">
+                              <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Juegos
+                              </button>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="Crud_Juegos_No_Tan_Pedidos.jsp">Juegos no tan Pedidos</a>
+                                <a class="dropdown-item" href="Juegos_Mas_Pedidos.jsp">Juegos mas pedidos</a>
                               </div>
                             </div>
                             <div class="btn-group">
                                   <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Juegos
+                                    Consolas
                                   </button>
                                   <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Juegos_Mas_Pedidos.html">Juegos Mas Pedidos</a>
-                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Crud_Juegos_No_Tan_Pedidos.html">Juegos No Tan Pedidos</a>
-                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Todos_Juegos_1.html">Todos los juegos</a>
-                                  </div>
+                                    <a class="dropdown-item" href="../../CRUD Productos/Consolas/Consolas.jsp">Consolas</a>
+                                    <a class="dropdown-item" href="../../CRUD Productos/Consolas/Crud_Consolas_Mas_Pedidas.jsp">Consolas Mas Pedidas</a>
+                                    <a class="dropdown-item" href="../../CRUD Productos/Consolas/Crud_Consolas_Poco_Pedidas.jsp">Consolas No Tan Pedidas</a>
                                 </div>
+                              </div>
                                 <div class="btn-group">
                                       <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Consolas
+                                        Citas
                                       </button>
                                       <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Consolas.html">Consolas</a>
-                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Crud_Consolas_Mas_Pedidas.html">Consolas Mas Pedidas</a>
-                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Crud_Consolas_Poco_Pedidas.html">Consolas No Tan Pedidas</a>
+                                        <a class="dropdown-item" href="../../CRUD Citas/Crud_Citas_Activas.jsp">Citas Activas</a>
+                                        <a class="dropdown-item" href="../../CRUD Citas/Crud_Citas_Inactivas.jsp">Citas Inactivas</a>
+                                      </div>
                                     </div>
-                                  </div>
-                                    <div class="btn-group">
-                                          <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Citas
-                                          </button>
-                                          <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Activas.html">Citas Activas</a>
-                                            <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Inactivas.html">Citas Inactivas</a>
-                                          </div>
-                                        </div>
-                                             <a href="../CRUD Clientes/Clientes_Registrados.html"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
-                                  </div>
-        </center>
-    <br>
-        </center>
+                                          <a href="../../CRUD Clientes/Clientes_Registrados.jsp"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
+                                          <a href="../../CRUD Categorias/Categorias_1.jsp"><button type="button" class="btn btn-outline-info">Categorias</button></a>
+                              </div>
+    </center>
         <br>
 
         <center>
-            <h3>Categorias</h3>
+            <h3>Juegos</h3>
         </center>
         <br>
         <br>
@@ -574,15 +573,15 @@
                     <div class="table-title">
                         <div class="row">
                             <div class="col-sm-6">
-                                <h2>Categorias</h2>
+                                <h2>Juegos</h2>
                             </div>
                             <div class="col-sm-6">
                                 <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i
                                         class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                    </i><span>Añadir Categoria</span></a>
+                                    </i><span>Añadir Nuevo Juego</span></a>
                                 <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i
                                         class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
-                                    </i><span>Eliminar Categoria</span></a>
+                                    </i><span>Eliminar Juego</span></a>
                             </div>
                         </div>
                     </div>
@@ -595,9 +594,9 @@
                                         <label for="selectAll"></label>
                                     </span>
                                 </th>
+                                <th>Nombre</th>
                                 <th>Categoria</th>
-                                <th>Cantidad De Juegos</th>
-                                <th>Id Categoria</th>
+                                <th>Id Juego</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -608,9 +607,9 @@
                                         <label for="checkbox3"></label>
                                     </span>
                                 </td>
-                                <td>Aventuras De Rol</td>
-                                <td>7</td>
-                                <td>021</td>
+                                <td>Mario Bros</td>
+                                <td>Estrategia</td>
+                                <td>478</td>
                                 <td>
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Edit"><i
@@ -627,9 +626,9 @@
                                         <label for="checkbox5"></label>
                                     </span>
                                 </td>
-                                <td>Cartas</td>
-                                <td>9</td>
-                                <td>022</td>
+                                <td>Kirby</td>
+                                <td>Acción</td>
+                                <td>479</td>
                                 <td>
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Editar"><i
@@ -645,9 +644,9 @@
                                         <label for="checkbox1"></label>
                                     </span>
                                 </td>
-                                <td>Construcción</td>
-                                <td>8</td>
-                                <td>023</td>
+                                <td>Splatoon 2</td>
+                                <td>Aventura De Rol</td>
+                                <td>481</td>
                                 <td>
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Edit"><i
@@ -664,9 +663,9 @@
                                         <label for="checkbox5"></label>
                                     </span>
                                 </td>
-                                <td>Cooperación</td>
-                                <td>9</td>
-                                <td>024</td>
+                                <td>Wall e</td>
+                                <td>Arcade</td>
+                                <td>482</td>
                                 <td>
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Edit"><i
@@ -683,9 +682,9 @@
                                         <label for="checkbox5"></label>
                                     </span>
                                 </td>
-                                <td>Cyberpunk</td>
-                                <td>8</td>
-                                <td>025</td>
+                                <td>Just Dance 17</td>
+                                <td>Musical</td>
+                                <td>483</td>
                                 <td>
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Edit"><i
@@ -702,9 +701,9 @@
                                         <label for="checkbox5"></label>
                                     </span>
                                 </td>
-                                <td>Shooter</td>
-                                <td>8</td>
-                                <td>026</td>
+                                <td>Fatal Frame 4</td>
+                                <td>Acción</td>
+                                <td>484</td>
                                 <td>
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Edit"><i
@@ -721,9 +720,9 @@
                                         <label for="checkbox5"></label>
                                     </span>
                                 </td>
-                                <td>Interactivos</td>
-                                <td>5</td>
-                                <td>027</td>
+                                <td>The Voice</td>
+                                <td>Estrategia</td>
+                                <td>485</td>
                                 <td>
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Edit"><i
@@ -743,9 +742,9 @@
                                     <label for="checkbox5"></label>
                                 </span>
                             </td>
-                            <td>Pinball</td>
-                            <td>8</td>
-                            <td>028</td>
+                            <td>Wii Fit U</td>
+                            <td>Lucha</td>
+                            <td>486</td>
                             <td>
                                 <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
                                         data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
@@ -761,9 +760,9 @@
                                                 <label for="checkbox1"></label>
                                             </span>
                                         </td>
-                                        <td>Antología</td>
-                                        <td>8</td>
-                                        <td>029</td>
+                                        <td>Crash Team Racing</td>
+                                        <td>Carreras</td>
+                                        <td>487</td>
                                         <td>
                                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                                     class="material-icons" data-toggle="tooltip" title="Editar"><i
@@ -779,9 +778,9 @@
                                                 <label for="checkbox1"></label>
                                             </span>
                                         </td>
-                                        <td>Tablero</td>
-                                        <td>5</td>
-                                        <td>030</td>
+                                        <td>Dark Souls 3</td>
+                                        <td>Acción</td>
+                                        <td>488</td>
                                         <td>
                                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                                     class="material-icons" data-toggle="tooltip" title="Editar"><i
@@ -794,23 +793,24 @@
                     <div class="clearfix">
                         <div class="hint-text">Mostrando 5 de 25 entradas</div>
                         <ul class="pagination">
-                            <li class="page-item disabled"><a href="#">Anterior</a></li>
-                            <li class="page-item"><a href="Categorias_1.html" class="page-link">1</a></li>
-                            <li class="page-item"><a href="Categorias_2.html" class="page-link">2</a></li>
-                            <li class="page-item active"><a href="Categorias_3.html" class="page-link">3</a></li>
+                            <li class="page-item disabled"><a href="Todos_Juegos_2.html">Anterior</a></li>
+                            <li class="page-item"><a href="Todos_Juegos_1.html" class="page-link">1</a></li>
+                            <li class="page-item"><a href="Todos_Juegos_2.html" class="page-link">2</a></li>
+                            <li class="page-item active"><a href="Todos_Juegos_3.html" class="page-link">3</a></li>
                             <li class="page-item"><a href="#" class="page-link">4</a></li>
                             <li class="page-item"><a href="#" class="page-link">5</a></li>
-                            <li class="page-item"><a href="Todos_Juegos_2.html" class="page-link">Siguiente</a></li>
+                            <li class="page-item"><a href="" class="page-link">Siguiente</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+
             <div id="addEmployeeModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <form>
                             <div class="modal-header">
-                                <h4 class="modal-title">Añadir Categoria</h4>
+                                <h4 class="modal-title">Añadir Juego</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                             </div>
                             <div class="modal-body">
@@ -841,7 +841,7 @@
                     <div class="modal-content">
                         <form>
                             <div class="modal-header">
-                                <h4 class="modal-title">Editar Categoria</h4>
+                                <h4 class="modal-title">Editar Juego</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
                                         class="fa fa-times" aria-hidden="true"></i></button>
                             </div>
@@ -873,12 +873,12 @@
                     <div class="modal-content">
                         <form>
                             <div class="modal-header">
-                                <h4 class="modal-title">Eliminar Categoria</h4>
+                                <h4 class="modal-title">Eliminar Juego</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
                                         class="fa fa-times" aria-hidden="true"></i></button>
                             </div>
                             <div class="modal-body">
-                                <p>¿Seguro Que Desea Eliminar Categoria</p>
+                                <p>¿Seguro Que Desea Eliminar El Juego</p>
                                 <p class="text-warning"><small>Esta acción no se puede deshacer.</small></p>
                             </div>
                             <div class="modal-footer">

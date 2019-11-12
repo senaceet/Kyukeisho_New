@@ -115,12 +115,12 @@ values  (1, "Adagny", "Benno", "Fave", "Ferrec", "adagny@gmail.com", 3002356897,
             
 -- TIPO_PRODUCTO --
 insert into Kyukeisho.tipo_producto (id_tipo_producto, nombre_tipo_producto)
-values 	(12340, "Comestibles"),
-		(12341, "Videojuegos"),
-		(12342, "Golosinas"),
-        (12343, "Productos Tecnologicos"),
-        (12344, "Bebidas"),
-        (12345, "Utiles Escolares");
+values 	(1, "Comestibles"),
+		(2, "Videojuegos"),
+		(3, "Golosinas"),
+        (4, "Productos Tecnologicos"),
+        (5, "Bebidas"),
+        (6, "Utiles Escolares");
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             
@@ -273,26 +273,26 @@ values (01,"AZ0"),
 
 -- PRODUCTOS --
 insert into Kyukeisho.productos (id_producto, nombre_producto, cantidad_producto, precio_unitario_producto, id_tipo_producto)
-values (1, "Cheetos", 1, 1200, 12340),
-	   (2, "Bom Bom Bum", 1, 250, 12342),
-       (3, "Ponque Ramo", 1, 3500, 12340),
-       (4, "Tricopollos", 1, 800, 12340),
-       (5, "Chocorramo", 1, 1200, 12340),
-       (6, "PS4 - Infinite Warfare Legacy Edition", 1, 59900, 12341),
-       (7, "Xbox OnE - Crash Bandicoot N. Sane Trigoly", 1, 169900, 12341),
-       (8, "PS4 - FIFA 20 Edition Deluxe", 1, 319000, 12341),
-       (9, "Xbox 360 - PES 2017", 1, 30000, 12341),
-       (10, "Wii - Pack Juegos Digitales", 1, 49990, 12341),
-       (11, "Audífonos Spirit", 1, 49990, 12343),
-       (12, "Cargador Bateria Power Bank 4000 mAh Blanco", 1, 9990, 12343),
-       (13, "Gaseosa Coca Cola sin azúcar x 2 und", 1, 8990, 12344),
-       (14, "Agua Cristal x 24 und", 1, 9990, 12344),
-       (15, "Bebida Gasificada Limonada", 1, 2790, 12344),
-       (16, "Jugo Hit x 12 und", 1, 9190, 12344),
-       (17, "Pony Malta Sixpack", 1, 5590, 12344),
-       (18, "Resaltadores x 20 und", 1, 3337, 12345),
-       (19, "Portafolio Pokémon", 1, 44991, 12345),
-       (20, "Xtime", 1, 200, 12342);
+values (1, "Cheetos", 12, 1200, 1),
+	   (2, "Bom Bom Bum", 3, 250, 1),
+       (3, "Ponque Ramo", 10, 3500, 1),
+       (4, "Tricopollos", 5, 800, 1),
+       (5, "Chocorramo", 14, 1200, 1),
+       (6, "PS4 - Infinite Warfare Legacy Edition", 1, 59900, 4),
+       (7, "Xbox OnE - Crash Bandicoot N. Sane Trigoly", 2, 169900, 4),
+       (8, "PS4 - FIFA 20 Edition Deluxe", 1, 319000, 4),
+       (9, "Xbox 360 - PES 2017", 5, 30000, 4),
+       (10, "Wii - Pack Juegos Digitales", 4, 49990, 4),
+       (11, "Audífonos Spirit", 8, 49990, 4),
+       (12, "Cargador Bateria Power Bank 4000 mAh Blanco", 25, 9990, 4),
+       (13, "Gaseosa Coca Cola sin azúcar x 2 und", 6, 8990, 5),
+       (14, "Agua Cristal x 24 und", 10, 9990, 5),
+       (15, "Bebida Gasificada Limonada", 14, 2790, 5),
+       (16, "Jugo Hit x 12 und", 13, 9190, 5),
+       (17, "Pony Malta Sixpack", 10, 5590, 5),
+       (18, "Resaltadores x 20 und", 50, 3337, 6),
+       (19, "Portafolio Pokémon", 15, 44991, 6),
+       (20, "Xtime", 60, 200, 1);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

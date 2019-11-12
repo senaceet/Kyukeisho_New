@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>
-        Kyukeisho
+        Consolas
     </title>
 
 <body>
@@ -147,7 +147,7 @@
             }
           </style>
           </head> 
-          <body>
+         <body>
             <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
                 <div class="navbar-header d-flex col">
                     <a href="../../../index.html">
@@ -186,53 +186,52 @@
                   </ul>
                 </div>
               </nav>
-          <br>
-    <center>
-            <div class="btn-group">
-                    <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Productos
-                    </button>
-                    <div class="dropdown-menu">
-                            <a class="dropdown-item" href="../../CRUD Productos/Crud_Productos_Vendidos.html">Productos Vendidos</a>
-                            <a class="dropdown-item" href="../../CRUD Productos/Crud_Productos_No_Tan_Vendidos.html">Productos No Tan Vendidos</a>
-                          </div>
-                        </div>
-                        <div class="btn-group">
-                              <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Juegos
-                              </button>
-                              <div class="dropdown-menu">
-                                <a class="dropdown-item" href="Crud_Juegos_No_Tan_Pedidos.html">Juegos no tan Pedidos</a>
-                                <a class="dropdown-item" href="Juegos_Mas_Pedidos.html">Juegos mas pedidos</a>
+              <br>
+        <center>
+                <div class="btn-group">
+                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Productos
+                        </button>
+                        <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../../CRUD Productos/Crud_Productos_Vendidos.jsp">Productos Vendidos</a>
+                                <a class="dropdown-item" href="../../CRUD Productos/Crud_Productos_No_Tan_Vendidos.jsp">Productos No Tan Vendidos</a>
                               </div>
                             </div>
                             <div class="btn-group">
                                   <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Consolas
+                                    Juegos
                                   </button>
                                   <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="../../CRUD Productos/Consolas/Consolas.html">Consolas</a>
-                                    <a class="dropdown-item" href="../../CRUD Productos/Consolas/Crud_Consolas_Mas_Pedidas.html">Consolas Mas Pedidas</a>
-                                    <a class="dropdown-item" href="../../CRUD Productos/Consolas/Crud_Consolas_Poco_Pedidas.html">Consolas No Tan Pedidas</a>
+                                    <a class="dropdown-item" href="../Juegos/Juegos_Mas_Pedidos.jsp">Juegos Mas Pedidos</a>
+                                    <a class="dropdown-item" href="../Juegos/Crud_Juegos_No_Tan_Pedidos.jsp">Juegos No Tan Pedidos</a>
+                                    <a class="dropdown-item" href="../Juegos/Todos_Juegos_1.jsp">Todos los juegos</a>
+                                  </div>
                                 </div>
-                              </div>
                                 <div class="btn-group">
                                       <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Citas
+                                        Consolas
                                       </button>
                                       <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="../../CRUD Citas/Crud_Citas_Activas.html">Citas Activas</a>
-                                        <a class="dropdown-item" href="../../CRUD Citas/Crud_Citas_Inactivas.html">Citas Inactivas</a>
-                                      </div>
+                                        <a class="dropdown-item" href="Consolas.jsp">Consolas</a>
+                                        <a class="dropdown-item" href="Crud_Consolas_Mas_Pedidas.jsp">Consolas Mas Pedidas</a>
                                     </div>
-                                          <a href="../../CRUD Clientes/Clientes_Registrados.html"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
-                                          <a href="../../CRUD Categorias/Categorias_1.html"><button type="button" class="btn btn-outline-info">Categorias</button></a>
-                              </div>
-    </center>
+                                  </div>
+                                    <div class="btn-group">
+                                          <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Citas
+                                          </button>
+                                          <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="../../CRUD Citas/Crud_Citas_Activas.jsp">Citas Activas</a>
+                                            <a class="dropdown-item" href="../../CRUD Citas/Crud_Citas_Inactivas.jsp">Citas Inactivas</a>
+                                          </div>
+                                        </div>
+                                             <a href="../../CRUD Clientes/Clientes_Registrados.jsp"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
+                                             <a href="../../CRUD Categorias/Categorias_1.jsp"><button type="button" class="btn btn-outline-info">Categorias</button></a>      
+        </center>
      <br>
 
     <center>
-        <h3>Juegos</h3>
+        <h3>Consolas</h3>
     </center>
     <br>
     <br>
@@ -541,15 +540,15 @@
                 <div class="table-title">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h2>Juegos</h2>
+                            <h2>Consolas</h2>
                         </div>
                         <div class="col-sm-6">
                             <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i
                                     class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                </i><span>Añadir Nuevo Juego</span></a>
+                                </i><span>Añadir Nueva Consola</span></a>
                             <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i
                                     class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
-                                </i><span>Eliminar Juego</span></a>
+                                </i><span>Eliminar Consola</span></a>
                         </div>
                     </div>
                 </div>
@@ -563,30 +562,13 @@
                                 </span>
                             </th>
                             <th>Nombre</th>
-                            <th>Categoria</th>
-                            <th>Id Juego</th>
+                            <th>Precio Por Hora</th>
+                            <th>Id Consola</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox3" name="options[]" value="1">
-                                    <label for="checkbox3"></label>
-                                </span>
-                            </td>
-                            <td>American Truck Simulator 2</td>
-                            <td>Simulador</td>
-                            <td>456</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
+                        
                         <tr>
                             <td>
                                 <span class="custom-checkbox">
@@ -594,103 +576,9 @@
                                     <label for="checkbox5"></label>
                                 </span>
                             </td>
-                            <td>Pes 2019</td>
-                            <td>Deportes</td>
-                            <td>457</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Eliminar"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                    <label for="checkbox1"></label>
-                                </span>
-                            </td>
-                            <td>Assassins Creed Odyssey Gold Edition</td>
-                            <td>Acción</td>
-                            <td>458</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
-                                </span>
-                            </td>
-                            <td>Grand Theft Auto V</td>
-                            <td>Acción</td>
-                            <td>459</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
-                                </span>
-                            </td>
-                            <td>God of War</td>
-                            <td>Acción</td>
-                            <td>461</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
-                                </span>
-                            </td>
-                            <td>Battlefield 4</td>
-                            <td>Supervivencia</td>
-                            <td>462</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
-                                </span>
-                            </td>
-                            <td>Spider-Man</td>
-                            <td>Supervivencia</td>
-                            <td>463</td>
+                            <td>Pc</td>
+                            <td>$ 1.000</td>
+                            <td>451</td>
                             <td>
                                 <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
                                         data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
@@ -710,9 +598,9 @@
                                 <label for="checkbox5"></label>
                             </span>
                         </td>
-                        <td>FIFA 19</td>
-                        <td>Deportes</td>
-                        <td>464</td>
+                        <td>Nintendo</td>
+                        <td>$ 1.000</td>
+                        <td>472</td>
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
                                     data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
@@ -728,56 +616,43 @@
                                             <label for="checkbox1"></label>
                                         </span>
                                     </td>
-                                    <td>Resident Evil 4</td>
-                                    <td>Supervivencia</td>
-                                    <td>465</td>
+                                    <td>Wii</td>
+                                    <td>$ 1.000</td>
+                                    <td>477</td>
                                     <td>
                                         <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
-                                                class="material-icons" data-toggle="tooltip" title="Editar"><i
+                                                class="material-icons" data-toggle="tooltip" title="Edit"><i
                                                     class="fa fa-pencil" aria-hidden="true"></i></a>
                                         <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                                class="material-icons" data-toggle="tooltip" title="Eliminar"><i
+                                                class="material-icons" data-toggle="tooltip" title="Delete"><i
                                                     class="fa fa-trash" aria-hidden="true"></i></a>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <span class="custom-checkbox">
-                                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                            <label for="checkbox1"></label>
-                                        </span>
                                     </td>
-                                    <td>NBA2K18</td>
-                                    <td>Deportes</td>
-                                    <td>466</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
-                                                class="material-icons" data-toggle="tooltip" title="Editar"><i
-                                                    class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                                class="material-icons" data-toggle="tooltip" title="Eliminar"><i
-                                                    class="fa fa-trash" aria-hidden="true"></i></a>
+                                </tr>
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
                 <div class="clearfix">
                     <div class="hint-text">Mostrando 5 de 25 entradas</div>
                     <ul class="pagination">
                         <li class="page-item disabled"><a href="#">Anterior</a></li>
-                        <li class="page-item active"><a href="Todos_Juegos_1.html" class="page-link">1</a></li>
-                        <li class="page-item"><a href="Todos_Juegos_2.html" class="page-link">2</a></li>
-                        <li class="page-item "><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
                         <li class="page-item"><a href="#" class="page-link">4</a></li>
                         <li class="page-item"><a href="#" class="page-link">5</a></li>
-                        <li class="page-item"><a href="Todos_Juegos_2.html" class="page-link">Siguiente</a></li>
+                        <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <div id="addEmployeeModal" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <form>
                         <div class="modal-header">
-                            <h4 class="modal-title">Añadir Juego</h4>
+                            <h4 class="modal-title">Añadir Producto</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                         </div>
                         <div class="modal-body">
@@ -786,12 +661,16 @@
                                 <input type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>Categoria</label>
-                                <input type="text" class="form-control" required>
+                                <label>Precio Unitario</label>
+                                <input type="email" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>Id Juego</label>
+                                <label>Fecha Vencimiento</label>
                                 <textarea class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Código</label>
+                                <input type="text" class="form-control" required>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -808,7 +687,7 @@
                 <div class="modal-content">
                     <form>
                         <div class="modal-header">
-                            <h4 class="modal-title">Editar Juego</h4>
+                            <h4 class="modal-title">Editar Producto</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
                                     class="fa fa-times" aria-hidden="true"></i></button>
                         </div>
@@ -818,11 +697,15 @@
                                 <input type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>Categoria</label>
+                                <label>Precio Por Hora</label>
                                 <input type="date" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>Id Juego</label>
+                                <label>Juego</label>
+                                <textarea class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Id Consola</label>
                                 <input type="text" class="form-control" required>
                             </div>
                         </div>
@@ -840,12 +723,12 @@
                 <div class="modal-content">
                     <form>
                         <div class="modal-header">
-                            <h4 class="modal-title">Eliminar Juego</h4>
+                            <h4 class="modal-title">Eliminar Producto</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
                                     class="fa fa-times" aria-hidden="true"></i></button>
                         </div>
                         <div class="modal-body">
-                            <p>¿Seguro Que Desea Eliminar El Juego</p>
+                            <p>¿Seguro Que Desea Eliminar Producto</p>
                             <p class="text-warning"><small>Esta acción no se puede deshacer.</small></p>
                         </div>
                         <div class="modal-footer">
@@ -856,9 +739,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright text-center  font-weight-bold p-2" style="background-color:transparent">
-            <p style="color:black">Desarrollado por Kyukeisho Copyright<i class="fa fa-copyright"
-                    aria-hidden="true"></i> 2019</p>
+
 
 
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

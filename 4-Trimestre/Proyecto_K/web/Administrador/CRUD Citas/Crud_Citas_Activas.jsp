@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>
-        Consolas
+        Kuykeisho
     </title>
 
 <body>
@@ -147,10 +147,10 @@
             }
           </style>
           </head> 
-         <body>
+          <body>
             <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
                 <div class="navbar-header d-flex col">
-                    <a href="../../../index.html">
+                    <a href="../../index.html">
                         <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
                         </a>                    
                     <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
@@ -162,7 +162,7 @@
                 </div>
                 <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
                   <ul class="nav navbar-nav">
-                        <li class="nav-item active"><a href="../../Administrador_inicio.html" class="nav-link">Página de administración</a></li>
+                        <li class="nav-item active"><a href="../Administrador_inicio.html" class="nav-link">Página de administración</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Ayuda</a></li>
                     </li>
                   </ul>
@@ -178,60 +178,61 @@
                     <li class="nav-item dropdown">
                       <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://miro.medium.com/max/1024/1*Age2mlAUaGBPNWcLvQPEUA.jpeg" class="avatar" alt="Avatar"> Andres Olaya <b class="caret"></b></a>
                       <ul class="dropdown-menu" style="background-color: #343a40">
-                            <li><a href="../../Perfil_Administrador.html" style="color: #ffffff" class="dropdown-item"><i class="fa fa-user-o"></i> Perfil</a></li>
+                            <li><a href="../Perfil_Administrador.html" style="color: #ffffff" class="dropdown-item"><i class="fa fa-user-o"></i> Perfil</a></li>
                         <li class="divider dropdown-divider"></li>
-                        <li><a href="../../../index.html" style="color: #ffffff" class="dropdown-item"><i class="material-icons"></i> Cerrar Sesión</a></li>
+                        <li><a href="../../index.html" style="color: #ffffff" class="dropdown-item"><i class="material-icons"></i> Cerrar Sesión</a></li>
                     </ul>
                     </li>
                   </ul>
                 </div>
               </nav>
-              <br>
-        <center>
+          <br>
+    <center>
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Productos
+            </button>
+            <div class="dropdown-menu">
+                    <a class="dropdown-item" href="../CRUD Productos/Crud_Productos_Vendidos.jsp">Productos Vendidos</a>
+                    <a class="dropdown-item" href="../CRUD Productos/Crud_Productos_No_Tan_Vendidos.jsp">Productos No Tan Vendidos</a>
+                  </div>
+                </div>
                 <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Productos
-                        </button>
-                        <div class="dropdown-menu">
-                                <a class="dropdown-item" href="../../CRUD Productos/Crud_Productos_Vendidos.html">Productos Vendidos</a>
-                                <a class="dropdown-item" href="../../CRUD Productos/Crud_Productos_No_Tan_Vendidos.html">Productos No Tan Vendidos</a>
+                      <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Juegos
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../CRUD Productos/Juegos/Juegos_Mas_Pedidos.jsp">Juegos Mas Pedidos</a>
+                        <a class="dropdown-item" href="../CRUD Productos/Juegos/Crud_Juegos_No_Tan_Pedidos.jsp">Juegos No Tan Pedidos</a>
+                        <a class="dropdown-item" href="../CRUD Productos/Juegos/Todos_Juegos_1.jsp">Todos los juegos</a>
+                      </div>
+                    </div>
+                    <div class="btn-group">
+                          <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Consolas
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../CRUD Productos/Consolas/Consolas.jsp">Consolas</a>
+                            <a class="dropdown-item" href="../CRUD Productos/Consolas/Crud_Consolas_Mas_Pedidas.jsp">Consolas Mas Pedidas</a>
+                            <a class="dropdown-item" href="../CRUD Productos/Consolas/Crud_Consolas_Poco_Pedidas.jsp">Consolas No Tan Pedidas</a>
+                        </div>
+                      </div>
+                        <div class="btn-group">
+                              <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Citas
+                              </button>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Inactivas.jsp">Citas Inactivas</a>
                               </div>
                             </div>
-                            <div class="btn-group">
-                                  <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Juegos
-                                  </button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="../Juegos/Juegos_Mas_Pedidos.html">Juegos Mas Pedidos</a>
-                                    <a class="dropdown-item" href="../Juegos/Crud_Juegos_No_Tan_Pedidos.html">Juegos No Tan Pedidos</a>
-                                    <a class="dropdown-item" href="../Juegos/Todos_Juegos_1.html">Todos los juegos</a>
-                                  </div>
-                                </div>
-                                <div class="btn-group">
-                                      <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Consolas
-                                      </button>
-                                      <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="Consolas.html">Consolas</a>
-                                        <a class="dropdown-item" href="Crud_Consolas_Mas_Pedidas.html">Consolas Mas Pedidas</a>
-                                    </div>
-                                  </div>
-                                    <div class="btn-group">
-                                          <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Citas
-                                          </button>
-                                          <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="../../CRUD Citas/Crud_Citas_Activas.html">Citas Activas</a>
-                                            <a class="dropdown-item" href="../../CRUD Citas/Crud_Citas_Inactivas.html">Citas Inactivas</a>
-                                          </div>
-                                        </div>
-                                             <a href="../../CRUD Clientes/Clientes_Registrados.html"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
-
-        </center>
-     <br>
+                              <a href="../CRUD Clientes/Clientes_Registrados.jsp"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
+                              <a href="../CRUD Categorias/Categorias_1.jsp"><button type="button" class="btn btn-outline-info">Categorias</button></a>
+    </center>
+    <br>
 
     <center>
-        <h3>Consolas</h3>
+        <h3>Citas Activas</h3>
     </center>
     <br>
     <br>
@@ -509,10 +510,8 @@
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
-            // Activate tooltip
             $('[data-toggle="tooltip"]').tooltip();
 
-            // Select/Deselect checkboxes
             var checkbox = $('table tbody input[type="checkbox"]');
             $("#selectAll").click(function () {
                 if (this.checked) {
@@ -540,15 +539,15 @@
                 <div class="table-title">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h2>Consolas</h2>
+                            <h2>Citas Activas</h2>
                         </div>
                         <div class="col-sm-6">
                             <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i
                                     class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                </i><span>Añadir Nueva Consola</span></a>
+                                </i><span>Añadir Nueva Cita</span></a>
                             <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i
                                     class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
-                                </i><span>Eliminar Consola</span></a>
+                                </i><span>Eliminar Cita</span></a>
                         </div>
                     </div>
                 </div>
@@ -561,24 +560,24 @@
                                     <label for="selectAll"></label>
                                 </span>
                             </th>
-                            <th>Nombre</th>
-                            <th>Precio Por Hora</th>
-                            <th>Id Consola</th>
+                            <th>Nombre Usuario</th>
+                            <th>Fecha</th>
+                            <th>Producto/Consola</th>
+                            <th>Código Cita</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                        
-                        <tr>
                             <td>
                                 <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
+                                    <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                    <label for="checkbox1"></label>
                                 </span>
                             </td>
-                            <td>Pc</td>
-                            <td>$ 1.000</td>
-                            <td>451</td>
+                            <td>Andres Olaya</td>
+                            <td>20/09/2019 03:45 pm</td>
+                            <td>XboX One</td>
+                            <td>00041</td>
                             <td>
                                 <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
                                         data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
@@ -588,19 +587,96 @@
                                             class="fa fa-trash" aria-hidden="true"></i></a>
                             </td>
                         </tr>
-                        </td>
+                        <tr>
+                            <td>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="checkbox2" name="options[]" value="1">
+                                    <label for="checkbox2"></label>
+                                </span>
+                            </td>
+                            <td>Anderson Quiros</td>
+                            <td>25/09/2019 10:00 am</td>
+                            <td>PS4</td>
+                            <td>00042</td>
+                            <td>
+                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
+                                            aria-hidden="true"></i></a>
+                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
+                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
+                                            class="fa fa-trash" aria-hidden="true"></i></a>
+                            </td>
                         </tr>
-                    </tbody>
-                    <tr>
+                        <tr>
+                            <td>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="checkbox3" name="options[]" value="1">
+                                    <label for="checkbox3"></label>
+                                </span>
+                            </td>
+                            <td>Juan Lopez</td>
+                            <td>22/09/2019 12:00 pm</td>
+                            <td>PS3</td>
+                            <td>00043</td>
+                            <td>
+                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
+                                            aria-hidden="true"></i></a>
+                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
+                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
+                                            class="fa fa-trash" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="checkbox4" name="options[]" value="1">
+                                    <label for="checkbox4"></label>
+                                </span>
+                            </td>
+                            <td>Vladimir Buitrago</td>
+                            <td>30/09/2019 05:00 pm</td>
+                            <td>Wii</td>
+                            <td>00044</td>
+                            <td>
+                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
+                                            aria-hidden="true"></i></a>
+                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
+                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
+                                            class="fa fa-trash" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                                    <label for="checkbox5"></label>
+                                </span>
+                            </td>
+                            <td>Angela Rozo</td>
+                            <td>26/09/2019 08:00 am</td>
+                            <td>Xbox One</td>
+                            <td>00045</td>
+                            <td>
+                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                                        data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
+                                            aria-hidden="true"></i></a>
+                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
+                                        class="material-icons" data-toggle="tooltip" title="Eliminar"><i
+                                            class="fa fa-trash" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
                         <td>
                             <span class="custom-checkbox">
                                 <input type="checkbox" id="checkbox5" name="options[]" value="1">
                                 <label for="checkbox5"></label>
                             </span>
                         </td>
-                        <td>Nintendo</td>
-                        <td>$ 1.000</td>
-                        <td>472</td>
+                        <td>Pedro Infante</td>
+                        <td>28/09/2019 03:00 pm</td>
+                        <td>Xbox One</td>
+                        <td>00046</td>
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
                                     data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
@@ -608,28 +684,85 @@
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
                                     data-toggle="tooltip" title="Eliminar"><i class="fa fa-trash"
                                         aria-hidden="true"></i></a>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <span class="custom-checkbox">
-                                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                            <label for="checkbox1"></label>
-                                        </span>
-                                    </td>
-                                    <td>Wii</td>
-                                    <td>$ 1.000</td>
-                                    <td>477</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
-                                                class="material-icons" data-toggle="tooltip" title="Edit"><i
-                                                    class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                                class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                                    class="fa fa-trash" aria-hidden="true"></i></a>
-                                    </td>
-                                </tr>
                         </td>
-                    </tr>
+                        </tr>
+                        <td>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                                <label for="checkbox5"></label>
+                            </span>
+                        </td>
+                        <td>Pedro Lopez</td>
+                        <td>06/10/2019 03:00 pm</td>
+                        <td>Xbox One</td>
+                        <td>00047</td>
+                        <td>
+                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                                    data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
+                                        aria-hidden="true"></i></a>
+                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
+                                    data-toggle="tooltip" title="Eliminar"><i class="fa fa-trash"
+                                        aria-hidden="true"></i></a>
+                        </td>
+                        </tr>
+                        <td>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                                <label for="checkbox5"></label>
+                            </span>
+                        </td>
+                        <td>Julian Montes</td>
+                        <td>09/11/2019 03:00 pm</td>
+                        <td>PS4</td>
+                        <td>00048</td>
+                        <td>
+                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                                    data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
+                                        aria-hidden="true"></i></a>
+                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
+                                    data-toggle="tooltip" title="Eliminar"><i class="fa fa-trash"
+                                        aria-hidden="true"></i></a>
+                        </td>
+                        </tr>
+                        <td>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                                <label for="checkbox5"></label>
+                            </span>
+                        </td>
+                        <td>Johan Perez</td>
+                        <td>30/12/2019 03:00 pm</td>
+                        <td>Xbox</td>
+                        <td>00049</td>
+                        <td>
+
+                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                                    data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
+                                        aria-hidden="true"></i></a>
+                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
+                                    data-toggle="tooltip" title="Eliminar"><i class="fa fa-trash"
+                                        aria-hidden="true"></i></a>
+                        </td>
+                        </tr>
+                        <td>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                                <label for="checkbox5"></label>
+                            </span>
+                        </td>
+                        <td>Manuel Carranza</td>
+                        <td>28/11/2019 03:00 pm</td>
+                        <td>Xbox One</td>
+                        <td>00050</td>
+                        <td>
+                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                                    data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
+                                        aria-hidden="true"></i></a>
+                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
+                                    data-toggle="tooltip" title="Eliminar"><i class="fa fa-trash"
+                                        aria-hidden="true"></i></a>
+                        </td>
+                        </tr>
                     </tbody>
                 </table>
                 <div class="clearfix">
@@ -652,24 +785,24 @@
                 <div class="modal-content">
                     <form>
                         <div class="modal-header">
-                            <h4 class="modal-title">Añadir Producto</h4>
+                            <h4 class="modal-title">Añadir Cita</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label>Nombre</label>
+                                <label>Nombre Usuario</label>
                                 <input type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>Precio Unitario</label>
+                                <label>Fecha Cita</label>
                                 <input type="email" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>Fecha Vencimiento</label>
+                                <label>Producto/Consola</label>
                                 <textarea class="form-control" required></textarea>
                             </div>
                             <div class="form-group">
-                                <label>Código</label>
+                                <label>Código Cita</label>
                                 <input type="text" class="form-control" required>
                             </div>
                         </div>
@@ -697,15 +830,15 @@
                                 <input type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>Precio Por Hora</label>
-                                <input type="date" class="form-control" required>
+                                <label>Precio Unitario</label>
+                                <input type="email" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>Juego</label>
+                                <label>Fecha Vencimiento</label>
                                 <textarea class="form-control" required></textarea>
                             </div>
                             <div class="form-group">
-                                <label>Id Consola</label>
+                                <label>Código</label>
                                 <input type="text" class="form-control" required>
                             </div>
                         </div>
@@ -742,15 +875,15 @@
 
 
 
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
-                integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-                crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
-                integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-                crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+            integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+            integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+            crossorigin="anonymous"></script>
     </body>
 
     </head>

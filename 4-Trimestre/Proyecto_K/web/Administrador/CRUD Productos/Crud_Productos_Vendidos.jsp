@@ -209,9 +209,9 @@
                         Juegos
                       </button>
                       <div class="dropdown-menu">
-                        <a class="dropdown-item" href="Juegos/Juegos_Mas_Pedidos.html">Juegos Mas Pedidos</a>
-                        <a class="dropdown-item" href="Juegos/Crud_Juegos_No_Tan_Pedidos.html">Juegos No Tan Pedidos</a>
-                        <a class="dropdown-item" href="Juegos/Todos_Juegos_1.html">Todos los juegos</a>
+                        <a class="dropdown-item" href="Juegos/Juegos_Mas_Pedidos.jsp">Juegos Mas Pedidos</a>
+                        <a class="dropdown-item" href="Juegos/Crud_Juegos_No_Tan_Pedidos.jsp">Juegos No Tan Pedidos</a>
+                        <a class="dropdown-item" href="Juegos/Todos_Juegos_1.jsp">Todos los juegos</a>
                       </div>
                     </div>
                     <div class="btn-group">
@@ -219,9 +219,9 @@
                             Consolas
                           </button>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="Consolas/Consolas.html">Consolas</a>
-                            <a class="dropdown-item" href="Consolas/Crud_Consolas_Mas_Pedidas.html">Consolas Mas Pedidas</a>
-                            <a class="dropdown-item" href="Consolas/Crud_Consolas_Poco_Pedidas.html">Consolas No Tan Pedidas</a>
+                            <a class="dropdown-item" href="Consolas/Consolas.jsp">Consolas</a>
+                            <a class="dropdown-item" href="Consolas/Crud_Consolas_Mas_Pedidas.jsp">Consolas Mas Pedidas</a>
+                            <a class="dropdown-item" href="Consolas/Crud_Consolas_Poco_Pedidas.jsp">Consolas No Tan Pedidas</a>
                         </div>
                       </div>
                         <div class="btn-group">
@@ -229,13 +229,13 @@
                                 Citas
                               </button>
                               <div class="dropdown-menu">
-                                <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Activas.html">Citas Activas</a>
-                                <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Inactivas.html">Citas Inactivas</a>
+                                <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Activas.jsp">Citas Activas</a>
+                                <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Inactivas.jsp">Citas Inactivas</a>
                               </div>
                             </div>
-                                  <a href="../CRUD Clientes/Clientes_Registrados.html"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
+                                  <a href="../CRUD Clientes/Clientes_Registrados.jsp"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
 
-                                  <a href="../CRUD Categorias/Categorias_1.html"><button type="button" class="btn btn-outline-info">Categorias</button></a>
+                                  <a href="../CRUD Categorias/Categorias_1.jsp"><button type="button" class="btn btn-outline-info">Categorias</button></a>
                       </div>
     </center>
     <br>
@@ -579,9 +579,9 @@
                             <label for="selectAll"></label>
                         </span>
                      </th>
-                <th  colspan="5">id producto</th><th colspan="3">Nombre</th>
-                <th colspan="2">cantidad</th><th colspan="2">precio_u</th>
-                <th colspan="2">editar</th><th colspan="2">eliminar</th>
+                <th  colspan="5">Id producto</th><th colspan="3">Nombre producto</th>
+                <th colspan="2">Cantidad del producto</th><th colspan="2">Precio_unitario</th>
+                <th colspan="2">Editar</th><th colspan="2">Eliminar</th>
             </tr>
             </thead>
             <%
