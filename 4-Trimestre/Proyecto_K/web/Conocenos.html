@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conocenos</title>
+    <link rel="icon" type="image/png" href="https://fotos.subefotos.com/e296fe07575583952d4e106565eb2181o.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ <style>
+    hr {
+      background-color: rgba(255, 251, 0, 0.438);
+    }
+  </style>
+  <style type="text/css">
+    body {
+      background: #e2eaef00;
+      font-family: "Open Sans", sans-serif;
+    }
+    .carousel {
+      margin: 50px auto;
+      padding: 0 70px;
+    }
+    .carousel .item {
+      color: #747d89;
+      min-height: 325px;
+        text-align: center;
+      overflow: hidden;
+    }
+    .carousel .thumb-wrapper {
+      padding: 25px 15px;
+      background: rgba(255, 0, 0, 0);
+      border-radius: 6px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0);
+    }
+    .carousel .item .img-box {
+      height: 120px;
+      margin-bottom: 20px;
+      width: 100%;
+      position: relative;
+    }
+    .carousel .item img {	
+      max-width: 100%;
+      max-height: 100%;
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
+    .carousel .item h4 {
+      font-size: 18px;
+    }
+    .carousel .item h4, .carousel .item p, .carousel .item ul {
+      margin-bottom: 5px;
+    }
+    .carousel .thumb-content .btn i {
+      font-size: 14px;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+    .carousel .carousel-control {
+      height: 44px;
+      width: 40px;
+      background: #ffe600;	
+        margin: auto 0;
+        border-radius: 4px;
+      opacity: 0.8;
+    }
+    .carousel .carousel-control:hover {
+      background: #ff0800;
+      opacity: 1;
+    }
+    .carousel .carousel-control i {
+        font-size: 36px;
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        margin: -19px 0 0 0;
+        z-index: 5;
+        left: 0;
+        right: 0;
+        color: rgb(0, 0, 0);
+      text-shadow: none;
+        font-weight: bold;
+    }
+    .carousel .item-price {
+      font-size: 13px;
+      padding: 2px 0;
+    }
+    .carousel .item-price strike {
+      opacity: 0.7;
+      margin-right: 5px;
+    }
+    .carousel .carousel-control.left i {
+      margin-left: -2px;
+    }
+    .carousel .carousel-control.right i {
+      margin-right: -4px;
+    }
+    .carousel .carousel-indicators {
+      bottom: -50px;
+    }
+    .carousel-indicators li, .carousel-indicators li.active {
+      width: 10px;
+      height: 10px;
+      margin: 4px;
+      border-radius: 50%;
+      border: none;
+    }
+    .carousel-indicators li {	
+      background: rgba(0, 0, 0, 0.2);
+    }
+    .carousel-indicators li.active {	
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .carousel .wish-icon {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 99;
+      cursor: pointer;
+      font-size: 16px;
+      color: #abb0b8;
+    }
+    .carousel .wish-icon .fa-heart {
+      color: #ff6161;
+    }
+    .star-rating li {
+      padding: 0;
+    }
+    .star-rating i {
+      font-size: 14px;
+      color: #ffc000;
+    }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".wish-icon i").click(function(){
+          $(this).toggleClass("fa-heart fa-heart-o");
+        });
+      });	
+    </script>
+
+</head>
+
+<body style="background-color: rgb(0, 0, 0)">
+  <font style="color:rgb(255, 145, 0)">
+    <div class="header fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
+        <a href="index.html">
+        <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
+        </a>
+        <div class="col-xl-1 text-center" >
+        <button class="navbar-toggler" style="background-color: rgb(255, 251, 0)" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2 width:8rem" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-warning my-2 my-sm-0 mr-sm-2" type="submit"><i class="fa fa-search"
+                aria-hidden="true"></i> Buscar </button>
+          </form>
+          <ul class="navbar-nav ">
+            <li class="nav-item dropdown mr-2">
+              <a class="nav-link dropdown-toggle navbar-DARK" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgb(255, 217, 0)">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                Mi cuenta:
+              </a>
+              <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="background-color: #343a40">
+                <a class="dropdown-item" href="Cliente\Inicio_Sesion_Cliente.html"
+                  style="color:rgb(255, 217, 0)">Cliente</a>
+                <a class="dropdown-item" href="Administrador\Inicio Sesion Administrador.html"
+                  style="color:rgb(255, 217, 0)">Administrador</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #fffb00">
+        <div class="col-xl-1 text-center" style="background-color: rgb(255, 251, 0)">
+        <button class="navbar-toggler" style="background-color: rgb(255, 251, 0)" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          MENU<span class="navbar-toggler-icon"></span>
+        </button>
+            </div>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent2">
+  
+        <div class="col-xl-3 text-left" style="background-color: rgb(255, 251, 0)">
+            <button class="btn text-right btn-lg dropdown-toggle" style="border-color: rgba(133, 133, 133, 0)" type="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-bars" aria-hidden="true"></i><strong> Categorias</strong>
+          </button>
+          <div class="dropdown-menu btn-lg " aria-labelledby="dropdownMenuButton"
+          style="width:14rem; background-color: rgb(255, 251, 0)">
+          <a href="juegos_Xbox_one_pagina_1.html" class="dropdown-item" style="color: rgb(0, 0, 0)">Xbox One</a>
+          <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#">Playstation 4</a>
+          <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#">PC</a>
+          <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#">Productos y accesorios</a>
+        </div>
+        </div>
+                  <div class="col-xl-3 text-left" style="background-color: rgb(255, 251, 0)">
+            <a href="Reservacion.html">
+              <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
+                <h5><strong><i class="fa fa-gamepad" aria-hidden="true"></i> Reservaciones</strong></h5>
+              </button>
+            </a>
+          </div>
+          
+          <div class="col-xl-3 text-left" style="background-color: rgb(255, 251, 0)">
+            <a href="contactenos.html">
+              <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
+                <h5><strong><i class="fa fa-phone" aria-hidden="true"></i> Contactenos</strong></h5>
+              </button>
+            </a>
+          </div>
+          <div class="col-xl-2 text-left" style="background-color: rgb(255, 251, 0)">
+            <a href="https://kyukeisho.blogspot.com/">
+              <button type="button" style="border-color: rgba(133, 133, 133, 0)"
+                class="btn btn-outline-dark">
+                <h5><strong><i class="fa fa-commenting" aria-hidden="true"></i> Blog</strong></h5>
+              </button>
+            </a>
+          </div>
+         </div>
+        </nav>
+       </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container-fluid">
+    <div class="row"> 
+        <div class="col-xl" align="center">
+        <h1 class="display-3"  >CONOCENOS</h1>
+         <hr>
+<div class="accordion" id="accordionExample">
+        <div class="card" style="background-color: rgba(20, 19, 19, 0.904)">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: white">
+                    <h2>¿Quienes somos?</h2>
+              </button>
+            </h2>
+          </div>
+      
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+        <div class="card" style="background-color: rgba(20, 19, 19, 0.904)">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: white">
+                    <h2>Mision</h2>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+        <div class="card" style="background-color: rgba(20, 19, 19, 0.904)">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: white">
+                    <h2>Vision</h2>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+        <div class="card" style="background-color: rgba(20, 19, 19, 0.904)">
+          <div class="card-header" id="headingFour">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="color: white">
+                    <h2>Politica de privacidad</h2>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<hr style="background-color: green">
+<br>
+<br>
+  <footer class="page-footer font-small indigo" style="background-color:rgba(180, 180, 180, 0)">
+    <div class="container">
+      <div class="row">
+        <h5 style="color:rgb(255, 230, 0)">¿Preguntas? Llama al ** *** *** ****</h5>
+      </div>
+      <div class="row">
+      </div>
+    </div>
+    <div class="container text-center text-md-left">
+      <div class="row">
+        <div class="col-md-3 mx-auto">
+          <br>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" style="color:rgb(255, 230, 0)">Preguntas frecuentes</a>
+              <br>
+              <a href="#!" style="color:rgb(255, 230, 0)">Preferencias de cookies</a>
+            </li>
+          </ul>
+          <br>
+          <div class="dropdown">
+            <button class="btn btn-outline-warning dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-globe" aria-hidden="true"></i> Idioma
+            </button>
+            <div class="dropdown-menu" style="background-color:rgb(255, 208, 0)" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Español</a>
+              <a class="dropdown-item" href="#">Ingles</a>
+            </div>
+          </div>
+          <br>
+          </ul>
+        </div>
+        <hr class="clearfix w-100 d-md-none">
+        <div class="col-md-3 mx-auto">
+          <ul class="list-unstyled">
+            <li>
+              <br>
+              <a href="#!" style="color:rgb(255, 230, 0)">Centro de ayuda</a>
+              <br>
+              <a href="#!" style="color:rgb(255, 230, 0)">Información corporativa</a>
+            </li>
+          </ul>
+        </div>
+        <hr class="clearfix w-100 d-md-none">
+        <div class="col-md-3 mx-auto">
+          <ul class="list-unstyled">
+            <li>
+              <br>
+              <a href="#!"style="color:rgb(255, 230, 0)">Términos de uso</a>
+            </li>
+          </ul>
+        </div>
+        <hr class="clearfix w-100 d-md-none">
+        <div class="col-md-3 mx-auto">
+          <ul class="list-unstyled">
+            <li>
+              <br>
+              <a href="#!" style="color:rgb(255, 230, 0)">Privacidad</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br>
+  </footer>
+
+  <div class="copyright text-center  font-weight-bold p-2" style="background-color: #343a40">
+    <p style="color:rgb(255, 217, 0)">Desarrollado por Kyukeisho Copyright<i class="fa fa-copyright"
+        aria-hidden="true"></i> 2019</p>
+  </div>
+    
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+    integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+    integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+    crossorigin="anonymous"></script>
+</body>
+</html>

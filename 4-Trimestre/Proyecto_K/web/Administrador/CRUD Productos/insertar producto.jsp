@@ -34,8 +34,6 @@
 <br>
 <br>
 <br>
-<br>
-<br>
 <center>
 <h1 ><strong>Ingresa el producto</strong></h1>
 <div class="card" style="background-color: rgb(96, 104, 99, 0.26); width: 26rem;">
@@ -47,10 +45,7 @@
 <p align="left">ID:</p>
 </div>
 <div class="col-xl-9">
-        	<div class="input-group" >
-                <span class="input-group-addon"></span>
-                <input type="text" style="background-color: rgb(96, 104, 99, 0.26)"  class="form-control" placeholder="ingrese id" name="id" required="required">	
-          </div>
+                <input type="text"   class="p-2 mb-2 bg-dark text-white form-control" placeholder="ingrese id"  name="id" required="required">	
 </div>
 </div>
 <div class="row">
@@ -60,7 +55,7 @@
 <div class="col-xl-9">
         	<div class="input-group" >
                 <span class="input-group-addon"></span>
-                <input type="text"   class="form-control" placeholder="ingrese nombre" name="nombre" required="required">	
+                <input type="text"  class="p-2 mb-2 bg-dark text-white form-control" placeholder="ingrese nombre" name="nombre" required="required">	
           </div>
 </div>
 </div>
@@ -71,7 +66,7 @@
 <div class="col-xl-9">
         	<div class="input-group" >
                 <span class="input-group-addon"></span>
-                <input type="text"   class="form-control" placeholder="ingrese cantidad" name="cantidad" required="required">	
+                <input type="text"   class="p-2 mb-2 bg-dark text-white form-control" placeholder="ingrese cantidad" name="cantidad" required="required">	
           </div>
 </div>
 </div>
@@ -82,7 +77,7 @@
 <div class="col-xl-9">
         	<div class="input-group" >
                 <span class="input-group-addon"></span>
-                <input type="text"   class="form-control" placeholder="ingrese precio" name="precio" required="required">	
+                <input type="text"  class="p-2 mb-2 bg-dark text-white form-control" placeholder="ingrese precio" name="precio" required="required">	
           </div>
 </div>
 </div>
@@ -91,7 +86,7 @@
 <p align="left">tipo:</p>
 </div>
 <div class="col-xl-9">
-        	<select name="tipo" class="form-control" required>
+        	<select name="tipo" class="p-2 mb-2 bg-dark text-white form-control" required>
                            <option value="0">seleccione tipo de producto</option>
                            <option value="1">Comestibles</option>
                            <option value="2">Videojuegos</option>
@@ -107,7 +102,6 @@
 <div class="d-flex bd-highlight">
   <div class="p-2 flex-fill bd-highlight"><a href="javascript:history.back()"><button type="button" class="btn btn-info btn-block">Cancelar</button></a></div>
   <div class="p-2 flex-fill bd-highlight"><input class="btn btn-info btn-block" type="submit" value="Registrar"></div>
-
 </div>
 
 </form>
