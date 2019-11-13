@@ -6,13 +6,16 @@ public class recuperacion_de_contraseña {
         public int codigo;
         public String var_email;
         public int var_codigo;
+        public String mostrar_email;
     
     public recuperacion_de_contraseña(String para, int c) {
         this.email = para;
         this.codigo = c;
         
     }
-    
+    public void mostrar(){
+    this.mostrar_email=email;
+    }
         public String email(){
         String var_email = this.email;
         return var_email;
@@ -21,4 +24,5 @@ public class recuperacion_de_contraseña {
         int var_codigo = this.codigo;
         return var_codigo;
     }
+        
 }

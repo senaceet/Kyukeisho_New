@@ -2,6 +2,8 @@ package controlador;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Random;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,13 +12,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import modelo.Email;
 import modelo.recuperacion_de_contraseña;
+import modelo.conexion;
 
 @WebServlet(name = "envio_correo", urlPatterns = {"/envio_correo"})
 public class envio_correo extends HttpServlet {
 
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
             
             Email email = new Email();
@@ -25,13 +28,19 @@ public class envio_correo extends HttpServlet {
             String clave = "emisor1379";
             String para = request.getParameter("correo");
             String asunto = "Codigo de recuperacion de contraseña" ;
-            int c = (int)(Math.random()*10000+100);
+            int cod = (int)(Math.random()*10000+1000);
             
-            String mensaje = "Este es tu codigo de recuperacion: "+c;
+            String mensaje = "Este es tu codigo de recuperacion: "+cod;
             
-            recuperacion_de_contraseña r = new recuperacion_de_contraseña(para,c);
+            recuperacion_de_contraseña r = new recuperacion_de_contraseña(para,cod);
             
             boolean resultado = email.enviarEmail(de, clave, para, mensaje, asunto);
+            
+            conexion c = new conexion();
+            Connection conn = c.getConnection();
+            
+            String sql= 
+            if(para==);
             response.sendRedirect("Cliente/Recuperar contrasena/Recuperar_contrasena_2.html");
     }
 

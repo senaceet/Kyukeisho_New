@@ -594,7 +594,7 @@
                 conn = DriverManager.getConnection("jdbc:mysql://localhost:3310/Kyukeisho?user=root&password=");
             
             sta = conn.createStatement();
-            rs = sta.executeQuery("select * from productos ORDER BY id_producto asc limit 25");
+            rs = sta.executeQuery("select id_producto,nombre_producto,cantidad_producto,precio_unitario_producto,nombre_tipo_producto from productos  ORDER BY id_producto asc limit 25");
             
             while(rs.next()){
                 %>

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controlador;
 
 import java.io.IOException;
@@ -14,43 +9,37 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import modelo.recuperacion_de_contraseña;
 
-/**
- *
- * @author VLAKOX
- */
-@WebServlet(name = "validar_codigo", urlPatterns = {"/validar_codigo"})
+
+
 public class validar_codigo extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    recuperacion_de_contraseña rec = new recuperacion_de_contraseña();
+    String e = rec.email;
+
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    throws ServletException, IOException {
+        
         response.setContentType("text/html;charset=UTF-8");
         
         String cod = request.getParameter("codigo_i");
         
-        String email = request.getParameter("email");
+        
         
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet validar_codigo</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>" + email + "</h1>");
+            out.println("<h1>" + e + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
+        
     }
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
