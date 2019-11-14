@@ -2,7 +2,7 @@
 
 <head>
     <link rel="shortcut icon" href="https://fotos.subefotos.com/9f07d19705d6bde4351c7e17c87c4d7fo.png">
-    <title>AdministraciÃ³n</title>
+    <title>Administración</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
         integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -163,12 +163,12 @@
                       <li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"></i><span class="badge">10</span></a></li>
                       <li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge">100</span></a></li>
                       <li class="nav-item dropdown">
-                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://miro.medium.com/max/1024/1*Age2mlAUaGBPNWcLvQPEUA.jpeg" class="avatar" alt="Avatar"> Andres Olaya <b class="caret"></b></a>
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://miro.medium.com/max/1024/1*Age2mlAUaGBPNWcLvQPEUA.jpeg" class="avatar" alt="Avatar"><b class="caret"></b></a>
                         <ul class="dropdown-menu" style="background-color: #343a40">
-                          <li><a href="Perfil_Administrador.html" style="color: #ffffff" class="dropdown-item"><i class="fa fa-user-o"></i> Perfil</a></li>
+                          <li><a href="Perfil_Administrador.html" style="color: #ffffff" class="dropdown-item"><i class="fa fa-user-o"></i>Perfil</a></li>
                           <li><a href="" style="color: #ffffff" class="dropdown-item"><i class="fa fa-user-o"></i> Ayuda</a></li>
                           <li class="divider dropdown-divider"></li>
-                          <li><a href="../index.html" style="color: #ffffff" class="dropdown-item"><i class="material-icons"></i> Cerrar SesiÃ³n</a></li>
+                          <li><a href="../index.html" style="color: #ffffff" class="dropdown-item"><i class="material-icons"></i> Cerrar Sesión</a></li>
                       </ul>
                       </li>
                     </ul>

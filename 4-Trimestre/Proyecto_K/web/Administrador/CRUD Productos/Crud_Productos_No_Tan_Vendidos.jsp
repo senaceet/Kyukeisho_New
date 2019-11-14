@@ -169,7 +169,7 @@
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
               <ul class="nav navbar-nav">
-                <li class="nav-item active"><a href="../Administrador_inicio.html" class="nav-link">Página de administración</a></li>
+                <li class="nav-item active"><a href="../Inicio_Administrador.jsp" class="nav-link">Página de administración</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Ayuda</a></li>
                 </li>
               </ul>
@@ -581,6 +581,7 @@
                      </th>
                 <th  colspan="5">Id producto</th><th colspan="3">Nombre producto</th>
                 <th colspan="2">Cantidad del producto</th><th colspan="2">Precio_unitario</th>
+                <th colspan="2">Tipo de producto</th>
                 <th colspan="2">Editar</th><th colspan="2">Eliminar</th>
             </tr>
             </thead>
@@ -594,7 +595,10 @@
                 conn = DriverManager.getConnection("jdbc:mysql://localhost:3310/Kyukeisho?user=root&password=");
             
             sta = conn.createStatement();
-            rs = sta.executeQuery("select * from productos where cantidad_producto >=25 ORDER BY id_producto asc limit 25");
+            rs = sta.executeQuery("select id_producto,nombre_producto,cantidad_producto,precio_unitario_producto,nombre_tipo_producto "
+                    +" from productos"
+                    +" inner join tipo_producto"
+                    +" on productos.id_tipo_producto = tipo_producto.id_tipo_producto where cantidad_producto >=25 ORDER BY id_producto asc limit 25");
             
             while(rs.next()){
                 %>
@@ -609,6 +613,7 @@
                     <th colspan="3" style="text-align:left"> <%=rs.getString(2)%></th>
                     <th colspan="2"><%=rs.getString(3)%></th>
                     <th colspan="2"><%=rs.getString(4)%></th>
+                    <th colspan="2"><%=rs.getString(5)%></th>
                     <th colspan="2">
                         <a href="editar producto.jsp?cod=<%=rs.getString(1)%>">
                         <img src="../../IMG/editar.png" width="25"/>
@@ -643,12 +648,11 @@
                          <tr bgcolor="#088A68">
                              <th align="center" colspan="5">
                         <div class="clearfix">
-                    <div class="hint-text">Mostrando 5 de 25 entradas</div>
+                    <div class="hint-text">Mostrando 5 de 5 entradas</div>
                     <ul class="pagination">
-                        <li class="page-item disabled"><a href="#">Anterior</a></li>
-                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
                         <li class="page-item"><a href="#" class="page-link">2</a></li>
-                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">3</a></li>
                         <li class="page-item"><a href="#" class="page-link">4</a></li>
                         <li class="page-item"><a href="#" class="page-link">5</a></li>
                         <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>

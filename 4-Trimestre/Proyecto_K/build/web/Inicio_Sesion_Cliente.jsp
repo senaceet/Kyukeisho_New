@@ -14,7 +14,7 @@
       <link rel="stylesheet" type="text/css" href="style.css">
     
       <title>
-        Kuykeisho_Login_cliente
+        Kuykeisho Cliente
       </title>
     
       <style> 
@@ -45,7 +45,7 @@
                   <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false" style="color: #ffffff">
-                        Â¿Como Registrarme?
+                        ¿Como Registrarme?
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:13rem; background-color: #343a40">
                         <a class="dropdown-item" href="../Administrador/Inicio Sesion Administrador.html" style="color: #ffffff">Administrador</a>
@@ -79,40 +79,36 @@
     <center>
             <div class="login-form">
               <h4 class="text-center">
-                <p style="color:rgb(255, 255, 255)" ;>Inicio SesiÃ³n</p>
+                <p style="color:rgb(255, 255, 255)" ;>Inicio Sesión</p>
               </h4>
               <hr>
-              <form action="Cliente.html" method="post">
-                <div class="form-group">
-                   
-                    <input id="email-iniciar" type="email" class="form-control" placeholder="Correo electrÃ³nico"
+              <form action="Controlador" method="post">
+                <div class="form-group">                   
+                    <input class="form-control" type="email" name="txtcorreo"  placeholder="Correo Electrónico"
                         style="width: 18rem" required="required">
                 </div>
                 <div class="form-group">
-                    <input id="contra-iniciar" type="password" class="form-control" placeholder="ContraseÃ±a"
+                    <input class="form-control" type="password" name="txtcontraseña"  placeholder="Contraseña"
                         style="width: 18rem" required="required">
                 </div>
                 <div class="form-group">
                 <div align="center">
-                        <button class="btn btn-warning btn-block my-4 my-sm-6" type="submit"
-                            style="width: 18rem; background-color:rgb(255, 217, 0); ">
-                            <font size=5>Iniciar sesiÃ³n</font>
-                        </button>
-                </div>
+                    <input class="btn btn-danger btn-block" type="submit" name="accion" value="Ingresar"> 
+                </div>                    
                 </div>
                 <div class="clearfix ">            
-                  <p style="color:rgb(255, 255, 255)" ;><label class="pull-left checkbox-inline"><input type="checkbox"> Recordar Cuenta</p>
+                  <p style="color:rgb(255, 255, 255)";><label class="pull-left checkbox-inline"><input type="checkbox"> Recordar Cuenta</p>
                 </label>
               </div>
               <div class="clearfix text-left">    
                 <a href="Recuperar contrasena/Recuperar_contrasena_1.html">
-                <h9 style="color:rgb(255, 255, 255)">Â¿Olvidaste tu contraseÃ±a?</h9>
+                <h9 style="color:rgb(255, 255, 255)">¿Olvidaste tu contraseña?</h9>
                 </a>        
               </div>
               <br>  
               <br>
               <center>
-              <h3 style="color: rgb(255, 255, 255)">Â¿No tienes cuenta?</h3>
+              <h3 style="color: rgb(255, 255, 255)">¿No tienes cuenta?</h3>
               <a href="Crear_Cuenta_Cliente.html">
                   <button type="button" class="btn btn-outline-warning">Crear cuenta</button>
                 </a>
@@ -129,7 +125,7 @@
                 <div class="login-form">
                   <form action="/examples/actions/confirmation.php" method="post">
                     <h2 class="text-center">
-                      <p style="color:rgb(255, 255, 255)" ;>Iniciar SesiÃ³n</p>
+                      <p style="color:rgb(255, 255, 255)" ;>Iniciar Sesión</p>
                     </h2>
                     <div class="text-center social-btn">
                       <a href="https://es-la.facebook.com/" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i>

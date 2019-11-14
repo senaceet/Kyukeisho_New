@@ -257,9 +257,9 @@ public final class Crud_005fProductos_005fNo_005fTan_005fVendidos_jsp extends or
       out.write("                        Juegos\r\n");
       out.write("                      </button>\r\n");
       out.write("                      <div class=\"dropdown-menu\">\r\n");
-      out.write("                        <a class=\"dropdown-item\" href=\"Juegos/Juegos_Mas_Pedidos.html\">Juegos Mas Pedidos</a>\r\n");
-      out.write("                        <a class=\"dropdown-item\" href=\"Juegos/Crud_Juegos_No_Tan_Pedidos.html\">Juegos No Tan Pedidos</a>\r\n");
-      out.write("                        <a class=\"dropdown-item\" href=\"Juegos/Todos_Juegos_1.html\">Todos los juegos</a>\r\n");
+      out.write("                        <a class=\"dropdown-item\" href=\"Juegos/Juegos_Mas_Pedidos.jsp\">Juegos Mas Pedidos</a>\r\n");
+      out.write("                        <a class=\"dropdown-item\" href=\"Juegos/Crud_Juegos_No_Tan_Pedidos.jsp\">Juegos No Tan Pedidos</a>\r\n");
+      out.write("                        <a class=\"dropdown-item\" href=\"Juegos/Todos_Juegos_1.jsp\">Todos los juegos</a>\r\n");
       out.write("                      </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("                    <div class=\"btn-group\">\r\n");
@@ -267,9 +267,9 @@ public final class Crud_005fProductos_005fNo_005fTan_005fVendidos_jsp extends or
       out.write("                            Consolas\r\n");
       out.write("                          </button>\r\n");
       out.write("                          <div class=\"dropdown-menu\">\r\n");
-      out.write("                            <a class=\"dropdown-item\" href=\"Consolas/Consolas.html\">Consolas</a>\r\n");
-      out.write("                            <a class=\"dropdown-item\" href=\"Consolas/Crud_Consolas_Mas_Pedidas.html\">Consolas Mas Pedidas</a>\r\n");
-      out.write("                            <a class=\"dropdown-item\" href=\"Consolas/Crud_Consolas_Poco_Pedidas.html\">Consolas No Tan Pedidas</a>\r\n");
+      out.write("                            <a class=\"dropdown-item\" href=\"Consolas/Consolas.jsp\">Consolas</a>\r\n");
+      out.write("                            <a class=\"dropdown-item\" href=\"Consolas/Crud_Consolas_Mas_Pedidas.jsp\">Consolas Mas Pedidas</a>\r\n");
+      out.write("                            <a class=\"dropdown-item\" href=\"Consolas/Crud_Consolas_Poco_Pedidas.jsp\">Consolas No Tan Pedidas</a>\r\n");
       out.write("                        </div>\r\n");
       out.write("                      </div>\r\n");
       out.write("                        <div class=\"btn-group\">\r\n");
@@ -277,13 +277,13 @@ public final class Crud_005fProductos_005fNo_005fTan_005fVendidos_jsp extends or
       out.write("                                Citas\r\n");
       out.write("                              </button>\r\n");
       out.write("                              <div class=\"dropdown-menu\">\r\n");
-      out.write("                                <a class=\"dropdown-item\" href=\"../CRUD Citas/Crud_Citas_Activas.html\">Citas Activas</a>\r\n");
-      out.write("                                <a class=\"dropdown-item\" href=\"../CRUD Citas/Crud_Citas_Inactivas.html\">Citas Inactivas</a>\r\n");
+      out.write("                                <a class=\"dropdown-item\" href=\"../CRUD Citas/Crud_Citas_Activas.jsp\">Citas Activas</a>\r\n");
+      out.write("                                <a class=\"dropdown-item\" href=\"../CRUD Citas/Crud_Citas_Inactivas.jsp\">Citas Inactivas</a>\r\n");
       out.write("                              </div>\r\n");
       out.write("                            </div>\r\n");
-      out.write("                                  <a href=\"../CRUD Clientes/Clientes_Registrados.html\"><button type=\"button\" class=\"btn btn-outline-info\">Clientes Registrados</button></a>\r\n");
+      out.write("                                  <a href=\"../CRUD Clientes/Clientes_Registrados.jsp\"><button type=\"button\" class=\"btn btn-outline-info\">Clientes Registrados</button></a>\r\n");
       out.write("\r\n");
-      out.write("                                  <a href=\"../CRUD Categorias/Categorias_1.html\"><button type=\"button\" class=\"btn btn-outline-info\">Categorias</button></a>\r\n");
+      out.write("                                  <a href=\"../CRUD Categorias/Categorias_1.jsp\"><button type=\"button\" class=\"btn btn-outline-info\">Categorias</button></a>\r\n");
       out.write("                      </div>\r\n");
       out.write("    </center>\r\n");
       out.write("    <br>\r\n");
@@ -627,9 +627,10 @@ public final class Crud_005fProductos_005fNo_005fTan_005fVendidos_jsp extends or
       out.write("                            <label for=\"selectAll\"></label>\r\n");
       out.write("                        </span>\r\n");
       out.write("                     </th>\r\n");
-      out.write("                <th  colspan=\"5\">id producto</th><th colspan=\"3\">Nombre</th>\r\n");
-      out.write("                <th colspan=\"2\">cantidad</th><th colspan=\"2\">precio_u</th>\r\n");
-      out.write("                <th colspan=\"2\">editar</th><th colspan=\"2\">eliminar</th>\r\n");
+      out.write("                <th  colspan=\"5\">Id producto</th><th colspan=\"3\">Nombre producto</th>\r\n");
+      out.write("                <th colspan=\"2\">Cantidad del producto</th><th colspan=\"2\">Precio_unitario</th>\r\n");
+      out.write("                <th colspan=\"2\">Tipo de producto</th>\r\n");
+      out.write("                <th colspan=\"2\">Editar</th><th colspan=\"2\">Eliminar</th>\r\n");
       out.write("            </tr>\r\n");
       out.write("            </thead>\r\n");
       out.write("            ");
@@ -643,7 +644,10 @@ public final class Crud_005fProductos_005fNo_005fTan_005fVendidos_jsp extends or
                 conn = DriverManager.getConnection("jdbc:mysql://localhost:3310/Kyukeisho?user=root&password=");
             
             sta = conn.createStatement();
-            rs = sta.executeQuery("select * from productos ORDER BY id_producto asc limit 25 where cantidad_producto >25");
+            rs = sta.executeQuery("select id_producto,nombre_producto,cantidad_producto,precio_unitario_producto,nombre_tipo_producto "
+                    +" from productos"
+                    +" inner join tipo_producto"
+                    +" on productos.id_tipo_producto = tipo_producto.id_tipo_producto where cantidad_producto >=25 ORDER BY id_producto asc limit 25");
             
             while(rs.next()){
                 
@@ -666,6 +670,9 @@ public final class Crud_005fProductos_005fNo_005fTan_005fVendidos_jsp extends or
       out.write("</th>\r\n");
       out.write("                    <th colspan=\"2\">");
       out.print(rs.getString(4));
+      out.write("</th>\r\n");
+      out.write("                    <th colspan=\"2\">");
+      out.print(rs.getString(5));
       out.write("</th>\r\n");
       out.write("                    <th colspan=\"2\">\r\n");
       out.write("                        <a href=\"editar producto.jsp?cod=");

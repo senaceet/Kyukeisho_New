@@ -169,7 +169,7 @@
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
               <ul class="nav navbar-nav">
-                <li class="nav-item active"><a href="../Administrador_inicio.html" class="nav-link">Página de administración</a></li>
+                <li class="nav-item active"><a href="../Inicio_Administrador.jsp" class="nav-link">Página de administración</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Ayuda</a></li>
                 </li>
               </ul>
@@ -543,7 +543,9 @@
         });
     </script>
     </head>
-   
+    
+<c:remove var="message" scope="session" /> 
+
          <center>
              <div class="container" >
                  <div class="row" >
@@ -648,12 +650,11 @@
                          <tr bgcolor="#088A68">
                              <th align="center" colspan="5">
                         <div class="clearfix">
-                    <div class="hint-text">Mostrando 5 de 25 entradas</div>
+                    <div class="hint-text">Mostrando 5 de 5 entradas</div>
                     <ul class="pagination">
-                        <li class="page-item disabled"><a href="#">Anterior</a></li>
-                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
                         <li class="page-item"><a href="#" class="page-link">2</a></li>
-                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">3</a></li>
                         <li class="page-item"><a href="#" class="page-link">4</a></li>
                         <li class="page-item"><a href="#" class="page-link">5</a></li>
                         <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>

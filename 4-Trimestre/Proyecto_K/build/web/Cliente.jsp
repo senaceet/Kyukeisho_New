@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>KYUKEISHO_Cliente</title>
+  <title>Kyukeisho_Cliente</title>
   <link rel="icon" type="image/png" href="https://fotos.subefotos.com/e296fe07575583952d4e106565eb2181o.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -180,7 +180,7 @@
 
 <body style="background-color: rgb(0, 0, 0)">
   <font style="color:rgb(255, 145, 0)">
-  <div class="header fixed-top">
+ <div class="header fixed-top">
     <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
         <a href="../index.html">
           <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
@@ -204,21 +204,21 @@
             <li class="nav-item dropdown mr-2">
               <a class="nav-link dropdown-toggle navbar-DARK" href="#" id="navbarDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgb(255, 217, 0)">
-                <i><img height="50" src="https://miro.medium.com/max/1024/1*3CVNY3sWvZrS1NckQ9kIqQ.jpeg" alt="" ></i>
-                Ana Maria Rojas
+                <i><img height="50" src="https://miro.medium.com/max/1024/1*3CVNY3sWvZrS1NckQ9kIqQ.jpeg" alt="" ></i>               
+                ${correo}
               </a>
                 <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="width:15rem; background-color: #343a40">
                  <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">Mis reservaciones</a>
                  <a class="dropdown-item" href="Perfil_Cliente.html" style="color:rgb(255, 217, 0)">Perfil</a>
-                 <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">Â¿Necesitas ayuda?</a>
+                 <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">¿Necesitas ayuda?</a>
                  <hr>
-                 <a class="dropdown-item" href="\index.html" style="color:rgb(255, 217, 0)">Cerrar SesiÃ³n</a>
+                 <a class="dropdown-item" href="Controlador?accion=Salir" style="color:rgb(255, 217, 0)">Cerrar Sesión</a>
                 </div>
             </li>
           </ul>
       </div>
     </nav>
-    
+
     <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #fffb00">
       <div class="col-xl-1 text-center" style="background-color: rgb(255, 251, 0)">
       <button class="navbar-toggler" style="background-color: rgb(255, 251, 0)" type="button" data-toggle="collapse"
@@ -303,7 +303,7 @@
               <br>
               <center>
               <a href="https://www.enelsofa.com/sofa2019/">
-              <button type="button" class="btn btn-warning">VER</button>â€‹
+              <button type="button" class="btn btn-warning">VER</button>?
               </a>
             </center> 
             </div>
@@ -317,7 +317,7 @@
               <br>
               <center>
               <a href="/Productos_1.html">             
-              <button type="button" class="btn btn-warning">VER</button>â€‹
+              <button type="button" class="btn btn-warning">VER</button>?
               </a>
             </center> 
             </div>
@@ -366,7 +366,7 @@
             <button class="btn btn-success btn-block"  type="button" data-toggle="collapse" data-target="#multiCollapse_xbox_one" aria-expanded="false" aria-controls="multiCollapseExample2"><h1>Categorias</h1></button>
             <div class="collapse multi-collapse" style="width: 35rem;"  id="multiCollapse_xbox_one">
               <div class="card card-body text-left" style="background-color: rgba(102, 255, 0, 0.336)">
-                <a href="#" style="color: white">AcciÃ³n </a>
+                <a href="#" style="color: white">Acción </a>
                 <a href="#" style="color: white">Lucha</a>
                 <a href="#" style="color: white">Beat 'em up</a>
                 <a href="#" style="color: white"> Arcade </a>
@@ -378,17 +378,17 @@
                 <a href="#" style="color: white"> Estrategia</a>
                 <a href="#" style="color: white">Estrategia en tiempo real</a>
                 <a href="#" style="color: white">Estrategia por turnos</a>
-                <a href="#" style="color: white">SimulaciÃ³n</a>
-                <a href="#" style="color: white">SimulaciÃ³n de vehÃ­culos</a>
-                <a href="#" style="color: white">SimulaciÃ³n de construcciÃ³n</a>
-                <a href="#" style="color: white">SimulaciÃ³n de vida</a>
-                <a href="#" style="color: white">SimulaciÃ³n de combate</a>
+                <a href="#" style="color: white">Simulación</a>
+                <a href="#" style="color: white">Simulación de vehículos</a>
+                <a href="#" style="color: white">Simulación de construcción</a>
+                <a href="#" style="color: white">Simulación de vida</a>
+                <a href="#" style="color: white">Simulación de combate</a>
                 <a href="#" style="color: white">Deporte</a>
                 <a href="#" style="color: white">Carreras</a>
                 <a href="#" style="color: white">Aventura</a>
                 <a href="#" style="color: white">Aventura conversacional</a>
-                <a href="#" style="color: white">Aventura grÃ¡fica</a>
-                <a href="#" style="color: white">AcciÃ³n-aventura</a>
+                <a href="#" style="color: white">Aventura gráfica</a>
+                <a href="#" style="color: white">Acción-aventura</a>
                 <a href="#" style="color: white">Survival horror</a>
                 <a href="#" style="color: white">Sigilo</a>
                 <a href="#" style="color: white">Battle Royale</a>
@@ -397,7 +397,7 @@
                 <a href="#" style="color: white">Musical</a>
                 <a href="#" style="color: white">Agilidad mental / Puzzle</a>
                 <a href="#" style="color: white">Party games</a>
-                <a href="#" style="color: white">EducaciÃ³n</a>
+                <a href="#" style="color: white">Educación</a>
                 <a href="#" style="color: white">Tipos de videojuegos</a>
               </div>
             </div>
@@ -420,7 +420,7 @@
             <button class="btn btn-primary btn-block" type="button" data-toggle="collapse" data-target="#multiCollapse_ps4" aria-expanded="false" aria-controls="multiCollapseExample2"><h1>Categorias</h1></button>
             <div class="collapse multi-collapse" style="width: 35rem;"  id="multiCollapse_ps4">
               <div class="card card-body text-left" style="background-color: rgba(0, 58, 247, 0.336)">
-                <a href="#" style="color: white">AcciÃ³n </a>
+                <a href="#" style="color: white">Acción </a>
                 <a href="#" style="color: white">Lucha</a>
                 <a href="#" style="color: white">Beat 'em up</a>
                 <a href="#" style="color: white"> Arcade </a>
@@ -432,17 +432,17 @@
                 <a href="#" style="color: white"> Estrategia</a>
                 <a href="#" style="color: white">Estrategia en tiempo real</a>
                 <a href="#" style="color: white">Estrategia por turnos</a>
-                <a href="#" style="color: white">SimulaciÃ³n</a>
-                <a href="#" style="color: white">SimulaciÃ³n de vehÃ­culos</a>
-                <a href="#" style="color: white">SimulaciÃ³n de construcciÃ³n</a>
-                <a href="#" style="color: white">SimulaciÃ³n de vida</a>
-                <a href="#" style="color: white">SimulaciÃ³n de combate</a>
+                <a href="#" style="color: white">Simulación</a>
+                <a href="#" style="color: white">Simulación de vehículos</a>
+                <a href="#" style="color: white">Simulación de construcción</a>
+                <a href="#" style="color: white">Simulación de vida</a>
+                <a href="#" style="color: white">Simulación de combate</a>
                 <a href="#" style="color: white">Deporte</a>
                 <a href="#" style="color: white">Carreras</a>
                 <a href="#" style="color: white">Aventura</a>
                 <a href="#" style="color: white">Aventura conversacional</a>
-                <a href="#" style="color: white">Aventura grÃ¡fica</a>
-                <a href="#" style="color: white">AcciÃ³n-aventura</a>
+                <a href="#" style="color: white">Aventura gráfica</a>
+                <a href="#" style="color: white">Acción-aventura</a>
                 <a href="#" style="color: white">Survival horror</a>
                 <a href="#" style="color: white">Sigilo</a>
                 <a href="#" style="color: white">Battle Royale</a>
@@ -451,7 +451,7 @@
                 <a href="#" style="color: white">Musical</a>
                 <a href="#" style="color: white">Agilidad mental / Puzzle</a>
                 <a href="#" style="color: white">Party games</a>
-                <a href="#" style="color: white">EducaciÃ³n</a>
+                <a href="#" style="color: white">Educación</a>
                 <a href="#" style="color: white">Tipos de videojuegos</a>
               </div>
             </div>
@@ -474,7 +474,7 @@
               <button class="btn btn-secondary btn-block"  type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2"><h1>Categorias</h1></button>
               <div class="collapse multi-collapse" style="width: 35rem;"  id="multiCollapseExample2">
                 <div class="card card-body text-left" style="background-color: rgba(119, 119, 119, 0.336)">
-                  <a href="#" style="color: white">AcciÃ³n </a>
+                  <a href="#" style="color: white">Acción </a>
                   <a href="#" style="color: white">Lucha</a>
                   <a href="#" style="color: white">Beat 'em up</a>
                   <a href="#" style="color: white"> Arcade </a>
@@ -486,17 +486,17 @@
                   <a href="#" style="color: white"> Estrategia</a>
                   <a href="#" style="color: white">Estrategia en tiempo real</a>
                   <a href="#" style="color: white">Estrategia por turnos</a>
-                  <a href="#" style="color: white">SimulaciÃ³n</a>
-                  <a href="#" style="color: white">SimulaciÃ³n de vehÃ­culos</a>
-                  <a href="#" style="color: white">SimulaciÃ³n de construcciÃ³n</a>
-                  <a href="#" style="color: white">SimulaciÃ³n de vida</a>
-                  <a href="#" style="color: white">SimulaciÃ³n de combate</a>
+                  <a href="#" style="color: white">Simulación</a>
+                  <a href="#" style="color: white">Simulación de vehículos</a>
+                  <a href="#" style="color: white">Simulación de construcción</a>
+                  <a href="#" style="color: white">Simulación de vida</a>
+                  <a href="#" style="color: white">Simulación de combate</a>
                   <a href="#" style="color: white">Deporte</a>
                   <a href="#" style="color: white">Carreras</a>
                   <a href="#" style="color: white">Aventura</a>
                   <a href="#" style="color: white">Aventura conversacional</a>
-                  <a href="#" style="color: white">Aventura grÃ¡fica</a>
-                  <a href="#" style="color: white">AcciÃ³n-aventura</a>
+                  <a href="#" style="color: white">Aventura gráfica</a>
+                  <a href="#" style="color: white">Acción-aventura</a>
                   <a href="#" style="color: white">Survival horror</a>
                   <a href="#" style="color: white">Sigilo</a>
                   <a href="#" style="color: white">Battle Royale</a>
@@ -505,7 +505,7 @@
                   <a href="#" style="color: white">Musical</a>
                   <a href="#" style="color: white">Agilidad mental / Puzzle</a>
                   <a href="#" style="color: white">Party games</a>
-                  <a href="#" style="color: white">EducaciÃ³n</a>
+                  <a href="#" style="color: white">Educación</a>
                   <a href="#" style="color: white">Tipos de videojuegos</a>
                 </div>
               </div>
@@ -551,8 +551,8 @@
                                                <div class="dropdown-menu bg-warning">
                                                     <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#"><h6 align="left">Mantas</h6></a>
                                                     <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#"><h6 align="left">Toalllas</h6></a>
-                                                    <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#"><h6 align="left">DecoraciÃ³n</h6></a>
-                                                    <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#"><h6 align="left">Edredones y sÃ¡banas</h6></a>
+                                                    <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#"><h6 align="left">Decoración</h6></a>
+                                                    <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#"><h6 align="left">Edredones y sábanas</h6></a>
                                                </div>
                                             </div>
                                         </span>
@@ -956,7 +956,7 @@
                       <td>Mouse Gamer Logitech G Pro Gaming</td>
                     </tr>
                     <tr>
-                      <th>DescripciÃ³n:</th>
+                      <th>Descripción:</th>
                       <td>...</td>
                     </tr>
                     <tr>
@@ -964,7 +964,7 @@
                       <td>...</td>
                     </tr>
                     <tr>
-                      <th>ValoraciÃ³n del Producto</th>
+                      <th>Valoración del Producto</th>
                       <td>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
@@ -1012,7 +1012,7 @@
                       <td>Audifonos negros</td>
                     </tr>
                     <tr>
-                      <th>DescripciÃ³n:</th>
+                      <th>Descripción:</th>
                       <td>...</td>
                     </tr>
                     <tr>
@@ -1020,7 +1020,7 @@
                       <td>...</td>
                     </tr>
                     <tr>
-                      <th>ValoraciÃ³n del Producto</th>
+                      <th>Valoración del Producto</th>
                       <td>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
@@ -1067,7 +1067,7 @@
                       <td>Teclado Gamer Weibo Wb539</td>
                     </tr>
                     <tr>
-                      <th>DescripciÃ³n:</th>
+                      <th>Descripción:</th>
                       <td>...</td>
                     </tr>
                     <tr>
@@ -1075,7 +1075,7 @@
                       <td>...</td>
                     </tr>
                     <tr>
-                      <th>ValoraciÃ³n del Producto</th>
+                      <th>Valoración del Producto</th>
                       <td>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
@@ -1122,7 +1122,7 @@
                       <td>Altavoces gaming</td>
                     </tr>
                     <tr>
-                      <th>DescripciÃ³n:</th>
+                      <th>Descripción:</th>
                       <td>...</td>
                     </tr>
                     <tr>
@@ -1130,7 +1130,7 @@
                       <td>...</td>
                     </tr>
                     <tr>
-                      <th>ValoraciÃ³n del Producto</th>
+                      <th>Valoración del Producto</th>
                       <td>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
@@ -1179,7 +1179,7 @@
                       <td>Xbox One S</td>
                     </tr>
                     <tr>
-                      <th>DescripciÃ³n:</th>
+                      <th>Descripción:</th>
                       <td>...</td>
                     </tr>
                     <tr>
@@ -1187,7 +1187,7 @@
                       <td>...</td>
                     </tr>
                     <tr>
-                      <th>ValoraciÃ³n del Producto</th>
+                      <th>Valoración del Producto</th>
                       <td>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
@@ -1234,7 +1234,7 @@
                       <td>xbox 360</td>
                     </tr>
                     <tr>
-                      <th>DescripciÃ³n:</th>
+                      <th>Descripción:</th>
                       <td>...</td>
                     </tr>
                     <tr>
@@ -1242,7 +1242,7 @@
                       <td>...</td>
                     </tr>
                     <tr>
-                      <th>ValoraciÃ³n del Producto</th>
+                      <th>Valoración del Producto</th>
                       <td>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
@@ -1289,7 +1289,7 @@
                       <td>PS4</td>
                     </tr>
                     <tr>
-                      <th>DescripciÃ³n:</th>
+                      <th>Descripción:</th>
                       <td>...</td>
                     </tr>
                     <tr>
@@ -1297,7 +1297,7 @@
                       <td>...</td>
                     </tr>
                     <tr>
-                      <th>ValoraciÃ³n del Producto</th>
+                      <th>Valoración del Producto</th>
                       <td>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
@@ -1344,7 +1344,7 @@
                       <td>PS3</td>
                     </tr>
                     <tr>
-                      <th>DescripciÃ³n:</th>
+                      <th>Descripción:</th>
                       <td>...</td>
                     </tr>
                     <tr>
@@ -1352,7 +1352,7 @@
                       <td>...</td>
                     </tr>
                     <tr>
-                      <th>ValoraciÃ³n del Producto</th>
+                      <th>Valoración del Producto</th>
                       <td>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
@@ -1400,7 +1400,7 @@
                       <td>Auriculares oscuros</td>
                     </tr>
                     <tr>
-                      <th>DescripciÃ³n:</th>
+                      <th>Descripción:</th>
                       <td>...</td>
                     </tr>
                     <tr>
@@ -1408,7 +1408,7 @@
                       <td>...</td>
                     </tr>
                     <tr>
-                      <th>ValoraciÃ³n del Producto</th>
+                      <th>Valoración del Producto</th>
                       <td>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
@@ -1454,7 +1454,7 @@
                       <td>Memoria USB Samsung</td>
                     </tr>
                     <tr>
-                      <th>DescripciÃ³n:</th>
+                      <th>Descripción:</th>
                       <td>...</td>
                     </tr>
                     <tr>
@@ -1462,7 +1462,7 @@
                       <td>...</td>
                     </tr>
                     <tr>
-                      <th>ValoraciÃ³n del Producto</th>
+                      <th>Valoración del Producto</th>
                       <td>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
@@ -1510,7 +1510,7 @@
                       <td>Vidrios Protectores</td>
                     </tr>
                     <tr>
-                      <th>DescripciÃ³n:</th>
+                      <th>Descripción:</th>
                       <td>...</td>
                     </tr>
                     <tr>
@@ -1518,7 +1518,7 @@
                       <td>...</td>
                     </tr>
                     <tr>
-                      <th>ValoraciÃ³n del Producto</th>
+                      <th>Valoración del Producto</th>
                       <td>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
@@ -1564,7 +1564,7 @@
                       <td>Fundas para celular</td>
                     </tr>
                     <tr>
-                      <th>DescripciÃ³n:</th>
+                      <th>Descripción:</th>
                       <td>...</td>
                     </tr>
                     <tr>
@@ -1572,7 +1572,7 @@
                       <td>...</td>
                     </tr>
                     <tr>
-                      <th>ValoraciÃ³n del Producto</th>
+                      <th>Valoración del Producto</th>
                       <td>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
@@ -1605,7 +1605,7 @@
     <footer class="page-footer font-small indigo" style="background-color:rgba(180, 180, 180, 0)">
       <div class="container">
         <div class="row">
-          <h5 style="color:rgb(255, 230, 0)">Â¿Preguntas? Llama al ** *** *** ****</h5>
+          <h5 style="color:rgb(255, 230, 0)">¿Preguntas? Llama al ** *** *** ****</h5>
         </div>
         <div class="row">
         </div>
@@ -1628,7 +1628,7 @@
                 <i class="fa fa-globe" aria-hidden="true"></i> Idioma
               </button>
               <div class="dropdown-menu" style="background-color:rgb(255, 208, 0)" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">EspaÃ±ol</a>
+                <a class="dropdown-item" href="#">Español</a>
                 <a class="dropdown-item" href="#">Ingles</a>
               </div>
             </div>
@@ -1642,7 +1642,7 @@
                 <br>
                 <a href="#!" style="color:rgb(255, 230, 0)">Centro de ayuda</a>
                 <br>
-                <a href="#!" style="color:rgb(255, 230, 0)">InformaciÃ³n corporativa</a>
+                <a href="#!" style="color:rgb(255, 230, 0)">Información corporativa</a>
               </li>
             </ul>
           </div>
@@ -1651,7 +1651,7 @@
             <ul class="list-unstyled">
               <li>
                 <br>
-                <a href="#!"style="color:rgb(255, 230, 0)">TÃ©rminos de uso</a>
+                <a href="#!"style="color:rgb(255, 230, 0)">Términos de uso</a>
               </li>
             </ul>
           </div>

@@ -3,10 +3,12 @@ package controlador;
 import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.System.out;
+import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,6 +24,7 @@ public class eliminar_producto extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
           String cod = request.getParameter("cod");
+
           
           Connection conn = null;
           ResultSet rs = null;
@@ -34,7 +37,10 @@ public class eliminar_producto extends HttpServlet {
             sta = conn.createStatement();
             
             sta.executeUpdate("delete from productos where id_producto = '"+ cod +"'");
-            response.sendRedirect("Administrador/CRUD Productos/Crud_Productos_Vendidos.jsp");
+   String message = "hello";
+   request.getSession().setAttribute("message", message);
+   response.sendRedirect("Administrador/CRUD Productos/Crud_Productos_Vendidos.jsp");
+
             sta.close();
             rs.close();
             conn.close();

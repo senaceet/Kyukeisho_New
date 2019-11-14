@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 
   <title>
-    Kuykeisho_Login_administrador
+    Kuykeisho Administrador
   </title>
 
   <style> 
@@ -44,7 +44,7 @@
               <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false" style="color: #ffffff">
-                    驴Como Registrarme?
+                    緾omo Registrarme?
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:13rem; background-color: #343a40">
                     <a class="dropdown-item" href="../Cliente/Inicio_Sesion_Cliente.html" style="color: #ffffff">Cliente</a>
@@ -80,26 +80,22 @@
 <center>
         <div class="login-form">
           <h4 class="text-center">
-            <p style="color:rgb(255, 255, 255)" ;>Inicio Sesi贸n</p>
+            <p style="color:rgb(255, 255, 255)" ;>Inicio Sesi髇</p>
           </h4>
           <hr>
-          <form action="Administrador_inicio.html" method="post">
-            <div class="form-group">
-               
-                <input id="email-iniciar" type="email" class="form-control" placeholder="Correo electr贸nico"
+          <form action="ControladorAdmin" method="post">
+            <div class="form-group">               
+                <input class="form-control" type="email" name="txtcorreo" placeholder="Correo electr髇ico"
                     style="width: 18rem" required="required">
             </div>
             <div class="form-group">
-                <input id="contra-iniciar" type="password" class="form-control" placeholder="Contrase帽a"
+                <input class="form-control" type="password" name="txtcontrase馻" placeholder="Contrase馻"
                     style="width: 18rem" required="required">
             </div>
             <div class="form-group">
-            <div align="center">
-                    <button class="btn btn-warning btn-block my-4 my-sm-6" type="submit"
-                        style="width: 18rem; background-color:rgb(255, 217, 0) ">
-                        <font size=5>Iniciar sesi贸n</font>
-                    </button>
-            </div>
+                <div align="center">
+                    <input class="btn btn-danger btn-block" type="submit" name="accion" value="Ingresar"> 
+                </div> 
             </div>
 
           <div class="clearfix">            
@@ -116,9 +112,9 @@
         <div class="login-form">
           <div class="col-xl-6">
             <div class="login-form">
-              <form action="Administrador_inicio.html" method="post">
+              <form action="Inicio_Administrador.jsp" method="post">
                 <h2 class="text-center">
-                  <p style="color:rgb(255, 255, 255)" ;>Iniciar Sesi贸n</p>
+                  <p style="color:rgb(255, 255, 255)" ;>Iniciar Sesi髇</p>
                 </h2>
                 <div class="text-center social-btn">
                   <a href="https://es-la.facebook.com/" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i>

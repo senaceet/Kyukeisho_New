@@ -217,7 +217,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("            </div>\r\n");
       out.write("            <div id=\"navbarCollapse\" class=\"collapse navbar-collapse justify-content-start\">\r\n");
       out.write("              <ul class=\"nav navbar-nav\">\r\n");
-      out.write("                <li class=\"nav-item active\"><a href=\"../Administrador_inicio.html\" class=\"nav-link\">Página de administración</a></li>\r\n");
+      out.write("                <li class=\"nav-item active\"><a href=\"../Inicio_Administrador.jsp\" class=\"nav-link\">Página de administración</a></li>\r\n");
       out.write("                <li class=\"nav-item\"><a href=\"#\" class=\"nav-link\">Ayuda</a></li>\r\n");
       out.write("                </li>\r\n");
       out.write("              </ul>\r\n");
@@ -591,7 +591,9 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("        });\r\n");
       out.write("    </script>\r\n");
       out.write("    </head>\r\n");
-      out.write("   \r\n");
+      out.write("    \r\n");
+      out.write("<c:remove var=\"message\" scope=\"session\" /> \r\n");
+      out.write("\r\n");
       out.write("         <center>\r\n");
       out.write("             <div class=\"container\" >\r\n");
       out.write("                 <div class=\"row\" >\r\n");
@@ -629,6 +631,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("                     </th>\r\n");
       out.write("                <th  colspan=\"5\">Id producto</th><th colspan=\"3\">Nombre producto</th>\r\n");
       out.write("                <th colspan=\"2\">Cantidad del producto</th><th colspan=\"2\">Precio_unitario</th>\r\n");
+      out.write("                <th colspan=\"2\">Tipo de producto</th>\r\n");
       out.write("                <th colspan=\"2\">Editar</th><th colspan=\"2\">Eliminar</th>\r\n");
       out.write("            </tr>\r\n");
       out.write("            </thead>\r\n");
@@ -643,7 +646,10 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
                 conn = DriverManager.getConnection("jdbc:mysql://localhost:3310/Kyukeisho?user=root&password=");
             
             sta = conn.createStatement();
-            rs = sta.executeQuery("select * from productos ORDER BY id_producto asc limit 25");
+            rs = sta.executeQuery("select id_producto,nombre_producto,cantidad_producto,precio_unitario_producto,nombre_tipo_producto "
+                    +" from productos"
+                    +" inner join tipo_producto"
+                    +" on productos.id_tipo_producto = tipo_producto.id_tipo_producto ORDER BY id_producto asc limit 25");
             
             while(rs.next()){
                 
@@ -666,6 +672,9 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("</th>\r\n");
       out.write("                    <th colspan=\"2\">");
       out.print(rs.getString(4));
+      out.write("</th>\r\n");
+      out.write("                    <th colspan=\"2\">");
+      out.print(rs.getString(5));
       out.write("</th>\r\n");
       out.write("                    <th colspan=\"2\">\r\n");
       out.write("                        <a href=\"editar producto.jsp?cod=");
@@ -707,12 +716,11 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("                         <tr bgcolor=\"#088A68\">\r\n");
       out.write("                             <th align=\"center\" colspan=\"5\">\r\n");
       out.write("                        <div class=\"clearfix\">\r\n");
-      out.write("                    <div class=\"hint-text\">Mostrando 5 de 25 entradas</div>\r\n");
+      out.write("                    <div class=\"hint-text\">Mostrando 5 de 5 entradas</div>\r\n");
       out.write("                    <ul class=\"pagination\">\r\n");
-      out.write("                        <li class=\"page-item disabled\"><a href=\"#\">Anterior</a></li>\r\n");
-      out.write("                        <li class=\"page-item\"><a href=\"#\" class=\"page-link\">1</a></li>\r\n");
+      out.write("                        <li class=\"page-item active\"><a href=\"#\" class=\"page-link\">1</a></li>\r\n");
       out.write("                        <li class=\"page-item\"><a href=\"#\" class=\"page-link\">2</a></li>\r\n");
-      out.write("                        <li class=\"page-item active\"><a href=\"#\" class=\"page-link\">3</a></li>\r\n");
+      out.write("                        <li class=\"page-item\"><a href=\"#\" class=\"page-link\">3</a></li>\r\n");
       out.write("                        <li class=\"page-item\"><a href=\"#\" class=\"page-link\">4</a></li>\r\n");
       out.write("                        <li class=\"page-item\"><a href=\"#\" class=\"page-link\">5</a></li>\r\n");
       out.write("                        <li class=\"page-item\"><a href=\"#\" class=\"page-link\">Siguiente</a></li>\r\n");

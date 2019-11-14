@@ -13,13 +13,13 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 
   <title>
-    Kuykeisho_Login_cliente
+    Kuykeisho Administrador
   </title>
 
   <style> 
       body {
           background-size: 100%;
-          background-image: url( https://i.pinimg.com/originals/17/0b/2b/170b2bba7048acbb7ef07424405abe1a.jpg);
+          background-image: url( https://i.pinimg.com/originals/17/0b/2b/170b2bba7048acbb7ef07424405abe1a.jpg );
       }
       </style>
 
@@ -27,7 +27,7 @@
 <body>
     <div class="header fixed-top">
         <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
-          <a href="index.html">
+          <a href="../index.html">
             <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
             </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -44,10 +44,10 @@
               <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false" style="color: #ffffff">
-                    ¿Como Registrarme?
+                    �Como Registrarme?
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:13rem; background-color: #343a40">
-                    <a class="dropdown-item" href="/Administrador/Inicio Sesion Administrador.html" style="color: #ffffff">Administrador</a>
+                    <a class="dropdown-item" href="../Cliente/Inicio_Sesion_Cliente.html" style="color: #ffffff">Cliente</a>
                   </div>
             </li>
           </ul>
@@ -61,9 +61,10 @@
 <br>
 
   <br><br><br>
+  
   <div class="container">
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-xl-6">
 
         <style type="text/css">
           .login-form {
@@ -76,49 +77,44 @@
             padding: 30px;
           }
         </style>
-
+<center>
         <div class="login-form">
           <h4 class="text-center">
-            <p style="color:rgb(255, 255, 255)" ;>Inicio Sesión</p>
+            <p style="color:rgb(255, 255, 255)" ;>Inicio Sesi�n</p>
           </h4>
           <hr>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Correo Electronico/Nombre Usuario" required="required">
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control" placeholder="Contraseña" required="required">
-          </div>
-          <div class="form-group">
-            <a href="Cliente.html"><button type="submit" class="btn btn-primary btn-block">Ingresar</button></a>
-          </div>
+          <form action="../ControladorAdmin" method="post">
+            <div class="form-group">               
+                <input class="form-control" type="email" name="txtcorreo" placeholder="Correo electr�nico"
+                    style="width: 18rem" required="required">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" name="txtcontrase�a" placeholder="Contrase�a"
+                    style="width: 18rem" required="required">
+            </div>
+            <div class="form-group">
+                <div align="center">
+                    <input class="btn btn-danger btn-block" type="submit" name="accion" value="Ingresar"> 
+                </div> 
+            </div>
+
           <div class="clearfix">            
               <p style="color:rgb(255, 255, 255)" ;><label class="pull-left checkbox-inline"><input type="checkbox"> Recordar Cuenta</p>
             </label>
-            <a href="/Cliente/Recuperar contrasena/Recuperar_contrasena_1.html">
-              <h6 align="right" style="color:rgb(255, 255, 255)">¿Olvidó Su Contraseña?</h6>
-            </a>
-            <br>
           </div>
-          <br>  
-          <center>
-          <h3 style="color: rgb(255, 255, 255)">¿No tienes cuenta?</h3>
-          <a href="Crear_Cuenta_Cliente.html">
-              <button type="button" class="btn btn-outline-warning">Crear cuenta</button>
-            </a>
-          </center>
-        </form>
+          </form>
         </div>
+      </center>
       </div>
-      <div class="col-lg-2">
 
-      </div>
-      <div class="col-lg-6">
+      <div class="col-xl-6">
+        <center>
         <div class="login-form">
-          <div class="col-lg-1">
+          <div class="col-xl-6">
             <div class="login-form">
-              <form action="/examples/actions/confirmation.php" method="post">
+              <form action="Inicio_Administrador.jsp" method="post">
                 <h2 class="text-center">
-                  <p style="color:rgb(255, 255, 255)" ;>Iniciar Sesión</p>
+                  <p style="color:rgb(255, 255, 255)" ;>Iniciar Sesi�n</p>
                 </h2>
                 <div class="text-center social-btn">
                   <a href="https://es-la.facebook.com/" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i>
@@ -132,6 +128,7 @@
           </div>
         </div>
       </div>
+    </center>
     </div>
   </div>
 
@@ -152,7 +149,6 @@
   <br>
   <br>
 
-
   <div class="copyright text-center  font-weight-bold p-2" style="background-color:rgb(0, 0, 0)">
       <p style="color:rgb(255, 217, 0)">Desarrollado por Kyukeisho Copyright<i class="fa fa-copyright"
           aria-hidden="true"></i> 2019</p>
@@ -167,5 +163,6 @@
     integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
     crossorigin="anonymous"></script>
 </body>
+
 
 </html>
