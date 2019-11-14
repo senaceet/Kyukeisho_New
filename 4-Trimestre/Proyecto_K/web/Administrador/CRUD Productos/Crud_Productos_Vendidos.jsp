@@ -581,6 +581,7 @@
                      </th>
                 <th  colspan="5">Id producto</th><th colspan="3">Nombre producto</th>
                 <th colspan="2">Cantidad del producto</th><th colspan="2">Precio_unitario</th>
+                <th colspan="2">Tipo de producto</th>
                 <th colspan="2">Editar</th><th colspan="2">Eliminar</th>
             </tr>
             </thead>
@@ -594,7 +595,10 @@
                 conn = DriverManager.getConnection("jdbc:mysql://localhost:3310/Kyukeisho?user=root&password=");
             
             sta = conn.createStatement();
-            rs = sta.executeQuery("select id_producto,nombre_producto,cantidad_producto,precio_unitario_producto,nombre_tipo_producto from productos  ORDER BY id_producto asc limit 25");
+            rs = sta.executeQuery("select id_producto,nombre_producto,cantidad_producto,precio_unitario_producto,nombre_tipo_producto "
+                    +" from productos"
+                    +" inner join tipo_producto"
+                    +" on productos.id_tipo_producto = tipo_producto.id_tipo_producto ORDER BY id_producto asc limit 25");
             
             while(rs.next()){
                 %>
@@ -609,6 +613,7 @@
                     <th colspan="3" style="text-align:left"> <%=rs.getString(2)%></th>
                     <th colspan="2"><%=rs.getString(3)%></th>
                     <th colspan="2"><%=rs.getString(4)%></th>
+                    <th colspan="2"><%=rs.getString(5)%></th>
                     <th colspan="2">
                         <a href="editar producto.jsp?cod=<%=rs.getString(1)%>">
                         <img src="../../IMG/editar.png" width="25"/>

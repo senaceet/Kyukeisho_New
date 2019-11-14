@@ -118,7 +118,7 @@ insert into Kyukeisho.tipo_producto (id_tipo_producto, nombre_tipo_producto)
 values 	(1, "Comestibles"),
 		(2, "Videojuegos"),
 		(3, "Golosinas"),
-        (4, "Productos Tecnologicos"),
+        (4, "Tecnologico"),
         (5, "Bebidas"),
         (6, "Utiles Escolares");
 

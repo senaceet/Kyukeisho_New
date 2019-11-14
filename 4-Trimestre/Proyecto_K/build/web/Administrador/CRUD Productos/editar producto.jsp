@@ -76,9 +76,22 @@
                     <td>cantidad: </td>
                     <td><input class="p-2 mb-2 bg-dark text-white form-control" type="text" value="<%=rs.getString(3)%>" name="txtcantidad"></td>
                 </tr>
-                                <tr>
+                <tr>
                     <td >precio unitario: </td>
                     <td><input class="p-2 mb-2 bg-dark text-white form-control" type="text" value="<%=rs.getString(4)%>" name="txtprecio"></td>
+                </tr>
+                <tr>
+                    <td >tipo producto:: </td>
+                    <td><select value="<%=rs.getString(5)%>" name="txttipo" class="p-2 mb-2 bg-dark text-white form-control" required>
+                           <option value="0">seleccione tipo de producto</option>
+                           <option value="1">Comestibles</option>
+                           <option value="2">Videojuegos</option>
+                           <option value="3">Golosinas</option>
+                           <option value="4">tecnologico</option>
+                           <option value="5">Bebidas</option>
+                           <option value="6">Utiles escolares</option>
+                       </select>
+                    </td>
                 </tr>
                 <tr>
                 <br>
@@ -97,8 +110,9 @@
         String nom = request.getParameter("txtnom");
         String can = request.getParameter("txtcantidad");
         String pre = request.getParameter("txtprecio");
+        String tip = request.getParameter("txttipo");
         
-        sta.executeUpdate("update productos set nombre_producto='"+ nom +"',cantidad_producto='"+can+"',precio_unitario_producto='"+pre+"' where id_producto = '"+id+"'");
+        sta.executeUpdate("update productos set nombre_producto='"+ nom +"',cantidad_producto='"+can+"',precio_unitario_producto='"+pre+"',id_tipo_producto='"+tip+"' where id_producto = '"+id+"'");
 
         request.getRequestDispatcher("Crud_Productos_Vendidos.jsp").forward(request, response);
         }

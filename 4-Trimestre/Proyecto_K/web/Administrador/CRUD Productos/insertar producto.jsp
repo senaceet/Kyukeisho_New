@@ -91,7 +91,7 @@
                            <option value="1">Comestibles</option>
                            <option value="2">Videojuegos</option>
                            <option value="3">Golosinas</option>
-                           <option value="4">Productos tecnologicos</option>
+                           <option value="4">tecnologico</option>
                            <option value="5">Bebidas</option>
                            <option value="6">Utiles escolares</option>
                        </select>	
