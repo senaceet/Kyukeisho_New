@@ -47,7 +47,7 @@
                     ¿Como Registrarme?
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:13rem; background-color: #343a40">
-                    <a class="dropdown-item" href="../Cliente/Inicio_Sesion_Cliente.html" style="color: #ffffff">Cliente</a>
+                    <a class="dropdown-item" href="../Cliente/Inicio_Sesion_Cliente.jsp" style="color: #ffffff">Cliente</a>
                   </div>
             </li>
           </ul>
@@ -80,7 +80,7 @@
 <center>
         <div class="login-form">
           <h4 class="text-center">
-            <p style="color:rgb(255, 255, 255)" ;>Inicio Sesión</p>
+            <p style="color:rgb(255, 255, 255)" >Inicio Sesión</p>
           </h4>
           <hr>
           <form action="../ControladorAdmin" method="post">
@@ -94,7 +94,7 @@
             </div>
             <div class="form-group">
                 <div align="center">
-                    <input class="btn btn-danger btn-block" type="submit" name="accion" value="Ingresar"> 
+                    <input style="width: 18rem;" class="btn btn-danger btn-block" type="submit" name="accion" value="Ingresar"> 
                 </div> 
             </div>
 

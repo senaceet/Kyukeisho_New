@@ -8,7 +8,7 @@ public class Admin {
     public Admin() {        
     }
     
-    public Admin(String correo_administrador, String contraseña_administrador) {
+    public Admin(String Correo_administrador, String Contraseña_administrador) {
         this.correo_administrador = correo_administrador;
         this.contraseña_administrador = contraseña_administrador;
     }

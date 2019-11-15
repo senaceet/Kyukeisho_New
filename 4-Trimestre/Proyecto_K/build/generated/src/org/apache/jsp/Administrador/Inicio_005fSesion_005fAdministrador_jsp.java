@@ -90,7 +90,7 @@ public final class Inicio_005fSesion_005fAdministrador_jsp extends org.apache.ja
       out.write("                    ¿Como Registrarme?\n");
       out.write("                  </a>\n");
       out.write("                  <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\" style=\"width:13rem; background-color: #343a40\">\n");
-      out.write("                    <a class=\"dropdown-item\" href=\"../Cliente/Inicio_Sesion_Cliente.html\" style=\"color: #ffffff\">Cliente</a>\n");
+      out.write("                    <a class=\"dropdown-item\" href=\"../Cliente/Inicio_Sesion_Cliente.jsp\" style=\"color: #ffffff\">Cliente</a>\n");
       out.write("                  </div>\n");
       out.write("            </li>\n");
       out.write("          </ul>\n");
@@ -123,7 +123,7 @@ public final class Inicio_005fSesion_005fAdministrador_jsp extends org.apache.ja
       out.write("<center>\n");
       out.write("        <div class=\"login-form\">\n");
       out.write("          <h4 class=\"text-center\">\n");
-      out.write("            <p style=\"color:rgb(255, 255, 255)\" ;>Inicio Sesión</p>\n");
+      out.write("            <p style=\"color:rgb(255, 255, 255)\" >Inicio Sesión</p>\n");
       out.write("          </h4>\n");
       out.write("          <hr>\n");
       out.write("          <form action=\"../ControladorAdmin\" method=\"post\">\n");
@@ -137,7 +137,7 @@ public final class Inicio_005fSesion_005fAdministrador_jsp extends org.apache.ja
       out.write("            </div>\n");
       out.write("            <div class=\"form-group\">\n");
       out.write("                <div align=\"center\">\n");
-      out.write("                    <input class=\"btn btn-danger btn-block\" type=\"submit\" name=\"accion\" value=\"Ingresar\"> \n");
+      out.write("                    <input style=\"width: 18rem;\" class=\"btn btn-danger btn-block\" type=\"submit\" name=\"accion\" value=\"Ingresar\"> \n");
       out.write("                </div> \n");
       out.write("            </div>\n");
       out.write("\n");

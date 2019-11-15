@@ -163,8 +163,10 @@
                       <li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"></i><span class="badge">10</span></a></li>
                       <li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge">100</span></a></li>
                       <li class="nav-item dropdown">
-                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://miro.medium.com/max/1024/1*Age2mlAUaGBPNWcLvQPEUA.jpeg" class="avatar" alt="Avatar"><b class="caret"></b></a>
-                        <ul class="dropdown-menu" style="background-color: #343a40">
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://miro.medium.com/max/1024/1*Age2mlAUaGBPNWcLvQPEUA.jpeg" class="avatar" alt="Avatar"><b class="caret"></b>
+                        ${correo}</a>
+                        
+                        <ul class="dropdown-menu dropdown-menu-right" style="background-color: #343a40">
                           <li><a href="Perfil_Administrador.html" style="color: #ffffff" class="dropdown-item"><i class="fa fa-user-o"></i>Perfil</a></li>
                           <li><a href="" style="color: #ffffff" class="dropdown-item"><i class="fa fa-user-o"></i> Ayuda</a></li>
                           <li class="divider dropdown-divider"></li>

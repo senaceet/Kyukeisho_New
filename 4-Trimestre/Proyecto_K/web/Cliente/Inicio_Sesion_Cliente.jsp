@@ -48,7 +48,7 @@
                         ¿Como Registrarme?
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:13rem; background-color: #343a40">
-                        <a class="dropdown-item" href="../Administrador/Inicio Sesion Administrador.html" style="color: #ffffff">Administrador</a>
+                        <a class="dropdown-item" href="../Administrador/Inicio_Sesion_Administrador.jsp" style="color: #ffffff">Administrador</a>
                       </div>
                 </li>
               </ul>
@@ -93,11 +93,11 @@
                 </div>
                 <div class="form-group">
                 <div align="center">
-                    <input class="btn btn-danger btn-block" type="submit" name="accion" value="Ingresar"> 
+                    <input style="width: 18rem;" class="btn btn-danger btn-block" type="submit" name="accion" value="Ingresar"> 
                 </div>                    
                 </div>
                 <div class="clearfix ">            
-                  <p style="color:rgb(255, 255, 255)";><label class="pull-left checkbox-inline"><input type="checkbox"> Recordar Cuenta</p>
+                  <p style="color:rgb(255, 255, 255);"><label class="pull-left checkbox-inline"><input type="checkbox"> Recordar Cuenta</p>
                 </label>
               </div>
               <div class="clearfix text-left">    
@@ -125,7 +125,7 @@
                 <div class="login-form">
                   <form action="/examples/actions/confirmation.php" method="post">
                     <h2 class="text-center">
-                      <p style="color:rgb(255, 255, 255)" ;>Iniciar Sesión</p>
+                      <p style="color:rgb(255, 255, 255)" >Iniciar Sesión</p>
                     </h2>
                     <div class="text-center social-btn">
                       <a href="https://es-la.facebook.com/" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i>

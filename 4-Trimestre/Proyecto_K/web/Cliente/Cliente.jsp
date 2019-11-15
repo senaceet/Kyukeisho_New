@@ -285,56 +285,72 @@
 <br>
 <br>
 <br>
-<center>
-    <div class="col-xl-8" style="background-color: rgba(255, 251, 0, 0)" >
-      <div class="bd-example" >
-        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-          </ol>
-          <div align="right" class="carousel-inner"  >
-            <div class="carousel-item active" >
-              <img height="600" src="https://i2.wp.com/revistaelparcero.com/wp-content/uploads/2015/11/LogoSOFA_b.png?resize=901%2C602"
-                class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
+ <center>
+      <div class="col-xl-8" style="background-color: rgba(255, 251, 0, 0)" >
+        <div class="bd-example" >
+          <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div align="right" class="carousel-inner"  >
+              <div class="carousel-item active" >
+                <img height="600" src="https://i2.wp.com/revistaelparcero.com/wp-content/uploads/2015/11/LogoSOFA_b.png?resize=901%2C602"
+                  class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+                <br>
+                <br>
+                <center>
+                <a href="https://www.enelsofa.com/sofa2019/">
+                <button type="button" class="btn btn-warning">VER</button>?
+                </a>
+              </center> 
               </div>
-              <br>
-              <br>
-              <center>
-              <a href="https://www.enelsofa.com/sofa2019/">
-              <button type="button" class="btn btn-warning">VER</button>?
-              </a>
-            </center> 
-            </div>
-            <div class="carousel-item">
-              <img height="600" src="https://o.aolcdn.com/images/dims?quality=85&image_uri=https%3A%2F%2Fo.aolcdn.com%2Fimages%2Fdims%3Fcrop%3D1350%252C819%252C0%252C0%26quality%3D85%26format%3Djpg%26resize%3D1600%252C972%26image_uri%3Dhttps%253A%252F%252Fs.yimg.com%252Fos%252Fcreatr-uploaded-images%252F2019-03%252Fe6af7d20-45d2-11e9-b7d4-8cb4ff4492a4%26client%3Da1acac3e1b3290917d92%26signature%3D34581802504d8324f7c340348d513c1811eee15b&client=amp-blogside-v2&signature=a060172810e83758f1bb6503dc34013f6f1a6c91"
-                class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <p class="h5">Ve nuestros mas recientes productos.</p>
+
+              <div class="carousel-item">
+                <img height="600" src="https://image.redbull.com/rbcom/010/2016-12-06/1331833245065_2/0001/0/1500/1000/1/la-lista-de-los-mejores-juegos-de-2016.jpg"
+                  class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <p class="h5">Ve los ultimos estrenos en videojuegos</p>
+                </div>  
+                <br>
+                <br>
+                <center>
+                <a href="/Cliente/Cliente_sin_iniciar_sesion.html#juegos">             
+                <button type="button" class="btn btn-warning">VER</button>?
+                </a>
+              </center> 
               </div>
-              <br>
-              <br>
-              <center>
-              <a href="/Productos_1.html">             
-              <button type="button" class="btn btn-warning">VER</button>?
-              </a>
-            </center> 
+              <div class="carousel-item">
+                <img height="600" src="https://o.aolcdn.com/images/dims?quality=85&image_uri=https%3A%2F%2Fo.aolcdn.com%2Fimages%2Fdims%3Fcrop%3D1350%252C819%252C0%252C0%26quality%3D85%26format%3Djpg%26resize%3D1600%252C972%26image_uri%3Dhttps%253A%252F%252Fs.yimg.com%252Fos%252Fcreatr-uploaded-images%252F2019-03%252Fe6af7d20-45d2-11e9-b7d4-8cb4ff4492a4%26client%3Da1acac3e1b3290917d92%26signature%3D34581802504d8324f7c340348d513c1811eee15b&client=amp-blogside-v2&signature=a060172810e83758f1bb6503dc34013f6f1a6c91"
+                  class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <p class="h5">Ve nuestros mas recientes productos.</p>
+                </div>
+                <br>
+                <br>
+                <center>
+                <a href="Productos_1.html">             
+                <button type="button" class="btn btn-warning">VER</button>?
+                </a>
+              </center> 
+              </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Siguiente</span>
+            </a>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Siguiente</span>
-          </a>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 </center>
 <br>
@@ -1688,3 +1704,4 @@
 </body>
 
 </html>
+
