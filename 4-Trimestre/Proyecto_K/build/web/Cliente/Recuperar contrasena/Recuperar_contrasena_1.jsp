@@ -90,11 +90,11 @@
                 <form  method="post" action="../../envio_correo">
                     <div class="login-form">
                             <h4 class="text-center">
-                                <p style="color:rgb(255, 255, 255)" ;>Recuperar Contraseña</p>
+                                <p style="color:rgb(255, 255, 255)" >Recuperar Contrase�a</p>
                             </h4>
                             <hr>
                             <div class="form-group">
-                                <input name="correo" type="email" class="form-control" placeholder="Correo Electronico/Número Telefonico"
+                                <input name="correo" type="email" class="form-control" placeholder="Correo Electronico"
                                     required="required">
                                     <button class="btn btn-primary btn-block my-4 my-sm-6" type="submit">
                                         <font size=5>Enviar</font>

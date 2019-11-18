@@ -24,7 +24,8 @@
             </style>
       
       </head>
-<body>  
+
+<body>
         <div class="header fixed-top" >
                 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
                     <a href="../../index.html">
@@ -39,7 +40,7 @@
                   </ul>
                   <ul class="navbar-nav ">
                       <li class="nav-item disable">
-                          <a class="nav-link" href="#" style="color: #ffffff" >Ayuda<span class="sr-only"></span></a>
+                          <a class="nav-link" href="#" style="color: #ffffff">Ayuda<span class="sr-only"></span></a>
                         </li>
                   </ul>
                 </div>
@@ -72,54 +73,72 @@
 
                 <div class="login-form">
                     <h4 class="text-center">
-                    </form>
+                        </form>
                 </div>
             </div>
 
             <div class="col-lg-2">
-                    <div class="login-form">
-                            <h4 class="text-center">
-                                <p style="color:rgb(255, 255, 255)" ;>Recuperar ContraseÃ±a</p>
-                            </h4>
-                            <hr>
-                            <div class="alert alert-success" role="alert">
-                                    <h4 class="alert-heading">Muy BienÂ¡</h4>
-                                    <p>Ingresa el cÃ³digo de recuperaciÃ³n que recibiste en tu correo electronico o telefono celular, si no lo has recibido has click aqui, para reenviarte el cÃ³digo nuevamente.</p>
-                                    <hr><a href="#">Reenviar Correo De RecuperaciÃ³nÂ¡Â¡</a></p>
-                                  </div>
-                            <form  method="post" action="../../validar_codigo">
-                            <div class="form-group">
-                                <input name="codigo_i" type="text" class="form-control" placeholder="CÃ³digo RecuperaciÃ³n"
-                                    required="required">
-                                    <button class="btn btn-primary btn-block my-4 my-sm-6" type="submit">
-                                        <font size=5>Enviar</font>
-                                    </button> 
+                <div class="login-form">
+                    <h4 class="text-center">
+                        <p style="color:rgb(255, 255, 255)" >Recuperar Contraseña</p>
+                    </h4>
+                    <hr>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Escriba Nueva Contraseña"
+                            required="required">
+                        <br>
+                        <input type="password" class="form-control" placeholder="Verificar Nueva Contraseña"
+                            required="required">
+                    </div>
+                    <br>
+                    <a href="#" class="btn btn-primary btn-block" data-target="#produk2" data-toggle="modal">Cambiar
+                        Contraseña</a>
+
+                    <div class="modal fade" id="produk2" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+                                    <th>Su Contraseña Se Ha Cambiado Exitosamente¡</th>
+
+                                </div>
                             </div>
-                            </form>
                         </div>
                     </div>
+                    </form>
+                </div>
             </div>
-            </div>
-            
-           
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-          
-            <div class="copyright text-center  font-weight-bold p-2" style="background-color:rgb(0, 0, 0)">
-                <p style="color:rgb(255, 217, 0)">Desarrollado por Kyukeisho Copyright<i class="fa fa-copyright"
-                    aria-hidden="true"></i> 2019</p>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  
+    <div class="copyright text-center  font-weight-bold p-2" style="background-color:rgb(0, 0, 0)">
+        <p style="color:rgb(255, 217, 0)">Desarrollado por Kyukeisho Copyright<i class="fa fa-copyright"
+            aria-hidden="true"></i> 2019</p>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

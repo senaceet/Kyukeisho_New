@@ -101,7 +101,7 @@
                 </label>
               </div>
               <div class="clearfix text-left">    
-                <a href="Recuperar contrasena/Recuperar_contrasena_1.html">
+                <a href="Recuperar contrasena/Recuperar_contrasena_1.jsp">
                 <h9 style="color:rgb(255, 255, 255)">¿Olvidaste tu contraseña?</h9>
                 </a>        
               </div>

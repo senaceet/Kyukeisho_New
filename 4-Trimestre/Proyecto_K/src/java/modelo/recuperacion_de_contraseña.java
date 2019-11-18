@@ -1,28 +1,31 @@
 package modelo;
 
-
 public class recuperacion_de_contraseña {
-        public String email;
-        public int codigo;
-        public String var_email;
-        public int var_codigo;
-        public String mostrar_email;
+    String correo_usuario;
+    int codigo_usuario;
     
-    public recuperacion_de_contraseña(String para, int c) {
-        this.email = para;
-        this.codigo = c;
-        
+    public recuperacion_de_contraseña() {        
     }
-    public void mostrar(){
-    this.mostrar_email=email;
+    
+    public recuperacion_de_contraseña(String correo_usuario, int codigo_usuario) {
+        this.correo_usuario = correo_usuario;
+        this.codigo_usuario = codigo_usuario;
     }
-        public String email(){
-        String var_email = this.email;
-        return var_email;
+
+    public String getCorreo_usuario() {
+        return correo_usuario;
     }
-        public int codigo(){
-        int var_codigo = this.codigo;
-        return var_codigo;
+
+    public void setCorreo_usuario(String correo_usuario) {
+        this.correo_usuario = correo_usuario;
     }
-        
+
+    public int getCodigo_usuario() {
+        return codigo_usuario;
+    }
+
+    public void setCodigo_usuario(int codigo_usuario) {
+        this.codigo_usuario = codigo_usuario;
+    }
+    
 }

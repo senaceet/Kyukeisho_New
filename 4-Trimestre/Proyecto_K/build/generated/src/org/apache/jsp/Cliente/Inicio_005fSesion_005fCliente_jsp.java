@@ -91,7 +91,7 @@ public final class Inicio_005fSesion_005fCliente_jsp extends org.apache.jasper.r
       out.write("                        ¿Como Registrarme?\n");
       out.write("                      </a>\n");
       out.write("                      <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\" style=\"width:13rem; background-color: #343a40\">\n");
-      out.write("                        <a class=\"dropdown-item\" href=\"../Administrador/Inicio Sesion Administrador.html\" style=\"color: #ffffff\">Administrador</a>\n");
+      out.write("                        <a class=\"dropdown-item\" href=\"../Administrador/Inicio_Sesion_Administrador.jsp\" style=\"color: #ffffff\">Administrador</a>\n");
       out.write("                      </div>\n");
       out.write("                </li>\n");
       out.write("              </ul>\n");
@@ -136,15 +136,15 @@ public final class Inicio_005fSesion_005fCliente_jsp extends org.apache.jasper.r
       out.write("                </div>\n");
       out.write("                <div class=\"form-group\">\n");
       out.write("                <div align=\"center\">\n");
-      out.write("                    <input class=\"btn btn-danger btn-block\" type=\"submit\" name=\"accion\" value=\"Ingresar\"> \n");
+      out.write("                    <input style=\"width: 18rem;\" class=\"btn btn-danger btn-block\" type=\"submit\" name=\"accion\" value=\"Ingresar\"> \n");
       out.write("                </div>                    \n");
       out.write("                </div>\n");
       out.write("                <div class=\"clearfix \">            \n");
-      out.write("                  <p style=\"color:rgb(255, 255, 255)\";><label class=\"pull-left checkbox-inline\"><input type=\"checkbox\"> Recordar Cuenta</p>\n");
+      out.write("                  <p style=\"color:rgb(255, 255, 255);\"><label class=\"pull-left checkbox-inline\"><input type=\"checkbox\"> Recordar Cuenta</p>\n");
       out.write("                </label>\n");
       out.write("              </div>\n");
       out.write("              <div class=\"clearfix text-left\">    \n");
-      out.write("                <a href=\"Recuperar contrasena/Recuperar_contrasena_1.html\">\n");
+      out.write("                <a href=\"Recuperar contrasena/Recuperar_contrasena_1.jsp\">\n");
       out.write("                <h9 style=\"color:rgb(255, 255, 255)\">¿Olvidaste tu contraseña?</h9>\n");
       out.write("                </a>        \n");
       out.write("              </div>\n");
@@ -168,7 +168,7 @@ public final class Inicio_005fSesion_005fCliente_jsp extends org.apache.jasper.r
       out.write("                <div class=\"login-form\">\n");
       out.write("                  <form action=\"/examples/actions/confirmation.php\" method=\"post\">\n");
       out.write("                    <h2 class=\"text-center\">\n");
-      out.write("                      <p style=\"color:rgb(255, 255, 255)\" ;>Iniciar Sesión</p>\n");
+      out.write("                      <p style=\"color:rgb(255, 255, 255)\" >Iniciar Sesión</p>\n");
       out.write("                    </h2>\n");
       out.write("                    <div class=\"text-center social-btn\">\n");
       out.write("                      <a href=\"https://es-la.facebook.com/\" class=\"btn btn-primary btn-block\"><i class=\"fa fa-facebook\"></i>\n");
