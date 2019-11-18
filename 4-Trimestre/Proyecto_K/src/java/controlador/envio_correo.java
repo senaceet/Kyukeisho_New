@@ -35,15 +35,19 @@ public class envio_correo extends HttpServlet {
             
             String mensaje = "Este es tu codigo de recuperacion: "+cod;
             
-            rec.setCorreo_usuario(para);
-            rec.setCodigo_usuario(cod);
+           recuperacion_de_contraseña re = new recuperacion_de_contraseña(para,cod); 
+           
             
             boolean resultado = email.enviarEmail(de, clave, para, mensaje, asunto);
-            
+           
             conexion c = new conexion();
             Connection conn = c.getConnection();
             
+            
+            
             response.sendRedirect("Cliente/Recuperar contrasena/Recuperar_contrasena_2.jsp");
+            
+            
     }
 
  

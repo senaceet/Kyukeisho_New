@@ -86,7 +86,7 @@
                                     <h4 class="alert-heading">Muy Bien¡</h4>
                                     <p>Ingresa el codigo de recuperacion que recibiste en tu correo electronico o telefono celular.</p>
                                   </div>
-                            <form  method="post" action="../../validacion_codigo">
+                            <form  method="post" action="../../controlador_validar">
                             <div class="form-group">
                                 <input name="codigo_i" type="text" class="form-control" placeholder="Codigo Recuperacion"
                                     required="required">

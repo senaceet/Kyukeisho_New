@@ -1,14 +1,27 @@
 package modelo;
 
-public class recuperacion_de_contraseña {
-    String correo_usuario_2;
-    String reo;
-    int codigo_usuario_2;
-    int num_usuario = 12;
+   import java.util.Random;
+import static modelo.codigo.main;
+
+public class codigo {
     
 
+            
+     public codigo() {        
+    }
+    String correo_usuario_2;
+    int codigo_usuario_2;
+    int num_usuario =;
     
-    public recuperacion_de_contraseña(String para, int cod) {
+                public static void main(String arg[ ]) {
+
+              Random rnd = new Random();
+              System.out.println(+rnd.nextInt());
+              
+
+         }
+    
+    public codigo(String para, int cod) {
         this.correo_usuario_2 = para;
         this.codigo_usuario_2 = cod;
     }
@@ -28,11 +41,8 @@ public class recuperacion_de_contraseña {
         public int getCodigo_usuario() {
         return codigo_usuario_2;
     }
-        
-        public recuperacion_de_contraseña() {      
-        this.reo=correo_usuario_2;
-    }
-            public String Correo() {
-        return reo;
+    
+        public int num() {
+        return codigo_usuario_2;
     }
 }
