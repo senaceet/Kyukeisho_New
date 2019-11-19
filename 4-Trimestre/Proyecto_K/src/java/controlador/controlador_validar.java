@@ -8,7 +8,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.recuperacion_de_contraseña;
+import javax.servlet.http.HttpSession;
+
 
 
 @WebServlet(name = "controlador_validar", urlPatterns = {"/controlador_validar"})
@@ -20,21 +21,20 @@ public class controlador_validar extends HttpServlet {
         
         int cod_i = Integer.parseInt(request.getParameter("codigo_i"));
         
-        recuperacion_de_contraseña rec = new recuperacion_de_contraseña(); 
-        String resultado1 =(rec.Correo());
+        HttpSession session=request.getSession(); 
+        int codigo2 = (int)session.getAttribute("codigo");
         
+        String message_c_i = "Codigo incorrecto,vuelve a ingreser el codigo.";
+       
         
-        try (PrintWriter out = response.getWriter()) {
-            out.println("<!DOCTYPE html>"); 
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet controlador_validar</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println(resultado1);
-            out.println("</body>");
-            out.println("</html>");
-        }
+        if(cod_i==codigo2){
+                
+                
+            response.sendRedirect("Cliente/Recuperar contrasena/Recuperar_contrasena_3.jsp");
+            }else{
+            request.getSession().setAttribute("message1", message_c_i);
+            response.sendRedirect("Cliente/Recuperar contrasena/Recuperar_contrasena_2.jsp");                
+            }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -8,13 +8,21 @@
         <servlet-name>ControladorAdmin</servlet-name>
         <servlet-class>controlador.ControladorAdmin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>controlador_validar</servlet-name>
+        <servlet-class>controlador.controlador_validar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
     </servlet-mapping>
-        <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>ControladorAdmin</servlet-name>
         <url-pattern>/ControladorAdmin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controlador_validar</servlet-name>
+        <url-pattern>/controlador_validar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

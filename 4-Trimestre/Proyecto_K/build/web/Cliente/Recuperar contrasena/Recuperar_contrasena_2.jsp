@@ -25,6 +25,7 @@
       
       </head>
 <body>  
+    
         <div class="header fixed-top" >
                 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
                     <a href="../../index.html">
@@ -99,8 +100,11 @@
                     </div>
             </div>
             </div>
+            <h5 style="color:white; text-align:center">
+            ${message1}
             
-           
+            <c:remove var="message1" scope="session" />
+            </h5> 
             <br>
             <br>
             <br>

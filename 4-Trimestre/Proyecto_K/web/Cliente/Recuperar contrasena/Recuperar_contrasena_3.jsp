@@ -28,7 +28,7 @@
 <body>
         <div class="header fixed-top" >
                 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
-                    <a href="../../index.html">
+                    <a href="../../recuperar_contraseña">
                         <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
                         </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -83,35 +83,26 @@
                         <p style="color:rgb(255, 255, 255)" >Recuperar Contraseña</p>
                     </h4>
                     <hr>
+                    <form  method="post" action="../../recuperar_contraseña">
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Escriba Nueva Contraseña"
-                            required="required">
+                        <input type="password" class="form-control" placeholder="Escriba Nueva Contraseña" name="contraseña_1"  required="required">
                         <br>
-                        <input type="password" class="form-control" placeholder="Verificar Nueva Contraseña"
-                            required="required">
+                        <input type="password" class="form-control" placeholder="Verificar Nueva Contraseña" name="contraseña_2" required="required">
                     </div>
-                    <br>
-                    <a href="#" class="btn btn-primary btn-block" data-target="#produk2" data-toggle="modal">Cambiar
-                        Contraseña</a>
-
-                    <div class="modal fade" id="produk2" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-
-                                    <th>Su Contraseña Se Ha Cambiado Exitosamente¡</th>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  
+                                <button class="btn btn-primary btn-block my-4 my-sm-6" type="submit" name="accion" value="enviar">
+                                        <font size=5>Actualizar</font>
+                                    </button> 
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
+            <h5 style="color:white; text-align:center">
+            ${message}
+            
+            <c:remove var="message" scope="session" />
+            </h5> 
 
     <br>
     <br>
