@@ -5,15 +5,23 @@ use Kyukeisho;
 create table Kyukeisho.usuario(
 id_usuario int (10) not null AUTO_INCREMENT,
 primer_nombre_usuario varchar (39) not null,
-segundo_nombre_usuario varchar (30),
+segundo_nombre_usuario varchar (30) null,
 primer_apellido_usuario varchar (30) not null,
 segundo_apellido_usuario varchar (30),
 correo_usuario varchar (30) not null unique,
-telefono_usuario bigint (10),
-direccion varchar (30),
+telefono_usuario bigint (10) null,
+direccion varchar (30) null,
 contraseña_usuario varchar (30) not null,
+id_estado int (10) not null,
 primary key (id_usuario)
 );
+
+-- ESTADO --
+create table Kyukeisho.estado(
+id_estado int (10) not null primary key,
+estado varchar (30) not null
+);
+
 
 -- ADMINISTRADOR --
 create table Kyukeisho.administrador(
@@ -148,6 +156,9 @@ alter table Kyukeisho.log_error add primary key (id_error);
 
 
 -- Creacion de Relaciones ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Estado/Usuario
+alter table kyukeisho.usuario add constraint fk_usuario_estado foreign key (id_estado) references kyukeisho.estado(id_estado) on update cascade on delete cascade;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
