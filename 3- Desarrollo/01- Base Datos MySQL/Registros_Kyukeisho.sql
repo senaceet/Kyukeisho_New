@@ -6,27 +6,27 @@ values 						(1, "Activo"),
 							(2, "Desactivo");
 
 -- USUARIO --
-insert into Kyukeisho.usuario (id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario, correo_usuario, telefono_usuario, direccion,contraseña_usuario)
-values 		(1, "Juan", "Alberto", "Lopez", "Obregon", "juanal@gmail.com", 3115698975, "Kra 4 N°45 R Sur","12345"),
-			(2, "Marcos", "Mateo", "Lopez", "Rodríguez", "marcos@gmail.com", 3205898965, "Kra 4 N°35 z Sur","12345"),
-            (3, "Daniel", "Alberto", "Gómez", "Gonzáles", "daniel@gmail.com", 3505623648, "Cll 10 N°65 R Sur","12345"),
-            (4, "Juan", "Pablo", "Martínez", "Sánchez", "juanpa@gmail.com", 3005368754, "Carrera 3 # 18- 49","12345"),
-            (5, "Álvaro", "Hakim", "Castro", "", "alvaro@gmail.com", 3017696370, "Carrera 7 # 84- 102","12345"),
-            (6, "Adrían", "Asher", "Ruiz", "Ortiz", "adrian@gmail.com", 3214578915, "Calle 4 No. 5 – 100","12345"),
-            (7, "Henry", "David", "Suárez", "Romero", "henry@gmail.com", 3120008975, "Calle 11 No. 4 - 14","12345"),
-            (8, "Diego", "Fernando", "Herrera", "Valencia", "diego@gmail.com", 1056897485, "Calle 24 N° 5-60","12345"),
-            (9, "Jude", "Javier", "Quintero", "Restrepo", "jude@gmail.com", 3000108975, "Av. Ciudad de Cali No. 6C-09","12345"),
-            (10, "Ángel", "Gabriel", "Giraldo", "Morales", "angel@gmail.com", 3115690000, "Calle 48b sur No. 21-13","12345"),
-            (11, "Thiago", "Valentín", "García", "Oliver	", "thiago@gmail.com", 3031230000, "Avenida Kra 60 No. 57-60","12345"),
-		    (12, "Julián", "Dante", "Jake", "", "julian@gmail.com", 3037896400, "Calle 11 No. 4-21 / 93","12345"),
-			(13, "Julián", "", "Jake", "", "julianja@gmail.com", 3037896400, "Calle 11 No. 4-21 / 93","12345"),
-            (14, "Andrea", "", "Noah	", "", "andrea@gmail.com", 3093646414, "Calle 10 No. 5-22","12345"),
-            (15, "Sophia", "", "Connor", "", "sophia@gmail.com", 3124587986, "Carrera 20 No. 37-54","12345"),
-            (16, "Emma", "", "Harry", "", "emma@gmail.com", 3201234578, "Av. Calle 19 N° 2-49 Centro","12345"),
-            (17, "Isabella", "", "Mason", "", "isabella@gmail.com", 3126548795, "Calle 109a N° 17-10 Sede Norte","12345"),
-            (18, "Olivia", "", "Charlie", "", "olivia@gmail.com", 3002345600, "Cr.8a # 15-63","12345"),
-            (19, "Martina", "", "Margaret", "", "martina@gmail.com", 3045687120, "Cr.9 # 74-99","12345"),
-            (20, "Giorgia", "", "Michelle", "", "giorgia@gmail.com", 3506584578, "Carrera 1 Este No. 17 01","12345");
+insert into Kyukeisho.usuario (id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario, correo_usuario, telefono_usuario, direccion,contraseña_usuario,id_estado)
+values 		(1, "Vladimir", "Alberto", "Buitrago", "Rodriguez", "vabuitrago18@misena.edu.co", 3115698975, "Kra 4 N°45 R Sur","12345",1),
+			(2, "Marcos", "Mateo", "Lopez", "Rodríguez", "marcos@gmail.com", 3205898965, "Kra 4 N°35 z Sur","12345",1),
+            (3, "Daniel", "Alberto", "Gómez", "Gonzáles", "daniel@gmail.com", 3505623648, "Cll 10 N°65 R Sur","12345",2),
+            (4, "Juan", "Pablo", "Martínez", "Sánchez", "juanpa@gmail.com", 3005368754, "Carrera 3 # 18- 49","12345",1),
+            (5, "Álvaro", "Hakim", "Castro", "", "alvaro@gmail.com", 3017696370, "Carrera 7 # 84- 102","12345",2),
+            (6, "Adrían", "Asher", "Ruiz", "Ortiz", "adrian@gmail.com", 3214578915, "Calle 4 No. 5 – 100","12345",2),
+            (7, "Henry", "David", "Suárez", "Romero", "henry@gmail.com", 3120008975, "Calle 11 No. 4 - 14","12345",1),
+            (8, "Diego", "Fernando", "Herrera", "Valencia", "diego@gmail.com", 1056897485, "Calle 24 N° 5-60","12345",1),
+            (9, "Jude", "Javier", "Quintero", "Restrepo", "jude@gmail.com", 3000108975, "Av. Ciudad de Cali No. 6C-09","12345",1),
+            (10, "Ángel", "Gabriel", "Giraldo", "Morales", "angel@gmail.com", 3115690000, "Calle 48b sur No. 21-13","12345",2),
+            (11, "Thiago", "Valentín", "García", "Oliver	", "thiago@gmail.com", 3031230000, "Avenida Kra 60 No. 57-60","12345",1),
+		    (12, "Julián", "Dante", "Jake", "", "julian@gmail.com", 3037896400, "Calle 11 No. 4-21 / 93","12345",1),
+			(13, "Julián", "", "Jake", "", "julianja@gmail.com", 3037896400, "Calle 11 No. 4-21 / 93","12345",1),
+            (14, "Andrea", "", "Noah	", "", "andrea@gmail.com", 3093646414, "Calle 10 No. 5-22","12345",1),
+            (15, "Sophia", "", "Connor", "", "sophia@gmail.com", 3124587986, "Carrera 20 No. 37-54","12345",1),
+            (16, "Emma", "", "Harry", "", "emma@gmail.com", 3201234578, "Av. Calle 19 N° 2-49 Centro","12345",2),
+            (17, "Isabella", "", "Mason", "", "isabella@gmail.com", 3126548795, "Calle 109a N° 17-10 Sede Norte","12345",2),
+            (18, "Olivia", "", "Charlie", "", "olivia@gmail.com", 3002345600, "Cr.8a # 15-63","12345",2),
+            (19, "Martina", "", "Margaret", "", "martina@gmail.com", 3045687120, "Cr.9 # 74-99","12345",1),
+            (20, "Giorgia", "", "Michelle", "", "giorgia@gmail.com", 3506584578, "Carrera 1 Este No. 17 01","12345",1);
 		
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------        
         
