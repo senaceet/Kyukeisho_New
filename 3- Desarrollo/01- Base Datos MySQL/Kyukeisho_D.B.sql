@@ -12,14 +12,14 @@ correo_usuario varchar (30) not null unique,
 telefono_usuario bigint (10) null,
 direccion varchar (30) null,
 contraseña_usuario varchar (30) not null,
-id_estado int (10) not null,
+id_estado int (10) null,
 primary key (id_usuario)
 );
 
 -- ESTADO --
 create table Kyukeisho.estado(
 id_estado int (10) not null primary key,
-estado varchar (30) not null
+estado varchar (30) null
 );
 
 
