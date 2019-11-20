@@ -19,6 +19,7 @@ public class Controlador extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         String accion = request.getParameter("accion");
+        String message_error = "Correo u/o contraseña incorrectos.";
         
         if(accion.equals("Ingresar")){
             String correo= request.getParameter("txtcorreo");
@@ -34,9 +35,11 @@ public class Controlador extends HttpServlet {
                 
                 response.sendRedirect("Cliente/Cliente.jsp");                
             }else{
+                request.getSession().setAttribute("message_e", message_error);
                 response.sendRedirect("Cliente/Inicio_Sesion_Cliente.jsp");                
             }
         }else{
+            request.getSession().setAttribute("message_e", message_error);
             response.sendRedirect("Cliente/Inicio_Sesion_Cliente.jsp");
         }
     }

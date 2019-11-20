@@ -109,10 +109,8 @@
             </div>
             <h5 style="color:white; text-align:center">
             ${message_e}
-            
             <c:remove var="message_e" scope="session" />
             </h5> 
-    <br>
     <br>
     <br>
     <br>

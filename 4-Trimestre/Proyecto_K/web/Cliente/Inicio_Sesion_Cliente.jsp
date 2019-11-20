@@ -79,7 +79,7 @@
     <center>
             <div class="login-form">
               <h4 class="text-center">
-                <p style="color:rgb(255, 255, 255)" ;>Inicio Sesión</p>
+                <p style="color:rgb(255, 255, 255)" >Inicio Sesión</p>
               </h4>
               <hr>
               <form action="../Controlador" method="post">
@@ -105,7 +105,11 @@
                 <h9 style="color:rgb(255, 255, 255)">¿Olvidaste tu contraseña?</h9>
                 </a>        
               </div>
-              <br>  
+              <br>
+            <h6 style="color:red; text-align:center">
+            ${message_e}
+            <c:remove var="message_e" scope="session" />
+            </h6>  
               <br>
               <center>
               <h3 style="color: rgb(255, 255, 255)">¿No tienes cuenta?</h3>
