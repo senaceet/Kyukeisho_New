@@ -1,6 +1,7 @@
 
 package modelo;
 
+import java_interfaces.ValidarAdmin;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

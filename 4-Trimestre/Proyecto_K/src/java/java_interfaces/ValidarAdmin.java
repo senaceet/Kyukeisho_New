@@ -1,4 +1,6 @@
-package modelo;
+package java_interfaces;
+
+import modelo.Admin;
 
 
 public interface ValidarAdmin {
