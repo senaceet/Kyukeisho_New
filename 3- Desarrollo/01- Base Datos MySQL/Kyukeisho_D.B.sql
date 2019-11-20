@@ -183,7 +183,7 @@ alter table Kyukeisho.juegos_categoria_juegos add index fk_juegos_categoria_jueg
 alter table Kyukeisho.juegos_categoria_juegos add primary key (codigo_juego, id_categoria_juegos);
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--- usuario_consola/Usuario -
+-- usuario_consola/Usuario 
 
 alter table Kyukeisho.usuario_consola add constraint fk_usuario_consola_id_usuario foreign key (id_usuario) references Kyukeisho.usuario (id_usuario) on update cascade on delete cascade;
 alter table Kyukeisho.usuario_consola add index fk_usuario_consola_id_usuario_idx (id_usuario);

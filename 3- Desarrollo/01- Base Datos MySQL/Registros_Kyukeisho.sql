@@ -1,32 +1,32 @@
 use Kyukeisho;
 
--- ESTADO --
+
 insert into kyukeisho.estado(id_estado, estado)
 values 						(1, "Activo"),
 							(2, "Desactivo");
 
--- USUARIO ---
-insert into Kyukeisho.usuario (id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario, correo_usuario, telefono_usuario, direccion,contraseña_usuario,id_estado)
-values 		(1, "Vladimir", "Alberto", "Buitrago", "Rodriguez", "vabuitrago18@misena.edu.co", 3115698975, "Kra 4 N°45 R Sur","12345",1),
-			(2, "Marcos", "Mateo", "Lopez", "Rodríguez", "marcos@gmail.com", 3205898965, "Kra 4 N°35 z Sur","12345",1),
-            (3, "Daniel", "Alberto", "Gómez", "Gonzáles", "daniel@gmail.com", 3505623648, "Cll 10 N°65 R Sur","12345",2),
-            (4, "Juan", "Pablo", "Martínez", "Sánchez", "juanpa@gmail.com", 3005368754, "Carrera 3 # 18- 49","12345",1),
-            (5, "Álvaro", "Hakim", "Castro", "", "alvaro@gmail.com", 3017696370, "Carrera 7 # 84- 102","12345",2),
-            (6, "Adrían", "Asher", "Ruiz", "Ortiz", "adrian@gmail.com", 3214578915, "Calle 4 No. 5 – 100","12345",2),
-            (7, "Henry", "David", "Suárez", "Romero", "henry@gmail.com", 3120008975, "Calle 11 No. 4 - 14","12345",1),
-            (8, "Diego", "Fernando", "Herrera", "Valencia", "diego@gmail.com", 1056897485, "Calle 24 N° 5-60","12345",1),
-            (9, "Jude", "Javier", "Quintero", "Restrepo", "jude@gmail.com", 3000108975, "Av. Ciudad de Cali No. 6C-09","12345",1),
-            (10, "Ángel", "Gabriel", "Giraldo", "Morales", "angel@gmail.com", 3115690000, "Calle 48b sur No. 21-13","12345",2),
-            (11, "Thiago", "Valentín", "García", "Oliver	", "thiago@gmail.com", 3031230000, "Avenida Kra 60 No. 57-60","12345",1),
-		    (12, "Julián", "Dante", "Jake", "", "julian@gmail.com", 3037896400, "Calle 11 No. 4-21 / 93","12345",1),
-			(13, "Julián", "", "Jake", "", "julianja@gmail.com", 3037896400, "Calle 11 No. 4-21 / 93","12345",1),
-            (14, "Andrea", "", "Noah	", "", "andrea@gmail.com", 3093646414, "Calle 10 No. 5-22","12345",1),
-            (15, "Sophia", "", "Connor", "", "sophia@gmail.com", 3124587986, "Carrera 20 No. 37-54","12345",1),
-            (16, "Emma", "", "Harry", "", "emma@gmail.com", 3201234578, "Av. Calle 19 N° 2-49 Centro","12345",2),
-            (17, "Isabella", "", "Mason", "", "isabella@gmail.com", 3126548795, "Calle 109a N° 17-10 Sede Norte","12345",2),
-            (18, "Olivia", "", "Charlie", "", "olivia@gmail.com", 3002345600, "Cr.8a # 15-63","12345",2),
-            (19, "Martina", "", "Margaret", "", "martina@gmail.com", 3045687120, "Cr.9 # 74-99","12345",1),
-            (20, "Giorgia", "", "Michelle", "", "giorgia@gmail.com", 3506584578, "Carrera 1 Este No. 17 01","12345",1);
+-- USUARIO --
+insert into Kyukeisho.usuario (id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario, correo_usuario, telefono_usuario, direccion,contraseña_usuario, id_estado)
+values 		(1, "Vladimir", "Alberto", "Buitrago", "Rodriguez", "vabuitrago18@misena.edu.co", 3115698975, "Kra 4 N°45 R Sur","12345", 1),
+			(2, "Marcos", "Mateo", "Lopez", "Rodríguez", "marcos@gmail.com", 3205898965, "Kra 4 N°35 z Sur","12345", 1),
+            (3, "Daniel", "Alberto", "Gómez", "Gonzáles", "daniel@gmail.com", 3505623648, "Cll 10 N°65 R Sur","12345", 1),
+            (4, "Juan", "Pablo", "Martínez", "Sánchez", "juanpa@gmail.com", 3005368754, "Carrera 3 # 18- 49","12345", 1),
+            (5, "Álvaro", "Hakim", "Castro", "", "alvaro@gmail.com", 3017696370, "Carrera 7 # 84- 102","12345", 1),
+            (6, "Adrían", "Asher", "Ruiz", "Ortiz", "adrian@gmail.com", 3214578915, "Calle 4 No. 5 – 100","12345", 1),
+            (7, "Henry", "David", "Suárez", "Romero", "henry@gmail.com", 3120008975, "Calle 11 No. 4 - 14","12345", 1),
+            (8, "Diego", "Fernando", "Herrera", "Valencia", "diego@gmail.com", 1056897485, "Calle 24 N° 5-60","12345", 1),
+            (9, "Jude", "Javier", "Quintero", "Restrepo", "jude@gmail.com", 3000108975, "Av. Ciudad de Cali No. 6C-09","12345", 1),
+            (10, "Ángel", "Gabriel", "Giraldo", "Morales", "angel@gmail.com", 3115690000, "Calle 48b sur No. 21-13","12345", 1),
+            (11, "Thiago", "Valentín", "García", "Oliver	", "thiago@gmail.com", 3031230000, "Avenida Kra 60 No. 57-60","12345", 1),
+		    (12, "Julián", "Dante", "Jake", "", "julian@gmail.com", 3037896400, "Calle 11 No. 4-21 / 93","12345", 1),
+			(13, "Julián", "", "Jake", "", "julianja@gmail.com", 3037896400, "Calle 11 No. 4-21 / 93","12345", 1),
+            (14, "Andrea", "", "Noah	", "", "andrea@gmail.com", 3093646414, "Calle 10 No. 5-22","12345", 1),
+            (15, "Sophia", "", "Connor", "", "sophia@gmail.com", 3124587986, "Carrera 20 No. 37-54","12345", 1),
+            (16, "Emma", "", "Harry", "", "emma@gmail.com", 3201234578, "Av. Calle 19 N° 2-49 Centro","12345", 1),
+            (17, "Isabella", "", "Mason", "", "isabella@gmail.com", 3126548795, "Calle 109a N° 17-10 Sede Norte","12345", 1),
+            (18, "Olivia", "", "Charlie", "", "olivia@gmail.com", 3002345600, "Cr.8a # 15-63","12345", 1),
+            (19, "Martina", "", "Margaret", "", "martina@gmail.com", 3045687120, "Cr.9 # 74-99","12345", 1),
+            (20, "Giorgia", "", "Michelle", "", "giorgia@gmail.com", 3506584578, "Carrera 1 Este No. 17 01","12345", 1);
 		
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------        
         
@@ -72,17 +72,15 @@ values     	(001, "Acción"),
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- SERVICIOS --
-insert into Kyukeisho.servicios (id_servicio, nombre_servicio, precio_servicio)
-values 		(01, "Baño", 1000),
-			(02, "Xbox 360", 1000 ),
-            (03, "PS2", 1000 ),
-            (04, "PS3", 1000 ),
-            (05, "PS4", 1000 ),
-            (06, "Pc", 1000 ),
-            (07, "Xbos one", 1000 ),
-            (08, "Nintendo", 1000 ),
-            (09, "Wii", 1000 ),
-            (10, "Alimentos", 1000 );
+insert into Kyukeisho.consola (id_consola, nombre_consola, precio_hora)
+values 		(01, "Xbox 360", 200 ),
+            (02, "PS2", 300 ),
+            (03, "PS3", 100 ),
+            (04, "PS4", 300 ),
+            (05, "Pc", 400 ),
+            (06, "Xbos one", 300 ),
+            (07, "Nintendo", 500 ),
+            (08, "Wii", 700 );
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -251,7 +249,7 @@ values
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         
 -- SERVICIOS_FACTURA -- 
-insert into Kyukeisho.servicios_factura (id_servicio, id_factura)
+insert into Kyukeisho.consola_factura (id_consola, id_factura)
 values (01,"AZ0"),
 	   (02,"AZ1"),
        (03,"AZ2"),
@@ -261,7 +259,7 @@ values (01,"AZ0"),
        (07,"AZ6"),
        (08,"AZ7"),
        (08,"AZ8"),
-       (10,"AZ9"),
+       (05,"AZ9"),
        (01,"AE0"),
        (02,"AE1"),
        (03,"AE2"),
@@ -270,8 +268,8 @@ values (01,"AZ0"),
        (06,"AE5"),
        (07,"AE6"),
        (08,"AE7"),
-       (09,"AE8"),
-       (10,"AE9"),
+       (07,"AE8"),
+       (05,"AE9"),
        (01,"AX0");
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -376,7 +374,7 @@ values	(1, "AZ0"),
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
 -- USUARIO_SERVICIOS --
-insert into Kyukeisho.usuario_servicios (id_usuario, id_servicio)
+insert into Kyukeisho.usuario_consola (id_usuario, id_consola)
 values	(1, 01),
 		(2, 02),
 		(3, 03),
@@ -385,8 +383,8 @@ values	(1, 01),
 		(6, 06),
 		(7, 07),
 		(8, 08),
-		(9, 09),
-		(10, 10),
+		(9, 07),
+		(10, 05),
 		(11, 01),
 		(12, 02),
 		(13, 03),
@@ -395,5 +393,5 @@ values	(1, 01),
 		(16, 06),
 		(17, 07),
 		(18, 08),
-		(19, 09),
-		(20, 10);
+		(19, 06),
+		(20, 04);
