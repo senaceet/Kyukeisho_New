@@ -87,11 +87,12 @@ public final class Recuperar_005fcontrasena_005f1_jsp extends org.apache.jasper.
       out.write("                  <li class=\"nav-item dropdown\">\r\n");
       out.write("                      <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\"\r\n");
       out.write("                        aria-haspopup=\"true\" aria-expanded=\"false\" style=\"color: #ffffff\">\r\n");
-      out.write("                        Â¿Como Registrarme?\r\n");
+      out.write("                        ¿Como Registrarme?\r\n");
       out.write("                      </a>\r\n");
+      out.write("                      <a href=\"\">\r\n");
       out.write("                      <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\" style=\"width:13rem; background-color: #343a40\">\r\n");
-      out.write("                        <a class=\"dropdown-item\" href=\"\" style=\"color: #ffffff\">Administrador</a>\r\n");
-      out.write("                        <a class=\"dropdown-item\" href=\"\" style=\"color: #ffffff\">Cliente</a>\r\n");
+      out.write("                        <a class=\"dropdown-item\" href=\"../../Administrador/Inicio_Sesion_Administrador.jsp\" style=\"color: #ffffff\">Administrador</a>\r\n");
+      out.write("                        <a class=\"dropdown-item\" href=\"../Inicio_Sesion_Cliente.jsp\" style=\"color: #ffffff\">Cliente</a>\r\n");
       out.write("                      </div>\r\n");
       out.write("                </li>\r\n");
       out.write("              </ul>\r\n");
@@ -139,7 +140,7 @@ public final class Recuperar_005fcontrasena_005f1_jsp extends org.apache.jasper.
       out.write("                            <div class=\"form-group\">\r\n");
       out.write("                                <input name=\"correo\" type=\"email\" class=\"form-control\" placeholder=\"Correo Electronico\"\r\n");
       out.write("                                    required=\"required\">\r\n");
-      out.write("                                    <button class=\"btn btn-primary btn-block my-4 my-sm-6\" type=\"submit\">\r\n");
+      out.write("                                    <button class=\"btn btn-primary btn-block my-4 my-sm-6\" type=\"submit\" name=\"accion\" value=\"Ingresar\">\r\n");
       out.write("                                        <font size=5>Enviar</font>\r\n");
       out.write("                                    </button>\r\n");
       out.write("                            </div>\r\n");
@@ -149,7 +150,13 @@ public final class Recuperar_005fcontrasena_005f1_jsp extends org.apache.jasper.
       out.write("                    </div>\r\n");
       out.write("            </div>\r\n");
       out.write("            </div>\r\n");
+      out.write("            <h5 style=\"color:white; text-align:center\">\r\n");
+      out.write("            ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${message_e}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\r\n");
       out.write("            \r\n");
+      out.write("            <c:remove var=\"message_e\" scope=\"session\" />\r\n");
+      out.write("            </h5> \r\n");
       out.write("    <br>\r\n");
       out.write("    <br>\r\n");
       out.write("    <br>\r\n");

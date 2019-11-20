@@ -27,6 +27,7 @@ public class Controlador extends HttpServlet {
             p.setCorreo_usuario(correo);
             p.setContraseña_usuario(contraseña);
             r = dao.Validar(p);
+            
             if(r==1){
                 
                 request.getSession().setAttribute("correo", correo);

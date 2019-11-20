@@ -544,28 +544,28 @@
                             <h2>Juegos Mas Pedidos</h2>
                         </div>
                         <div class="col-sm-6">
-                            <a href=" " class="btn btn-success" data-toggle="modal"><i
+                            <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i
                                     class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                </i><span>Añadir Nuevo Juego</span></a>
-                            <a href=" " class="btn btn-danger" data-toggle="modal"><i
+                                </i><span>AÃ±adir Nuevo Juego</span></a>
+                            <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i
                                     class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
                                 </i><span>Eliminar Juego</span></a>
                         </div>
                     </div>
                 </div>
                 <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-			<th>
-                            <span class="custom-checkbox">
-                            <input type="checkbox">
-                            <label for="selec"></label>
-                            </span>
-			</th>
+                    <thead>
+                        <tr>
+                            <th>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="selectAll">
+                                    <label for="selectAll"></label>
+                                </span>
+                            </th>
                             <th>Nombre</th>
                             <th>Precio Unitario</th>
                             <th>Cantidad</th>
-                            <th>Código Juego</th>
+                            <th>CÃ³digo Juego</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -12,6 +12,10 @@
         <servlet-name>controlador_validar</servlet-name>
         <servlet-class>controlador.controlador_validar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>envio_correo</servlet-name>
+        <servlet-class>controlador.envio_correo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>controlador_validar</servlet-name>
         <url-pattern>/controlador_validar</url-pattern>
+    </servlet-mapping>
+        <servlet-mapping>
+        <servlet-name>envio_correo</servlet-name>
+        <url-pattern>/envio_correo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

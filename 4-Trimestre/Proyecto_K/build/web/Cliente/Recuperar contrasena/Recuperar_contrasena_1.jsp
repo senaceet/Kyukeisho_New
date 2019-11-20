@@ -44,11 +44,12 @@
                   <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false" style="color: #ffffff">
-                        Â¿Como Registrarme?
+                        ¿Como Registrarme?
                       </a>
+                      <a href="">
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:13rem; background-color: #343a40">
-                        <a class="dropdown-item" href="" style="color: #ffffff">Administrador</a>
-                        <a class="dropdown-item" href="" style="color: #ffffff">Cliente</a>
+                        <a class="dropdown-item" href="../../Administrador/Inicio_Sesion_Administrador.jsp" style="color: #ffffff">Administrador</a>
+                        <a class="dropdown-item" href="../Inicio_Sesion_Cliente.jsp" style="color: #ffffff">Cliente</a>
                       </div>
                 </li>
               </ul>
@@ -96,7 +97,7 @@
                             <div class="form-group">
                                 <input name="correo" type="email" class="form-control" placeholder="Correo Electronico"
                                     required="required">
-                                    <button class="btn btn-primary btn-block my-4 my-sm-6" type="submit">
+                                    <button class="btn btn-primary btn-block my-4 my-sm-6" type="submit" name="accion" value="Ingresar">
                                         <font size=5>Enviar</font>
                                     </button>
                             </div>
@@ -106,7 +107,11 @@
                     </div>
             </div>
             </div>
+            <h5 style="color:white; text-align:center">
+            ${message_e}
             
+            <c:remove var="message_e" scope="session" />
+            </h5> 
     <br>
     <br>
     <br>
