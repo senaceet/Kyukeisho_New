@@ -5,7 +5,7 @@ insert into kyukeisho.estado(id_estado, estado)
 values 						(1, "Activo"),
 							(2, "Desactivo");
 
--- USUARIO --
+-- USUARIO ---
 insert into Kyukeisho.usuario (id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario, correo_usuario, telefono_usuario, direccion,contraseña_usuario,id_estado)
 values 		(1, "Vladimir", "Alberto", "Buitrago", "Rodriguez", "vabuitrago18@misena.edu.co", 3115698975, "Kra 4 N°45 R Sur","12345",1),
 			(2, "Marcos", "Mateo", "Lopez", "Rodríguez", "marcos@gmail.com", 3205898965, "Kra 4 N°35 z Sur","12345",1),
