@@ -61,23 +61,24 @@ alter table Kyukeisho.factura add primary key (id_factura);
 
 -- JUEGOS --
 create table Kyukeisho.juegos(
-codigo_juego varchar (5) not null,
+codigo_juego int (5) not null AUTO_INCREMENT,
 nombre_juego varchar (100),
-id_usuario int (10) not null 
+id_usuario int (10) not null, 
+primary key (codigo_juego)
 );
 
 
 -- CATEGORIA_JUEGOS --
 create table Kyukeisho.categoria_juegos(
-id_categoria_juegos int (10) not null,
-nombre_categoria_juegos varchar (50)
+id_categoria_juegos int (10) not null AUTO_INCREMENT,
+nombre_categoria_juegos varchar (50),
+primary key (id_categoria_juegos)
 );
-alter table Kyukeisho.categoria_juegos add primary key (id_categoria_juegos);
 
 
 -- JUEGOS_CATEGORIA_JUEGOS --
 create table Kyukeisho.juegos_categoria_juegos(
-codigo_juego varchar (5) not null,
+codigo_juego int (5) not null,
 id_categoria_juegos int (10) not null
 );
 
@@ -165,7 +166,6 @@ alter table kyukeisho.usuario add constraint fk_usuario_estado foreign key (id_e
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Juegos/usuario 
-alter table Kyukeisho.juegos add primary key (codigo_juego);
 alter table Kyukeisho.juegos add constraint fk_juegos_usuario foreign key (id_usuario) references Kyukeisho.usuario (id_usuario) on update cascade on delete cascade;
 alter table Kyukeisho.juegos add index fk_juegos_usuario_idx (id_usuario);
 

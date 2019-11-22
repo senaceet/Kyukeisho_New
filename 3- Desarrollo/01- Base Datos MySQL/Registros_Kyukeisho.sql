@@ -157,46 +157,46 @@ values	("AZ0", '2019-10-01 04:29:00', '2019-10-01 05:29:00', 100000),
 insert into Kyukeisho.juegos (codigo_juego, nombre_juego, id_usuario)
 values  
 		-- Pc --
-        ("A1", "Euro Truck Simulator 2", 1),
-		("A2", "American Truck Simulator 2", 2),
-		("A3", "Pes 2019", 3),
-		("A4", "Assassin’s Creed Odyssey Gold Edition", 4),
-		("A5", "Grand Theft Auto V", 5),
+        (1, "Euro Truck Simulator 2", 1),
+		(2, "American Truck Simulator 2", 2),
+		(3, "Pes 2019", 3),
+		(4, "Assassin’s Creed Odyssey Gold Edition", 4),
+		(5, "Grand Theft Auto V", 5),
         
 	-- PS4 --
-		("B1","Call of Duty 4: Modern Warfare",6),
-		("B2","God of War",7),
-		("B3","Battlefield 4",8),
-		("B4","Spider-Man",9),	
-		("B5","FIFA 19",10),
+		(6,"Call of Duty 4: Modern Warfare",6),
+		(7,"God of War",7),
+		(8,"Battlefield 4",8),
+		(9,"Spider-Man",9),	
+		(10,"FIFA 19",10),
         
 	-- Xbox 360 --
-		("C1","Resident Evil 4",11),
-		("C2","NBA2K18",12),
-		("C3","Rise of the Tomb Raider",13),
-		("C4", "WWE 2K17",14),
-		("C5", "Call Of Duty Black Ops III",15),
+		(11,"Resident Evil 4",11),
+		(12,"NBA2K18",12),
+		(13,"Rise of the Tomb Raider",13),
+		(14, "WWE 2K17",14),
+		(15, "Call Of Duty Black Ops III",15),
         
 	-- Xbox One --
-		("D1", "Minecraft", 16),
-		("D2", "Fortnite", 17),
-		("D3", "Roblox", 18),
-		("D4", "The Elder Scrolls Online", 19),
-		("D5", "Anthem", 20),
+		(16, "Minecraft", 16),
+		(17, "Fortnite", 17),
+		(18, "Roblox", 18),
+		(19, "The Elder Scrolls Online", 19),
+		(20, "Anthem", 20),
         
 	-- Nintendo --
-		("E1", "The Legend of Zelda",16),
-		("E2", "Mario Kart 8 Deluxe",17),
-		("E3", "Mario Bros",18),
-		("E4", "Kirby",19),
-		("E5", "Splatoon 2", 20),
+		(21, "The Legend of Zelda",16),
+		(22, "Mario Kart 8 Deluxe",17),
+		(23, "Mario Bros",18),
+		(24, "Kirby",19),
+		(25, "Splatoon 2", 20),
         
 	-- Wii-
-		("F1", "Wall e", 16),
-		("F2", "Just Dance 17",1),
-		("F3", "Fatal Frame 4",5),
-		("F4", "The Voice", 4),
-		("F5", "Wii Fit U", 11);
+		(26, "Wall e", 16),
+		(27, "Just Dance 17",1),
+		(28, "Fatal Frame 4",5),
+		(29, "The Voice", 4),
+		(30, "Wii Fit U", 11);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
@@ -204,46 +204,46 @@ values
 insert into Kyukeisho.juegos_categoria_juegos (codigo_juego, id_categoria_juegos)
 values 	
 		-- Pc --
-        ("A1", 005),
-		("A2", 005),
-		("A3", 006),
-		("A4", 001),
-		("A5", 001),
+        (1, 005),
+		(2, 005),
+		(3, 006),
+		(4, 001),
+		(5, 001),
         
 	-- PS4 --
-		("B1", 001),
-		("B2", 017),
-		("B3", 017),
-		("B4", 004),	
-		("B5", 006),
+		(6, 001),
+		(7, 017),
+		(8, 017),
+		(9, 004),	
+		(10, 006),
         
 	-- Xbox 360 --
-		("C1", 017),
-		("C2", 006),
-		("C3", 001),
-		("C4", 002),
-		("C5", 001),
+		(11, 017),
+		(12, 006),
+		(13, 001),
+		(14, 002),
+		(15, 001),
         
 	-- Xbox One --
-		("D1", 023),
-		("D2", 017),
-		("D3", 017),
-		("D4", 031),
-		("D5", 001),
+		(16, 023),
+		(17, 017),
+		(18, 017),
+		(19, 031),
+		(20, 001),
         
 	-- Nintendo --
-		("E1", 004),
-		("E2", 036),
-		("E3", 004),
-		("E4", 001),
-		("E5", 021),
+		(21, 004),
+		(22, 036),
+		(23, 004),
+		(24, 001),
+		(25, 021),
         
 	-- Wii-
-		("F1", 003),
-		("F2", 010),
-		("F3", 001),
-		("F4", 004),
-		("F5", 002);
+		(26, 003),
+		(27, 010),
+		(28, 001),
+		(29, 004),
+		(30, 002);
 
         
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
