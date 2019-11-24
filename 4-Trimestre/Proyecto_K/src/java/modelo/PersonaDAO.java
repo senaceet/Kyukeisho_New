@@ -1,5 +1,6 @@
 package modelo;
 
+import Conexion.Conexion;
 import java_interfaces.Validar;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,7 +9,7 @@ import java.sql.ResultSet;
 
 public class PersonaDAO implements Validar{
     Connection con;
-    conexion cn=new conexion();
+    Conexion cn=new Conexion();
     PreparedStatement ps;
     ResultSet rs;
     

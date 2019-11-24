@@ -269,7 +269,7 @@
                             src="https://d50xhnwqnrbqk.cloudfront.net/images/products/large/Combos-papas-onduladas.png"
                             width="100" height="100"></center>
                     <div class="card-body">
-                        <center><a href="CRUD Productos\Crud_Productos_Vendidos.jsp" class="btn btn-Light btn-sm active" role="button"
+                        <center><a href="../Crud_Productos_Vendidos.jsp" class="btn btn-Light btn-sm active" role="button"
                                 aria-pressed="true">
                                 <h5>Productos</h5></i>
                             </a></center>
@@ -285,9 +285,9 @@
                             src="https://s3.amazonaws.com/w3-cache.content-blog/wp-content/uploads/2018/01/13181645/videojuegos.png"
                             width="100" height="100"></center>
                     <div class="card-body">
-                        <center><a href="CRUD Categorias\Categorias_1.jsp" class="btn btn-Light btn-sm active" role="button"
+                        <center><a href="../Categorias_1.jsp" class="btn btn-Light btn-sm active" role="button"
                                 aria-pressed="true">
-                                <h5>Categoria</h5></i>
+                                <h5>Categorias juegos</h5></i>
                             </a></center>
                         <br>
                         <center>

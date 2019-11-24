@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
 import modelo.Email;
 import modelo.Persona_email;
 import modelo.Persona_email_DAO;
-import modelo.conexion;
+import Conexion.Conexion;
 
 @WebServlet(name = "envio_correo", urlPatterns = {"/envio_correo"})
 public class envio_correo extends HttpServlet {
@@ -46,7 +46,7 @@ public class envio_correo extends HttpServlet {
             session.setAttribute("codigo", cod);
             session.setAttribute("correo", para);
            
-            conexion c = new conexion();
+            Conexion c = new Conexion();
             Connection conn = c.getConnection();
             
         String message_error = "Este correo no existe en nuestro sistema,Vuelve a ingresar un correo valido.";

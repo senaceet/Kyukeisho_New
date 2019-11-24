@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import static jdk.nashorn.internal.runtime.Debug.id;
-import modelo.conexion;
+import Conexion.Conexion;
 
 @WebServlet(name = "recuperar_contraseña", urlPatterns = {"/recuperar_contraseña"})
 public class recuperar_contraseña extends HttpServlet {
@@ -38,7 +38,7 @@ public class recuperar_contraseña extends HttpServlet {
                 response.sendRedirect("Cliente/Recuperar contrasena/Recuperar_contrasena_3.jsp"); 
                 
             }else{
-              conexion c = new conexion();
+              Conexion c = new Conexion();
               Connection conn = c.getConnection();
             
               Statement st = null;  

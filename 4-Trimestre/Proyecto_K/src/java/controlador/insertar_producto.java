@@ -11,7 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.conexion;
+import Conexion.Conexion;
 
 
 @WebServlet(name = "insertar_producto", urlPatterns = {"/insertar_producto"})
@@ -27,7 +27,7 @@ public class insertar_producto extends HttpServlet {
         String pre = request.getParameter("precio");
         String tip = request.getParameter("tipo");
         
-        conexion c = new conexion();
+        Conexion c = new Conexion();
         Connection conn = c.getConnection();
         
         Statement st = null;

@@ -10,7 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.conexion;
+import Conexion.Conexion;
 
 
 @WebServlet(name = "registrar_admin", urlPatterns = {"/registrar_admin"})
@@ -29,7 +29,7 @@ public class registrar_admin extends HttpServlet {
         String tel = request.getParameter("tel");
         String contra = request.getParameter("contra");
         
-        conexion c = new conexion();
+        Conexion c = new Conexion();
         Connection conn = c.getConnection();
         
         Statement st = null;

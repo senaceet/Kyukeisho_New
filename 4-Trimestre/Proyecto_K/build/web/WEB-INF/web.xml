@@ -16,6 +16,18 @@
         <servlet-name>envio_correo</servlet-name>
         <servlet-class>controlador.envio_correo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>controlador_categorias_juegos</servlet-name>
+        <servlet-class>controlador.controlador_categorias_juegos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>controlador_productos_vendidos</servlet-name>
+        <servlet-class>controlador.controlador_productos_vendidos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>controlador_productos_no_tan_vendidos</servlet-name>
+        <servlet-class>controlador.controlador_productos_no_tan_vendidos</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
@@ -28,9 +40,21 @@
         <servlet-name>controlador_validar</servlet-name>
         <url-pattern>/controlador_validar</url-pattern>
     </servlet-mapping>
-        <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>envio_correo</servlet-name>
         <url-pattern>/envio_correo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controlador_categorias_juegos</servlet-name>
+        <url-pattern>/controlador_categorias_juegos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controlador_productos_vendidos</servlet-name>
+        <url-pattern>/controlador_productos_vendidos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controlador_productos_no_tan_vendidos</servlet-name>
+        <url-pattern>/controlador_productos_no_tan_vendidos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

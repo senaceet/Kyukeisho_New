@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.conexion;
+import Conexion.Conexion;
 import modelo.usuario_DAO;
 
 @WebServlet(name = "registro_usuario", urlPatterns = {"/registro_usuario"})
@@ -35,7 +35,7 @@ public class registro_usuario extends HttpServlet {
         usuario_DAO d = new usuario_DAO(pri_nom_user,seg_nom_user,pri_ape_user,seg_ape_user,email_user,tel_user,direc_user,contra_user);
         String doc1 = d.connection();
         
-        conexion c = new conexion();
+        Conexion c = new Conexion();
         Connection conn = c.getConnection();
         
         Statement st = null;
