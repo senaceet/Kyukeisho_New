@@ -54,9 +54,10 @@ create table Kyukeisho.factura(
 id_factura varchar (6) not null,
 hora_entrada datetime,
 hora_compra datetime,
-precio_total int (10) not null
+precio_total int (10) not null,
+primary key (id_factura)
 );
-alter table Kyukeisho.factura add primary key (id_factura);
+
 
 
 -- JUEGOS --
@@ -108,11 +109,12 @@ id_factura varchar (6) not null
 
 -- PRODUCTOS --
 create table Kyukeisho.productos(
-id_producto int (10) not null,
+id_producto int (10) not null AUTO_INCREMENT,
 nombre_producto varchar (100),
 cantidad_producto int (10),
 precio_unitario_producto int (10),
-id_tipo_producto int (10) not null
+id_tipo_producto int (10) not null,
+primary key (id_producto)
 );
 
 
@@ -126,35 +128,33 @@ id_producto int (10)
 -- TIPOS_PRODUCTO --
 create table Kyukeisho.tipo_producto(
 id_tipo_producto int (10) not null,
-nombre_tipo_producto varchar (100)
+nombre_tipo_producto varchar (100),
+primary key (id_tipo_producto)
 );
-alter table Kyukeisho.tipo_producto add primary key (id_tipo_producto);
-
 
 -- CITAS --
 create table Kyukeisho.citas(
 id_cita int (10) not null,
 hora_cita datetime,
-id_usuario int (10) not null
+id_usuario int (10) not null,
+primary key (id_cita)
 );
 
 
 -- SERVIDOR_CORREO --
 create table Kyukeisho.servidor_correo(
 id_servidor int (2) not null,
-dominio_servicio varchar (30)
+dominio_servicio varchar (30),
+primary key (id_servidor)
 );
-alter table Kyukeisho.servidor_correo add primary key (id_servidor);
-
 
 -- LOG_ERROR --
 create table Kyukeisho.log_error(
 id_error int (2) not null,
 descripcion_error varchar (100),
-hora_error datetime
+hora_error datetime,
+primary key (id_error)
 );
-alter table Kyukeisho.log_error add primary key (id_error);
-
 
 
 
@@ -209,13 +209,11 @@ alter table Kyukeisho.consola_factura add primary key (id_consola, id_factura);
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Productos/tipo_producto
-alter table Kyukeisho.productos add primary key (id_producto);
 alter table Kyukeisho.productos add constraint fk_productos_tipo_producto foreign key (id_tipo_producto) references Kyukeisho.tipo_producto (id_tipo_producto) on update cascade on delete cascade;
 alter table Kyukeisho.productos add index fk_productos_tipo_producto_idx (id_tipo_producto);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Citas/Usuario
-alter table Kyukeisho.citas add primary key (id_cita);
 alter table Kyukeisho.citas add constraint fk_citas_usuario foreign key (id_usuario) references Kyukeisho.usuario (id_usuario) on update cascade;
 alter table Kyukeisho.citas add index fk_citas_usuario_idx (id_usuario);
 
