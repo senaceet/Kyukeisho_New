@@ -209,7 +209,7 @@
           <body>
           <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
             <div class="navbar-header d-flex col">
-                <a href="../../index.html">
+                <a href="index.html">
                     <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
                     </a>            
              <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
@@ -237,9 +237,9 @@
                 <li class="nav-item dropdown" >
                   <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://miro.medium.com/max/1024/1*Age2mlAUaGBPNWcLvQPEUA.jpeg" class="avatar" alt="Avatar"> Andres Olaya <b class="caret"></b></a>
                   <ul class="dropdown-menu" style="background-color: #343a40">
-                    <li><a href="../Perfil_Administrador.html" style="color: rgb(255, 255, 255)" class="dropdown-item"><i class="fa fa-user-o"></i> Perfil</a></li>
+                    <li><a href="Administrador/Perfil_Administrador.html" style="color: rgb(255, 255, 255)" class="dropdown-item"><i class="fa fa-user-o"></i> Perfil</a></li>
                     <li class="divider dropdown-divider"></li>
-                    <li><a href="../../index.html" style="color: rgb(255, 255, 255)" class="dropdown-item"><i class="material-icons"></i> Cerrar Sesión</a></li>
+                    <li><a href="index.html" style="color: rgb(255, 255, 255)" class="dropdown-item"><i class="material-icons"></i> Cerrar Sesión</a></li>
                   </ul>
                 </li>
               </ul>
@@ -696,7 +696,7 @@
                     <div class="modal-content">
                         <form action="controlador_productos_no_tan_vendidos">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                <h4 class="modal-title">Añadir Categoria producto</h4>
+                                <h4 class="modal-title">Añadir producto</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
@@ -747,7 +747,7 @@
           %>
                         <form action="controlador_productos_no_tan_vendidos">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                <h4 class="modal-title">Editar categoria</h4>
+                                <h4 class="modal-title">Editar producto</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
@@ -800,7 +800,7 @@
           %>
                         <form action="controlador_productos_no_tan_vendidos">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                <h4 class="modal-title">Eliminar categoria</h4>
+                                <h4 class="modal-title">Eliminar producto</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
@@ -808,7 +808,7 @@
 
                             <div class="modal-body">
                                 
-                                <p>¿Está seguro de que desea eliminar esta categoria?</p>
+                                <p>¿Está seguro de que desea eliminar este producto?</p>
                             </div>
                    
                             <div class="modal-footer" style="background-color: rgb(216, 211, 40)">

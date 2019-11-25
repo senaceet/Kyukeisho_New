@@ -243,7 +243,7 @@
         </div>
       </div>
       <div class="col-xl-3 text-left" style="background-color: rgb(255, 251, 0)">
-          <a href="../Reservacion.html">
+          <a href="Reservacion.html">
             <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
               <h5><strong><i class="fa fa-gamepad" aria-hidden="true"></i> Reservaciones</strong></h5>
             </button>

@@ -765,7 +765,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("                    <div class=\"modal-content\">\r\n");
       out.write("                        <form action=\"controlador_productos_vendidos\">\r\n");
       out.write("                            <div class=\"modal-header\" style=\"background-color: rgb(216, 211, 40)\">\r\n");
-      out.write("                                <h4 class=\"modal-title\">Añadir Categoria producto</h4>\r\n");
+      out.write("                                <h4 class=\"modal-title\">Añadir producto</h4>\r\n");
       out.write("                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\"\r\n");
       out.write("                                    aria-hidden=\"true\">&times;</button>\r\n");
       out.write("                            </div>\r\n");
@@ -818,7 +818,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("\r\n");
       out.write("                        <form action=\"controlador_productos_vendidos\">\r\n");
       out.write("                            <div class=\"modal-header\" style=\"background-color: rgb(216, 211, 40)\">\r\n");
-      out.write("                                <h4 class=\"modal-title\">Editar categoria</h4>\r\n");
+      out.write("                                <h4 class=\"modal-title\">Editar producto</h4>\r\n");
       out.write("                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\"\r\n");
       out.write("                                    aria-hidden=\"true\">&times;</button>\r\n");
       out.write("                            </div>\r\n");
@@ -883,7 +883,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("\r\n");
       out.write("                        <form action=\"controlador_productos_vendidos\">\r\n");
       out.write("                            <div class=\"modal-header\" style=\"background-color: rgb(216, 211, 40)\">\r\n");
-      out.write("                                <h4 class=\"modal-title\">Eliminar categoria</h4>\r\n");
+      out.write("                                <h4 class=\"modal-title\">Eliminar producto</h4>\r\n");
       out.write("                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\"\r\n");
       out.write("                                    aria-hidden=\"true\">&times;</button>\r\n");
       out.write("                            </div>\r\n");
@@ -893,7 +893,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("\r\n");
       out.write("                            <div class=\"modal-body\">\r\n");
       out.write("                                \r\n");
-      out.write("                                <p>¿Está seguro de que desea eliminar esta categoria?</p>\r\n");
+      out.write("                                <p>¿Está seguro de que desea eliminar este producto?</p>\r\n");
       out.write("                            </div>\r\n");
       out.write("                   \r\n");
       out.write("                            <div class=\"modal-footer\" style=\"background-color: rgb(216, 211, 40)\">\r\n");

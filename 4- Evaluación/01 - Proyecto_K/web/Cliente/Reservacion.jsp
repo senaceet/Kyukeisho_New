@@ -88,14 +88,14 @@
                     </div>
                       
                       <div class="col-xl-3 text-left" style="background-color: rgb(255, 251, 0)">
-                        <a href="Conocenos.html">
+                        <a href="../Conocenos.html">
                           <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
                             <h5><strong><i class="fa fa-users" aria-hidden="true"></i> Conocenos</strong></h5>
                           </button>
                         </a>
                       </div>
                       <div class="col-xl-3 text-left" style="background-color: rgb(255, 251, 0)">
-                        <a href="contactenos.html">
+                        <a href="../contactenos.html">
                           <button type="button" style="border-color: rgba(133, 133, 133, 0)"
                             class="btn btn-outline-dark">
                             <h5><strong><i class="fa fa-phone" aria-hidden="true"></i> Contactanos</strong></h5>
@@ -134,34 +134,40 @@
                 <h4 class="card-title mt-3 text-center">RESERVA TU CONSOLA</h4>
                 <br>
                 <p class="text-center">Diligencia el formulario para proceder</p>
-                <form>
-
+                <form method="post" action="../registro_reservacion">
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-gamepad" aria-hidden="true"></i> </span>
                     </div>
-                    <select class="form-control">
-                        <option selected=""> Sellecciona el tipo de consola</option>
-                        <option>Xbox one</option>
-                        <option>Playstation 4</option>
-                        <option>Xbox 360</option>
-                        <option>Playstation 3</option>
-                    </select>
+                           <select name="consola" class="form-control" required="required">
+                             <option value="0">seleccione tipo de producto</option>
+                             <option value="1">Xbox 360</option>
+                             <option value="2">PS2</option>
+                             <option value="3">PS3</option>
+                             <option value="4">PS4</option>
+                             <option value="5">PC</option>
+                             <option value="6">Xbox one</option>
+                             <option value="7">Nintendo</option>
+                             <option value="8">Wii</option>
+                           </select> 
+                    
                 </div> 
 
                     <div class="form-group">
                             <label >Fecha de inicio</label>
-                            <input type="date" name="bday" max="3000-12-31" 
-                                   min="1000-01-01" class="form-control">
+                            <input name="fecha" type="date" max="3000-12-31" min="1000-01-01" class="form-control">
                            </div>
-                           <div class="form-group">
+                    
+                    <div class="form-group">
                                 <label >Hora de inicio</label>
-                                  <input class="form-control" type="time" value="06:00:00" id="example-time-input">
+                                  <input name="hora" class="form-control" type="time" value="22:00:00">
                               </div>
                               <br>
+                              
                 <div class="form-group">
                     <button type="submit" class="btn btn-warning btn-block"> Reservar  </button>
                 </div>  
+                              
             </form>
             </article>
             </div> 
@@ -174,7 +180,7 @@
         <footer class="page-footer font-small indigo" style="background-color:rgb(0, 0, 0)">
           <div class="container">
             <div class="row">
-              <h5 style="color:rgb(255, 230, 0)">¿Preguntas? Llama al ** *** *** ****</h5>
+              <h5 style="color:rgb(255, 230, 0)">�Preguntas? Llama al ** *** *** ****</h5>
             </div>
             <div class="row">
             </div>
@@ -197,7 +203,7 @@
                     <i class="fa fa-globe" aria-hidden="true"></i> Idioma
                   </button>
                   <div class="dropdown-menu" style="background-color:rgb(255, 208, 0)" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Español</a>
+                    <a class="dropdown-item" href="#">Espa�ol</a>
                     <a class="dropdown-item" href="#">Ingles</a>
                   </div>
                 </div>
@@ -211,7 +217,7 @@
                     <br>
                     <a href="#!" style="color:rgb(255, 230, 0)">Centro de ayuda</a>
                     <br>
-                    <a href="#!" style="color:rgb(255, 230, 0)">Información corporativa</a>
+                    <a href="#!" style="color:rgb(255, 230, 0)">Informacion corporativa</a>
                   </li>
                 </ul>
               </div>
@@ -220,7 +226,7 @@
                 <ul class="list-unstyled">
                   <li>
                     <br>
-                    <a href="#!"style="color:rgb(255, 230, 0)">Términos de uso</a>
+                    <a href="#!"style="color:rgb(255, 230, 0)">Terminos de uso</a>
                   </li>
                 </ul>
               </div>

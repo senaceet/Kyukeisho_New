@@ -54,9 +54,9 @@ public class registrar_admin extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(insertar_producto.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(registrar_admin.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(insertar_producto.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(registrar_admin.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -66,9 +66,9 @@ public class registrar_admin extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(insertar_producto.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(registrar_admin.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(insertar_producto.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(registrar_admin.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
