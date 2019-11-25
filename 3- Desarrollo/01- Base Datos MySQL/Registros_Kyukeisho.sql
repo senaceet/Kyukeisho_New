@@ -1,12 +1,13 @@
 use Kyukeisho;
 
 
-insert into kyukeisho.estado(id_estado, estado)
+insert into kyukeisho.estado_cliente(id_estado_cliente,estado_cliente)
 values 						(1, "Activo"),
 							(2, "Desactivo");
+                            
 
 -- USUARIO --
-insert into Kyukeisho.usuario (id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario, correo_usuario, telefono_usuario, direccion,contraseña_usuario, id_estado)
+insert into Kyukeisho.usuario (id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario, correo_usuario, telefono_usuario, direccion,contraseña_usuario, id_estado_cliente)
 values 		(1, "Vladimir", "Alberto", "Buitrago", "Rodriguez", "vabuitrago18@misena.edu.co", 3115698975, "Kra 4 N°45 R Sur","12345", 1),
 			(2, "Marcos", "Mateo", "Lopez", "Rodríguez", "marcos@gmail.com", 3205898965, "Kra 4 N°35 z Sur","12345", 1),
             (3, "Daniel", "Alberto", "Gómez", "Gonzáles", "daniel@gmail.com", 3505623648, "Cll 10 N°65 R Sur","12345", 1),
@@ -71,41 +72,35 @@ values     	(001, "Acción"),
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+insert into kyukeisho.estado_consola(id_estado_consola,estado_consola)
+values 						(1, "Disponible"),
+							(2, "Ocupada");
+                            
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- SERVICIOS --
-insert into Kyukeisho.consola (id_consola, nombre_consola, precio_hora)
-values 		(01, "Xbox 360", 200 ),
-            (02, "PS2", 300 ),
-            (03, "PS3", 100 ),
-            (04, "PS4", 300 ),
-            (05, "Pc", 400 ),
-            (06, "Xbos one", 300 ),
-            (07, "Nintendo", 500 ),
-            (08, "Wii", 700 );
+insert into Kyukeisho.consola (id_consola, nombre_consola, precio_hora,id_estado_consola)
+values 		(01, "Xbox 360", 200, 1),
+            (02, "PS2", 300, 1),
+            (03, "PS3", 100, 1),
+            (04, "PS4", 300, 1),
+            (05, "Pc", 400, 1),
+            (06, "Xbos one", 300 ,1),
+            (07, "Nintendo", 500 ,1),
+            (08, "Wii", 700 ,1);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- CITAS -- 
-insert into Kyukeisho.citas (id_cita, hora_cita, id_usuario)
-values 		(0001, '2019-10-01 04:29:00', 1),
-			(0002, '2018-12-03 05:45:00', 2),
-            (0003, '2016-11-05 01:32:00', 3),
-            (0004, '2017-09-07 02:13:00', 4),
-            (0005, '2017-10-08 03:45:00', 5),
-            (0006, '2017-05-09 05:45:00', 6),
-            (0007, '2018-10-10 06:15:00', 7),
-            (0008, '2019-01-12 07:23:00', 8),
-            (0009, '2018-10-12 08:32:00', 9),
-            (0010, '2019-10-11 09:45:00', 10),
-            (0011, '2018-04-14 12:12:00', 11),
-            (0012, '2019-10-15 11:45:00', 12),
-            (0013, '2018-05-16 10:45:00', 13),
-            (0014, '2017-06-17 03:45:00', 14),
-            (0015, '2018-10-18 05:45:00', 15),
-            (0016, '2019-07-19 07:45:00', 16),
-            (0017, '2019-08-20 10:45:00', 17),
-            (0018, '2017-09-22 03:45:00', 18),
-            (0019, '2018-11-21 18:45:00', 19),
-            (0020, '2019-12-23 03:54:00', 20);
+insert into Kyukeisho.reservaciones (id_reservacion,fecha_incio,hora_incio, id_usuario,id_consola)
+values 		(0001, '2019-10-01','04:29:00', 1,01),
+			(0002, '2018-12-03','05:45:00', 2,02),
+            (0003, '2016-11-05','01:32:00', 3,03),
+            (0004, '2017-09-07','02:13:00', 4,04),
+            (0005, '2017-10-08','03:45:00', 5,05),
+            (0006, '2017-05-09','05:45:00', 6,06),
+            (0007, '2018-10-10','06:15:00', 7,07),
+            (0008, '2019-01-12','07:23:00', 8,08);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
@@ -371,28 +366,4 @@ values	(1, "AZ0"),
 		(1, "AE7"),
 		(2, "AE8"),
 		(1, "AE9");
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    
--- USUARIO_SERVICIOS --
-insert into Kyukeisho.usuario_consola (id_usuario, id_consola)
-values	(1, 01),
-		(2, 02),
-		(3, 03),
-		(4, 04),
-		(5, 05),
-		(6, 06),
-		(7, 07),
-		(8, 08),
-		(9, 07),
-		(10, 05),
-		(11, 01),
-		(12, 02),
-		(13, 03),
-		(14, 04),
-		(15, 05),
-		(16, 06),
-		(17, 07),
-		(18, 08),
-		(19, 06),
-		(20, 04);
         

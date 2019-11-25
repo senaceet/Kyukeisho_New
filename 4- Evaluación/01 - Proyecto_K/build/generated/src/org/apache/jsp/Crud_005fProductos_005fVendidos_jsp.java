@@ -272,7 +272,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("            </div>\r\n");
       out.write("            <div id=\"navbarCollapse\" class=\"collapse navbar-collapse justify-content-start\">\r\n");
       out.write("              <ul class=\"nav navbar-nav\">\r\n");
-      out.write("                <li class=\"nav-item active\"><a href=\"../Inicio_Administrador.jsp\" class=\"nav-link\">Página de administración</a></li>\r\n");
+      out.write("                <li class=\"nav-item active\"><a href=\"Administrador/Inicio_Administrador.jsp\" class=\"nav-link\">Página de administración</a></li>\r\n");
       out.write("                <li class=\"nav-item\"><a href=\"#\" class=\"nav-link\">Ayuda</a></li>\r\n");
       out.write("                </li>\r\n");
       out.write("              </ul>\r\n");
@@ -338,7 +338,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("                            </div>\r\n");
       out.write("                                  <a href=\"../CRUD Clientes/Clientes_Registrados.jsp\"><button type=\"button\" class=\"btn btn-outline-info\">Clientes Registrados</button></a>\r\n");
       out.write("\r\n");
-      out.write("                                  <a href=\"../CRUD Categorias/Categorias_1.jsp\"><button type=\"button\" class=\"btn btn-outline-info\">Categorias</button></a>\r\n");
+      out.write("                                  <a href=\"Categorias_1.jsp\"><button type=\"button\" class=\"btn btn-outline-info\">Categorias</button></a>\r\n");
       out.write("                      </div>\r\n");
       out.write("    </center>\r\n");
       out.write("    <br>\r\n");

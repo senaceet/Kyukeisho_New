@@ -12,14 +12,14 @@ correo_usuario varchar (30) not null unique,
 telefono_usuario bigint (10) null,
 direccion varchar (30) null,
 contraseña_usuario varchar (30) not null,
-id_estado int (10) null,
+id_estado_cliente int (10) null,
 primary key (id_usuario)
 );
 
--- ESTADO --
-create table Kyukeisho.estado(
-id_estado int (10) not null primary key,
-estado varchar (30) null
+-- ESTADO CLIENTE --
+create table Kyukeisho.estado_cliente(
+id_estado_cliente int (10) not null primary key,
+estado_cliente varchar (30) null
 );
 
 
@@ -82,23 +82,21 @@ create table Kyukeisho.juegos_categoria_juegos(
 codigo_juego int (5) not null,
 id_categoria_juegos int (10) not null
 );
-
-
--- USUARIO_SERVICIOS --
-create table Kyukeisho.usuario_consola(
-id_usuario int (10) not null,
-id_consola int (2) not null
-);
-
  
 -- Consolas disponibles
 create table Kyukeisho.consola(
-id_consola int (2) not null,
+id_consola int (2) not null ,
 nombre_consola varchar (100),
 precio_hora int(10) not null,
+id_estado_consola int (10),
 primary key(id_consola)
 );
  
+-- ESTADO CONSOLA --
+create table Kyukeisho.estado_consola(
+id_estado_consola int (10) not null primary key,
+estado_consola varchar (30) null
+); 
  
  -- SERVICIOS_FACTURA --
 create table Kyukeisho.consola_factura(
@@ -132,12 +130,14 @@ nombre_tipo_producto varchar (100),
 primary key (id_tipo_producto)
 );
 
--- CITAS --
-create table Kyukeisho.citas(
-id_cita int (10) not null,
-hora_cita datetime,
+-- Reservaciones --
+create table Kyukeisho.reservaciones(
+id_reservacion int (10) not null,
+fecha_incio date,
+hora_incio time,
 id_usuario int (10) not null,
-primary key (id_cita)
+id_consola int (2),
+primary key (id_reservacion)
 );
 
 
@@ -161,7 +161,7 @@ primary key (id_error)
 -- Creacion de Relaciones ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Estado/Usuario
-alter table kyukeisho.usuario add constraint fk_usuario_estado foreign key (id_estado) references kyukeisho.estado(id_estado) on update cascade on delete cascade;
+alter table kyukeisho.usuario add constraint fk_usuario_estado_cliente foreign key (id_estado_cliente) references kyukeisho.estado_cliente(id_estado_cliente) on update cascade on delete cascade;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -183,16 +183,9 @@ alter table Kyukeisho.juegos_categoria_juegos add index fk_juegos_categoria_jueg
 alter table Kyukeisho.juegos_categoria_juegos add primary key (codigo_juego, id_categoria_juegos);
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--- usuario_consola/Usuario 
+-- Reservaciones/consolas 
 
-alter table Kyukeisho.usuario_consola add constraint fk_usuario_consola_id_usuario foreign key (id_usuario) references Kyukeisho.usuario (id_usuario) on update cascade on delete cascade;
-alter table Kyukeisho.usuario_consola add index fk_usuario_consola_id_usuario_idx (id_usuario);
-
--- usuario_consola/consola
-alter table Kyukeisho.usuario_consola add constraint fk_usuario_consola_id_consola foreign key (id_consola) references Kyukeisho.consola (id_consola) on update cascade on delete cascade;
-alter table Kyukeisho.usuario_consola add index fk_usuario_consola_id_consola_idx (id_consola);
-
-alter table Kyukeisho.usuario_consola add primary key (id_usuario, id_consola);
+alter table kyukeisho.reservaciones add constraint fk_reservaciones_consola foreign key (id_consola) references Kyukeisho.consola(id_consola) on update cascade on delete cascade;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -208,14 +201,19 @@ alter table Kyukeisho.consola_factura add index fk_consola_factura_id_factura_id
 alter table Kyukeisho.consola_factura add primary key (id_consola, id_factura);
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+-- Estado_consola/consola
+alter table Kyukeisho.consola add constraint fk_consola_estado_consola foreign key (id_estado_consola) references Kyukeisho.estado_consola(id_estado_consola) on update cascade on delete cascade;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Productos/tipo_producto
 alter table Kyukeisho.productos add constraint fk_productos_tipo_producto foreign key (id_tipo_producto) references Kyukeisho.tipo_producto (id_tipo_producto) on update cascade on delete cascade;
 alter table Kyukeisho.productos add index fk_productos_tipo_producto_idx (id_tipo_producto);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Citas/Usuario
-alter table Kyukeisho.citas add constraint fk_citas_usuario foreign key (id_usuario) references Kyukeisho.usuario (id_usuario) on update cascade;
-alter table Kyukeisho.citas add index fk_citas_usuario_idx (id_usuario);
+alter table Kyukeisho.reservaciones add constraint fk_reservaciones_usuario foreign key (id_usuario) references Kyukeisho.usuario (id_usuario) on update cascade;
+alter table Kyukeisho.reservaciones add index fk_reservaciones_usuario_idx (id_usuario);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- factura_productos/Factura
