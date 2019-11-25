@@ -132,11 +132,11 @@ primary key (id_tipo_producto)
 
 -- Reservaciones --
 create table Kyukeisho.reservaciones(
-id_reservacion int (10) not null,
+id_reservacion int (10) not null AUTO_INCREMENT,
 fecha_incio date,
 hora_incio time,
-id_usuario int (10) not null,
 id_consola int (2),
+correo_usuario varchar (30),
 primary key (id_reservacion)
 );
 
@@ -211,9 +211,9 @@ alter table Kyukeisho.productos add constraint fk_productos_tipo_producto foreig
 alter table Kyukeisho.productos add index fk_productos_tipo_producto_idx (id_tipo_producto);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- Citas/Usuario
-alter table Kyukeisho.reservaciones add constraint fk_reservaciones_usuario foreign key (id_usuario) references Kyukeisho.usuario (id_usuario) on update cascade;
-alter table Kyukeisho.reservaciones add index fk_reservaciones_usuario_idx (id_usuario);
+-- Reservaciones/Usuario
+alter table Kyukeisho.reservaciones add constraint fk_reservaciones_usuario foreign key (correo_usuario) references Kyukeisho.usuario (correo_usuario) on update cascade;
+alter table Kyukeisho.reservaciones add index fk_reservaciones_usuario_idx (correo_usuario);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- factura_productos/Factura
