@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5d7e5ef9-6662-40aa-8bb9-522d8525fe6c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from reservaciones;]]>
+	</queryString>
+	<field name="id_consola" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_incio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hora_incio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="correo_usuario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_reservacion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="79" backcolor="#006699" uuid="73dc277e-2789-48d7-bd65-a0fdffa5caf9"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="e167c759-7b6c-41d9-bdfd-ebe1885f3e01"/>
+					<textElement>
+						<font fontName="Times New Roman" size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Reservaciones]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="455" y="0" width="100" height="20" uuid="f2ab389b-778d-42b9-bb13-aff62f865198"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="19" y="0" width="87" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="5a0d7297-7f1b-423a-89dd-ca59af0f60e1"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id Reservación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="133" y="0" width="87" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="dcf8f97a-bce7-49bf-9fd1-4ce41d96fd67"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Inicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="272" y="0" width="87" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4a59d5f1-f1b7-44e8-ade2-e949009aa16c"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Correo Inicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="430" y="0" width="110" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="1b381a77-c110-43f8-a14a-104e9262dfe0"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Consola]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="430" y="0" width="100" height="20" uuid="911d049f-6e3c-4e3b-8798-38c910e2f17e"/>
+				<textFieldExpression><![CDATA[$F{id_consola}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="133" y="0" width="121" height="20" uuid="aade1810-86c7-49f3-a5d0-d0c96536caab"/>
+				<textFieldExpression><![CDATA[$F{fecha_incio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="272" y="0" width="137" height="20" uuid="3d28340d-02d8-4690-9514-695a78f29dfa"/>
+				<textFieldExpression><![CDATA[$F{correo_usuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="0" width="34" height="20" uuid="e8890cb8-be94-4672-b72d-c6a956c6ab19"/>
+				<textFieldExpression><![CDATA[$F{id_reservacion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="34" width="100" height="20" uuid="09938e96-40e4-4a2d-b5d0-7e52cfcf9d14"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
