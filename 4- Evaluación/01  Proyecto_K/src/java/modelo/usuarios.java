@@ -6,13 +6,15 @@ public class usuarios{
     String segundo_nombre_usuario;
     String primer_apellido_usuario;
     String segundo_apellido_usuario;
+    String correo_usuario;
 
-    public usuarios(String primer_nombre_usuario, String segundo_nombre_usuario,  String primer_apellido_usuario, String segundo_apellido_usuario) {
+    public usuarios(String primer_nombre_usuario, String segundo_nombre_usuario,  String primer_apellido_usuario, String segundo_apellido_usuario, String correo_usuario) {
        
         this.primer_nombre_usuario = primer_nombre_usuario;
         this.segundo_nombre_usuario = segundo_nombre_usuario;
         this.primer_apellido_usuario = primer_apellido_usuario;
         this.segundo_apellido_usuario = segundo_apellido_usuario;
+        this.correo_usuario = correo_usuario;
     }
 
     
@@ -21,6 +23,7 @@ public class usuarios{
         this.segundo_nombre_usuario = segundo_nombre_usuario;
         this.primer_apellido_usuario = primer_apellido_usuario;
         this.segundo_apellido_usuario = segundo_apellido_usuario;
+        this.correo_usuario = correo_usuario;
      }
 
     public int getid_usuario() {
@@ -59,6 +62,13 @@ public class usuarios{
 
     public void setsegundo_apellido_usuario(String segundo_apellido_usuario) {
         this.segundo_apellido_usuario = segundo_apellido_usuario;
+    }
+            public String getcorreo_usuario() {
+        return correo_usuario;
+    }
+
+    public void setcorreo_usuario (String correo_usuario ) {
+        this.correo_usuario  = correo_usuario ;
     }
 
 

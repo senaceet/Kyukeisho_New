@@ -1,5 +1,6 @@
 package controlador;
 
+import Conexion.Conexion;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -12,7 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import Conexion.Conexion;
+import javax.servlet.http.HttpSession;
 import modelo.reservacion_DAO;
 
 @WebServlet(name = "registro_reservacion", urlPatterns = {"/registro_reservacion"})
@@ -27,6 +28,8 @@ public class registro_reservacion extends HttpServlet {
         String hora = request.getParameter("hora");
         int consola = Integer.parseInt(request.getParameter("consola"));
 
+        HttpSession session=request.getSession();
+        String correo_e = (String)session.getAttribute("correo_e");
         
         reservacion_DAO d = new reservacion_DAO(fecha,hora,consola);
         String doc1 = d.connection();
@@ -36,7 +39,7 @@ public class registro_reservacion extends HttpServlet {
         
         Statement st = null;
         st = conn.createStatement();
-        String sql = "insert into reservaciones (fecha_incio,hora_incio,id_consola) values('" + fecha + "','" + hora + "'," + consola + ")";
+        String sql = "insert into reservaciones (fecha_incio,hora_incio,id_consola,correo_usuario) values('" + fecha + "','" + hora + "'," + consola + ",'" + correo_e + "')";
         st.executeUpdate(sql);
         
         response.sendRedirect("Cliente/Reservacion.jsp");

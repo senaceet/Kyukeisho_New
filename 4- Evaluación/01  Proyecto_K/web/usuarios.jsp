@@ -610,6 +610,7 @@
                                 <th>Segundo Nombre</th>
                                 <th>Primer Apellido</th>
                                 <th>Segundo Apellido</th>
+                                <th>correo_usuario</th>
 
                             </tr>
                         </thead>
@@ -635,6 +636,7 @@
                                 <td><%= ma.getsegundo_nombre_usuario()%></td>
                                 <td><%= ma.getprimer_apellido_usuario()%></td>
                                 <td><%= ma.getsegundo_apellido_usuario()%></td>
+                                <td><%= ma.getcorreo_usuario()%></td>
 
         
                         <td>

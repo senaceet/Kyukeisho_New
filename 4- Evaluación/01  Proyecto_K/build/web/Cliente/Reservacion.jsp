@@ -24,7 +24,7 @@
         <font style="color:rgb(255, 145, 0)">
                 <div class="header fixed-top">
                   <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
-                        <a href="index.html">
+                        <a href="../index.html">
                             <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
                             </a>                    
                     <div class="col-xl-1 text-center" >
@@ -54,9 +54,9 @@
                                  <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">Mis reservaciones</a>
                                  <a class="dropdown-item" href="/Cliente/Perfil_Cliente.html" style="color:rgb(255, 217, 0)">Perfil</a>
                                  <a class="dropdown-item" href="/Cliente/Ajustes_Cliente.html" style="color:rgb(255, 217, 0)">Ajustes</a>
-                                 <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">¿Necesitas ayuda?</a>
+                                 <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">�Necesitas ayuda?</a>
                                  <hr>
-                                 <a class="dropdown-item" href="\index.html" style="color:rgb(255, 217, 0)">Cerrar Sesión</a>
+                                 <a class="dropdown-item" href="../index.html" style="color:rgb(255, 217, 0)">Cerrar Sesion</a>
                                 </div>
                             </li>
                           </ul>

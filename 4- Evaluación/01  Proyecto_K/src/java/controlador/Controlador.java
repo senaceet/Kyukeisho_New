@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import modelo.Persona;
 import modelo.PersonaDAO;
 
@@ -28,6 +29,9 @@ public class Controlador extends HttpServlet {
             p.setCorreo_usuario(correo);
             p.setContraseña_usuario(contraseña);
             r = dao.Validar(p);
+            
+            HttpSession session=request.getSession();
+            session.setAttribute("correo_e", correo);
             
             if(r==1){
                 

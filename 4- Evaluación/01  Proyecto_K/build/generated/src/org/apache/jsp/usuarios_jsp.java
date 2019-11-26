@@ -661,6 +661,7 @@ public final class usuarios_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <th>Segundo Nombre</th>\n");
       out.write("                                <th>Primer Apellido</th>\n");
       out.write("                                <th>Segundo Apellido</th>\n");
+      out.write("                                <th>correo_usuario</th>\n");
       out.write("\n");
       out.write("                            </tr>\n");
       out.write("                        </thead>\n");
@@ -697,6 +698,9 @@ public final class usuarios_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</td>\n");
       out.write("                                <td>");
       out.print( ma.getsegundo_apellido_usuario());
+      out.write("</td>\n");
+      out.write("                                <td>");
+      out.print( ma.getcorreo_usuario());
       out.write("</td>\n");
       out.write("\n");
       out.write("        \n");

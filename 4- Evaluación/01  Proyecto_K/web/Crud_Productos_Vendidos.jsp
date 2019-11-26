@@ -570,11 +570,15 @@
                     <div class="table-title" style="background-color: rgb(216, 211, 40)">
                         <div class="row" ><br></div>
                         <div class="row" >
-                            <div class="col-lg-5">
+                            <div class="col-lg-4">
                                 <h2> <strong>Productos</strong></h2>
                             </div>
-                            <div class="col-lg-6" >
-
+                            <div class="col-lg-7" >
+                                
+                                <form name="form1" action="Productos.jsp" target="_black">
+                                    <input type="submit" class="btn btn-info" value="Generar reporte en PDF" />
+                                </form>
+                                
                                 <a  href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
                                     <i class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
                                 </i><span> Eliminar Productos</span></a>
@@ -583,9 +587,7 @@
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 </i><span> Añadir Producto</span></a>
                                 
-                                <form name="form1" action="Productos.jsp" target="_black">
-                                    <input type="submit" value="Generar PDF Productos" />
-                                </form>
+
                             </div>
                             
                         </div>

@@ -20,7 +20,7 @@ public class usuarios_DAO implements CRUD_usuarios {
     @Override
     public List listar() {
         ArrayList<usuarios>list=new ArrayList<>();
-        String sql="select  id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario  from usuario";
+        String sql="select  id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario,correo_usuario  from usuario";
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);
@@ -32,6 +32,7 @@ public class usuarios_DAO implements CRUD_usuarios {
                 ma.setsegundo_nombre_usuario(rs.getString("segundo_nombre_usuario"));
                 ma.setprimer_apellido_usuario(rs.getString("primer_apellido_usuario"));
                 ma.setsegundo_apellido_usuario(rs.getString("segundo_apellido_usuario"));
+                ma.setcorreo_usuario(rs.getString("correo_usuario"));
                 list.add(ma);
             }
         } catch (Exception e) {
@@ -41,7 +42,7 @@ public class usuarios_DAO implements CRUD_usuarios {
 
     @Override
     public usuarios list(int id_usuario) {
-        String sql="select  id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario from usuario" + id_usuario;
+        String sql="select  id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario,correo_usuario from usuario" + id_usuario;
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);
@@ -52,6 +53,7 @@ public class usuarios_DAO implements CRUD_usuarios {
                 CJ.setsegundo_nombre_usuario(rs.getString("segundo_nombre_usuario"));
                 CJ.setprimer_apellido_usuario(rs.getString("primer_apellido_usuario"));
                 CJ.setsegundo_apellido_usuario(rs.getString("segundo_apellido_usuario"));
+                CJ.setcorreo_usuario(rs.getString("correo_usuario"));
 
             }
         } catch (Exception e) {
