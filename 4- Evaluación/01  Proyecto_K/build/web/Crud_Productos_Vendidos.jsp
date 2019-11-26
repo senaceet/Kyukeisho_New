@@ -583,9 +583,9 @@
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 </i><span> Añadir Producto</span></a>
                                 
-                                <a href="#gReporte" class="btn btn-info"  data-toggle="modal">
-                                 <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                </i><span> Generar reporte</span></a>
+                                <form name="form1" action="Productos.jsp" target="_black">
+                                    <input type="submit" value="Generar PDF Productos" />
+                                </form>
                             </div>
                             
                         </div>

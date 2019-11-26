@@ -28,6 +28,10 @@
         <servlet-name>controlador_productos_no_tan_vendidos</servlet-name>
         <servlet-class>controlador.controlador_productos_no_tan_vendidos</servlet-class>
     </servlet>
+        <servlet>
+        <servlet-name>controlador_usuarios</servlet-name>
+        <servlet-class>controlador.controlador_usuarios</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>controlador_productos_no_tan_vendidos</servlet-name>
         <url-pattern>/controlador_productos_no_tan_vendidos</url-pattern>
+    </servlet-mapping>
+        <servlet-mapping>
+        <servlet-name>controlador_usuarios</servlet-name>
+        <url-pattern>/controlador_usuarios</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

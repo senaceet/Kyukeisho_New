@@ -192,7 +192,7 @@
                     <center><img src="https://pbs.twimg.com/profile_images/770888805461164032/a_U3VO3G.jpg" width="100"
                             height="100"></center>
                     <div class="card-body">
-                        <center><a href="CRUD Clientes/Clientes_Registrados.jsp" class="btn btn-Light btn-sm active" role="button"
+                        <center><a href="../usuarios.jsp" class="btn btn-Light btn-sm active" role="button"
                                 aria-pressed="true">
                                 <h5>Clientes</h5></i>
                             </a></center>

@@ -64,6 +64,8 @@ public final class Categorias_005f1_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\r\n");
       out.write("    <link href=\"//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css\" rel=\"stylesheet\" id=\"bootstrap-css\">\r\n");
       out.write("    <link href=\"https://fonts.googleapis.com/css?family=Roboto|Varela+Round\" rel=\"stylesheet\">\r\n");
+      out.write("    <link rel=\"icon\" type=\"image/png\" href=\"https://fotos.subefotos.com/e296fe07575583952d4e106565eb2181o.png\">\r\n");
+      out.write("\r\n");
       out.write("    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\">\r\n");
       out.write("    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\">\r\n");
       out.write("\r\n");
@@ -270,7 +272,7 @@ public final class Categorias_005f1_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("            </div>\r\n");
       out.write("            <div id=\"navbarCollapse\" class=\"collapse navbar-collapse justify-content-start\">\r\n");
       out.write("              <ul class=\"nav navbar-nav\">\r\n");
-      out.write("                <li class=\"nav-item active\"><a href=\"../Inicio_Administrador.jsp\" class=\"nav-link\">Página de administración</a></li>\r\n");
+      out.write("                <li class=\"nav-item active\"><a href=\"Administrador/Inicio_Administrador.jsp\" class=\"nav-link\">Página de administración</a></li>\r\n");
       out.write("                <li class=\"nav-item\"><a href=\"#\" class=\"nav-link\">Ayuda</a></li>\r\n");
       out.write("                </li>\r\n");
       out.write("              </ul>\r\n");
@@ -301,8 +303,8 @@ public final class Categorias_005f1_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                Productos\r\n");
       out.write("                        </button>\r\n");
       out.write("                        <div class=\"dropdown-menu\">\r\n");
-      out.write("                                <a class=\"dropdown-item\" href=\"../CRUD Productos/Crud_Productos_Vendidos.jsp\">Productos Vendidos</a>\r\n");
-      out.write("                                <a class=\"dropdown-item\" href=\"../CRUD Productos/Crud_Productos_No_Tan_Vendidos.jsp\">Productos No Tan Vendidos</a>\r\n");
+      out.write("                                <a class=\"dropdown-item\" href=\"Crud_Productos_Vendidos.jsp\">Productos Vendidos</a>\r\n");
+      out.write("                                <a class=\"dropdown-item\" href=\"Crud_Productos_No_Tan_Vendidos.jsp\">Productos No Tan Vendidos</a>\r\n");
       out.write("                              </div>\r\n");
       out.write("                            </div>\r\n");
       out.write("                            <div class=\"btn-group\">\r\n");

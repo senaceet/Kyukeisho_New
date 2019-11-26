@@ -1,5 +1,5 @@
-<%@page import="modelo.Productos_vendidos"%>
-<%@page import="modelo.Productos_vendidos_DAO"%>
+<%@page import="modelo.usuarios"%>
+<%@page import="modelo.usuarios_DAO"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -606,19 +606,18 @@
                                     </span>
                                 </th>
                                 <th>Id </th>
-                                <th>Nombre Producto</th>
-                                <th>Cantidad_producto</th>
-                                <th>Precio_unitario_producto</th>
-                                <th>Tipo_producto</th>
-                                <th>Acciones</th>
+                                <th>Primer Nombre</th>
+                                <th>Segundo Nombre</th>
+                                <th>Primer Apellido</th>
+                                <th>Segundo Apellido</th>
 
                             </tr>
                         </thead>
                         <%
-                    Productos_vendidos_DAO dao=new Productos_vendidos_DAO();
-                    List<Productos_vendidos>list=dao.listar();
-                    Iterator<Productos_vendidos>iter=list.iterator();
-                    Productos_vendidos ma=null;
+                    usuarios_DAO dao=new usuarios_DAO();
+                    List<usuarios>list=dao.listar();
+                    Iterator<usuarios>iter=list.iterator();
+                    usuarios ma=null;
                     while(iter.hasNext()){
                         ma=iter.next();
                 %>
@@ -631,16 +630,18 @@
                                     </span>
                                 </td>
                                 
-                                <td><%= ma.getid_producto()%></td>
-                                <td><%= ma.getnombre_producto()%></td>
-                                <th><%= ma.getcantidad_producto()%></th>
-                                <th><%= ma.getprecio_unitario_producto()%></th>
-                                <th><%= ma.getnombre_tipo_producto()%></th>
-                                <td>
-                                    <a href="controlador_productos_vendidos?accion=editar&id_producto=<%= ma.getid_producto() %>" class="edit"><i
+                                <td><%= ma.getid_usuario()%></td>
+                                <td><%= ma.getprimer_nombre_usuario()%></td>
+                                <td><%= ma.getsegundo_nombre_usuario()%></td>
+                                <td><%= ma.getprimer_apellido_usuario()%></td>
+                                <td><%= ma.getsegundo_apellido_usuario()%></td>
+
+        
+                        <td>
+                                    <a href="controlador_usuarios?accion=editar&id_usuario=<%= ma.getid_usuario() %>" class="edit"><i
                                             style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>
                                             
-                                    <a href="controlador_productos_vendidos?accion=elimi&id_producto=<%= ma.getid_producto() %>" class="delete"><i
+                                    <a href="controlador_usuarios?accion=elimi&id_usuario=<%= ma.getid_usuario() %>" class="delete"><i
                                              style="color:red" class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
                                 </td>   
                             </tr>
@@ -694,7 +695,7 @@
             <div id="addcate" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="controlador_productos_vendidos">
+                        <form action="controlador_usuarios">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
                                 <h4 class="modal-title">Añadir Categoria producto</h4>
                                 <button type="button" class="close" data-dismiss="modal"
@@ -702,24 +703,9 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label>nombre_producto</label>
-                                    <input name="Nom_P" type="text" class="form-control" required>
-                                    <label>cantidad_producto</label>
-                                    <input name="Can_P" type="text" class="form-control" required>
-                                    <label>precio_unitario_producto</label>
-                                    <input name="Pre_P" type="text" class="form-control" required>
-                                    <label>tipo_producto</label> 
-                                    
-                           <select name="tipo_P" class="p-2 mb-2 form-control" required="required">
-                             <option value="0">seleccione tipo de producto</option>
-                             <option value="1">Comestibles</option>
-                             <option value="2">Videojuegos</option>
-                             <option value="3">Golosinas</option>
-                             <option value="4">tecnologico</option>
-                             <option value="5">Bebidas</option>
-                             <option value="6">Utiles escolares</option>
-                           </select> 
-                                    
+                                    <label>nombre_usuario</label>
+                                    <input name="Nom" type="text" class="form-control" required>
+
                             </div>
                             </div>
                             <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
@@ -738,14 +724,14 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <%
-              Productos_vendidos_DAO dao2=new Productos_vendidos_DAO();
-              Productos_vendidos ma2= new Productos_vendidos();
-              if (request.getAttribute("id_producto")!= null){
-              int id_producto=Integer.parseInt((String)request.getAttribute("id_producto"));
-               ma2=(Productos_vendidos)dao2.list(id_producto);
+              usuarios_DAO dao2=new usuarios_DAO();
+              usuarios ma2= new usuarios();
+              if (request.getAttribute("id_usuario")!= null){
+              int id_usuario=Integer.parseInt((String)request.getAttribute("id_usuario"));
+               ma2=(usuarios)dao2.list(id_usuario);
               }
           %>
-                        <form action="controlador_productos_vendidos">
+                        <form action="controlador_usuarios">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
                                 <h4 class="modal-title">Editar categoria</h4>
                                 <button type="button" class="close" data-dismiss="modal"
@@ -756,24 +742,9 @@
 
 
                                     <label>Nombre producto</label>
-                                    <input type="text" class="form-control" required value="<%= ma2.getnombre_producto() %>" name="Nom_P2">
-                                    <label>Cantidad_producto</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getcantidad_producto() %>" name="Can_P2">
-                                    <label>Precio_unitario_producto</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getprecio_unitario_producto() %>" name="Pre_P2">
-                                    
-                             <label>Tipo_producto</label> 
-                             <select class="p-2 mb-2  form-control" required="required" value="<%= ma2.getid_tipo_producto() %>" name="Tipo_P2">
-                             <option value="0">seleccione tipo de producto</option>
-                             <option value="1">Comestibles</option>
-                             <option value="2">Videojuegos</option>
-                             <option value="3">Golosinas</option>
-                             <option value="4">tecnologico</option>
-                             <option value="5">Bebidas</option>
-                             <option value="6">Utiles escolares</option>
-                             </select> 
-                                    
-                             <input type="hidden" class="form-control" required value="<%= ma2.getid_producto() %>" name="id_producto2">
+                                    <input type="text" class="form-control" required value="<%= ma2.getid_usuario() %>" name="Nom2">
+ 
+                             <input type="hidden" class="form-control" required value="<%= ma2.getid_usuario() %>" name="id_usuario2">
                              
                                 </div>
                             </div>
@@ -791,20 +762,20 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <%
-              Productos_vendidos_DAO dao3=new Productos_vendidos_DAO();
-              Productos_vendidos ma3= new Productos_vendidos();
-              if (request.getAttribute("id_producto")!= null){
-              int id_producto=Integer.parseInt((String)request.getAttribute("id_producto"));
-               ma3=(Productos_vendidos)dao3.list(id_producto);
+              usuarios_DAO dao3=new usuarios_DAO();
+             usuarios ma3= new usuarios();
+              if (request.getAttribute("id_usuario")!= null){
+              int id_usuario=Integer.parseInt((String)request.getAttribute("id_usuario"));
+               ma3=(usuarios)dao3.list(id_usuario);
               }
           %>
-                        <form action="controlador_productos_vendidos">
+                        <form action="controlador_usuarios">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
                                 <h4 class="modal-title">Eliminar categoria</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
-                          <input type="hidden" class="form-control" required value="<%= ma3.getid_producto() %>" name="id_producto3">
+                          <input type="hidden" class="form-control" required value="<%= ma3.getid_usuario() %>" name="id_usuario3">
 
                             <div class="modal-body">
                                 

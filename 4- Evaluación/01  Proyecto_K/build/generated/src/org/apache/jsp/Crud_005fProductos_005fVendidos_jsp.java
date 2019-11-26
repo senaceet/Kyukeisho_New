@@ -260,7 +260,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("          <body>\r\n");
       out.write("          <nav class=\"navbar navbar-default navbar-expand-xl navbar-dark bg-dark\">\r\n");
       out.write("            <div class=\"navbar-header d-flex col\">\r\n");
-      out.write("                <a href=\"index.html\">\r\n");
+      out.write("                <a href=\"../../index.html\">\r\n");
       out.write("                    <img width=\"380\" height=\"70\" src=\"https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png\" class=\"img-fluid\" alt=\"Responsive image\">\r\n");
       out.write("                    </a>            \r\n");
       out.write("             <button type=\"button\" data-target=\"#navbarCollapse\" data-toggle=\"collapse\" class=\"navbar-toggle navbar-toggler ml-auto\">\r\n");
@@ -288,9 +288,9 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("                <li class=\"nav-item dropdown\" >\r\n");
       out.write("                  <a href=\"#\" data-toggle=\"dropdown\" class=\"nav-link dropdown-toggle user-action\"><img src=\"https://miro.medium.com/max/1024/1*Age2mlAUaGBPNWcLvQPEUA.jpeg\" class=\"avatar\" alt=\"Avatar\"> Andres Olaya <b class=\"caret\"></b></a>\r\n");
       out.write("                  <ul class=\"dropdown-menu\" style=\"background-color: #343a40\">\r\n");
-      out.write("                    <li><a href=\"Administrador/Perfil_Administrador.html\" style=\"color: rgb(255, 255, 255)\" class=\"dropdown-item\"><i class=\"fa fa-user-o\"></i> Perfil</a></li>\r\n");
+      out.write("                    <li><a href=\"../Perfil_Administrador.html\" style=\"color: rgb(255, 255, 255)\" class=\"dropdown-item\"><i class=\"fa fa-user-o\"></i> Perfil</a></li>\r\n");
       out.write("                    <li class=\"divider dropdown-divider\"></li>\r\n");
-      out.write("                    <li><a href=\"index.html\" style=\"color: rgb(255, 255, 255)\" class=\"dropdown-item\"><i class=\"material-icons\"></i> Cerrar Sesión</a></li>\r\n");
+      out.write("                    <li><a href=\"../../index.html\" style=\"color: rgb(255, 255, 255)\" class=\"dropdown-item\"><i class=\"material-icons\"></i> Cerrar Sesión</a></li>\r\n");
       out.write("                  </ul>\r\n");
       out.write("                </li>\r\n");
       out.write("              </ul>\r\n");
@@ -634,9 +634,9 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("                                 <i class=\"material-icons\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i>\r\n");
       out.write("                                </i><span> Añadir Producto</span></a>\r\n");
       out.write("                                \r\n");
-      out.write("                                <a href=\"#gReporte\" class=\"btn btn-info\"  data-toggle=\"modal\">\r\n");
-      out.write("                                 <i class=\"material-icons\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i>\r\n");
-      out.write("                                </i><span> Generar reporte</span></a>\r\n");
+      out.write("                                <form name=\"form1\" action=\"Productos.jsp\" target=\"_black\">\r\n");
+      out.write("                                    <input type=\"submit\" value=\"Generar PDF Productos\" />\r\n");
+      out.write("                                </form>\r\n");
       out.write("                            </div>\r\n");
       out.write("                            \r\n");
       out.write("                        </div>\r\n");
@@ -765,7 +765,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("                    <div class=\"modal-content\">\r\n");
       out.write("                        <form action=\"controlador_productos_vendidos\">\r\n");
       out.write("                            <div class=\"modal-header\" style=\"background-color: rgb(216, 211, 40)\">\r\n");
-      out.write("                                <h4 class=\"modal-title\">Añadir producto</h4>\r\n");
+      out.write("                                <h4 class=\"modal-title\">Añadir Categoria producto</h4>\r\n");
       out.write("                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\"\r\n");
       out.write("                                    aria-hidden=\"true\">&times;</button>\r\n");
       out.write("                            </div>\r\n");
@@ -818,7 +818,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("\r\n");
       out.write("                        <form action=\"controlador_productos_vendidos\">\r\n");
       out.write("                            <div class=\"modal-header\" style=\"background-color: rgb(216, 211, 40)\">\r\n");
-      out.write("                                <h4 class=\"modal-title\">Editar producto</h4>\r\n");
+      out.write("                                <h4 class=\"modal-title\">Editar categoria</h4>\r\n");
       out.write("                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\"\r\n");
       out.write("                                    aria-hidden=\"true\">&times;</button>\r\n");
       out.write("                            </div>\r\n");
@@ -883,7 +883,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("\r\n");
       out.write("                        <form action=\"controlador_productos_vendidos\">\r\n");
       out.write("                            <div class=\"modal-header\" style=\"background-color: rgb(216, 211, 40)\">\r\n");
-      out.write("                                <h4 class=\"modal-title\">Eliminar producto</h4>\r\n");
+      out.write("                                <h4 class=\"modal-title\">Eliminar categoria</h4>\r\n");
       out.write("                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\"\r\n");
       out.write("                                    aria-hidden=\"true\">&times;</button>\r\n");
       out.write("                            </div>\r\n");
@@ -893,7 +893,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("\r\n");
       out.write("                            <div class=\"modal-body\">\r\n");
       out.write("                                \r\n");
-      out.write("                                <p>¿Está seguro de que desea eliminar este producto?</p>\r\n");
+      out.write("                                <p>¿Está seguro de que desea eliminar esta categoria?</p>\r\n");
       out.write("                            </div>\r\n");
       out.write("                   \r\n");
       out.write("                            <div class=\"modal-footer\" style=\"background-color: rgb(216, 211, 40)\">\r\n");

@@ -212,7 +212,7 @@
                  <a class="dropdown-item" href="Perfil_Cliente.html" style="color:rgb(255, 217, 0)">Perfil</a>
                  <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">¿Necesitas ayuda?</a>
                  <hr>
-                 <a class="dropdown-item" href="Controlador?accion=Salir" style="color:rgb(255, 217, 0)">Cerrar Sesión</a>
+                 <a class="dropdown-item" href="Inicio_Sesion_Cliente.jsp" style="color:rgb(255, 217, 0)">Cerrar Sesión</a>
                 </div>
             </li>
           </ul>
