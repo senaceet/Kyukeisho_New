@@ -7,6 +7,7 @@ public class usuarios{
     String primer_apellido_usuario;
     String segundo_apellido_usuario;
     String correo_usuario;
+    
 
     public usuarios(String primer_nombre_usuario, String segundo_nombre_usuario,  String primer_apellido_usuario, String segundo_apellido_usuario, String correo_usuario) {
        

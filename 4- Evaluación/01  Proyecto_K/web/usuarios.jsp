@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CRUD Productos vendidos</title>
+    <title>Usuario</title>
     
     <link rel="stylesheet" href="css/styles.css" media="all">
 
@@ -571,17 +571,17 @@
                         <div class="row" ><br></div>
                         <div class="row" >
                             <div class="col-lg-5">
-                                <h2> <strong>Productos</strong></h2>
+                                <h2> <strong>Usuario</strong></h2>
                             </div>
                             <div class="col-lg-6" >
 
                                 <a  href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
                                     <i class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
-                                </i><span> Eliminar Productos</span></a>
+                                </i><span> Eliminar Usuarios</span></a>
                                 
                                 <a href="#addcate" class="btn btn-success"  data-toggle="modal">
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                </i><span> Añadir Producto</span></a>
+                                </i><span> Añadir Usuarios</span></a>
                                 
                                 <form name="form1" action="Productos.jsp" target="_black">
                                     <input type="submit" value="Generar PDF Productos" />
@@ -610,7 +610,8 @@
                                 <th>Segundo Nombre</th>
                                 <th>Primer Apellido</th>
                                 <th>Segundo Apellido</th>
-                                <th>correo_usuario</th>
+                                <th>Correo</th>
+                                <th>Telefono</th>
 
                             </tr>
                         </thead>

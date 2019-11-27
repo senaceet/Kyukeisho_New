@@ -67,7 +67,7 @@ public final class Reservacion_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <font style=\"color:rgb(255, 145, 0)\">\r\n");
       out.write("                <div class=\"header fixed-top\">\r\n");
       out.write("                  <nav class=\"navbar navbar-expand-lg navbar-light \" style=\"background-color: #343a40\">\r\n");
-      out.write("                        <a href=\"index.html\">\r\n");
+      out.write("                        <a href=\"../index.html\">\r\n");
       out.write("                            <img width=\"380\" height=\"70\" src=\"https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png\" class=\"img-fluid\" alt=\"Responsive image\">\r\n");
       out.write("                            </a>                    \r\n");
       out.write("                    <div class=\"col-xl-1 text-center\" >\r\n");
@@ -97,9 +97,9 @@ public final class Reservacion_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                 <a class=\"dropdown-item\" href=\"#\" style=\"color:rgb(255, 217, 0)\">Mis reservaciones</a>\r\n");
       out.write("                                 <a class=\"dropdown-item\" href=\"/Cliente/Perfil_Cliente.html\" style=\"color:rgb(255, 217, 0)\">Perfil</a>\r\n");
       out.write("                                 <a class=\"dropdown-item\" href=\"/Cliente/Ajustes_Cliente.html\" style=\"color:rgb(255, 217, 0)\">Ajustes</a>\r\n");
-      out.write("                                 <a class=\"dropdown-item\" href=\"#\" style=\"color:rgb(255, 217, 0)\">Â¿Necesitas ayuda?</a>\r\n");
+      out.write("                                 <a class=\"dropdown-item\" href=\"#\" style=\"color:rgb(255, 217, 0)\">¿Necesitas ayuda?</a>\r\n");
       out.write("                                 <hr>\r\n");
-      out.write("                                 <a class=\"dropdown-item\" href=\"\\index.html\" style=\"color:rgb(255, 217, 0)\">Cerrar SesiÃ³n</a>\r\n");
+      out.write("                                 <a class=\"dropdown-item\" href=\"../index.html\" style=\"color:rgb(255, 217, 0)\">Cerrar Sesion</a>\r\n");
       out.write("                                </div>\r\n");
       out.write("                            </li>\r\n");
       out.write("                          </ul>\r\n");
