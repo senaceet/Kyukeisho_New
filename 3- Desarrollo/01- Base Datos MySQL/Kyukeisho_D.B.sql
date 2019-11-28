@@ -212,7 +212,7 @@ alter table Kyukeisho.productos add index fk_productos_tipo_producto_idx (id_tip
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Reservaciones/Usuario
-alter table Kyukeisho.reservaciones add constraint fk_reservaciones_usuario foreign key (correo_usuario) references Kyukeisho.usuario (correo_usuario) on update cascade;
+alter table Kyukeisho.reservaciones add constraint fk_reservaciones_usuario foreign key (correo_usuario) references Kyukeisho.usuario (correo_usuario) on update cascade on delete cascade;
 alter table Kyukeisho.reservaciones add index fk_reservaciones_usuario_idx (correo_usuario);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
