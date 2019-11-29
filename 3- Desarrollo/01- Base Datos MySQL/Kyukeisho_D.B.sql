@@ -39,20 +39,19 @@ primary key (id_administrador)
 -- FACTURA_COMPRA --
 create table Kyukeisho.factura_compra(
 id_usuario int (10) not null,
-id_factura varchar (6) not null
+id_factura int (10) not null
 );
 
 -- FACTURA_VENTA --
 create table Kyukeisho.factura_venta(
 id_administrador int (10) not null ,
-id_factura varchar (6) not null
+id_factura int (10) not null
 );
 
 
 -- FACTURA --
 create table Kyukeisho.factura(
-id_factura varchar (6) not null,
-hora_entrada datetime,
+id_factura int (10) auto_increment not null,
 hora_compra datetime,
 precio_total int (10) not null,
 primary key (id_factura)
@@ -101,7 +100,7 @@ estado_consola varchar (30) null
  -- SERVICIOS_FACTURA --
 create table Kyukeisho.consola_factura(
 id_consola int (2) not null,
-id_factura varchar (6) not null
+id_factura int (10) not null
 );
 
 
@@ -118,8 +117,8 @@ primary key (id_producto)
 
 -- FACTURA_PRODUCTOS --
 create table Kyukeisho.factura_productos(
-id_factura varchar (6) not null,
-id_producto int (10)
+id_factura int (10) not null,
+id_producto int (10) not null
 );
 
 
