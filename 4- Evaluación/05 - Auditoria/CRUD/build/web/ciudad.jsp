@@ -1,5 +1,5 @@
-<%@page import="modelo.usuarios"%>
-<%@page import="modelo.usuarios_DAO"%>
+<%@page import="modelo.ciudad"%>
+<%@page import="modelo.ciudaddao"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Usuario</title>
+    <title>Ciudad</title>
     
     <link rel="stylesheet" href="css/styles.css" media="all">
 
@@ -246,49 +246,48 @@
             </div>
           </nav>
           <br>
-    <center>
-        <div class="btn-group">
-            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Productos
-            </button>
-            <div class="dropdown-menu">
-                    <a class="dropdown-item" href="Crud_Productos_No_Tan_Vendidos.jsp">Productos No Tan Vendidos</a>
-                  </div>
-                </div>
+ <center>
                 <div class="btn-group">
-                      <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Juegos
-                      </button>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="Juegos/Juegos_Mas_Pedidos.jsp">Juegos Mas Pedidos</a>
-                        <a class="dropdown-item" href="Juegos/Crud_Juegos_No_Tan_Pedidos.jsp">Juegos No Tan Pedidos</a>
-                        <a class="dropdown-item" href="Juegos/Todos_Juegos_1.jsp">Todos los juegos</a>
-                      </div>
-                    </div>
-                    <div class="btn-group">
-                          <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Consolas
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="Consolas/Consolas.jsp">Consolas</a>
-                            <a class="dropdown-item" href="Consolas/Crud_Consolas_Mas_Pedidas.jsp">Consolas Mas Pedidas</a>
-                            <a class="dropdown-item" href="Consolas/Crud_Consolas_Poco_Pedidas.jsp">Consolas No Tan Pedidas</a>
-                        </div>
-                      </div>
-                        <div class="btn-group">
-                              <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Citas
-                              </button>
-                              <div class="dropdown-menu">
-                                <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Activas.jsp">Citas Activas</a>
-                                <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Inactivas.jsp">Citas Inactivas</a>
+                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Productos
+                        </button>
+                        <div class="dropdown-menu">
+                                <a class="dropdown-item" href="Crud_Productos_Vendidos.jsp">Productos Vendidos</a>
+                                <a class="dropdown-item" href="Crud_Productos_No_Tan_Vendidos.jsp">Productos No Tan Vendidos</a>
                               </div>
                             </div>
-
-                                  <a href="Categorias_1.jsp"><button type="button" class="btn btn-outline-info">Categorias</button></a>
-                      </div>
-    </center>
+                            <div class="btn-group">
+                                  <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Juegos
+                                  </button>
+                                  <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Juegos_Mas_Pedidos.jsp">Juegos Mas Pedidos</a>
+                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Crud_Juegos_No_Tan_Pedidos.jsp">Juegos No Tan Pedidos</a>
+                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Todos_Juegos_1.jsp">Todos los juegos</a>
+                                  </div>
+                                </div>
+                                <div class="btn-group">
+                                      <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Consolas
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Consolas.jsp">Consolas</a>
+                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Crud_Consolas_Mas_Pedidas.jsp">Consolas Mas Pedidas</a>
+                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Crud_Consolas_Poco_Pedidas.jsp">Consolas No Tan Pedidas</a>
+                                    </div>
+                                  </div>
+                                    <div class="btn-group">
+                                          <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Citas
+                                          </button>
+                                          <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Activas.jsp">Citas Activas</a>
+                                            <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Inactivas.jsp">Citas Inactivas</a>
+                                          </div>
+                                        </div>
+                                             <a href="CRUD_usuarios.jsp"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
+                                  </div>
+        </center>
     <br>
     <br>
     <br>
@@ -570,21 +569,15 @@
                         <div class="row" ><br></div>
                         <div class="row" >
                             <div class="col-lg-5">
-                                <h2> <strong>Usuario</strong></h2>
+                                <h2> <strong>Categoria de juegos</strong></h2>
                             </div>
                             <div class="col-lg-6" >
-
-                                <form name="form1" action="" target="_black">
-                                    <input type="submit" class="btn btn-info" value="Generar reporte en PDF" />
-                                </form>                               
                                 
                                 <a href="#addcate" class="btn btn-success"  data-toggle="modal">
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                </i><span> Añadir Usuarios</span></a>
-                                
-
+                                </i><span> Añadir Categoria</span></a>
                             </div>
-         
+                            
                         </div>
                         <div class="row" ><br></div>
                     </div>
@@ -602,25 +595,18 @@
                                         <label for="selectAll"></label>
                                     </span>
                                 </th>
-                                <th>Id</th>
-                                <th>Primer Nombre</th>
-                                <th>Segundo Nombre</th>
-                                <th>Primer Apellido</th>
-                                <th>Segundo Apellido</th>
-                                <th>Correo</th>
-                                <th>Telefono</th>
-                                <th>direccion</th>
-                                <th>contraseña</th>
-                                <th>Estado</th>
+                                <th>Id Ciudad</th>
+                                <th>Nombre ciudad</th>
+                              
                                 <th>Acciones</th>
 
                             </tr>
                         </thead>
                         <%
-                    usuarios_DAO dao=new usuarios_DAO();
-                    List<usuarios>list=dao.listar();
-                    Iterator<usuarios>iter=list.iterator();
-                    usuarios ma=null;
+                    ciudaddao dao =new ciudaddao();
+                    List<ciudad>list=dao.listar();
+                    Iterator<ciudad>iter=list.iterator();
+                    ciudad ma=null;
                     while(iter.hasNext()){
                         ma=iter.next();
                 %>
@@ -632,24 +618,12 @@
                                         <label for="checkbox1"></label>
                                     </span>
                                 </td>
-                                
-                                <td><%= ma.getid_usuario()%></td>
-                                <td><%= ma.getprimer_nombre_usuario()%></td>
-                                <td><%= ma.getsegundo_nombre_usuario()%></td>
-                                <td><%= ma.getprimer_apellido_usuario()%></td>
-                                <td><%= ma.getsegundo_apellido_usuario()%></td>
-                                <td><%= ma.getcorreo_usuario()%></td>
-                                <td><%= ma.gettelefono_usuario()%></td>
-                                <td><%= ma.getdireccion()%></td>
-                                <td><%= ma.getcontraseña_usuario()%></td>
-                                <td><%= ma.getestado_cliente()%></td>
-
-        
-                        <td>
-                                    <a href="controlador_usuarios?accion=editar&id_usuario=<%= ma.getid_usuario() %>" class="edit"><i
-                                            style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>  
+                                <td><%= ma.getcodigo_ciudad()%></td>
+                                <td><%= ma.getnombre_ciudad()%></td>
+                                <td>
+                                    <a href="controlador_ciudad?accion=editar&codigo_ciudad=<%= ma.getcodigo_ciudad() %>" class="edit"><i
+                                            style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>
                                             
-                                </td>   
                             </tr>
                             <% 
                              }
@@ -701,40 +675,17 @@
             <div id="addcate" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="controlador_usuarios">
+                        <form action="controlador_ciudad">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                <h4 class="modal-title">Añadir usuario</h4>
+                                <h4 class="modal-title">Añadir Ciudad</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label>Primer nombre</label>
-                                    <input name="pnom" type="text" class="form-control" required>
-                                    <label>segundo nombre</label>
-                                    <input name="snom" type="text" class="form-control" >
-                                    <label>Primer apellido</label>
-                                    <input name="pape" type="text" class="form-control" required>
-                                    <label>Segundo apellido</label>
-                                    <input name="sape" type="text" class="form-control" >
-                                    <label>Correo</label>
-                                    <input name="cor" type="email" class="form-control" required>
-                                    <label>Telefono</label>
-                                    <input name="tel" type="text" class="form-control" value="0">
-                                    <label>Direccion</label>
-                                    <input name="dir" type="text" class="form-control" >
-                                    <label>contraseña</label>
-                                    <input name="con" type="password" class="form-control" required>
-                                    
-                                    <label>Estado</label>
-                                    <select name="es" class="p-2 mb-2 form-control">
-                                     <option value="0">seleccione Estado</option>
-                                     <option value="1">Activo</option>
-                                     <option value="2">Desactivo</option>
-                                   </select> 
-                                    
-
-                            </div>
+                                    <label>Nombre Ciudad</label>
+                                    <input name="nombre" type="text" class="form-control" required>
+                                </div>
                             </div>
                             <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
                                 <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -744,55 +695,31 @@
                     </div>
                 </div>
             </div>
-                        <!-- Editar -->    
+            <!-- Editar -->    
             
-            
-            <div id="editcate" class="modal fade">
+           <div id="editcate" class="modal fade">
                 
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <%
-              usuarios_DAO dao2=new usuarios_DAO();
-              usuarios ma2= new usuarios();
-              if (request.getAttribute("id_usuario")!= null){
-              int id_usuario=Integer.parseInt((String)request.getAttribute("id_usuario"));
-               ma2=(usuarios)dao2.list(id_usuario);
+              ciudaddao dao2=new ciudaddao();
+              ciudad ma2= new ciudad();
+              if (request.getAttribute("codigo_ciudad")!= null){
+              int codigo_ciudad=Integer.parseInt((String)request.getAttribute("codigo_ciudad"));
+               ma2=(ciudad)dao2.list(codigo_ciudad);
               }
           %>
-                        <form action="controlador_usuarios">
+                        <form action="controlador_ciudad">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                <h4 class="modal-title">Editar usuario</h4>
+                                <h4 class="modal-title">Editar Ciudad</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label>Primer nombre</label>
-                                    <input type="text" class="form-control" required value="<%= ma2.getprimer_nombre_usuario()%>" name="pnom2">
-                                    <label>segundo nombre</label>
-                                    <input  type="text" class="form-control" value="<%= ma2.getsegundo_nombre_usuario() %>" name="snom2">
-                                    <label>Primer apellido</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getprimer_apellido_usuario() %>" name="pape2">
-                                    <label>Segundo apellido</label>
-                                    <input  type="text" class="form-control" value="<%= ma2.getsegundo_apellido_usuario() %>" name="sape2">
-                                    <label>Correo</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getcorreo_usuario() %>" name="cor2">
-                                    <label>Telefono</label>
-                                    <input  type="text" class="form-control" value="<%= ma2.gettelefono_usuario()%>" name="tel2">
-                                    <label>Direccion</label>
-                                    <input  type="text" class="form-control" value="<%= ma2.getdireccion() %>" name="dir2">
-                                    <label>contraseña_usuario</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getcontraseña_usuario() %>" name="con2" >
-
-                                    <label>Estado</label>
-                                    <select class="p-2 mb-2 form-control" required="required" value="<%= ma2.getid_estado_cliente() %>" name="es2">
-                                     <option value="0">seleccione Estado</option>
-                                     <option value="1">Activo</option>
-                                     <option value="2">Desactivo</option>
-                                    </select> 
-                                     
-                                    <input type="hidden" class="form-control" required value="<%= ma2.getid_usuario() %>" name="id_usuario2">
-                                    
+                                    <label>Nombre Ciudad</label>
+                                    <input type="text" class="form-control" required value="<%= ma2.getnombre_ciudad() %>" name="nombre2">
+                                    <input type="hidden" class="form-control" required value="<%= ma2.getcodigo_ciudad() %>" name="codigo_ciudad2">
                                 </div>
                             </div>
                             <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
@@ -803,8 +730,52 @@
                     </div>
                 </div>
             </div>
-                               
-                         
+                             
+                                
+                                
+            <div id="dReporte" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form>
+                            <div class="modal-header">
+                                <h4 class="modal-title">Descargando...</h4>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+                                        style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-danger" data-dismiss="modal" value="Cancelar">
+                                <input type="submit" class="btn btn-default" value="Aceptar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="guardarR" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form>
+                            <div class="modal-header">
+                                <h4 class="modal-title">Crear copia en...</h4>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                                <input type="submit" class="btn btn-primary" value="Correo">
+
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 </body>
 
 </html>

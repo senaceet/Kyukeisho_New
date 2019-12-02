@@ -576,11 +576,7 @@
 
                                 <form name="form1" action="" target="_black">
                                     <input type="submit" class="btn btn-info" value="Generar reporte en PDF" />
-                                </form>
-                                
-                                <a  href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
-                                    <i class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
-                                </i><span> Eliminar Usuarios</span></a>
+                                </form>                               
                                 
                                 <a href="#addcate" class="btn btn-success"  data-toggle="modal">
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
@@ -765,7 +761,7 @@
           %>
                         <form action="controlador_usuarios">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                <h4 class="modal-title">Editar categoria</h4>
+                                <h4 class="modal-title">Editar usuario</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
@@ -808,50 +804,7 @@
                 </div>
             </div>
                                
-                          
-            <div id="dReporte" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form>
-                            <div class="modal-header">
-                                <h4 class="modal-title">Descargando...</h4>
-                                <button type="button" class="close" data-dismiss="modal"
-                                    aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
-                                        style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <input type="button" class="btn btn-danger" data-dismiss="modal" value="Cancelar">
-                                <input type="submit" class="btn btn-default" value="Aceptar">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div id="guardarR" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form>
-                            <div class="modal-header">
-                                <h4 class="modal-title">Crear copia en...</h4>
-                                <button type="button" class="close" data-dismiss="modal"
-                                    aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-footer">
-                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                                <input type="submit" class="btn btn-primary" value="Correo">
-
-
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+                         
 </body>
 
 </html>

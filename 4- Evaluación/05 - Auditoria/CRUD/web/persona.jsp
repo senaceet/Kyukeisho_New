@@ -1,5 +1,5 @@
-<%@page import="modelo.usuarios"%>
-<%@page import="modelo.usuarios_DAO"%>
+<%@page import="modelo.persona"%>
+<%@page import="modelo.personadao"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -576,7 +576,11 @@
 
                                 <form name="form1" action="" target="_black">
                                     <input type="submit" class="btn btn-info" value="Generar reporte en PDF" />
-                                </form>                               
+                                </form>
+                                
+                                <a  href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
+                                    <i class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
+                                </i><span> Eliminar Usuarios</span></a>
                                 
                                 <a href="#addcate" class="btn btn-success"  data-toggle="modal">
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
@@ -602,25 +606,21 @@
                                         <label for="selectAll"></label>
                                     </span>
                                 </th>
-                                <th>Id</th>
+                                <th>Documento</th>                                
                                 <th>Primer Nombre</th>
                                 <th>Segundo Nombre</th>
                                 <th>Primer Apellido</th>
                                 <th>Segundo Apellido</th>
-                                <th>Correo</th>
-                                <th>Telefono</th>
-                                <th>direccion</th>
-                                <th>contraseña</th>
-                                <th>Estado</th>
+                                <th>Ciudad</th>
                                 <th>Acciones</th>
 
                             </tr>
                         </thead>
                         <%
-                    usuarios_DAO dao=new usuarios_DAO();
-                    List<usuarios>list=dao.listar();
-                    Iterator<usuarios>iter=list.iterator();
-                    usuarios ma=null;
+                    personadao dao=new personadao();
+                    List<persona>list=dao.listar();
+                    Iterator<persona>iter=list.iterator();
+                    persona ma=null;
                     while(iter.hasNext()){
                         ma=iter.next();
                 %>
@@ -633,20 +633,17 @@
                                     </span>
                                 </td>
                                 
-                                <td><%= ma.getid_usuario()%></td>
-                                <td><%= ma.getprimer_nombre_usuario()%></td>
-                                <td><%= ma.getsegundo_nombre_usuario()%></td>
-                                <td><%= ma.getprimer_apellido_usuario()%></td>
-                                <td><%= ma.getsegundo_apellido_usuario()%></td>
-                                <td><%= ma.getcorreo_usuario()%></td>
-                                <td><%= ma.gettelefono_usuario()%></td>
-                                <td><%= ma.getdireccion()%></td>
-                                <td><%= ma.getcontraseña_usuario()%></td>
-                                <td><%= ma.getestado_cliente()%></td>
+                                <td><%= ma.getdocumento_persona()%></td>
+                                <td><%= ma.getprimer_nombre_persona()%></td>
+                                <td><%= ma.getsegundo_nombre_persona()%></td>
+                                <td><%= ma.getprimer_apellido_persona()%></td>
+                                <td><%= ma.getsegundo_apellido_persona()%></td>
+                                
+                                <td><%= ma.getcodigo_ciudad()%></td>
 
         
                         <td>
-                                    <a href="controlador_usuarios?accion=editar&id_usuario=<%= ma.getid_usuario() %>" class="edit"><i
+                                    <a href="controlador_persona?accion=editar&documento_persona=<%= ma.getdocumento_persona() %>" class="edit"><i
                                             style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>  
                                             
                                 </td>   
@@ -701,7 +698,7 @@
             <div id="addcate" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="controlador_usuarios">
+                        <form action="controlador_persona">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
                                 <h4 class="modal-title">Añadir usuario</h4>
                                 <button type="button" class="close" data-dismiss="modal"
@@ -709,6 +706,8 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
+                                    <label>Documento</label>
+                                    <input name="documento_persona" type="number" class="form-control" required>
                                     <label>Primer nombre</label>
                                     <input name="pnom" type="text" class="form-control" required>
                                     <label>segundo nombre</label>
@@ -717,20 +716,11 @@
                                     <input name="pape" type="text" class="form-control" required>
                                     <label>Segundo apellido</label>
                                     <input name="sape" type="text" class="form-control" >
-                                    <label>Correo</label>
-                                    <input name="cor" type="email" class="form-control" required>
-                                    <label>Telefono</label>
-                                    <input name="tel" type="text" class="form-control" value="0">
-                                    <label>Direccion</label>
-                                    <input name="dir" type="text" class="form-control" >
-                                    <label>contraseña</label>
-                                    <input name="con" type="password" class="form-control" required>
                                     
-                                    <label>Estado</label>
-                                    <select name="es" class="p-2 mb-2 form-control">
-                                     <option value="0">seleccione Estado</option>
-                                     <option value="1">Activo</option>
-                                     <option value="2">Desactivo</option>
+                                    <label>Ciudad</label>
+                                    <select name="codigo" class="p-2 mb-2 form-control">
+                                     <option value="0">seleccione Ciudad</option>
+                                     <option value="1">Bogotá</option>
                                    </select> 
                                     
 
@@ -752,46 +742,37 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <%
-              usuarios_DAO dao2=new usuarios_DAO();
-              usuarios ma2= new usuarios();
-              if (request.getAttribute("id_usuario")!= null){
-              int id_usuario=Integer.parseInt((String)request.getAttribute("id_usuario"));
-               ma2=(usuarios)dao2.list(id_usuario);
+              personadao dao2=new personadao();
+              persona ma2= new persona();
+              if (request.getAttribute("documento_persona")!= null){
+              int documento_persona=Integer.parseInt((String)request.getAttribute("documento_persona"));
+               ma2=(persona)dao2.list(documento_persona);
               }
           %>
-                        <form action="controlador_usuarios">
+                        <form action="controlador_persona">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                <h4 class="modal-title">Editar usuario</h4>
+                                <h4 class="modal-title">Editar categoria</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label>Primer nombre</label>
-                                    <input type="text" class="form-control" required value="<%= ma2.getprimer_nombre_usuario()%>" name="pnom2">
+                                    <input type="text" class="form-control" required value="<%= ma2.getprimer_nombre_persona()%>" name="pnom2">
                                     <label>segundo nombre</label>
-                                    <input  type="text" class="form-control" value="<%= ma2.getsegundo_nombre_usuario() %>" name="snom2">
+                                    <input  type="text" class="form-control" value="<%= ma2.getsegundo_nombre_persona() %>" name="snom2">
                                     <label>Primer apellido</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getprimer_apellido_usuario() %>" name="pape2">
+                                    <input  type="text" class="form-control" required value="<%= ma2.getprimer_apellido_persona() %>" name="pape2">
                                     <label>Segundo apellido</label>
-                                    <input  type="text" class="form-control" value="<%= ma2.getsegundo_apellido_usuario() %>" name="sape2">
-                                    <label>Correo</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getcorreo_usuario() %>" name="cor2">
-                                    <label>Telefono</label>
-                                    <input  type="text" class="form-control" value="<%= ma2.gettelefono_usuario()%>" name="tel2">
-                                    <label>Direccion</label>
-                                    <input  type="text" class="form-control" value="<%= ma2.getdireccion() %>" name="dir2">
-                                    <label>contraseña_usuario</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getcontraseña_usuario() %>" name="con2" >
+                                    <input  type="text" class="form-control" value="<%= ma2.getsegundo_apellido_persona() %>" name="sape2">
 
-                                    <label>Estado</label>
-                                    <select class="p-2 mb-2 form-control" required="required" value="<%= ma2.getid_estado_cliente() %>" name="es2">
-                                     <option value="0">seleccione Estado</option>
-                                     <option value="1">Activo</option>
-                                     <option value="2">Desactivo</option>
+                                    <label>Ciudad</label>
+                                    <select class="p-2 mb-2 form-control" required="required" value="<%= ma2.getcodigo_ciudad() %>" name="codigo2">
+                                     <option value="0">Seleccione Ciudad</option>                                     
+                                     <option value="1">Bogotá</option>
                                     </select> 
                                      
-                                    <input type="hidden" class="form-control" required value="<%= ma2.getid_usuario() %>" name="id_usuario2">
+                                    <input type="hidden" class="form-control" required value="<%= ma2.getdocumento_persona() %>" name="documento_persona2">
                                     
                                 </div>
                             </div>
@@ -804,7 +785,50 @@
                 </div>
             </div>
                                
-                         
+                          
+            <div id="dReporte" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form>
+                            <div class="modal-header">
+                                <h4 class="modal-title">Descargando...</h4>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+                                        style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-danger" data-dismiss="modal" value="Cancelar">
+                                <input type="submit" class="btn btn-default" value="Aceptar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="guardarR" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form>
+                            <div class="modal-header">
+                                <h4 class="modal-title">Crear copia en...</h4>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                                <input type="submit" class="btn btn-primary" value="Correo">
+
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 </body>
 
 </html>
