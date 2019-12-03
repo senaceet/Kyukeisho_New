@@ -157,7 +157,7 @@
               <body>
                   <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
                       <div class="navbar-header d-flex col">
-                          <a href="../index.html">
+                          <a href="">
                               <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
                               </a>                    
                           <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
@@ -168,28 +168,7 @@
                         </button>
                       </div>
                       <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item active"><a href="Cliente.jsp    " class="nav-link">Página de principal</a></li>
-                              <li class="nav-item"><a href="#" class="nav-link">Ayuda</a></li>
-                          </li>
-                          <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
-                        </ul>
 
-                        <ul class="nav navbar-nav navbar-right ml-auto">
-                            <li class="nav-item dropdown mr-2">
-                                <a class="nav-link dropdown-toggle navbar-DARK" href="#" id="navbarDropdown" role="button"
-                                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgb(255, 217, 0)">
-                                  <i><img height="50" src="https://miro.medium.com/max/1024/1*3CVNY3sWvZrS1NckQ9kIqQ.jpeg" alt="" ></i>
-                                  Juan@gmail.com
-                                </a>
-                                  <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="width:15rem; background-color: #343a40">
-                                   <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">Mis reservaciones</a>
-                                   <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">¿Necesitas ayuda?</a>
-                                   <hr>
-                                   <a class="dropdown-item" href="index.jsp" style="color:rgb(255, 217, 0)">Cerrar Sesión</a>
-                                  </div>
-                              </li> 
-                        </ul>
                       </div>
                     </nav>
                   <br>

@@ -209,7 +209,7 @@
           <body>
           <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
             <div class="navbar-header d-flex col">
-                <a href="../../index.html">
+                <a href="">
                     <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
                     </a>            
              <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
@@ -221,73 +221,13 @@
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
               <ul class="nav navbar-nav">
-                <li class="nav-item active"><a href="Administrador/Inicio_Administrador.jsp" class="nav-link">Página de administración</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Ayuda</a></li>
+                <li class="nav-item active"><a href="homepage.jsp" class="nav-link">Página de administración</a></li>
                 </li>
               </ul>
-              <form class="navbar-form form-inline">
-                <div class="input-group search-box">								
-                  <input type="text" id="search" class="form-control" placeholder="Buscar">
-                  <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                </div>
-              </form>
-              <ul class="nav navbar-nav navbar-right ml-auto">
-                <li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"></i><span class="badge">10</span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge">100</span></a></li>
-                <li class="nav-item dropdown" >
-                  <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://miro.medium.com/max/1024/1*Age2mlAUaGBPNWcLvQPEUA.jpeg" class="avatar" alt="Avatar"> Andres Olaya <b class="caret"></b></a>
-                  <ul class="dropdown-menu" style="background-color: #343a40">
-                    <li><a href="../Perfil_Administrador.html" style="color: rgb(255, 255, 255)" class="dropdown-item"><i class="fa fa-user-o"></i> Perfil</a></li>
-                    <li class="divider dropdown-divider"></li>
-                    <li><a href="../../index.html" style="color: rgb(255, 255, 255)" class="dropdown-item"><i class="material-icons"></i> Cerrar Sesión</a></li>
-                  </ul>
-                </li>
-              </ul>
+
             </div>
           </nav>
           <br>
- <center>
-                <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Productos
-                        </button>
-                        <div class="dropdown-menu">
-                                <a class="dropdown-item" href="Crud_Productos_Vendidos.jsp">Productos Vendidos</a>
-                                <a class="dropdown-item" href="Crud_Productos_No_Tan_Vendidos.jsp">Productos No Tan Vendidos</a>
-                              </div>
-                            </div>
-                            <div class="btn-group">
-                                  <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Juegos
-                                  </button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Juegos_Mas_Pedidos.jsp">Juegos Mas Pedidos</a>
-                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Crud_Juegos_No_Tan_Pedidos.jsp">Juegos No Tan Pedidos</a>
-                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Todos_Juegos_1.jsp">Todos los juegos</a>
-                                  </div>
-                                </div>
-                                <div class="btn-group">
-                                      <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Consolas
-                                      </button>
-                                      <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Consolas.jsp">Consolas</a>
-                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Crud_Consolas_Mas_Pedidas.jsp">Consolas Mas Pedidas</a>
-                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Crud_Consolas_Poco_Pedidas.jsp">Consolas No Tan Pedidas</a>
-                                    </div>
-                                  </div>
-                                    <div class="btn-group">
-                                          <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Citas
-                                          </button>
-                                          <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Activas.jsp">Citas Activas</a>
-                                            <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Inactivas.jsp">Citas Inactivas</a>
-                                          </div>
-                                        </div>
-                                             <a href="CRUD_usuarios.jsp"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
-                                  </div>
-        </center>
     <br>
     <br>
     <br>
@@ -569,21 +509,16 @@
                         <div class="row" ><br></div>
                         <div class="row" >
                             <div class="col-lg-5">
-                                <h2> <strong>Categoria de juegos</strong></h2>
+                                <h2> <strong>Ciudad</strong></h2>
                             </div>
                             <div class="col-lg-6" >
 
-                                <a  href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
-                                    <i class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
-                                </i><span> Eliminar Categorias</span></a>
                                 
                                 <a href="#addcate" class="btn btn-success"  data-toggle="modal">
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                </i><span> Añadir Categoria</span></a>
+                                </i><span> Añadir Ciudad</span></a>
                                 
-                                <a href="#gReporte" class="btn btn-info"  data-toggle="modal">
-                                 <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                </i><span> Generar reporte</span></a>
+
                             </div>
                             
                         </div>
@@ -720,7 +655,7 @@
           %>
                         <form action="Controlador_Ciudad">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                <h4 class="modal-title">Editar categoria</h4>
+                                <h4 class="modal-title">Editar Ciudad</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
