@@ -21,10 +21,14 @@ create table ejercicio.auditoria(
 id_auditoria int (10) auto_increment not null,
 empleado varchar (30) not null,
 fecha datetime not null,
-intervencion varchar (50) not null,
-accion varchar (30) not null,
+intervencion varchar (50) null,
+accion varchar (30) null,
+documento_persona int (10) null,
+primer_nombre_persona varchar (30) not null,
+segundo_nombre_persona varchar (30) null,
+primer_apellido_persona varchar (30) not null,
+segundo_apellido_persona varchar (30) null,
 codigo_ciudad int (10) not null,
-nombre_ciudad varchar (50) not null,
 primary key (id_auditoria)
 );
 
@@ -38,5 +42,5 @@ insert into ejercicio.persona()
 values 		(1001457897, "Juan", NULL, "Gonzales", NULL, 1);
 
 
-select * from ciudad;
+
 

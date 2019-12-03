@@ -53,7 +53,7 @@ String listar="/persona.jsp";
             CJ.setcorreo(correo_g);
             
             dao.add(CJ);
-            dao.add2(CJ);
+            dao.auditoria_añadir_persona(CJ);
             acceso=listar;
         }
         
@@ -71,7 +71,13 @@ String listar="/persona.jsp";
             CJ.setprimer_apellido_persona(request.getParameter("pape2"));
             CJ.setsegundo_apellido_persona(request.getParameter("sape2"));
             CJ.setcodigo_ciudad(Integer.parseInt(request.getParameter("cod2")));
+            HttpSession session=request.getSession();
+            String correo_g = (String)session.getAttribute("correo_g");
+            CJ.setcorreo(correo_g);
+            
             dao.edit(CJ);
+            dao.auditoria_editar_persona_viejo(CJ);
+            dao.auditoria_editar_persona_nuevo(CJ);
             acceso=listar;
         }
         

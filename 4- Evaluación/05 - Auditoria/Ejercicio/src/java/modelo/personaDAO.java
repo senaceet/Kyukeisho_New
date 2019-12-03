@@ -90,8 +90,35 @@ public class personaDAO implements CRUD_persona {
     }
     
     @Override
-    public boolean add2(persona ma) {
-       String sql="insert into auditoria (empleado,fecha,codigo_ciudad,nombre_ciudad)values('"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "',"+ma.getcodigo_ciudad()+",'"+ma.getnombre_ciudad()+"')";
+    public boolean auditoria_añadir_persona(persona ma) {
+       String sql="insert into auditoria (empleado,fecha,intervencion,accion,documento_persona,primer_nombre_persona,segundo_nombre_persona,primer_apellido_persona,segundo_apellido_persona,codigo_ciudad)values('"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad personas','Agrego',"+ma.getdocumento_persona()+",'"+ma.getprimer_nombre_persona()+"','"+ma.getsegundo_nombre_persona()+"','"+ma.getprimer_apellido_persona()+"','"+ma.getsegundo_apellido_persona()+"',"+ma.getcodigo_ciudad()+")";
+        
+       try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();            
+        } catch (Exception e) {
+        }
+       return false;
+    }
+    
+        @Override
+    public boolean auditoria_editar_persona_viejo(persona ma) {
+       String sql="insert into auditoria (empleado,fecha,intervencion,accion,documento_persona,primer_nombre_persona,segundo_nombre_persona,primer_apellido_persona,segundo_apellido_persona,codigo_ciudad) SELECT  '"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad personas','registro viejo' documento_persona,primer_nombre_persona,segundo_nombre_persona,primer_apellido_persona,segundo_apellido_persona,codigo_ciudad FROM persona where documento_persona=" + ma.getdocumento_persona();
+       
+        
+       try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();            
+        } catch (Exception e) {
+        }
+       return false;
+    }
+    
+            @Override
+    public boolean auditoria_editar_persona_nuevo(persona ma) {
+       String sql="insert into auditoria (empleado,fecha,intervencion,accion,documento_persona,primer_nombre_persona,segundo_nombre_persona,primer_apellido_persona,segundo_apellido_persona,codigo_ciudad)values('"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad personas','editado',"+ma.getdocumento_persona()+",'"+ma.getprimer_nombre_persona()+"','"+ma.getsegundo_nombre_persona()+"','"+ma.getprimer_apellido_persona()+"','"+ma.getsegundo_apellido_persona()+"',"+ma.getcodigo_ciudad()+")";
         
        try {
             con=cn.getConnection();
