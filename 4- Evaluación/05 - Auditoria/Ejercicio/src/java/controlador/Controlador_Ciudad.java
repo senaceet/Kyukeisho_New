@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import modelo.Ciudad;
 
 
@@ -40,7 +41,12 @@ String listar="/Ciudad.jsp";
       
         else if(action.equalsIgnoreCase("Agregar")){
             CJ.setnombre_ciudad(request.getParameter("nombre"));
+            HttpSession session=request.getSession();
+            String correo_g = (String)session.getAttribute("correo_g");
+            CJ.setcorreo(correo_g);
+            
             dao.add(CJ);
+            dao.auditoria_añadir_ciudad(CJ);
             acceso=listar;
         }
         
@@ -53,10 +59,34 @@ String listar="/Ciudad.jsp";
         else if(action.equalsIgnoreCase("Actualizar")){
             CJ.setcodigo_ciudad(codigo_ciudad=Integer.parseInt(request.getParameter("codigo_ciudad2")));
             CJ.setnombre_ciudad(request.getParameter("nombre2"));
+            
+            HttpSession session=request.getSession();
+            String correo_g = (String)session.getAttribute("correo_g");
+            CJ.setcorreo(correo_g);
+            
             dao.edit(CJ);
+            dao.auditoria_editar_ciudad_nuevo(CJ);
             acceso=listar;
         }
-
+        
+        else if(action.equalsIgnoreCase("elimi")){
+            request.setAttribute("codigo_ciudad",request.getParameter("codigo_ciudad"));
+            request.setAttribute("a1",1);
+            acceso=listar;
+        }
+      
+        
+        else if(action.equalsIgnoreCase("Eliminar")){
+            codigo_ciudad=Integer.parseInt(request.getParameter("codigo_ciudad3"));
+            CJ.setcodigo_ciudad(codigo_ciudad);
+            HttpSession session=request.getSession();
+            String correo_g = (String)session.getAttribute("correo_g");
+            CJ.setcorreo(correo_g);
+            
+            dao.auditoria_eliminar_ciudad(CJ);
+            dao.eliminar(codigo_ciudad);
+            acceso=listar;
+        }
        
         RequestDispatcher vista=getServletContext().getRequestDispatcher(acceso);
         vista.forward( request, response );

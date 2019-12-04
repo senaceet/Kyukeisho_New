@@ -566,6 +566,9 @@
                                 <td>
                                     <a href="Controlador_Ciudad?accion=editar&codigo_ciudad=<%= ma.getcodigo_ciudad() %>" class="edit"><i
                                             style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>
+                                            
+                                    <a href="Controlador_Ciudad?accion=elimi&codigo_ciudad=<%= ma.getcodigo_ciudad() %>" class="delete"><i
+                                             style="color:red" class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
                                 </td>   
                             </tr>
                             <% 
@@ -675,50 +678,43 @@
                 </div>
             </div>
                                 
-             
-            <div id="dReporte" class="modal fade">
+             <!-- eliminar -->
+            <div id="elimicate" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form>
-                            <div class="modal-header">
-                                <h4 class="modal-title">Descargando...</h4>
+                        <%
+              
+              CiudadDAO dao3=new CiudadDAO();
+              Ciudad ma3= new Ciudad();
+              if (request.getAttribute("codigo_ciudad")!= null){
+              int codigo_ciudad=Integer.parseInt((String)request.getAttribute("codigo_ciudad"));
+               ma3=(Ciudad)dao3.list(codigo_ciudad);
+              }
+          %>
+                        <form action="Controlador_Ciudad">
+                            <div class="modal-header" style="background-color: rgb(216, 211, 40)">
+                                <h4 class="modal-title">Eliminar categoria</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
+                          <input type="hidden" class="form-control" required value="<%= ma3.getcodigo_ciudad() %>" name="codigo_ciudad3">
+
                             <div class="modal-body">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
-                                        style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    </div>
-                                </div>
+                                
+                                <p>¿Está seguro de que desea eliminar esta categoria?</p>
                             </div>
-                            <div class="modal-footer">
-                                <input type="button" class="btn btn-danger" data-dismiss="modal" value="Cancelar">
-                                <input type="submit" class="btn btn-default" value="Aceptar">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div id="guardarR" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form>
-                            <div class="modal-header">
-                                <h4 class="modal-title">Crear copia en...</h4>
-                                <button type="button" class="close" data-dismiss="modal"
-                                    aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-footer">
+                   
+                            <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
+                                <hr>
                                 <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                                <input type="submit" class="btn btn-primary" value="Correo">
-
-
+                                <input type="submit"  class="btn btn-danger" value="Eliminar" name="accion">
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+                          
+            
 </body>
 
 </html>

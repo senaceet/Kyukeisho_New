@@ -359,11 +359,11 @@
         }
 
         table.table tr th:first-child {
-            width: 60px;
+            width: 6000px;
         }
 
         table.table tr th:last-child {
-            width: 100px;
+            width: 1000px;
         }
 
         table.table-striped tbody tr:nth-of-type(odd) {
@@ -564,15 +564,15 @@
             font-weight: normal;
         }
     </style>
-            <div class="container" >
+            <div class="container">
                 <div class="table-wrapper" bgcolor="#088A68">
                     <div class="table-title" style="background-color: rgb(216, 211, 40)">
                         <div class="row" ><br></div>
-                        <div class="row" >
-                            <div class="col-lg-5">
+                        <div class="row" style="width:1000px" >
+                            <div class="col-lg-6" >
                                 <h2> <strong>Usuario</strong></h2>
                             </div>
-                            <div class="col-lg-6" >
+                            <div class="col-lg-6" style="width:1000px">
 
                                 <form name="form1" action="" target="_black">
                                     <input type="submit" class="btn btn-info" value="Generar reporte en PDF" />
@@ -593,7 +593,7 @@
         <div class="container" >
             <div class="row" >
                 <div class="container" style="background-color:#FFFFFF">
-        <table class="table table-striped table-hover "  width="1000">
+        <table class="table table-striped table-hover "  >
             <thead>
             <tr bgcolor="#C0BB2E">
                                 <th>
@@ -659,7 +659,7 @@
                 </div>
             </div>
             </div>
-              <div class="container" style="background-color: rgb(216, 211, 40)">
+              <div class="container-fuid"  width="1000" style="background-color: rgb(216, 211, 40)">
                   <div class="row" ><br></div>
                  <div class="row"   >
                  <div class="col-lg-8">

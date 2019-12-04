@@ -75,8 +75,9 @@ String listar="/persona.jsp";
             String correo_g = (String)session.getAttribute("correo_g");
             CJ.setcorreo(correo_g);
             
-            dao.edit(CJ);
+            
             dao.auditoria_editar_persona_viejo(CJ);
+            dao.edit(CJ);
             dao.auditoria_editar_persona_nuevo(CJ);
             acceso=listar;
         }

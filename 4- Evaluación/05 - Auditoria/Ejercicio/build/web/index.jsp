@@ -14,7 +14,7 @@
       <link rel="stylesheet" type="text/css" href="style.css">
     
       <title>
-        Usuario
+        Index(login)
       </title>
     
       <style> 
@@ -28,30 +28,13 @@
     <body>
         <div class="header fixed-top">
             <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
-              <a href="../index.html">
+              <a href="">
                 <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
                 </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent" >
-              <ul class="navbar-nav mr-auto">
-              </ul>
-              <ul class="navbar-nav ">
-                  <li class="nav-item disable">
-                      <a class="nav-link" href="#" style="color: #ffffff">Ayuda<span class="sr-only"></span></a>
-                    </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false" style="color: #ffffff">
-                        ¿Como Registrarme?
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:13rem; background-color: #343a40">
-                        <a class="dropdown-item" href="../Administrador/Inicio_Sesion_Administrador.jsp" style="color: #ffffff">Administrador</a>
-                      </div>
-                </li>
-              </ul>
             </div>
           </nav>
         </div>
