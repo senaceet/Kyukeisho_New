@@ -60,6 +60,10 @@
         <servlet-name>registro_usuario</servlet-name>
         <servlet-class>controlador.registro_usuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>controlador_juegos</servlet-name>
+        <servlet-class>controlador.controlador_juegos</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
@@ -119,6 +123,10 @@
     <servlet-mapping>
         <servlet-name>registro_usuario</servlet-name>
         <url-pattern>/registro_usuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controlador_juegos</servlet-name>
+        <url-pattern>/controlador_juegos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

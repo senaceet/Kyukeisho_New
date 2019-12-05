@@ -61,9 +61,8 @@ primary key (id_factura)
 
 -- JUEGOS --
 create table Kyukeisho.juegos(
-codigo_juego int (5) not null AUTO_INCREMENT,
+codigo_juego int (5) AUTO_INCREMENT,
 nombre_juego varchar (100),
-id_usuario int (10) not null, 
 primary key (codigo_juego)
 );
 
@@ -165,8 +164,6 @@ alter table kyukeisho.usuario add constraint fk_usuario_estado_cliente foreign k
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Juegos/usuario 
-alter table Kyukeisho.juegos add constraint fk_juegos_usuario foreign key (id_usuario) references Kyukeisho.usuario (id_usuario) on update cascade on delete cascade;
-alter table Kyukeisho.juegos add index fk_juegos_usuario_idx (id_usuario);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

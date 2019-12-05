@@ -148,49 +148,49 @@ values	(1, '2019-10-01 05:29:00', 100000),
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         
 -- JUEGOS --        
-insert into Kyukeisho.juegos (codigo_juego, nombre_juego, id_usuario)
+insert into Kyukeisho.juegos (codigo_juego, nombre_juego)
 values  
 		-- Pc --
-        (1, "Euro Truck Simulator 2", 1),
-		(2, "American Truck Simulator 2", 2),
-		(3, "Pes 2019", 3),
-		(4, "Assassin’s Creed Odyssey Gold Edition", 4),
-		(5, "Grand Theft Auto V", 5),
+        (1, "Euro Truck Simulator 2"),
+		(2, "American Truck Simulator 2"),
+		(3, "Pes 2019"),
+		(4, "Assassin’s Creed Odyssey Gold Edition"),
+		(5, "Grand Theft Auto V"),
         
 	-- PS4 --
-		(6,"Call of Duty 4: Modern Warfare",6),
-		(7,"God of War",7),
-		(8,"Battlefield 4",8),
-		(9,"Spider-Man",9),	
-		(10,"FIFA 19",10),
+		(6,"Call of Duty 4: Modern Warfare"),
+		(7,"God of War"),
+		(8,"Battlefield 4"),
+		(9,"Spider-Man"),	
+		(10,"FIFA 19"),
         
 	-- Xbox 360 --
-		(11,"Resident Evil 4",11),
-		(12,"NBA2K18",12),
-		(13,"Rise of the Tomb Raider",13),
-		(14, "WWE 2K17",14),
-		(15, "Call Of Duty Black Ops III",15),
+		(11,"Resident Evil 4"),
+		(12,"NBA2K18"),
+		(13,"Rise of the Tomb Raider"),
+		(14, "WWE 2K17"),
+		(15, "Call Of Duty Black Ops III"),
         
 	-- Xbox One --
-		(16, "Minecraft", 16),
-		(17, "Fortnite", 17),
-		(18, "Roblox", 18),
-		(19, "The Elder Scrolls Online", 19),
-		(20, "Anthem", 20),
+		(16, "Minecraft"),
+		(17, "Fortnite"),
+		(18, "Roblox"),
+		(19, "The Elder Scrolls Online"),
+		(20, "Anthem"),
         
 	-- Nintendo --
-		(21, "The Legend of Zelda",16),
-		(22, "Mario Kart 8 Deluxe",17),
-		(23, "Mario Bros",18),
-		(24, "Kirby",19),
-		(25, "Splatoon 2", 20),
+		(21, "The Legend of Zelda"),
+		(22, "Mario Kart 8 Deluxe"),
+		(23, "Mario Bros"),
+		(24, "Kirby"),
+		(25, "Splatoon 2"),
         
 	-- Wii-
-		(26, "Wall e", 16),
-		(27, "Just Dance 17",1),
-		(28, "Fatal Frame 4",5),
-		(29, "The Voice", 4),
-		(30, "Wii Fit U", 11);
+		(26, "Wall e"),
+		(27, "Just Dance 17"),
+		(28, "Fatal Frame 4"),
+		(29, "The Voice"),
+		(30, "Wii Fit U");
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
