@@ -90,13 +90,14 @@ public class personaDAO implements CRUD_persona {
     }
     
     @Override
+    
     public boolean auditoria_añadir_persona(persona ma) {
-       String sql="insert into auditoria_persona (empleado,fecha,intervencion,accion,documento_persona,primer_nombre_persona,segundo_nombre_persona,primer_apellido_persona,segundo_apellido_persona,codigo_ciudad)values('"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad personas','Agrego',"+ma.getdocumento_persona()+",'"+ma.getprimer_nombre_persona()+"','"+ma.getsegundo_nombre_persona()+"','"+ma.getprimer_apellido_persona()+"','"+ma.getsegundo_apellido_persona()+"',"+ma.getcodigo_ciudad()+")";
+       String sql="insert into auditoria (empleado,fecha,intervencion,accion,resumen)values('"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad persona','Agrego', concat("+ma.getdocumento_persona()+ ",' ','"+ma.getprimer_nombre_persona()+"',' ','"+ma.getsegundo_nombre_persona()+"',' ','"+ma.getprimer_apellido_persona()+"',' ','"+ma.getsegundo_apellido_persona()+"',' ',"+ma.getcodigo_ciudad()+"))";
         
        try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);
-            ps.executeUpdate();            
+            ps.executeUpdate(); 
         } catch (Exception e) {
         }
        return false;
@@ -104,8 +105,7 @@ public class personaDAO implements CRUD_persona {
     
         @Override
     public boolean auditoria_editar_persona_viejo(persona ma) {
-       String sql="insert into auditoria_persona (empleado,fecha,intervencion,accion,documento_persona,primer_nombre_persona,segundo_nombre_persona,primer_apellido_persona,segundo_apellido_persona,codigo_ciudad) SELECT '"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad persona','editado viejo',documento_persona,primer_nombre_persona,segundo_nombre_persona,primer_apellido_persona,segundo_apellido_persona,codigo_ciudad from persona where documento_persona="+ma.getdocumento_persona()+"";
-        
+        String sql="insert into auditoria (empleado,fecha,intervencion,accion,resumen) SELECT '"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad persona','editado viejo', concat(documento_persona,' ',primer_nombre_persona,' ',segundo_nombre_persona,' ',primer_apellido_persona,' ',segundo_apellido_persona,' ',codigo_ciudad) from persona where documento_persona="+ma.getdocumento_persona()+"";        
        try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);
@@ -117,7 +117,7 @@ public class personaDAO implements CRUD_persona {
     
             @Override
     public boolean auditoria_editar_persona_nuevo(persona ma) {
-       String sql="insert into auditoria_persona (empleado,fecha,intervencion,accion,documento_persona,primer_nombre_persona,segundo_nombre_persona,primer_apellido_persona,segundo_apellido_persona,codigo_ciudad)values('"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad personas','editado nuevo',"+ma.getdocumento_persona()+",'"+ma.getprimer_nombre_persona()+"','"+ma.getsegundo_nombre_persona()+"','"+ma.getprimer_apellido_persona()+"','"+ma.getsegundo_apellido_persona()+"',"+ma.getcodigo_ciudad()+")";
+       String sql="insert into auditoria (empleado,fecha,intervencion,accion,resumen) values('"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad persona','editado nuevo', concat("+ma.getdocumento_persona()+ ",' ','"+ma.getprimer_nombre_persona()+"',' ','"+ma.getsegundo_nombre_persona()+"',' ','"+ma.getprimer_apellido_persona()+"',' ','"+ma.getsegundo_apellido_persona()+"',' ',"+ma.getcodigo_ciudad()+"))";
         
        try {
             con=cn.getConnection();

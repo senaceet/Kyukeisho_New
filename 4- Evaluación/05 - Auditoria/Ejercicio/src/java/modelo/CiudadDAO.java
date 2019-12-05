@@ -72,7 +72,7 @@ public class CiudadDAO implements CRUD_Ciudad {
     
     @Override
     public boolean auditoria_añadir_ciudad(Ciudad ma) {
-       String sql="insert into auditoria_Ciudad (empleado,fecha,intervencion,accion,nombre_ciudad,codigo_ciudad) SELECT '"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad ciudad','Agrego','"+ma.getnombre_ciudad()+"',codigo_ciudad from ciudad where nombre_ciudad='"+ma.getnombre_ciudad()+"'";
+       String sql="insert into auditoria (empleado,fecha,intervencion,accion,resumen) SELECT '"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad ciudad','Agrego', concat(codigo_ciudad,' ','"+ma.getnombre_ciudad()+"') from ciudad where nombre_ciudad='"+ma.getnombre_ciudad()+"'";
         
        try {
             con=cn.getConnection();
@@ -83,7 +83,32 @@ public class CiudadDAO implements CRUD_Ciudad {
        return false;
     }
 
-
+        @Override
+    public boolean auditoria_editar_ciudad_viejo(Ciudad ma) {
+        String sql="insert into auditoria (empleado,fecha,intervencion,accion,resumen) SELECT '"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad ciudad','editado viejo', concat(codigo_ciudad,' ',nombre_ciudad) from ciudad where codigo_ciudad="+ma.getcodigo_ciudad()+"";        
+        
+       try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();            
+        } catch (Exception e) {
+        }
+       return false;
+    }
+    
+    @Override
+    public boolean auditoria_editar_ciudad_nuevo(Ciudad ma) {
+       String sql="insert into auditoria (empleado,fecha,intervencion,accion,resumen)values('"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad ciudad','editado nuevo', concat("+ma.getcodigo_ciudad()+",' ','"+ma.getnombre_ciudad()+"'))";
+        
+       try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();            
+        } catch (Exception e) {
+        }
+       return false;
+    }
+    
     @Override
     public boolean edit(Ciudad ma) {
         String sql="update ciudad set nombre_ciudad='"+ma.getnombre_ciudad()+"'where codigo_ciudad="+ma.getcodigo_ciudad();
@@ -97,21 +122,8 @@ public class CiudadDAO implements CRUD_Ciudad {
     }
     
     @Override
-    public boolean auditoria_editar_ciudad_nuevo(Ciudad ma) {
-       String sql="insert into auditoria_Ciudad (empleado,fecha,intervencion,accion,codigo_ciudad,nombre_ciudad)values('"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad ciudad','editado',"+ma.getcodigo_ciudad()+",'"+ma.getnombre_ciudad()+"')";
-        
-       try {
-            con=cn.getConnection();
-            ps=con.prepareStatement(sql);
-            ps.executeUpdate();            
-        } catch (Exception e) {
-        }
-       return false;
-    }
-    
-    @Override
     public boolean auditoria_eliminar_ciudad(Ciudad ma) {
-       String sql="insert into auditoria_Ciudad (empleado,fecha,intervencion,accion,codigo_ciudad,nombre_ciudad) SELECT '"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad ciudad','eliminado',"+ma.getcodigo_ciudad()+",nombre_ciudad FROM ciudad WHERE codigo_ciudad=" + ma.getcodigo_ciudad();
+       String sql="insert into auditoria (empleado,fecha,intervencion,accion,resumen) SELECT '"+ma.getcorreo()+"','" + dateFormat.format(cal.getTime()) + "','Entidad ciudad','eliminado', concat(codigo_ciudad,' ',nombre_ciudad) from ciudad where codigo_ciudad="+ma.getcodigo_ciudad()+"";
         
        try {
             con=cn.getConnection();

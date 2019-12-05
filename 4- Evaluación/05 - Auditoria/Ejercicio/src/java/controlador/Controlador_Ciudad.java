@@ -64,6 +64,7 @@ String listar="/Ciudad.jsp";
             String correo_g = (String)session.getAttribute("correo_g");
             CJ.setcorreo(correo_g);
             
+            dao.auditoria_editar_ciudad_viejo(CJ);
             dao.edit(CJ);
             dao.auditoria_editar_ciudad_nuevo(CJ);
             acceso=listar;
