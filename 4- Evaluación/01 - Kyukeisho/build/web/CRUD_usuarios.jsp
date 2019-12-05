@@ -303,12 +303,8 @@
         }
 
         .table-wrapper {
-            background: #13BC0E;
-            padding: 20px 25px;
-            width: 1168px;
-            margin: 30px 0;
-            border-radius: 3px;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+            background: #0074FF;
+
         }
 
         .table-title {
@@ -360,11 +356,11 @@
         }
 
         table.table tr th:first-child {
-            width: 6000px;
+            width: 60px;
         }
 
         table.table tr th:last-child {
-            width: 1000px;
+            width: 100px;
         }
 
         table.table-striped tbody tr:nth-of-type(odd) {
@@ -565,15 +561,16 @@
             font-weight: normal;
         }
     </style>
-            <div class="container">
-                <div class="table-wrapper" bgcolor="#F32C02">
-                    <div class="table-title" style="width:73rem; background-color: rgb(216, 211, 40)">
+ 
+            <div class="container-right" >
+                <div class="table-wrapper" bgcolor="#088A68">
+                    <div class="table-title" style="background-color: rgb(216, 211, 40)">
                         <div class="row" ><br></div>
                         <div class="row" >
-                            <div class="col-lg-6" >
+                            <div class="col-lg-5">
                                 <h2> <strong>Usuario</strong></h2>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6" >
 
                                 <form name="form1" action="" target="_black">
                                     <input type="submit" class="btn btn-info" value="Generar reporte en PDF" />
@@ -582,6 +579,8 @@
                                 <a href="#addcate" class="btn btn-success"  data-toggle="modal">
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 </i><span> Añadir Usuarios</span></a>
+                                
+
                             </div>
          
                         </div>
@@ -589,20 +588,20 @@
                     </div>
                     <br>
                     
-        <div class="container" style="background-color:#00AAFF">
-            <div class="row" style="background-color:#51FF00; width:73rem">
-                <div class="container" style="background-color:#F40000; width:100rem">
-            <table class="table table-striped table-hover ">
+        <div class="container" >
+            <div class="row" >
+                <div class="container" style="background-color:#FFFFFF">
+        <table class="table table-striped table-hover "  style="width:100rem">
             <thead>
-            <tr bgcolor="#C0BB2E" >
+            <tr bgcolor="#C0BB2E">
                                 <th>
                                     <span class="custom-checkbox">
                                         <input type="checkbox" id="selectAll">
                                         <label for="selectAll"></label>
                                     </span>
                                 </th>
-                                <th>Id</th>
-                                <th>Primer Nombre</th>
+                                <th >Id</th>
+                                <th >Primer Nombre</th>
                                 <th>Segundo Nombre</th>
                                 <th>Primer Apellido</th>
                                 <th>Segundo Apellido</th>
@@ -632,8 +631,8 @@
                                     </span>
                                 </td>
                                 
-                                <td><%= ma.getid_usuario()%></td>
-                                <td><%= ma.getprimer_nombre_usuario()%></td>
+                                <td ><%= ma.getid_usuario()%></td>
+                                <td ><%= ma.getprimer_nombre_usuario()%></td>
                                 <td><%= ma.getsegundo_nombre_usuario()%></td>
                                 <td><%= ma.getprimer_apellido_usuario()%></td>
                                 <td><%= ma.getsegundo_apellido_usuario()%></td>
@@ -658,7 +657,7 @@
                 </div>
             </div>
             </div>
-              <div class="container-fuid"  style="width:73rem; background-color: rgb(216, 211, 40)">
+              <div class="container" style="background-color: rgb(216, 211, 40)">
                   <div class="row" ><br></div>
                  <div class="row"   >
                  <div class="col-lg-8">
