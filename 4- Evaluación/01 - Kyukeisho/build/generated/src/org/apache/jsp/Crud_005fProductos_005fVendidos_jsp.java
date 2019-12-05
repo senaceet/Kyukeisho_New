@@ -626,7 +626,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("                            </div>\r\n");
       out.write("                            <div class=\"col-lg-7\" >\r\n");
       out.write("                                \r\n");
-      out.write("                                <form name=\"form1\" action=\"Productos.jsp\" target=\"_black\">\r\n");
+      out.write("                                <form name=\"form1\" action=\"PdfProducto.jsp\" target=\"_black\">\r\n");
       out.write("                                    <input type=\"submit\" class=\"btn btn-info\" value=\"Generar reporte en PDF\" />\r\n");
       out.write("                                </form>\r\n");
       out.write("                                \r\n");

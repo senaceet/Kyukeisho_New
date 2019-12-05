@@ -86,7 +86,7 @@ id_categoria_juegos int (10) not null
 create table Kyukeisho.consola(
 id_consola int (2) not null ,
 nombre_consola varchar (100),
-precio_hora int(10) not null,
+precio_hora varchar (10) not null,
 id_estado_consola int (10),
 primary key(id_consola)
 );

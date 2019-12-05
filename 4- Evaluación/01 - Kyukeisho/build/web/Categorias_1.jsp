@@ -581,7 +581,7 @@
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 </i><span> Añadir Categoria</span></a>
                                 
-                                <a href="#gReporte" class="btn btn-info"  data-toggle="modal">
+                                <a href="PdfCategoria.jsp" class="btn btn-info"  data-toggle="modal">
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 </i><span> Generar reporte</span></a>
                             </div>

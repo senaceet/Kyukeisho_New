@@ -12,7 +12,7 @@
         Connection con = null;
         try{
         Class.forName("com.mysql.jdbc.Driver");
-        con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3310/kyukeisho","root","");
+        con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/kyukeisho","root","");
         out.print("Conexion en Linea");
         }catch(Exception ex){
         out.print("Error: "+ex.getMessage());
