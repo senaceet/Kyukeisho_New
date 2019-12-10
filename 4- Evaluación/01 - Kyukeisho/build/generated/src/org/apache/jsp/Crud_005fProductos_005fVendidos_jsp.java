@@ -56,7 +56,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html lang=\"en\">\r\n");
 
-        Persona p = (Persona)session.getAttribute("persona");
+        Persona p = (Persona)session.getAttribute("administrador");
         if(p==null){
         request.getRequestDispatcher("Administrador/Inicio_Sesion_Administrador.jsp").forward(request, response);
     

@@ -632,7 +632,7 @@ public final class Categorias_005f1_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                 <i class=\"material-icons\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i>\r\n");
       out.write("                                </i><span> Añadir Categoria</span></a>\r\n");
       out.write("                                \r\n");
-      out.write("                                <a href=\"#gReporte\" class=\"btn btn-info\"  data-toggle=\"modal\">\r\n");
+      out.write("                                <a href=\"PdfCategoria.jsp\" class=\"btn btn-info\"  data-toggle=\"modal\">\r\n");
       out.write("                                 <i class=\"material-icons\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i>\r\n");
       out.write("                                </i><span> Generar reporte</span></a>\r\n");
       out.write("                            </div>\r\n");
