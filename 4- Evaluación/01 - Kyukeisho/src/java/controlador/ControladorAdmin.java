@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import modelo.Admin;
 import modelo.AdminDAO;
 
@@ -27,15 +28,24 @@ public class ControladorAdmin extends HttpServlet {
             if(r==1){
                 
                 request.getSession().setAttribute("correo", correo);
+                HttpSession session=request.getSession();
+                session.setAttribute("administrador", p);
                 
                 response.sendRedirect("Administrador/Inicio_Administrador.jsp");                
             }else{
                 response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp");                
             }
-        }else{
-            response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp");
+        }
+        
+               if(accion.equals("cerrar")){
+            HttpSession session = request.getSession();
+            session.removeAttribute("administrador");
+            response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp");    
         }
     }
+    
+    
+    
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

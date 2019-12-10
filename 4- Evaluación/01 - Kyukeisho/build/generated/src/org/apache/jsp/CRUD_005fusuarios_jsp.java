@@ -355,11 +355,7 @@ public final class CRUD_005fusuarios_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("\r\n");
       out.write("        .table-wrapper {\r\n");
       out.write("            background: #0074FF;\r\n");
-      out.write("            padding: 20px 25px;\r\n");
-      out.write("            margin: 30px 0;\r\n");
-      out.write("            width: 1800px;\r\n");
-      out.write("            border-radius: 3px;\r\n");
-      out.write("            box-shadow: 0 1px 1px rgba(0, 0, 0, .05);\r\n");
+      out.write("\r\n");
       out.write("        }\r\n");
       out.write("\r\n");
       out.write("        .table-title {\r\n");
@@ -617,7 +613,7 @@ public final class CRUD_005fusuarios_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("        }\r\n");
       out.write("    </style>\r\n");
       out.write(" \r\n");
-      out.write("            <div class=\"container\" >\r\n");
+      out.write("            <div class=\"container-right\" >\r\n");
       out.write("                <div class=\"table-wrapper\" bgcolor=\"#088A68\">\r\n");
       out.write("                    <div class=\"table-title\" style=\"background-color: rgb(216, 211, 40)\">\r\n");
       out.write("                        <div class=\"row\" ><br></div>\r\n");

@@ -64,6 +64,14 @@
         <servlet-name>controlador_juegos</servlet-name>
         <servlet-class>controlador.controlador_juegos</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>cerrarsesion</servlet-name>
+        <servlet-class>controlador.cerrarsesion</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ingresar</servlet-name>
+        <servlet-class>controlador.ingresar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
@@ -127,6 +135,14 @@
     <servlet-mapping>
         <servlet-name>controlador_juegos</servlet-name>
         <url-pattern>/controlador_juegos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cerrarsesion</servlet-name>
+        <url-pattern>/cerrarsesion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ingresar</servlet-name>
+        <url-pattern>/ingresar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

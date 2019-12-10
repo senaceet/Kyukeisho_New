@@ -29,23 +29,28 @@ public class Controlador extends HttpServlet {
             p.setCorreo_usuario(correo);
             p.setContraseña_usuario(contraseña);
             r = dao.Validar(p);
-            
             HttpSession session=request.getSession();
             session.setAttribute("correo_e", correo);
+           
             
             if(r==1){
                 
                 request.getSession().setAttribute("correo", correo);
+                session.setAttribute("persona", p);
                 
                 response.sendRedirect("Cliente/Cliente.jsp");                
             }else{
                 request.getSession().setAttribute("message_e", message_error);
                 response.sendRedirect("Cliente/Inicio_Sesion_Cliente.jsp");                
             }
-        }else{
-            request.getSession().setAttribute("message_e", message_error);
-            response.sendRedirect("Cliente/Inicio_Sesion_Cliente.jsp");
         }
+        
+       if(accion.equals("cerrar")){
+            HttpSession session = request.getSession();
+            session.removeAttribute("persona");
+            response.sendRedirect("Cliente/Inicio_Sesion_Cliente.jsp");    
+        }
+       
     }
 
 

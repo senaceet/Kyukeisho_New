@@ -301,10 +301,13 @@
             font-family: 'Varela Round', sans-serif;
             font-size: 13px;
         }
-
         .table-wrapper {
-            background: #0074FF;
-
+            background: #FFFFFF;
+            width: 1620px;
+            padding: 20px 25px;
+            margin: 30px 0;
+            border-radius: 3px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
         }
 
         .table-title {
@@ -561,9 +564,9 @@
             font-weight: normal;
         }
     </style>
- 
-            <div class="container-right" >
-                <div class="table-wrapper" bgcolor="#088A68">
+    <center>
+            <div class="container-rigtht" >
+                <div class="table-wrapper" bgcolor="#088A68" >
                     <div class="table-title" style="background-color: rgb(216, 211, 40)">
                         <div class="row" ><br></div>
                         <div class="row" >
@@ -587,10 +590,10 @@
                         <div class="row" ><br></div>
                     </div>
                     <br>
-                    
-        <div class="container" >
-            <div class="row" >
-                <div class="container" style="background-color:#FFFFFF">
+                  
+        <div class="container-right"  >
+            <div class="row" style="width:110rem">
+                <div class="container-right" style="background-color:#FFFFFF">
         <table class="table table-striped table-hover "  style="width:100rem">
             <thead>
             <tr bgcolor="#C0BB2E">
@@ -654,12 +657,13 @@
                             %>
                        
                     </table>
-                </div>
-            </div>
-            </div>
-              <div class="container" style="background-color: rgb(216, 211, 40)">
-                  <div class="row" ><br></div>
-                 <div class="row"   >
+           </div> 
+           </div>
+                            </div>
+                            <br>
+              <div class="container-right" style="background-color: rgb(216, 211, 40); width:99rem" >
+                  <div class="row"><br></div>
+                 <div class="row ">
                  <div class="col-lg-8">
                    Mostrando 5 de 5 entradas
                  </div>
@@ -675,26 +679,11 @@
                  </div>
               </div>
             </div>
-                     
-                   
-            <div id="gReporte" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form>
-                            <div class="modal-header">
-                                <h4 class="modal-title">¿Que desea hacer?</h4>
-                                <button type="button" class="close" data-dismiss="modal"
-                                    aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-footer">
-                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                                <a href="#guardarR" class="btn btn-primary" data-toggle="modal"> Guardar</a>
-                                <a href="#dReporte" class="btn btn-primary" data-toggle="modal"> Descargar</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            
+            
+               
+            </center>
+                            
             <!-- Añadir atributo -->
             <div id="addcate" class="modal fade">
                 <div class="modal-dialog">

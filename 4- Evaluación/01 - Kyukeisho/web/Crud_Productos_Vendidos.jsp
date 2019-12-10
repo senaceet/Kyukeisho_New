@@ -1,3 +1,4 @@
+<%@page import="modelo.Persona"%>
 <%@page import="modelo.Productos_vendidos"%>
 <%@page import="modelo.Productos_vendidos_DAO"%>
 <%@page import="java.util.Iterator"%>
@@ -6,7 +7,15 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
+<%
+        Persona p = (Persona)session.getAttribute("administrador");
+        if(p==null){
+        request.getRequestDispatcher("Administrador/Inicio_Sesion_Administrador.jsp").forward(request, response);
+    
+    }
+    
+    
+    %>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -239,7 +248,13 @@
                   <ul class="dropdown-menu" style="background-color: #343a40">
                     <li><a href="../Perfil_Administrador.html" style="color: rgb(255, 255, 255)" class="dropdown-item"><i class="fa fa-user-o"></i> Perfil</a></li>
                     <li class="divider dropdown-divider"></li>
-                    <li><a href="../../index.html" style="color: rgb(255, 255, 255)" class="dropdown-item"><i class="material-icons"></i> Cerrar Sesión</a></li>
+                    
+                    <form action="../Controlador" method="post">
+                 <div class="form-group">
+                <div align="center">
+                    <input style="width: 14rem;" class="btn btn-warning btn-block" type="submit" name="accion" value="cerrar"> 
+                </div>
+                     
                   </ul>
                 </li>
               </ul>

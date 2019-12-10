@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import modelo.Persona;
 import modelo.Productos_vendidos;
 import modelo.Productos_vendidos_DAO;
 import java.util.Iterator;
@@ -51,8 +52,18 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html lang=\"en\">\r\n");
+
+        Persona p = (Persona)session.getAttribute("persona");
+        if(p==null){
+        request.getRequestDispatcher("Administrador/Inicio_Sesion_Administrador.jsp").forward(request, response);
+    
+    }
+    
+    
+    
       out.write("\r\n");
       out.write("<head>\r\n");
       out.write("    <meta charset=\"utf-8\">\r\n");
@@ -290,7 +301,13 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("                  <ul class=\"dropdown-menu\" style=\"background-color: #343a40\">\r\n");
       out.write("                    <li><a href=\"../Perfil_Administrador.html\" style=\"color: rgb(255, 255, 255)\" class=\"dropdown-item\"><i class=\"fa fa-user-o\"></i> Perfil</a></li>\r\n");
       out.write("                    <li class=\"divider dropdown-divider\"></li>\r\n");
-      out.write("                    <li><a href=\"../../index.html\" style=\"color: rgb(255, 255, 255)\" class=\"dropdown-item\"><i class=\"material-icons\"></i> Cerrar Sesión</a></li>\r\n");
+      out.write("                    \r\n");
+      out.write("                    <form action=\"../Controlador\" method=\"post\">\r\n");
+      out.write("                 <div class=\"form-group\">\r\n");
+      out.write("                <div align=\"center\">\r\n");
+      out.write("                    <input style=\"width: 14rem;\" class=\"btn btn-warning btn-block\" type=\"submit\" name=\"accion\" value=\"cerrar\"> \r\n");
+      out.write("                </div>\r\n");
+      out.write("                     \r\n");
       out.write("                  </ul>\r\n");
       out.write("                </li>\r\n");
       out.write("              </ul>\r\n");

@@ -1,6 +1,17 @@
+<%@page import="modelo.Persona"%>
 <!DOCTYPE html>
 <html lang="en">
 
+    <%
+        Persona p = (Persona)session.getAttribute("persona");
+        if(p==null){
+        request.getRequestDispatcher("Inicio_Sesion_Cliente.jsp").forward(request, response);
+    
+    }
+    
+    
+    %>
+    
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -212,7 +223,14 @@
                  <a class="dropdown-item" href="Perfil_Cliente.html" style="color:rgb(255, 217, 0)">Perfil</a>
                  <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">¿Necesitas ayuda?</a>
                  <hr>
-                 <a class="dropdown-item" href="Inicio_Sesion_Cliente.jsp" style="color:rgb(255, 217, 0)">Cerrar Sesión</a>
+                 <form action="../Controlador" method="post">
+                 <div class="form-group">
+                <div align="center">
+                    <input style="width: 14rem;" class="btn btn-warning btn-block" type="submit" name="accion" value="cerrar"> 
+                </div>           
+                     
+                </div>
+                 </form>
                 </div>
             </li>
           </ul>
