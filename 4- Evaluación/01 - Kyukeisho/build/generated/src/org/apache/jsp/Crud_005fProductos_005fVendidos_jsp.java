@@ -3,7 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import modelo.Persona;
+import modelo.Admin;
 import modelo.Productos_vendidos;
 import modelo.Productos_vendidos_DAO;
 import java.util.Iterator;
@@ -56,7 +56,7 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html lang=\"en\">\r\n");
 
-        Persona p = (Persona)session.getAttribute("administrador");
+        Admin p = (Admin)session.getAttribute("administrador");
         if(p==null){
         request.getRequestDispatcher("Administrador/Inicio_Sesion_Administrador.jsp").forward(request, response);
     

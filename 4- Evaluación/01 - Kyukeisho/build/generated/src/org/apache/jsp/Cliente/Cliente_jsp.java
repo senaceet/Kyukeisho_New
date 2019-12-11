@@ -271,9 +271,13 @@ public final class Cliente_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                 <a class=\"dropdown-item\" href=\"Perfil_Cliente.html\" style=\"color:rgb(255, 217, 0)\">Perfil</a>\r\n");
       out.write("                 <a class=\"dropdown-item\" href=\"#\" style=\"color:rgb(255, 217, 0)\">¿Necesitas ayuda?</a>\r\n");
       out.write("                 <hr>\r\n");
-      out.write("                 \r\n");
       out.write("                 <form action=\"../Controlador\" method=\"post\">\r\n");
-      out.write("                 <input style=\"width: 15rem;\" class=\"btn btn-danger btn-block\" type=\"submit\" name=\"accion\" value=\"cerrar\"> \r\n");
+      out.write("                 <div class=\"form-group\">\r\n");
+      out.write("                <div align=\"center\">\r\n");
+      out.write("                    <input style=\"width: 14rem;\" class=\"btn btn-warning btn-block\" type=\"submit\" name=\"accion\" value=\"cerrar\"> \r\n");
+      out.write("                </div>           \r\n");
+      out.write("                     \r\n");
+      out.write("                </div>\r\n");
       out.write("                 </form>\r\n");
       out.write("                </div>\r\n");
       out.write("            </li>\r\n");

@@ -1,4 +1,4 @@
-<%@page import="modelo.Persona"%>
+<%@page import="modelo.Admin"%>
 <%@page import="modelo.Productos_vendidos"%>
 <%@page import="modelo.Productos_vendidos_DAO"%>
 <%@page import="java.util.Iterator"%>
@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%
-        Persona p = (Persona)session.getAttribute("administrador");
+        Admin p = (Admin)session.getAttribute("administrador");
         if(p==null){
         request.getRequestDispatcher("Administrador/Inicio_Sesion_Administrador.jsp").forward(request, response);
     

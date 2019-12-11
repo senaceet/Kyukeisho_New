@@ -25,10 +25,11 @@ public class ControladorAdmin extends HttpServlet {
             p.setCorreo_administrador(correo);
             p.setContraseña_administrador(contraseña);
             r = dao.ValidarAdmin(p);
+            HttpSession session=request.getSession();
             if(r==1){
                 
                 request.getSession().setAttribute("correo", correo);
-                HttpSession session=request.getSession();
+                
                 session.setAttribute("administrador", p);
                 
                 response.sendRedirect("Administrador/Inicio_Administrador.jsp");                
