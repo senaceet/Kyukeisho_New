@@ -84,8 +84,7 @@
               <hr>
               <form action="../Controlador" method="post">
                 <div class="form-group">                   
-                    <input class="form-control" type="email" name="txtcorreo"  placeholder="Correo Electrónico"
-                        style="width: 18rem" required="required">
+                    <input class="form-control" type="email" name="txtcorreo"  placeholder="Correo Electrónico" style="width: 18rem" required="required">
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="password" name="txtcontraseña"  placeholder="Contraseña"
