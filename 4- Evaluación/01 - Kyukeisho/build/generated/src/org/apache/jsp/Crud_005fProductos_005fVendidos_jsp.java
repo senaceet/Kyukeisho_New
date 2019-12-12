@@ -52,20 +52,20 @@ public final class Crud_005fProductos_005fVendidos_jsp extends org.apache.jasper
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("\r\n");
+      out.write("/\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html lang=\"en\">\r\n");
 
         Admin p = (Admin)session.getAttribute("administrador");
         if(p==null){
-        request.getRequestDispatcher("Administrador/Inicio_Sesion_Administrador.jsp").forward(request, response);
+        response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp");
     
     }
     
     
-    
       out.write("\r\n");
       out.write("<head>\r\n");
+      out.write("\r\n");
       out.write("    <meta charset=\"utf-8\">\r\n");
       out.write("    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n");
       out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n");

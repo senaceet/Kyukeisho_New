@@ -10,13 +10,13 @@
 <%
         Admin p = (Admin)session.getAttribute("administrador");
         if(p==null){
-        request.getRequestDispatcher("Administrador/Inicio_Sesion_Administrador.jsp").forward(request, response);
+        response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp");
     
     }
     
-    
     %>
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
