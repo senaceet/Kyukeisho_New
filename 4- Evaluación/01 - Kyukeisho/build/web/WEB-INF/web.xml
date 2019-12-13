@@ -118,7 +118,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>recuperar_contraseña</servlet-name>
-        <url-pattern>/recuperar_contrase_a</url-pattern>
+        <url-pattern>/recuperar_contraseña</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>registrar_admin</servlet-name>

@@ -17,6 +17,7 @@ public class PersonaDAO implements Validar{
     public int Validar(Persona per) {
         int r=0;
         
+        String oper = "12345";
         String sql = "select * from usuario where correo_usuario=? and contraseña_usuario=?";
         try {
             con = cn.getConnection();

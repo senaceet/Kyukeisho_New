@@ -127,8 +127,7 @@ public final class Inicio_005fSesion_005fCliente_jsp extends org.apache.jasper.r
       out.write("              <hr>\r\n");
       out.write("              <form action=\"../Controlador\" method=\"post\">\r\n");
       out.write("                <div class=\"form-group\">                   \r\n");
-      out.write("                    <input class=\"form-control\" type=\"email\" name=\"txtcorreo\"  placeholder=\"Correo Electrónico\"\r\n");
-      out.write("                        style=\"width: 18rem\" required=\"required\">\r\n");
+      out.write("                    <input class=\"form-control\" type=\"email\" name=\"txtcorreo\"  placeholder=\"Correo Electrónico\" style=\"width: 18rem\" required=\"required\">\r\n");
       out.write("                </div>\r\n");
       out.write("                <div class=\"form-group\">\r\n");
       out.write("                    <input class=\"form-control\" type=\"password\" name=\"txtcontraseña\"  placeholder=\"Contraseña\"\r\n");

@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import Conexion.Conexion;
+import modelo.Encriptacion_MD5;
 import modelo.usuario_DAO;
 
 @WebServlet(name = "registro_usuario", urlPatterns = {"/registro_usuario"})
@@ -31,8 +32,9 @@ public class registro_usuario extends HttpServlet {
         long tel_user =Long.parseLong(request.getParameter("telefono_cliente"));
         String direc_user = request.getParameter("direccion_cliente");
         String contra_user = request.getParameter("contra_cliente");
+        String contra_encriptada = Encriptacion_MD5.Encriptar(contra_user);
         
-        usuario_DAO d = new usuario_DAO(pri_nom_user,seg_nom_user,pri_ape_user,seg_ape_user,email_user,tel_user,direc_user,contra_user);
+        usuario_DAO d = new usuario_DAO(pri_nom_user,seg_nom_user,pri_ape_user,seg_ape_user,email_user,tel_user,direc_user,contra_user,contra_encriptada);
         String doc1 = d.connection();
         
         Conexion c = new Conexion();
@@ -40,7 +42,7 @@ public class registro_usuario extends HttpServlet {
         
         Statement st = null;
         st = conn.createStatement();
-        String sql = "insert into usuario (primer_nombre_usuario,segundo_nombre_usuario,primer_apellido_usuario,segundo_apellido_usuario,correo_usuario,telefono_usuario,direccion,contraseña_usuario) values('" + pri_nom_user + "','" + seg_nom_user + "','" + pri_ape_user + "','" + seg_ape_user + "','" + email_user + "'," + tel_user + ",'" + direc_user + "','" + contra_user + "')";
+        String sql = "insert into usuario (primer_nombre_usuario,segundo_nombre_usuario,primer_apellido_usuario,segundo_apellido_usuario,correo_usuario,telefono_usuario,direccion,contraseña_usuario) values('" + pri_nom_user + "','" + seg_nom_user + "','" + pri_ape_user + "','" + seg_ape_user + "','" + email_user + "'," + tel_user + ",'" + direc_user + "','" + contra_encriptada + "')";
         st.executeUpdate(sql);
         response.sendRedirect("Cliente/Inicio_Sesion_Cliente.jsp");
     }

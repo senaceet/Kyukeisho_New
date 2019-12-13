@@ -11,9 +11,10 @@ public class usuario_DAO {
     public long tel;
     public String direc;
     public String contra;
+    public String contra_encriptada;
     
     
-    public usuario_DAO(String pri_nom_user, String seg_nom_user, String pri_ape_user, String seg_ape_user, String email_user, long tel_user, String direc_user, String contra_user) {
+    public usuario_DAO(String pri_nom_user, String seg_nom_user, String pri_ape_user, String seg_ape_user, String email_user, long tel_user, String direc_user, String contra_user, String contra_encriptada) {
         this.p_nom = pri_nom_user;
         this.s_nom = seg_nom_user;
         this.p_ape = pri_ape_user;
@@ -22,11 +23,12 @@ public class usuario_DAO {
         this.tel = tel_user;
         this.direc = direc_user;
         this.contra = contra_user;
+        this.contra_encriptada = contra_encriptada;
         this.doc1 = 0;
     }
     
     public String connection(){
-       String doc1 = this.p_nom + this.s_nom + this.p_ape + this.s_ape + this.email + this.tel + this.direc + this.contra;
+       String doc1 = this.p_nom + this.s_nom + this.p_ape + this.s_ape + this.email + this.tel + this.direc + this.contra +this.contra_encriptada;
         return doc1;
     }
 }

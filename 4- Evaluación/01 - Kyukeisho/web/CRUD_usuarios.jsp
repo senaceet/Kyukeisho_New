@@ -707,7 +707,7 @@
                                     <label>Correo</label>
                                     <input name="cor" type="email" class="form-control" required>
                                     <label>Telefono</label>
-                                    <input name="tel" type="text" class="form-control" value="0">
+                                    <input name="tel" type="number" class="form-control" value="0">
                                     <label>Direccion</label>
                                     <input name="dir" type="text" class="form-control" >
                                     <label>contraseña</label>

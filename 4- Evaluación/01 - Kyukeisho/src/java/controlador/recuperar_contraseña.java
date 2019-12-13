@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import static jdk.nashorn.internal.runtime.Debug.id;
 import Conexion.Conexion;
+import modelo.Encriptacion_MD5;
 
 @WebServlet(name = "recuperar_contraseña", urlPatterns = {"/recuperar_contraseña"})
 public class recuperar_contraseña extends HttpServlet {
@@ -25,6 +26,7 @@ public class recuperar_contraseña extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         String con_1 = request.getParameter("contraseña_1");
+        String contra_encriptada = Encriptacion_MD5.Encriptar(con_1);
         String con_2 = request.getParameter("contraseña_2");
         
         HttpSession session=request.getSession(); 
@@ -43,7 +45,7 @@ public class recuperar_contraseña extends HttpServlet {
             
               Statement st = null;  
               st = conn.createStatement();
-              String sql = "Update usuario Set contraseña_usuario= '"+ con_1 +"' where correo_usuario= '"+ correo2 +"'";
+              String sql = "Update usuario Set contraseña_usuario= '"+ contra_encriptada +"' where correo_usuario= '"+ correo2 +"'";
               st.executeUpdate(sql);
         
                 request.getSession().setAttribute("message", message_gg);
