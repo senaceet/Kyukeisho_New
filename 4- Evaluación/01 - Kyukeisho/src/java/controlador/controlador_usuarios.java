@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelo.Encriptacion_MD5;
 import modelo.usuarios;
 
 
@@ -46,7 +47,9 @@ String listar="/CRUD_usuarios.jsp";
             CJ.setcorreo_usuario(request.getParameter("cor"));
             CJ.settelefono_usuario(Long.parseLong(request.getParameter("tel")));
             CJ.setdireccion(request.getParameter("dir"));
-            CJ.setcontraseña_usuario(request.getParameter("con"));
+            String contraseña= request.getParameter("con");
+            String contraseña_encriptada = Encriptacion_MD5.Encriptar(contraseña);
+            CJ.setcontraseña_usuario(contraseña_encriptada);
             CJ.setid_estado_cliente(Integer.parseInt(request.getParameter("es")));
             dao.add(CJ);
             acceso=listar;

@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import modelo.Encriptacion_MD5;
 import modelo.Persona;
 import modelo.PersonaDAO;
 
@@ -25,9 +26,10 @@ public class Controlador extends HttpServlet {
         if(accion.equals("Ingresar")){
             String correo= request.getParameter("txtcorreo");
             String contraseña= request.getParameter("txtcontraseña");
+            String contraseña_encriptado = Encriptacion_MD5.Encriptar(contraseña);
             
             p.setCorreo_usuario(correo);
-            p.setContraseña_usuario(contraseña);
+            p.setContraseña_usuario(contraseña_encriptado);
             r = dao.Validar(p);
             HttpSession session=request.getSession();
             session.setAttribute("correo_e", correo);

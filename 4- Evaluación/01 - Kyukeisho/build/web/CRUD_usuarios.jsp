@@ -769,7 +769,7 @@
                                     <label>Direccion</label>
                                     <input  type="text" class="form-control" value="<%= ma2.getdireccion() %>" name="dir2">
                                     <label>contraseña_usuario</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getcontraseña_usuario() %>" name="con2" >
+                                    <input  type="text" class="form-control" required value="<%= ma2.getcontraseña_usuario() %>" name="con2">
 
                                     <label>Estado</label>
                                     <select class="p-2 mb-2 form-control" required="required" value="<%= ma2.getid_estado_cliente() %>" name="es2">

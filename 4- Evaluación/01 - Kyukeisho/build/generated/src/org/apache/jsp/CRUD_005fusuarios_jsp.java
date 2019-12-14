@@ -784,7 +784,7 @@ public final class CRUD_005fusuarios_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                                    <label>Correo</label>\r\n");
       out.write("                                    <input name=\"cor\" type=\"email\" class=\"form-control\" required>\r\n");
       out.write("                                    <label>Telefono</label>\r\n");
-      out.write("                                    <input name=\"tel\" type=\"text\" class=\"form-control\" value=\"0\">\r\n");
+      out.write("                                    <input name=\"tel\" type=\"number\" class=\"form-control\" value=\"0\">\r\n");
       out.write("                                    <label>Direccion</label>\r\n");
       out.write("                                    <input name=\"dir\" type=\"text\" class=\"form-control\" >\r\n");
       out.write("                                    <label>contraseña</label>\r\n");
