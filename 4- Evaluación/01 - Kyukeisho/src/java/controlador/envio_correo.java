@@ -34,8 +34,8 @@ public class envio_correo extends HttpServlet {
             
             Email email = new Email();
             
-            String de = "emisor2000@gmail.com";
-            String clave = "emisor1379";
+            String de = "kyukeisho@gmail.com";
+            String clave = "kyukeisho2019";
             String para = request.getParameter("correo");
             String asunto = "Codigo de recuperacion de contraseña" ;
             int cod = (int)(Math.random()*10000+1000);
