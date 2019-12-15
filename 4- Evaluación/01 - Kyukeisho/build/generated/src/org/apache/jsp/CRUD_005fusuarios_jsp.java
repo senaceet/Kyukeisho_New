@@ -864,7 +864,7 @@ public final class CRUD_005fusuarios_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                                    <label>contraseña_usuario</label>\r\n");
       out.write("                                    <input  type=\"text\" class=\"form-control\" required value=\"");
       out.print( ma2.getcontraseña_usuario() );
-      out.write("\" name=\"con2\" >\r\n");
+      out.write("\" name=\"con2\">\r\n");
       out.write("\r\n");
       out.write("                                    <label>Estado</label>\r\n");
       out.write("                                    <select class=\"p-2 mb-2 form-control\" required=\"required\" value=\"");
