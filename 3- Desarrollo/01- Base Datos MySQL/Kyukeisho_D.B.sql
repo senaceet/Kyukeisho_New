@@ -1,39 +1,40 @@
-create database Kyukeisho;
-use Kyukeisho;
+CREATE DATABASE Kyukeisho;
+USE Kyukeisho;
 
 -- USUARIO --
-create table Kyukeisho.usuario(
-id_usuario int (10) not null AUTO_INCREMENT,
-primer_nombre_usuario varchar (39) not null,
-segundo_nombre_usuario varchar (30) null,
-primer_apellido_usuario varchar (30) not null,
-segundo_apellido_usuario varchar (30),
-correo_usuario varchar (50) not null unique,
-telefono_usuario bigint (10) null,
-direccion varchar (30) null,
-contraseña_usuario varchar (30) not null,
-id_estado_cliente int (10) null,
+CREATE TABLE Kyukeisho.usuario(
+id_usuario INT (10) NOT NULL AUTO_INCREMENT,
+primer_nombre_usuario VARCHAR (40) NOT NULL,
+segundo_nombre_usuario VARCHAR (40) NULL,
+primer_apellido_usuario VARCHAR (40) NOT NULL,
+segundo_apellido_usuario VARCHAR (40) NULL,
+correo_usuario VARCHAR (50) NOT NULL UNIQUE,
+telefono_usuario BIGINT (15) NULL,
+direccion VARCHAR (30) NULL,
+contraseña_usuario VARCHAR (50) NOT NULL,
+id_estado_cliente INT (10) NULL,
 primary key (id_usuario)
 );
 
 -- ESTADO CLIENTE --
-create table Kyukeisho.estado_cliente(
-id_estado_cliente int (10) not null primary key,
-estado_cliente varchar (30) null
+CREATE TABLE Kyukeisho.estado_cliente(
+id_estado_cliente INT (10) NOT NULL,
+estado_cliente VARCHAR (30) NULL,
+PRIMARY KEY (id_estado_cliente)
 );
 
 
 -- ADMINISTRADOR --
-create table Kyukeisho.administrador(
-id_administrador int (10) not null AUTO_INCREMENT,
-primer_nombre_administrador varchar (30) not null,
-segundo_nombre_administrador varchar (30),
-primer_apellido_administrador varchar (30) not null,
-segundo_apellido_administrador varchar (30),
-correo_administrador varchar (30) unique,
-telefono_administrador bigint (10),
-contraseña_administrador varchar (30) not null,
-primary key (id_administrador)
+CREATE TABLE Kyukeisho.administrador(
+id_administrador INT (10) NOT NULL AUTO_INCREMENT,
+primer_nombre_administrador VARCHAR (40) NOT NULL,
+segundo_nombre_administrador VARCHAR (40) NULL,
+primer_apellido_administrador VARCHAR (40) NOT NULL,
+segundo_apellido_administrador VARCHAR (30),
+correo_administrador VARCHAR (30) UNIQUE,
+telefono_administrador BIGINT (10),
+contraseña_administrador VARCHAR (30) NOT NULL,
+PRIMARY KEY (id_administrador)
 );
 
 -- FACTURA_COMPRA --
