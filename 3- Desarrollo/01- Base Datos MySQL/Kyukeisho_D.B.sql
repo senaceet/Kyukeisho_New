@@ -30,219 +30,216 @@ id_administrador INT (10) NOT NULL AUTO_INCREMENT,
 primer_nombre_administrador VARCHAR (40) NOT NULL,
 segundo_nombre_administrador VARCHAR (40) NULL,
 primer_apellido_administrador VARCHAR (40) NOT NULL,
-segundo_apellido_administrador VARCHAR (30),
+segundo_apellido_administrador VARCHAR (30) NULL,
 correo_administrador VARCHAR (30) UNIQUE,
-telefono_administrador BIGINT (10),
+telefono_administrador BIGINT (10) NULL,
 contraseña_administrador VARCHAR (30) NOT NULL,
 PRIMARY KEY (id_administrador)
 );
 
 -- FACTURA_COMPRA --
-create table Kyukeisho.factura_compra(
-id_usuario int (10) not null,
-id_factura int (10) not null
+CREATE TABLE Kyukeisho.factura_compra(
+id_usuario INT (10) NOT NULL,
+id_factura INT (10) NOT NULL
 );
 
 -- FACTURA_VENTA --
-create table Kyukeisho.factura_venta(
-id_administrador int (10) not null ,
-id_factura int (10) not null
+CREATE TABLE Kyukeisho.factura_venta(
+id_administrador INT (10) NOT NULL,
+id_factura INT (10) NOT NULL
 );
 
 
 -- FACTURA --
-create table Kyukeisho.factura(
-id_factura int (10) auto_increment not null,
-hora_compra datetime,
-precio_total int (10) not null,
-primary key (id_factura)
+CREATE TABLE Kyukeisho.factura(
+id_factura INT (10) AUTO_INCREMENT NOT NULL,
+hora_compra DATETIME,
+precio_total INT (10) NOT NULL,
+PRIMARY KEY (id_factura)
 );
 
 
-
 -- JUEGOS --
-create table Kyukeisho.juegos(
-codigo_juego int (5) AUTO_INCREMENT,
-nombre_juego varchar (100),
-primary key (codigo_juego)
+CREATE TABLE Kyukeisho.juegos(
+codigo_juego INT (5) AUTO_INCREMENT,
+nombre_juego VARCHAR (100) NULL,
+PRIMARY KEY (codigo_juego)
 );
 
 
 -- CATEGORIA_JUEGOS --
-create table Kyukeisho.categoria_juegos(
-id_categoria_juegos int (10) not null AUTO_INCREMENT,
-nombre_categoria_juegos varchar (50),
-primary key (id_categoria_juegos)
+CREATE TABLE Kyukeisho.categoria_juegos(
+id_categoria_juegos INT (10) AUTO_INCREMENT NOT NULL,
+nombre_categoria_juegos VARCHAR (50) NULL,
+PRIMARY KEY (id_categoria_juegos)
 );
 
 
 -- JUEGOS_CATEGORIA_JUEGOS --
-create table Kyukeisho.juegos_categoria_juegos(
-codigo_juego int (5) not null,
-id_categoria_juegos int (10) not null
+CREATE TABLE Kyukeisho.juegos_categoria_juegos(
+codigo_juego INT (5) NOT NULL,
+id_categoria_juegos INT (10) NOT NULL
 );
  
 -- Consolas disponibles
-create table Kyukeisho.consola(
-id_consola int (2) not null ,
-nombre_consola varchar (100),
-precio_hora varchar (10) not null,
-id_estado_consola int (10),
-primary key(id_consola)
+CREATE TABLE Kyukeisho.consola(
+id_consola INT (2) NOT NULL,
+nombre_consola VARCHAR (100) NULL,
+precio_hora VARCHAR (10) NOT NULL,
+id_estado_consola INT (10) NULL,
+PRIMARY KEY (id_consola)
 );
  
 -- ESTADO CONSOLA --
-create table Kyukeisho.estado_consola(
-id_estado_consola int (10) not null primary key,
-estado_consola varchar (30) null
+CREATE TABLE Kyukeisho.estado_consola(
+id_estado_consola INT (10) NOT NULL,
+estado_consola VARCHAR (30) NULL,
+PRIMARY KEY (id_estado_consola)
 ); 
  
  -- SERVICIOS_FACTURA --
-create table Kyukeisho.consola_factura(
-id_consola int (2) not null,
-id_factura int (10) not null
+CREATE TABLE Kyukeisho.consola_factura(
+id_consola INT (2) NOT NULL,
+id_factura INT (10) NOT NULL
 );
 
 
 -- PRODUCTOS --
-create table Kyukeisho.productos(
-id_producto int (10) not null AUTO_INCREMENT,
-nombre_producto varchar (100),
-cantidad_producto int (10),
-precio_unitario_producto int (10),
-id_tipo_producto int (10) not null,
-primary key (id_producto)
+CREATE TABLE Kyukeisho.productos(
+id_producto INT (10) AUTO_INCREMENT NOT NULL,
+nombre_producto VARCHAR (100) NULL,
+cantidad_producto INT (10) NULL,
+precio_unitario_producto INT (10) NULL,
+id_tipo_producto INT (10) NOT NULL,
+PRIMARY KEY (id_producto)
 );
 
 
 -- FACTURA_PRODUCTOS --
-create table Kyukeisho.factura_productos(
-id_factura int (10) not null,
-id_producto int (10) not null
+CREATE TABLE Kyukeisho.factura_productos(
+id_factura INT (10) NOT NULL,
+id_producto INT (10) NOT NULL
 );
 
 
 -- TIPOS_PRODUCTO --
-create table Kyukeisho.tipo_producto(
-id_tipo_producto int (10) not null,
-nombre_tipo_producto varchar (100),
-primary key (id_tipo_producto)
+CREATE TABLE Kyukeisho.tipo_producto(
+id_tipo_producto INT (10) NOT NULL,
+nombre_tipo_producto VARCHAR (100) NULL,
+PRIMARY KEY (id_tipo_producto)
 );
 
+
 -- Reservaciones --
-create table Kyukeisho.reservaciones(
-id_reservacion int (10) not null AUTO_INCREMENT,
-fecha_incio date,
-hora_incio time,
-id_consola int (2),
-correo_usuario varchar (30),
-primary key (id_reservacion)
+CREATE TABLE Kyukeisho.reservaciones(
+id_reservacion INT (10) AUTO_INCREMENT NOT NULL,
+fecha_incio DATE,
+hora_incio TIME,
+id_consola INT (2) NULL,
+correo_usuario VARCHAR (30) NULL,
+PRIMARY KEY (id_reservacion)
 );
 
 
 -- SERVIDOR_CORREO --
-create table Kyukeisho.servidor_correo(
-id_servidor int (2) not null,
-dominio_servicio varchar (30),
-primary key (id_servidor)
+CREATE TABLE Kyukeisho.servidor_correo(
+id_servidor INT (2) NOT NULL,
+dominio_servicio VARCHAR (30) NULL,
+PRIMARY KEY (id_servidor)
 );
+
 
 -- LOG_ERROR --
-create table Kyukeisho.log_error(
-id_error int (2) not null,
-descripcion_error varchar (100),
-hora_error datetime,
-primary key (id_error)
+CREATE TABLE Kyukeisho.log_error(
+id_error INT (2) NOT NULL,
+descripcion_error VARCHAR (100) NULL,
+hora_error DATETIME,
+PRIMARY KEY (id_error)
 );
-
 
 
 -- Creacion de Relaciones ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Estado/Usuario
-alter table kyukeisho.usuario add constraint fk_usuario_estado_cliente foreign key (id_estado_cliente) references kyukeisho.estado_cliente(id_estado_cliente) on update cascade on delete cascade;
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
--- Juegos/usuario 
+ALTER TABLE kyukeisho.usuario ADD CONSTRAINT fk_usuario_estado_cliente FOREIGN KEY (id_estado_cliente) REFERENCES kyukeisho.estado_cliente(id_estado_cliente) ON UPDATE CASCADE ON DELETE CASCADE;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- juegos_categoria_juegos/Juegos 
 
-alter table Kyukeisho.juegos_categoria_juegos add constraint fk_juegos_categoria_juegos_codigo_juego foreign key (codigo_juego) references Kyukeisho.juegos (codigo_juego) on update cascade on delete cascade;
-alter table Kyukeisho.juegos_categoria_juegos add index fk_juegos_categoria_juegos_codigo_juego_idx (codigo_juego);
+ALTER TABLE Kyukeisho.juegos_categoria_juegos ADD CONSTRAINT fk_juegos_categoria_juegos_codigo_juego FOREIGN KEY (codigo_juego) REFERENCES Kyukeisho.juegos (codigo_juego) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE Kyukeisho.juegos_categoria_juegos ADD INDEX fk_juegos_categoria_juegos_codigo_juego_idx (codigo_juego);
 
 -- juegos_categoria_juegos/categoria_juegos
-alter table Kyukeisho.juegos_categoria_juegos add constraint fk_juegos_categoria_juegos_id_categoria_juegos foreign key (id_categoria_juegos) references Kyukeisho.categoria_juegos (id_categoria_juegos) on update cascade on delete cascade;
-alter table Kyukeisho.juegos_categoria_juegos add index fk_juegos_categoria_juegos_id_categoria_juegos_idx (id_categoria_juegos);
+ALTER TABLE Kyukeisho.juegos_categoria_juegos ADD CONSTRAINT fk_juegos_categoria_juegos_id_categoria_juegos FOREIGN KEY (id_categoria_juegos) REFERENCES Kyukeisho.categoria_juegos (id_categoria_juegos) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE Kyukeisho.juegos_categoria_juegos ADD INDEX fk_juegos_categoria_juegos_id_categoria_juegos_idx (id_categoria_juegos);
 
-alter table Kyukeisho.juegos_categoria_juegos add primary key (codigo_juego, id_categoria_juegos);
+ALTER TABLE Kyukeisho.juegos_categoria_juegos ADD PRIMARY KEY (codigo_juego, id_categoria_juegos);
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Reservaciones/consolas 
 
-alter table kyukeisho.reservaciones add constraint fk_reservaciones_consola foreign key (id_consola) references Kyukeisho.consola(id_consola) on update cascade on delete cascade;
+ALTER TABLE kyukeisho.reservaciones ADD CONSTRAINT fk_reservaciones_consola FOREIGN KEY (id_consola) REFERENCES Kyukeisho.consola(id_consola) ON UPDATE CASCADE ON DELETE CASCADE;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- consola_factura/consola
 
-alter table Kyukeisho.consola_factura add constraint fk_consola_factura_id_consola foreign key (id_consola) references Kyukeisho.consola (id_consola) on update cascade on delete cascade;
-alter table Kyukeisho.consola_factura add index fk_consola_factura_id_consola_idx (id_consola); 
+ALTER TABLE Kyukeisho.consola_factura ADD CONSTRAINT fk_consola_factura_id_consola FOREIGN KEY (id_consola) REFERENCES Kyukeisho.consola (id_consola) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE Kyukeisho.consola_factura ADD INDEX fk_consola_factura_id_consola_idx (id_consola); 
 
 -- servicios_factura/Factura
-alter table Kyukeisho.consola_factura add constraint fk_consola_factura_id_factura foreign key (id_factura) references Kyukeisho.factura (id_factura) on update cascade on delete cascade;
-alter table Kyukeisho.consola_factura add index fk_consola_factura_id_factura_idx (id_factura);
+ALTER TABLE Kyukeisho.consola_factura ADD CONSTRAINT fk_consola_factura_id_factura FOREIGN KEY (id_factura) REFERENCES Kyukeisho.factura (id_factura) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE Kyukeisho.consola_factura ADD INDEX fk_consola_factura_id_factura_idx (id_factura);
 
-alter table Kyukeisho.consola_factura add primary key (id_consola, id_factura);
+ALTER TABLE Kyukeisho.consola_factura ADD PRIMARY KEY (id_consola, id_factura);
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Estado_consola/consola
-alter table Kyukeisho.consola add constraint fk_consola_estado_consola foreign key (id_estado_consola) references Kyukeisho.estado_consola(id_estado_consola) on update cascade on delete cascade;
+ALTER TABLE Kyukeisho.consola ADD CONSTRAINT fk_consola_estado_consola FOREIGN KEY (id_estado_consola) REFERENCES Kyukeisho.estado_consola(id_estado_consola) ON UPDATE CASCADE ON DELETE CASCADE;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Productos/tipo_producto
-alter table Kyukeisho.productos add constraint fk_productos_tipo_producto foreign key (id_tipo_producto) references Kyukeisho.tipo_producto (id_tipo_producto) on update cascade on delete cascade;
-alter table Kyukeisho.productos add index fk_productos_tipo_producto_idx (id_tipo_producto);
+ALTER TABLE Kyukeisho.productos ADD CONSTRAINT fk_productos_tipo_producto FOREIGN KEY (id_tipo_producto) REFERENCES Kyukeisho.tipo_producto (id_tipo_producto) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE Kyukeisho.productos ADD INDEX fk_productos_tipo_producto_idx (id_tipo_producto);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Reservaciones/Usuario
-alter table Kyukeisho.reservaciones add constraint fk_reservaciones_usuario foreign key (correo_usuario) references Kyukeisho.usuario (correo_usuario) on update cascade on delete cascade;
-alter table Kyukeisho.reservaciones add index fk_reservaciones_usuario_idx (correo_usuario);
+ALTER TABLE Kyukeisho.reservaciones ADD CONSTRAINT fk_reservaciones_usuario FOREIGN KEY (correo_usuario) REFERENCES Kyukeisho.usuario (correo_usuario) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE Kyukeisho.reservaciones ADD INDEX fk_reservaciones_usuario_idx (correo_usuario);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- factura_productos/Factura
 
-alter table Kyukeisho.factura_productos add constraint fk_factura_productos_id_factura foreign key (id_factura) references Kyukeisho.factura (id_factura) on update cascade on delete cascade;
-alter table Kyukeisho.factura_productos add index fk_factura_productos_id_factura_idx (id_factura);
+ALTER TABLE Kyukeisho.factura_productos ADD CONSTRAINT fk_factura_productos_id_factura FOREIGN KEY (id_factura) REFERENCES Kyukeisho.factura (id_factura) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE Kyukeisho.factura_productos ADD INDEX fk_factura_productos_id_factura_idx (id_factura);
 
 -- factura_productos/Productos
-alter table Kyukeisho.factura_productos add constraint fk_factura_productos_id_producto foreign key (id_producto) references Kyukeisho.productos (id_producto) on update cascade on delete cascade;
-alter table Kyukeisho.factura_productos add index fk_factura_productos_id_producto_idx (id_producto);
+ALTER TABLE Kyukeisho.factura_productos ADD CONSTRAINT fk_factura_productos_id_producto FOREIGN KEY (id_producto) REFERENCES Kyukeisho.productos (id_producto) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE Kyukeisho.factura_productos ADD INDEX fk_factura_productos_id_producto_idx (id_producto);
 
-alter table Kyukeisho.factura_productos add primary key (id_factura, id_producto);
+ALTER TABLE Kyukeisho.factura_productos ADD PRIMARY KEY (id_factura, id_producto);
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- factura_compra/Usuario
-alter table Kyukeisho.factura_compra add constraint fk_factura_compra_id_usuario foreign key (id_usuario) references Kyukeisho.usuario (id_usuario) on update cascade on delete cascade;
-alter table Kyukeisho.factura_compra add index fk_factura_compra_id_usuario_idx (id_usuario);
+ALTER TABLE Kyukeisho.factura_compra ADD CONSTRAINT fk_factura_compra_id_usuario FOREIGN KEY (id_usuario) REFERENCES Kyukeisho.usuario (id_usuario) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE Kyukeisho.factura_compra ADD INDEX fk_factura_compra_id_usuario_idx (id_usuario);
 
 -- factura_compra/Factura
-alter table Kyukeisho.factura_compra add constraint fk_factura_compra_id_factura foreign key (id_factura) references Kyukeisho.factura (id_factura) on update cascade on delete cascade;
-alter table Kyukeisho.factura_compra add index fk_factura_compra_id_factura_idx (id_factura);
+ALTER TABLE Kyukeisho.factura_compra ADD CONSTRAINT fk_factura_compra_id_factura FOREIGN KEY (id_factura) REFERENCES Kyukeisho.factura (id_factura) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE Kyukeisho.factura_compra ADD INDEX fk_factura_compra_id_factura_idx (id_factura);
 
-alter table Kyukeisho.factura_compra add primary key (id_usuario,id_factura);
+ALTER TABLE Kyukeisho.factura_compra ADD PRIMARY KEY (id_usuario,id_factura);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- factura_venta/administrador
 
-alter table Kyukeisho.factura_venta add constraint fk_factura_venta_id_administrador foreign key (id_administrador) references Kyukeisho.administrador (id_administrador) on update cascade on delete cascade;
-alter table Kyukeisho.factura_venta add index fk_factura_venta_id_administrador_idx (id_administrador);
+ALTER TABLE Kyukeisho.factura_venta ADD CONSTRAINT fk_factura_venta_id_administrador FOREIGN KEY (id_administrador) REFERENCES Kyukeisho.administrador (id_administrador) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE Kyukeisho.factura_venta ADD INDEX fk_factura_venta_id_administrador_idx (id_administrador);
 
 -- factura_venta/Factura
-alter table Kyukeisho.factura_venta add constraint fk_factura_venta_id_factura foreign key (id_factura) references Kyukeisho.factura (id_factura) on update cascade on delete cascade;
-alter table Kyukeisho.factura_venta add index fk_factura_venta_id_factura_idx (id_factura);
+ALTER TABLE Kyukeisho.factura_venta ADD CONSTRAINT fk_factura_venta_id_factura FOREIGN KEY (id_factura) REFERENCES Kyukeisho.factura (id_factura) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE Kyukeisho.factura_venta ADD INDEX fk_factura_venta_id_factura_idx (id_factura);
 
-alter table Kyukeisho.factura_venta add primary key (id_administrador, id_factura);
+ALTER TABLE Kyukeisho.factura_venta  ADD PRIMARY KEY (id_administrador, id_factura);
