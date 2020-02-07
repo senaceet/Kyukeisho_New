@@ -1,14 +1,14 @@
-use Kyukeisho;
+USE Kyukeisho;
 
 
-insert into kyukeisho.estado_cliente(id_estado_cliente,estado_cliente)
-values 						(1, "Activo"),
+INSERT INTO kyukeisho.estado_cliente(id_estado_cliente,estado_cliente)
+VALUES 						(1, "Activo"),
 							(2, "Desactivo");
                             
 
 -- USUARIO --
-insert into Kyukeisho.usuario (id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario, correo_usuario, telefono_usuario, direccion,contraseña_usuario, id_estado_cliente)
-values 		(1, "Vladimir", "Alberto", "Buitrago", "Rodriguez", "vabuitrago18@misena.edu.co", 3115698975, "Kra 4 N°45 R Sur","CWlaarcP6EE=", 1),
+INSERT INTO Kyukeisho.usuario (id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario, correo_usuario, telefono_usuario, direccion,contraseña_usuario, id_estado_cliente)
+VALUES 		(1, "Vladimir", "Alberto", "Buitrago", "Rodriguez", "vabuitrago18@misena.edu.co", 3115698975, "Kra 4 N°45 R Sur","CWlaarcP6EE=", 1),
 			(2, "Marcos", "Mateo", "Lopez", "Rodríguez", "marcos@gmail.com", 3205898965, "Kra 4 N°35 z Sur","CWlaarcP6EE=", 1),
             (3, "Daniel", "Alberto", "Gómez", "Gonzáles", "daniel@gmail.com", 3505623648, "Cll 10 N°65 R Sur","CWlaarcP6EE=", 1),
             (4, "Juan", "Pablo", "Martínez", "Sánchez", "juanpa@gmail.com", 3005368754, "Carrera 3 # 18- 49","CWlaarcP6EE=", 1),
@@ -32,8 +32,8 @@ values 		(1, "Vladimir", "Alberto", "Buitrago", "Rodriguez", "vabuitrago18@misen
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------        
         
 -- CATEGORIA_JUEGOS --
-insert into Kyukeisho.categoria_juegos (id_categoria_juegos, nombre_categoria_juegos)
-values     	(001, "Acción"),
+INSERT INTO Kyukeisho.categoria_juegos (id_categoria_juegos, nombre_categoria_juegos)
+VALUES     	(001, "Acción"),
 			(002, "Lucha"),
 			(003, "Arcade"),
 			(004, "Estrategia"),
@@ -72,15 +72,15 @@ values     	(001, "Acción"),
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-insert into kyukeisho.estado_consola(id_estado_consola,estado_consola)
-values 						(1, "Disponible"),
+INSERT INTO kyukeisho.estado_consola(id_estado_consola,estado_consola)
+VALUES 						(1, "Disponible"),
 							(2, "Ocupada");
                             
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- SERVICIOS --
-insert into Kyukeisho.consola (id_consola, nombre_consola, precio_hora,id_estado_consola)
-values 		(01, "Xbox 360", 200, 1),
+INSERT INTO Kyukeisho.consola (id_consola, nombre_consola, precio_hora,id_estado_consola)
+VALUES 		(01, "Xbox 360", 200, 1),
             (02, "PS2", 300, 1),
             (03, "PS3", 100, 1),
             (04, "PS4", 300, 1),
@@ -92,8 +92,8 @@ values 		(01, "Xbox 360", 200, 1),
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- CITAS -- 
-insert into Kyukeisho.reservaciones (id_reservacion,fecha_incio,hora_incio, correo_usuario,id_consola)
-values 		(0001, '2019-10-01','04:29:00',"vabuitrago18@misena.edu.co",01),
+INSERT INTO Kyukeisho.reservaciones (id_reservacion,fecha_incio,hora_incio, correo_usuario,id_consola)
+VALUES 		(0001, '2019-10-01','04:29:00',"vabuitrago18@misena.edu.co",01),
 			(0002, '2018-12-03','05:45:00',"marcos@gmail.com",02),
             (0003, '2016-11-05','01:32:00',"daniel@gmail.com",03),
             (0004, '2017-09-07','02:13:00',"juanpa@gmail.com",04),
@@ -105,15 +105,15 @@ values 		(0001, '2019-10-01','04:29:00',"vabuitrago18@misena.edu.co",01),
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
 -- ADMINISTRADOR --
-insert into Kyukeisho.administrador (id_administrador, primer_nombre_administrador, segundo_nombre_administrador, primer_apellido_administrador, segundo_apellido_administrador, correo_administrador, telefono_administrador,contraseña_administrador)
-values  (1, "Adagny", "Benno", "Fave", "Ferrec", "adagny@gmail.com", 3002356897,"12345"),
+INSERT INTO Kyukeisho.administrador (id_administrador, primer_nombre_administrador, segundo_nombre_administrador, primer_apellido_administrador, segundo_apellido_administrador, correo_administrador, telefono_administrador,contraseña_administrador)
+VALUES  (1, "Adagny", "Benno", "Fave", "Ferrec", "adagny@gmail.com", 3002356897,"12345"),
 		(2, "Dafnée", "Denise", "Rossi", "Bianchi", "dafnee@gmail.com", 3052138795,"12345");
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             
 -- TIPO_PRODUCTO --
-insert into Kyukeisho.tipo_producto (id_tipo_producto, nombre_tipo_producto)
-values 	(1, "Comestibles"),
+INSERT INTO Kyukeisho.tipo_producto (id_tipo_producto, nombre_tipo_producto)
+VALUES 	(1, "Comestibles"),
 		(2, "Videojuegos"),
 		(3, "Golosinas"),
         (4, "Tecnologico"),
@@ -123,8 +123,8 @@ values 	(1, "Comestibles"),
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             
 -- FACTURA --
-insert into Kyukeisho.factura (id_factura, hora_compra, precio_total)
-values	(1, '2019-10-01 05:29:00', 100000),
+INSERT INTO Kyukeisho.factura (id_factura, hora_compra, precio_total)
+VALUES	(1, '2019-10-01 05:29:00', 100000),
 		(2, '2018-11-01 04:00:00', 10000),
 		(3, '2019-11-09 06:29:00', 10000),
 		(4, '2019-02-01 05:29:00', 10000),
@@ -148,8 +148,8 @@ values	(1, '2019-10-01 05:29:00', 100000),
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         
 -- JUEGOS --        
-insert into Kyukeisho.juegos (codigo_juego, nombre_juego)
-values  
+INSERT INTO Kyukeisho.juegos (codigo_juego, nombre_juego)
+VALUES  
 		-- Pc --
         (1, "Euro Truck Simulator 2"),
 		(2, "American Truck Simulator 2"),
@@ -195,8 +195,8 @@ values
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
 -- JUEGOS_CATEGORIA_JUEGOS --
-insert into Kyukeisho.juegos_categoria_juegos (codigo_juego, id_categoria_juegos)
-values 	
+INSERT INTO Kyukeisho.juegos_categoria_juegos (codigo_juego, id_categoria_juegos)
+VALUES 	
 		-- Pc --
         (1, 005),
 		(2, 005),
@@ -243,8 +243,8 @@ values
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         
 -- SERVICIOS_FACTURA -- 
-insert into Kyukeisho.consola_factura (id_consola, id_factura)
-values (01,1),
+INSERT INTO Kyukeisho.consola_factura (id_consola, id_factura)
+VALUES (01,1),
 	   (02,2),
        (03,3),
        (04,4),
@@ -268,8 +268,8 @@ values (01,1),
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- PRODUCTOS --
-insert into Kyukeisho.productos (id_producto, nombre_producto, cantidad_producto, precio_unitario_producto, id_tipo_producto)
-values (1, "Cheetos", 12, 1200, 1),
+INSERT INTO Kyukeisho.productos (id_producto, nombre_producto, cantidad_producto, precio_unitario_producto, id_tipo_producto)
+VALUES (1, "Cheetos", 12, 1200, 1),
 	   (2, "Bom Bom Bum", 3, 250, 1),
        (3, "Ponque Ramo", 10, 3500, 1),
        (4, "Tricopollos", 5, 800, 1),
@@ -293,8 +293,8 @@ values (1, "Cheetos", 12, 1200, 1),
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- FACTURA_PRODUCTOS --
-insert into Kyukeisho.factura_productos (id_factura, id_producto)
-values (1,1 ),
+INSERT INTO Kyukeisho.factura_productos (id_factura, id_producto)
+VALUES (1,1 ),
 	   (2,2 ),
        (3,3 ),
        (4,4 ),
@@ -318,8 +318,8 @@ values (1,1 ),
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------           
 
 -- FACTURA_COMPRA --
-insert into Kyukeisho.factura_compra(id_usuario,id_factura)
-values	(1,1),
+INSERT INTO Kyukeisho.factura_compra(id_usuario,id_factura)
+VALUES	(1,1),
 		(2,2),
 		(3,3),
 		(4,4),
@@ -343,8 +343,8 @@ values	(1,1),
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
 
 -- FACTURA_VENTA --
-insert into Kyukeisho.factura_venta(id_administrador, id_factura)
-values	(1, 1),
+INSERT INTO Kyukeisho.factura_venta(id_administrador, id_factura)
+VALUES	(1, 1),
 		(2, 2),
 		(2, 3),
 		(1, 4),
