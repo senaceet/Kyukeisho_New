@@ -13,7 +13,7 @@ telefono_usuario BIGINT (15) NULL,
 direccion VARCHAR (30) NULL,
 contraseña_usuario VARCHAR (50) NOT NULL,
 id_estado_cliente INT (10) NULL,
-primary key (id_usuario)
+PRIMARY KEY (id_usuario)
 );
 
 -- ESTADO CLIENTE --
