@@ -47,10 +47,13 @@ public class Controlador extends HttpServlet {
             }
         }
         
-       if(accion.equals("cerrar")){
+       if(accion.equals("Cerrar Sesion")){
+           
             HttpSession session = request.getSession();
             session.removeAttribute("persona");
-            response.sendRedirect("Cliente/Inicio_Sesion_Cliente.jsp");    
+            request.getSession().invalidate();
+            response.sendRedirect("Cliente/Inicio_Sesion_Cliente.jsp"); 
+            
         }
        
     }

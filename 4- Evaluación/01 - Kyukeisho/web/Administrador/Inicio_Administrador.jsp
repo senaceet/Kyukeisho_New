@@ -1,5 +1,16 @@
+<%@page import="javax.mail.Session"%>
+<%@page import="modelo.Admin"%>
 <html>
-
+    
+    <%
+        Admin a = (Admin)session.getAttribute("administrador");
+        if(a==null){
+        request.getRequestDispatcher("Inicio_Sesion_Administrador.jsp").forward(request, response);
+    }  
+        response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        response.setDateHeader("Expires",0); 
+    %>
+    
 <head>
     <link rel="shortcut icon" href="https://fotos.subefotos.com/9f07d19705d6bde4351c7e17c87c4d7fo.png">
     <title>Administración</title>
@@ -156,21 +167,32 @@
                       <span class="icon-bar"></span>
                     </button>
                   </div>
+
                   <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
                     <form class="navbar-form form-inline">
                     </form>
                     <ul class="nav navbar-nav navbar-right ml-auto">
-                      <li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"></i><span class="badge">10</span></a></li>
-                      <li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge">100</span></a></li>
                       <li class="nav-item dropdown">
-                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://miro.medium.com/max/1024/1*Age2mlAUaGBPNWcLvQPEUA.jpeg" class="avatar" alt="Avatar"><b class="caret"></b>
-                        ${correo}</a>
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
+                            <b class="caret"></b>
+                        ${correo}
+                        </a>
                         
                         <ul class="dropdown-menu dropdown-menu-right" style="background-color: #343a40">
-                          <li><a href="Perfil_Administrador.html" style="color: #ffffff" class="dropdown-item"><i class="fa fa-user-o"></i>Perfil</a></li>
-                          <li><a href="" style="color: #ffffff" class="dropdown-item"><i class="fa fa-user-o"></i> Ayuda</a></li>
                           <li class="divider dropdown-divider"></li>
-                          <li><a href="../index.html" style="color: #ffffff" class="dropdown-item"><i class="material-icons"></i> Cerrar Sesión</a></li>
+                          <li>
+
+                              
+                               
+                 <form action="../ControladorAdmin" method="post">
+                 <div class="form-group">
+                <div align="center">
+                    <input style="width: 10rem;" class="btn btn-dark btn-block" type="submit" name="accion" value="Cerrar Sesion"> 
+                </div>               
+                </div>
+                 </form>
+                              
+                          </li>
                       </ul>
                       </li>
                     </ul>

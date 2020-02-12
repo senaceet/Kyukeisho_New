@@ -8,7 +8,8 @@
         request.getRequestDispatcher("Inicio_Sesion_Cliente.jsp").forward(request, response);
     
     }
-    
+        response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        response.setDateHeader("Expires",0);    
     
     %>
     
@@ -33,19 +34,16 @@
       background: #e2eaef00;
       font-family: "Open Sans", sans-serif;
     }
-
     .carousel {
       margin: 50px auto;
       padding: 0 70px;
     }
-
     .carousel .item {
       color: #747d89;
       min-height: 325px;
       text-align: center;
       overflow: hidden;
     }
-
     .carousel .thumb-wrapper {
       padding: 25px 15px;
       background: rgba(255, 0, 0, 0);
@@ -54,14 +52,12 @@
       position: relative;
       box-shadow: 0 2px 3px rgba(0, 0, 0, 0);
     }
-
     .carousel .item .img-box {
       height: 120px;
       margin-bottom: 20px;
       width: 100%;
       position: relative;
     }
-
     .carousel .item img {
       max-width: 100%;
       max-height: 100%;
@@ -72,23 +68,19 @@
       left: 0;
       right: 0;
     }
-
     .carousel .item h4 {
       font-size: 18px;
     }
-
     .carousel .item h4,
     .carousel .item p,
     .carousel .item ul {
       margin-bottom: 5px;
     }
-
     .carousel .thumb-content .btn i {
       font-size: 14px;
       font-weight: bold;
       margin-left: 5px;
     }
-
     .carousel .carousel-control {
       height: 44px;
       width: 40px;
@@ -97,12 +89,10 @@
       border-radius: 4px;
       opacity: 0.8;
     }
-
     .carousel .carousel-control:hover {
       background: #ff0800;
       opacity: 1;
     }
-
     .carousel .carousel-control i {
       font-size: 36px;
       position: absolute;
@@ -116,29 +106,23 @@
       text-shadow: none;
       font-weight: bold;
     }
-
     .carousel .item-price {
       font-size: 13px;
       padding: 2px 0;
     }
-
     .carousel .item-price strike {
       opacity: 0.7;
       margin-right: 5px;
     }
-
     .carousel .carousel-control.left i {
       margin-left: -2px;
     }
-
     .carousel .carousel-control.right i {
       margin-right: -4px;
     }
-
     .carousel .carousel-indicators {
       bottom: -50px;
     }
-
     .carousel-indicators li,
     .carousel-indicators li.active {
       width: 10px;
@@ -147,15 +131,12 @@
       border-radius: 50%;
       border: none;
     }
-
     .carousel-indicators li {
       background: rgba(0, 0, 0, 0.2);
     }
-
     .carousel-indicators li.active {
       background: rgba(0, 0, 0, 0.6);
     }
-
     .carousel .wish-icon {
       position: absolute;
       right: 10px;
@@ -165,15 +146,12 @@
       font-size: 16px;
       color: #abb0b8;
     }
-
     .carousel .wish-icon .fa-heart {
       color: #ff6161;
     }
-
     .star-rating li {
       padding: 0;
     }
-
     .star-rating i {
       font-size: 14px;
       color: #ffc000;
@@ -215,20 +193,18 @@
             <li class="nav-item dropdown mr-2">
               <a class="nav-link dropdown-toggle navbar-DARK" href="#" id="navbarDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgb(255, 217, 0)">
-                <i><img height="50" src="https://miro.medium.com/max/1024/1*3CVNY3sWvZrS1NckQ9kIqQ.jpeg" alt="" ></i>               
-                ${correo}
+                    ${correo}
               </a>
                 <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="width:15rem; background-color: #343a40">
                  <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">Mis reservaciones</a>
-                 <a class="dropdown-item" href="Perfil_Cliente.html" style="color:rgb(255, 217, 0)">Perfil</a>
+                 <a class="dropdown-item" href="Perfil_Cliente.jsp" style="color:rgb(255, 217, 0)">Perfil</a>
                  <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">¿Necesitas ayuda?</a>
                  <hr>
                  <form action="../Controlador" method="post">
                  <div class="form-group">
                 <div align="center">
-                    <input style="width: 14rem;" class="btn btn-warning btn-block" type="submit" name="accion" value="cerrar"> 
-                </div>           
-                     
+                    <input style="width: 14rem;" class="btn btn-warning btn-block" type="submit" name="accion" value="Cerrar Sesion"> 
+                </div>               
                 </div>
                  </form>
                 </div>
@@ -303,7 +279,7 @@
 <br>
 <br>
 <br>
- <center>
+<center>
       <div class="col-xl-8" style="background-color: rgba(255, 251, 0, 0)" >
         <div class="bd-example" >
           <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -314,16 +290,18 @@
             </ol>
             <div align="right" class="carousel-inner"  >
               <div class="carousel-item active" >
-                <img height="600" src="https://i2.wp.com/revistaelparcero.com/wp-content/uploads/2015/11/LogoSOFA_b.png?resize=901%2C602"
-                  class="d-block w-100" alt="...">
+               <iframe width="750" height="600" src="https://www.youtube.com/embed/mIjpiXhrTn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class="carousel-caption d-none d-md-block">
-                </div>
+                <p class="h5">Ve los ultimos estrenos en videojuegos</p>
+                </div>  
                 <br>
                 <br>
                 <center>
-                <a href="https://www.enelsofa.com/sofa2019/">
-                <button type="button" class="btn btn-warning">VER</button>?
+                    
+                <a href="https://www.enelsofa.com/sofa2019/">             
+                <button type="button" class="btn btn-warning">VER</button>
                 </a>
+                    
               </center> 
               </div>
 
@@ -337,8 +315,7 @@
                 <br>
                 <center>
                 <a href="/Cliente/Cliente_sin_iniciar_sesion.html#juegos">             
-                <button type="button" class="btn btn-warning">VER</button>?
-                </a>
+                <button type="button" class="btn btn-warning">VER</button>                </a>
               </center> 
               </div>
               <div class="carousel-item">
@@ -351,8 +328,7 @@
                 <br>
                 <center>
                 <a href="Productos_1.html">             
-                <button type="button" class="btn btn-warning">VER</button>?
-                </a>
+                <button type="button" class="btn btn-warning">VER</button>                </a>
               </center> 
               </div>
             </div>
@@ -1722,4 +1698,3 @@
 </body>
 
 </html>
-

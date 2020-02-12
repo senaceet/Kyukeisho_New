@@ -13,7 +13,7 @@ import modelo.AdminDAO;
 
 public class ControladorAdmin extends HttpServlet {
     AdminDAO dao=new AdminDAO();
-    Admin p = new Admin();
+    Admin a = new Admin();
     int r;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -22,15 +22,15 @@ public class ControladorAdmin extends HttpServlet {
         if(accion.equals("Ingresar")){
             String correo= request.getParameter("txtcorreo");
             String contraseña= request.getParameter("txtcontraseña");
-            p.setCorreo_administrador(correo);
-            p.setContraseña_administrador(contraseña);
-            r = dao.ValidarAdmin(p);
+            a.setCorreo_administrador(correo);
+            a.setContraseña_administrador(contraseña);
+            r = dao.ValidarAdmin(a);
             HttpSession session=request.getSession();
             if(r==1){
                 
                 request.getSession().setAttribute("correo", correo);
                 
-                session.setAttribute("administrador", p);
+                session.setAttribute("administrador", a);
                 
                 response.sendRedirect("Administrador/Inicio_Administrador.jsp");                
             }else{
@@ -38,9 +38,10 @@ public class ControladorAdmin extends HttpServlet {
             }
         }
         
-               if(accion.equals("cerrar")){
+               if(accion.equals("Cerrar Sesion")){
             HttpSession session = request.getSession();
             session.removeAttribute("administrador");
+            request.getSession().invalidate();
             response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp");    
         }
     }

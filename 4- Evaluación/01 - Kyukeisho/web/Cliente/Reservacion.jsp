@@ -46,8 +46,7 @@
                             <li class="nav-item dropdown mr-2">
                               <a class="nav-link dropdown-toggle navbar-DARK" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgb(255, 217, 0)">
-                                <i><img height="50" src="https://miro.medium.com/max/1024/1*3CVNY3sWvZrS1NckQ9kIqQ.jpeg" alt="" ></i>
-                                Ana Maria Rojas
+                                ${correo}
                               </a>
                                 <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="width:15rem; background-color: #343a40">
                                  <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">Mis favoritos</a>

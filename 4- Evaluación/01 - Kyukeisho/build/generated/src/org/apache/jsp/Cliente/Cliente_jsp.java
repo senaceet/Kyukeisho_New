@@ -43,7 +43,6 @@ public final class Cliente_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\r\n");
-      out.write("<!DOCTYPE html>\r\n");
       out.write("<html lang=\"en\">\r\n");
       out.write("\r\n");
       out.write("    ");
@@ -54,7 +53,8 @@ public final class Cliente_jsp extends org.apache.jasper.runtime.HttpJspBase
     
     }
     
-    
+        response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        response.setDateHeader("Expires",0);
     
       out.write("\r\n");
       out.write("    \r\n");
@@ -261,22 +261,21 @@ public final class Cliente_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <li class=\"nav-item dropdown mr-2\">\r\n");
       out.write("              <a class=\"nav-link dropdown-toggle navbar-DARK\" href=\"#\" id=\"navbarDropdown\" role=\"button\"\r\n");
       out.write("                data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" style=\"color:rgb(255, 217, 0)\">\r\n");
-      out.write("                <i><img height=\"50\" src=\"https://miro.medium.com/max/1024/1*3CVNY3sWvZrS1NckQ9kIqQ.jpeg\" alt=\"\" ></i>               \r\n");
       out.write("                ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${correo}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\r\n");
       out.write("              </a>\r\n");
-      out.write("                <div class=\"dropdown-menu mr-sm-2 \" aria-labelledby=\"navbarDropdown\" style=\"width:15rem; background-color: #343a40\">\r\n");
+      out.write("                <div class=\"dropdown-menu mr-sm-2 \" aria-labelledby=\"navbarDropdown\" style=\"width:13rem; background-color: #343a40\">\r\n");
       out.write("                 <a class=\"dropdown-item\" href=\"#\" style=\"color:rgb(255, 217, 0)\">Mis reservaciones</a>\r\n");
-      out.write("                 <a class=\"dropdown-item\" href=\"Perfil_Cliente.html\" style=\"color:rgb(255, 217, 0)\">Perfil</a>\r\n");
+      out.write("                 <a class=\"dropdown-item\" href=\"Perfil_Cliente.jsp\" style=\"color:rgb(255, 217, 0)\">Perfil</a>\r\n");
       out.write("                 <a class=\"dropdown-item\" href=\"#\" style=\"color:rgb(255, 217, 0)\">¿Necesitas ayuda?</a>\r\n");
       out.write("                 <hr>\r\n");
       out.write("                 <form action=\"../Controlador\" method=\"post\">\r\n");
       out.write("                 <div class=\"form-group\">\r\n");
       out.write("                <div align=\"center\">\r\n");
-      out.write("                    <input style=\"width: 14rem;\" class=\"btn btn-warning btn-block\" type=\"submit\" name=\"accion\" value=\"cerrar\"> \r\n");
+      out.write("                <input style=\"width: 12rem;\" class=\"btn btn-warning btn-block\" type=\"submit\" name=\"accion\" value=\"Cerrar Sesion\">                 \r\n");
       out.write("                </div>           \r\n");
-      out.write("                     \r\n");
+      out.write("                 </div>    \r\n");
       out.write("                </div>\r\n");
       out.write("                 </form>\r\n");
       out.write("                </div>\r\n");
@@ -362,16 +361,18 @@ public final class Cliente_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </ol>\r\n");
       out.write("            <div align=\"right\" class=\"carousel-inner\"  >\r\n");
       out.write("              <div class=\"carousel-item active\" >\r\n");
-      out.write("                <img height=\"600\" src=\"https://i2.wp.com/revistaelparcero.com/wp-content/uploads/2015/11/LogoSOFA_b.png?resize=901%2C602\"\r\n");
-      out.write("                  class=\"d-block w-100\" alt=\"...\">\r\n");
+      out.write("               <iframe width=\"750\" height=\"600\" src=\"https://www.youtube.com/embed/mIjpiXhrTn4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n");
       out.write("                <div class=\"carousel-caption d-none d-md-block\">\r\n");
-      out.write("                </div>\r\n");
+      out.write("                <p class=\"h5\">Ve los ultimos estrenos en videojuegos</p>\r\n");
+      out.write("                </div>  \r\n");
       out.write("                <br>\r\n");
       out.write("                <br>\r\n");
       out.write("                <center>\r\n");
-      out.write("                <a href=\"https://www.enelsofa.com/sofa2019/\">\r\n");
-      out.write("                <button type=\"button\" class=\"btn btn-warning\">VER</button>?\r\n");
+      out.write("                    \r\n");
+      out.write("                <a href=\"https://www.enelsofa.com/sofa2019/\">             \r\n");
+      out.write("                <button type=\"button\" class=\"btn btn-warning\">VER</button>\r\n");
       out.write("                </a>\r\n");
+      out.write("                    \r\n");
       out.write("              </center> \r\n");
       out.write("              </div>\r\n");
       out.write("\r\n");
@@ -385,8 +386,7 @@ public final class Cliente_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <br>\r\n");
       out.write("                <center>\r\n");
       out.write("                <a href=\"/Cliente/Cliente_sin_iniciar_sesion.html#juegos\">             \r\n");
-      out.write("                <button type=\"button\" class=\"btn btn-warning\">VER</button>?\r\n");
-      out.write("                </a>\r\n");
+      out.write("                <button type=\"button\" class=\"btn btn-warning\">VER</button>                </a>\r\n");
       out.write("              </center> \r\n");
       out.write("              </div>\r\n");
       out.write("              <div class=\"carousel-item\">\r\n");
@@ -399,8 +399,7 @@ public final class Cliente_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <br>\r\n");
       out.write("                <center>\r\n");
       out.write("                <a href=\"Productos_1.html\">             \r\n");
-      out.write("                <button type=\"button\" class=\"btn btn-warning\">VER</button>?\r\n");
-      out.write("                </a>\r\n");
+      out.write("                <button type=\"button\" class=\"btn btn-warning\">VER</button>                </a>\r\n");
       out.write("              </center> \r\n");
       out.write("              </div>\r\n");
       out.write("            </div>\r\n");
@@ -617,7 +616,7 @@ public final class Cliente_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"card text-white bg-warning mb-3\" style=\"max-width: 18rem;\">\r\n");
       out.write("                        <div class=\"card-header\">CATEGORIAS</div>\r\n");
       out.write("                        <div class=\"card-body\">\r\n");
-      out.write("                                <a href=\"juegos_Xbox_one_pagina_1.html\" class=\"dropdown-item\" style=\"color: rgb(0, 0, 0)\"><h6 align=\"left\">Accesorios para celulares</h6></a>\r\n");
+      out.write("                                <a href=\"juegos_Xbox_one_pagina_1.html\" class=\"dropdown-item\" style=\"color: rgb(0, 0, 0)\"><h6 align=\"left\">Accesorios</h6></a>\r\n");
       out.write("                                <a class=\"dropdown-item\" style=\"color: rgb(0, 0, 0)\" href=\"#\"><h6 align=\"left\">Gaming</h6></a>\r\n");
       out.write("                                <a class=\"dropdown-item\" style=\"color: rgb(0, 0, 0)\" href=\"#\"><h6 align=\"left\">Infantil</h6></a>\r\n");
       out.write("                                <a class=\"dropdown-item\" style=\"color: rgb(0, 0, 0)\" href=\"#\"><h6 align=\"left\">Belleza</h6></a>\r\n");
