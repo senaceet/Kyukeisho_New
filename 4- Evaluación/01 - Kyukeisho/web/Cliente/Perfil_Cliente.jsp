@@ -1,6 +1,5 @@
 <%@page import="modelo.Persona"%>
-<!DOCTYPE html>
-<html lang="en">
+<html>
      <%
         Persona p = (Persona)session.getAttribute("persona");
         if(p==null){
@@ -9,20 +8,23 @@
     }
     
     
-    %>​
+    %>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>KYUKEISHO_Perfil</title>
-  <link rel="icon" type="image/png" href="https://fotos.subefotos.com/e296fe07575583952d4e106565eb2181o.png">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-​
 
+    <link rel="shortcut icon" href="https://fotos.subefotos.com/9f07d19705d6bde4351c7e17c87c4d7fo.png">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>
+        Kuykeisho
+    </title>
     <body>
             <style type="text/css">
                 body{
@@ -154,50 +156,35 @@
               </style>
               </head> 
               <body>
-                  <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
-                      <div class="navbar-header d-flex col">
-                          <a href="../index.html">
-                              <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
-                              </a>                    
-                          <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
-                          <span class="navbar-toggler-icon"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                        </button>
-                      </div>
-                      <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item active"><a href="Cliente.jsp    " class="nav-link">Página de principal</a></li>
-                              <li class="nav-item"><a href="#" class="nav-link">Ayuda</a></li>
-                          </li>
-                          <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
-                        </ul>
-
-                        <ul class="nav navbar-nav navbar-right ml-auto">
-                            <li class="nav-item dropdown mr-2">
-                                <a class="nav-link dropdown-toggle navbar-DARK" href="#" id="navbarDropdown" role="button"
-                                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgb(255, 217, 0)">
-                                  <i><img height="50" src="https://miro.medium.com/max/1024/1*3CVNY3sWvZrS1NckQ9kIqQ.jpeg" alt="" ></i>
-                                  Ana Maria Rojas
-                                </a>
-                                  <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="width:15rem; background-color: #343a40">
-                                   <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">Mis reservaciones</a>
-                                   <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">¿Necesitas ayuda?</a>
-                                   <hr>
-                                   
-                                   <form action="../Controlador" method="post">
-                 <div class="form-group">
-                <div align="center">
-                    <input style="width: 14rem;" class="btn btn-warning btn-block" type="submit" name="accion" value="cerrar"> 
-                </div> 
-                                   
-                                  </div>
-                              </li> 
-                        </ul>
-                      </div>
-                    </nav>
-
+                <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
+                  <div class="navbar-header d-flex col">
+                      <a href="../index.html">
+                          <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
+                          </a>                    
+                      <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+                      <span class="navbar-toggler-icon"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                  </div>
+                  <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item active"><a href="Administrador_inicio.html" class="nav-link">Administraci�n</a></li>
+                      </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right ml-auto">
+                      <li class="nav-item dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
+                        ${correo}
+                        <b class="caret"></b></a>
+                        <ul class="dropdown-menu" style="background-color: #343a40">
+                          <li><a href="../index.html" style="color: #ffffff" class="dropdown-item"><i class="material-icons"></i> Cerrar Sesi�n</a></li>
+                      </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
         <style type="text/css">
             body {
                 color: #fff;
@@ -257,12 +244,12 @@
             .login-form .btn {        
                 font-size: 16px;
                 font-weight: bold;
-                background: #fffb01;
+                background: #fffb05;
                 border: none;
                 margin-bottom: 20px;
             }
             .login-form .btn:hover, .login-form .btn:focus {
-                background: #fffb01;
+                background: #eeff00;
                 outline: none !important;
             }    
             .login-form a {
@@ -281,20 +268,16 @@
             }
         </style>
         </head>
-        <br>  
         <body>
-        
         <div class="login-form">
- 
-             <form action="Ajustes.html" method="post">
-              
+          <br>
+          <br>
+            <form action="Ajustes.html" method="post">
                 <div class="avatar">
-                    <img src="https://miro.medium.com/max/1024/1*3CVNY3sWvZrS1NckQ9kIqQ.jpeg" alt="Avatar">
+                    <img src="https://images.vexels.com/media/users/3/137047/isolated/preview/5831a17a290077c646a48c4db78a81bb-perfil-de-usuario-icono-azul-by-vexels.png" alt="Avatar">
                 </div>
-                <h2 class="text-center">Editar Foto Perfil</h2>  
-                <div class="form-group text-right">
-                    <input type="file">                 
-                </div> 
+                <h2 class="text-center">Editar Perfil</h2>   
+
                 <div class="form-group">
                     <input type="text" class="form-control" name="Editar Nombre Perfil" placeholder="Editar Nombre Perfil">
                 </div>
@@ -321,15 +304,15 @@
                 </div>
             </form>
         </div>
-​
-        <br>
-        <br>
 
+        <br>
+          <br>
+          <br>
 <div class="copyright text-center  font-weight-bold p-2" style="background-color:rgb(0, 0, 0)">
         <p style="color:rgb(255, 217, 0)">Desarrollado por Kyukeisho Copyright<i class="fa fa-copyright"
             aria-hidden="true"></i> 2019</p>
-​
-​
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -341,5 +324,5 @@
         crossorigin="anonymous"></script>
 </body>
 </head>
-​
+
 </html>
