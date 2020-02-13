@@ -184,11 +184,7 @@
       <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2 width:8rem" type="search" placeholder="Buscar" aria-label="Search">
-          <button class="btn btn-outline-warning my-2 my-sm-0 mr-sm-2" type="submit"><i class="fa fa-search"
-              aria-hidden="true"></i> Buscar </button>
-        </form>
+
         <ul class="navbar-nav ">
             <li class="nav-item dropdown mr-2">
               <a class="nav-link dropdown-toggle navbar-DARK" href="#" id="navbarDropdown" role="button"
@@ -290,7 +286,7 @@
             </ol>
             <div align="right" class="carousel-inner"  >
               <div class="carousel-item active" >
-               <iframe width="750" height="600" src="https://www.youtube.com/embed/mIjpiXhrTn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               <iframe  height="600" src="https://www.youtube.com/embed/mIjpiXhrTn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="d-block w-100" alt="..."></iframe>
                 <div class="carousel-caption d-none d-md-block">
                 <p class="h5">Ve los ultimos estrenos en videojuegos</p>
                 </div>  
@@ -545,7 +541,7 @@
                 <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
                         <div class="card-header">CATEGORIAS</div>
                         <div class="card-body">
-                                <a href="juegos_Xbox_one_pagina_1.html" class="dropdown-item" style="color: rgb(0, 0, 0)"><h6 align="left">Accesorios para celulares</h6></a>
+                                <a href="juegos_Xbox_one_pagina_1.html" class="dropdown-item" style="color: rgb(0, 0, 0)"><h6 align="left">Accesorios</h6></a>
                                 <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#"><h6 align="left">Gaming</h6></a>
                                 <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#"><h6 align="left">Infantil</h6></a>
                                 <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#"><h6 align="left">Belleza</h6></a>

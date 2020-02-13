@@ -70,7 +70,6 @@ String listar="/CRUD_usuarios.jsp";
             CJ.setcorreo_usuario(request.getParameter("cor2"));
             CJ.settelefono_usuario(Long.parseLong(request.getParameter("tel2")));
             CJ.setdireccion(request.getParameter("dir2"));
-            CJ.setcontraseña_usuario(request.getParameter("con2"));
             CJ.setid_estado_cliente(Integer.parseInt(request.getParameter("es2")));
             dao.edit(CJ);
             acceso=listar;

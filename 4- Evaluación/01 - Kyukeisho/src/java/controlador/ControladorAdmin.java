@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import modelo.Encriptacion_MD5;
 import modelo.Admin;
 import modelo.AdminDAO;
 
@@ -19,13 +20,17 @@ public class ControladorAdmin extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String accion = request.getParameter("accion");
+        
         if(accion.equals("Ingresar")){
             String correo= request.getParameter("txtcorreo");
             String contraseña= request.getParameter("txtcontraseña");
+            String contraseña_encriptado = Encriptacion_MD5.Encriptar(contraseña);
+            
             a.setCorreo_administrador(correo);
-            a.setContraseña_administrador(contraseña);
+            a.setContraseña_administrador(contraseña_encriptado);
             r = dao.ValidarAdmin(a);
             HttpSession session=request.getSession();
+            
             if(r==1){
                 
                 request.getSession().setAttribute("correo", correo);

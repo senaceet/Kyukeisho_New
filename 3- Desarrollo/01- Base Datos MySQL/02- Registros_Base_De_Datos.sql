@@ -106,8 +106,8 @@ VALUES 		(0001, '2019-10-01','04:29:00',"vabuitrago18@misena.edu.co",01),
 	
 -- ADMINISTRADOR --
 INSERT INTO Kyukeisho.administrador (id_administrador, primer_nombre_administrador, segundo_nombre_administrador, primer_apellido_administrador, segundo_apellido_administrador, correo_administrador, telefono_administrador,contraseña_administrador)
-VALUES  (1, "Adagny", "Benno", "Fave", "Ferrec", "adagny@gmail.com", 3002356897,"12345"),
-		(2, "Dafnée", "Denise", "Rossi", "Bianchi", "dafnee@gmail.com", 3052138795,"12345");
+VALUES  (1, "Adagny", "Benno", "Fave", "Ferrec", "adagny@gmail.com", 3002356897,"CWlaarcP6EE="), -- =12345
+		(2, "Dafnée", "Denise", "Rossi", "Bianchi", "dafnee@gmail.com", 3052138795,"CWlaarcP6EE=");
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             

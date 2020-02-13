@@ -221,21 +221,23 @@
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
               <ul class="nav navbar-nav">
-                <li class="nav-item active"><a href="Administrador/Inicio_Administrador.jsp" class="nav-link">Página de administración</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Ayuda</a></li>
+                <li class="nav-item active">
+                    <a href="Administrador/Inicio_Administrador.jsp" class="nav-link"></a>
+                </li>
                 </li>
               </ul>
               <form class="navbar-form form-inline">
                 <div class="input-group search-box">								
-                  <input type="text" id="search" class="form-control" placeholder="Buscar">
-                  <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    <a href="Administrador/Inicio_Administrador.jsp" class="nav-link"><h6 style="color: white">Página de administración</h6></a>
                 </div>
               </form>
               <ul class="nav navbar-nav navbar-right ml-auto">
-                <li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"></i><span class="badge">10</span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge">100</span></a></li>
                 <li class="nav-item dropdown" >
-                  <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://miro.medium.com/max/1024/1*Age2mlAUaGBPNWcLvQPEUA.jpeg" class="avatar" alt="Avatar"> Andres Olaya <b class="caret"></b></a>
+                  <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
+                      <b class="caret">
+                        ${correo}
+                      </b>
+                  </a>
                   <ul class="dropdown-menu" style="background-color: #343a40">
                     <li><a href="../Perfil_Administrador.html" style="color: rgb(255, 255, 255)" class="dropdown-item"><i class="fa fa-user-o"></i> Perfil</a></li>
                     <li class="divider dropdown-divider"></li>
@@ -731,8 +733,8 @@
                     </div>
                 </div>
             </div>
-                        <!-- Editar -->    
             
+            <!-- Editar -->    
             
             <div id="editcate" class="modal fade">
                 
@@ -769,7 +771,7 @@
                                     <label>Direccion</label>
                                     <input  type="text" class="form-control" value="<%= ma2.getdireccion() %>" name="dir2">
                                     <label>contraseña_usuario</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getcontraseña_usuario() %>" name="con2">
+                                    <input  type="text" class="form-control" required value="<%= ma2.getcontraseña_usuario() %>" name="con2" disabled="<%= ma2.getcontraseña_usuario() %>">
 
                                     <label>Estado</label>
                                     <select class="p-2 mb-2 form-control" required="required" value="<%= ma2.getid_estado_cliente() %>" name="es2">

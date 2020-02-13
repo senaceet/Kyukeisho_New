@@ -44,7 +44,7 @@
               <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false" style="color: #ffffff">
-                    ¿Como Registrarme?
+                    Iniciar sesion Como:
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:13rem; background-color: #343a40">
                     <a class="dropdown-item" href="../Cliente/Inicio_Sesion_Cliente.jsp" style="color: #ffffff">Cliente</a>
@@ -64,7 +64,7 @@
   
   <div class="container">
     <div class="row">
-      <div class="col-xl-6">
+      <div class="col-xl-12">
 
         <style type="text/css">
           .login-form {
@@ -113,16 +113,7 @@
           <div class="col-xl-6">
             <div class="login-form">
               <form action="Inicio_Administrador.jsp" method="post">
-                <h2 class="text-center">
-                  <p style="color:rgb(255, 255, 255)" ;>Iniciar Sesión</p>
-                </h2>
-                <div class="text-center social-btn">
-                  <a href="https://es-la.facebook.com/" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i>
-                    Iniciar Con <b>Facebook</b></a>
-                  <a href="https://twitter.com/?lang=es" class="btn btn-info btn-block"><i class="fa fa-twitter"></i>
-                    Iniciar Con <b>Twitter</b></a>
-                  <a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
-                    class="btn btn-danger btn-block"><i class="fa fa-google"></i> Iniciar Con <b>Google</b></a>
+
                 </div>
             </div>
           </div>

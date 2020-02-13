@@ -42,7 +42,7 @@ public class registro_usuario extends HttpServlet {
         
         Statement st = null;
         st = conn.createStatement();
-        String sql = "insert into usuario (primer_nombre_usuario,segundo_nombre_usuario,primer_apellido_usuario,segundo_apellido_usuario,correo_usuario,telefono_usuario,direccion,contraseña_usuario) values('" + pri_nom_user + "','" + seg_nom_user + "','" + pri_ape_user + "','" + seg_ape_user + "','" + email_user + "'," + tel_user + ",'" + direc_user + "','" + contra_encriptada + "')";
+        String sql = "insert into usuario (primer_nombre_usuario,segundo_nombre_usuario,primer_apellido_usuario,segundo_apellido_usuario,correo_usuario,telefono_usuario,direccion,contraseña_usuario,id_estado_cliente) values('" + pri_nom_user + "','" + seg_nom_user + "','" + pri_ape_user + "','" + seg_ape_user + "','" + email_user + "'," + tel_user + ",'" + direc_user + "','" + contra_encriptada + "',1)";
         st.executeUpdate(sql);
         response.sendRedirect("Cliente/Inicio_Sesion_Cliente.jsp");
     }

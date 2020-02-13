@@ -12,7 +12,7 @@ correo_usuario VARCHAR (50) NOT NULL UNIQUE,
 telefono_usuario BIGINT (15) NULL,
 direccion VARCHAR (30) NULL,
 contraseña_usuario VARCHAR (50) NOT NULL,
-id_estado_cliente INT (10) NULL,
+id_estado_cliente INT (10) NOT NULL,
 PRIMARY KEY (id_usuario)
 );
 

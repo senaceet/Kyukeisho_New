@@ -89,7 +89,7 @@ public class usuarios_DAO implements CRUD_usuarios {
 
     @Override
     public boolean edit(usuarios ma) {
-        String sql="update usuario set primer_nombre_usuario='"+ma.getprimer_nombre_usuario()+"',segundo_nombre_usuario= '"+ma.getsegundo_nombre_usuario()+"',primer_apellido_usuario= '"+ma.getprimer_apellido_usuario()+"',segundo_apellido_usuario= '"+ma.getsegundo_apellido_usuario()+"',correo_usuario= '"+ma.getcorreo_usuario()+"',telefono_usuario= "+ma.gettelefono_usuario()+",direccion= '"+ma.getdireccion()+"',contraseña_usuario= '"+ma.getcontraseña_usuario()+"',id_estado_cliente= "+ma.getid_estado_cliente()+" where id_usuario="+ma.getid_usuario();
+        String sql="update usuario set primer_nombre_usuario='"+ma.getprimer_nombre_usuario()+"',segundo_nombre_usuario= '"+ma.getsegundo_nombre_usuario()+"',primer_apellido_usuario= '"+ma.getprimer_apellido_usuario()+"',segundo_apellido_usuario= '"+ma.getsegundo_apellido_usuario()+"',correo_usuario= '"+ma.getcorreo_usuario()+"',telefono_usuario= "+ma.gettelefono_usuario()+",direccion= '"+ma.getdireccion()+"',id_estado_cliente= "+ma.getid_estado_cliente()+" where id_usuario="+ma.getid_usuario();
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);

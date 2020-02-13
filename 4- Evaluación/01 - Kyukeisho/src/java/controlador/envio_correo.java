@@ -46,6 +46,11 @@ public class envio_correo extends HttpServlet {
             session.setAttribute("codigo", cod);
             session.setAttribute("correo", para);
            
+            //activar opcion de cuenta de gmail de lña empresa para enviar correo
+            //1.gestionar cuenta de google
+            //2.seguridad
+            //3.Acceso de aplicaciones poco seguras
+            
             Conexion c = new Conexion();
             Connection conn = c.getConnection();
             
