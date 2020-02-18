@@ -87,7 +87,7 @@ public final class Inicio_005fSesion_005fAdministrador_jsp extends org.apache.ja
       out.write("              <li class=\"nav-item dropdown\">\r\n");
       out.write("                  <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\"\r\n");
       out.write("                    aria-haspopup=\"true\" aria-expanded=\"false\" style=\"color: #ffffff\">\r\n");
-      out.write("                    ¿Como Registrarme?\r\n");
+      out.write("                    Iniciar sesion Como:\r\n");
       out.write("                  </a>\r\n");
       out.write("                  <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\" style=\"width:13rem; background-color: #343a40\">\r\n");
       out.write("                    <a class=\"dropdown-item\" href=\"../Cliente/Inicio_Sesion_Cliente.jsp\" style=\"color: #ffffff\">Cliente</a>\r\n");
@@ -107,7 +107,7 @@ public final class Inicio_005fSesion_005fAdministrador_jsp extends org.apache.ja
       out.write("  \r\n");
       out.write("  <div class=\"container\">\r\n");
       out.write("    <div class=\"row\">\r\n");
-      out.write("      <div class=\"col-xl-6\">\r\n");
+      out.write("      <div class=\"col-xl-12\">\r\n");
       out.write("\r\n");
       out.write("        <style type=\"text/css\">\r\n");
       out.write("          .login-form {\r\n");
@@ -156,16 +156,7 @@ public final class Inicio_005fSesion_005fAdministrador_jsp extends org.apache.ja
       out.write("          <div class=\"col-xl-6\">\r\n");
       out.write("            <div class=\"login-form\">\r\n");
       out.write("              <form action=\"Inicio_Administrador.jsp\" method=\"post\">\r\n");
-      out.write("                <h2 class=\"text-center\">\r\n");
-      out.write("                  <p style=\"color:rgb(255, 255, 255)\" ;>Iniciar Sesión</p>\r\n");
-      out.write("                </h2>\r\n");
-      out.write("                <div class=\"text-center social-btn\">\r\n");
-      out.write("                  <a href=\"https://es-la.facebook.com/\" class=\"btn btn-primary btn-block\"><i class=\"fa fa-facebook\"></i>\r\n");
-      out.write("                    Iniciar Con <b>Facebook</b></a>\r\n");
-      out.write("                  <a href=\"https://twitter.com/?lang=es\" class=\"btn btn-info btn-block\"><i class=\"fa fa-twitter\"></i>\r\n");
-      out.write("                    Iniciar Con <b>Twitter</b></a>\r\n");
-      out.write("                  <a href=\"https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin\"\r\n");
-      out.write("                    class=\"btn btn-danger btn-block\"><i class=\"fa fa-google\"></i> Iniciar Con <b>Google</b></a>\r\n");
+      out.write("\r\n");
       out.write("                </div>\r\n");
       out.write("            </div>\r\n");
       out.write("          </div>\r\n");

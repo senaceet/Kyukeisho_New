@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import modelo.Encriptacion_MD5;
 import modelo.usuarios;
 
@@ -55,8 +56,10 @@ String listar="/CRUD_usuarios.jsp";
             acceso=listar;
         }
         
+
+        
         else if(action.equalsIgnoreCase("editar")){
-            request.setAttribute("id_usuario",request.getParameter("id_usuario"));
+            request.setAttribute("correo",request.getParameter("correo"));
             request.setAttribute("a",1);
             acceso=listar;
         }
@@ -70,6 +73,7 @@ String listar="/CRUD_usuarios.jsp";
             CJ.setcorreo_usuario(request.getParameter("cor2"));
             CJ.settelefono_usuario(Long.parseLong(request.getParameter("tel2")));
             CJ.setdireccion(request.getParameter("dir2"));
+            CJ.setcontraseña_usuario(request.getParameter("con2"));
             CJ.setid_estado_cliente(Integer.parseInt(request.getParameter("es2")));
             dao.edit(CJ);
             acceso=listar;

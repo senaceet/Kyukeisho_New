@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import modelo.usuarios;
 import java_interfaces.CRUD_usuarios;
+import javax.servlet.http.HttpSession;
 
 
 public class usuarios_DAO implements CRUD_usuarios {
@@ -17,6 +18,7 @@ public class usuarios_DAO implements CRUD_usuarios {
     ResultSet rs;
     usuarios CJ =new usuarios();
 
+    
     @Override
     public List listar() {
         ArrayList<usuarios>list=new ArrayList<>();
@@ -73,6 +75,34 @@ public class usuarios_DAO implements CRUD_usuarios {
         }
         return CJ;
     }
+    
+    
+        @Override
+    public usuarios list2(int correo_usuario) {
+        String sql="select  id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario,correo_usuario,telefono_usuario,direccion,contraseña_usuario,estado_cliente.estado_cliente"
+                  +" from usuario"
+                  +" inner join estado_cliente"
+                  +" on usuario.id_estado_cliente = estado_cliente.id_estado_cliente where id_usuario=" + correo_usuario;
+        try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            rs=ps.executeQuery();
+            while(rs.next()){                
+                CJ.setid_usuario(rs.getInt("id_usuario"));
+                CJ.setprimer_nombre_usuario(rs.getString("primer_nombre_usuario"));
+                CJ.setsegundo_nombre_usuario(rs.getString("segundo_nombre_usuario"));
+                CJ.setprimer_apellido_usuario(rs.getString("primer_apellido_usuario"));
+                CJ.setsegundo_apellido_usuario(rs.getString("segundo_apellido_usuario"));
+                CJ.setcorreo_usuario(rs.getString("correo_usuario"));
+                CJ.settelefono_usuario(rs.getLong("telefono_usuario"));
+                CJ.setdireccion(rs.getString("direccion"));
+                CJ.setcontraseña_usuario(rs.getString("contraseña_usuario"));
+                CJ.setestado_cliente(rs.getString("estado_cliente"));
+            }
+        } catch (Exception e) {
+        }
+        return CJ;
+    }
 
     @Override
     public boolean add(usuarios ma) {
@@ -89,7 +119,7 @@ public class usuarios_DAO implements CRUD_usuarios {
 
     @Override
     public boolean edit(usuarios ma) {
-        String sql="update usuario set primer_nombre_usuario='"+ma.getprimer_nombre_usuario()+"',segundo_nombre_usuario= '"+ma.getsegundo_nombre_usuario()+"',primer_apellido_usuario= '"+ma.getprimer_apellido_usuario()+"',segundo_apellido_usuario= '"+ma.getsegundo_apellido_usuario()+"',correo_usuario= '"+ma.getcorreo_usuario()+"',telefono_usuario= "+ma.gettelefono_usuario()+",direccion= '"+ma.getdireccion()+"',id_estado_cliente= "+ma.getid_estado_cliente()+" where id_usuario="+ma.getid_usuario();
+        String sql="update usuario set primer_nombre_usuario='"+ma.getprimer_nombre_usuario()+"',segundo_nombre_usuario= '"+ma.getsegundo_nombre_usuario()+"',primer_apellido_usuario= '"+ma.getprimer_apellido_usuario()+"',segundo_apellido_usuario= '"+ma.getsegundo_apellido_usuario()+"',correo_usuario= '"+ma.getcorreo_usuario()+"',telefono_usuario= "+ma.gettelefono_usuario()+",direccion= '"+ma.getdireccion()+"',contraseña_usuario= '"+ma.getcontraseña_usuario()+"',id_estado_cliente= "+ma.getid_estado_cliente()+" where id_usuario="+ma.getid_usuario();
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);

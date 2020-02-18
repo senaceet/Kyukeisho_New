@@ -99,7 +99,7 @@
             </div>
 
           <div class="clearfix">            
-              <p style="color:rgb(255, 255, 255)" ;><label class="pull-left checkbox-inline"><input type="checkbox"> Recordar Cuenta</p>
+              <p style="color:rgb(255, 255, 255)"><label class="pull-left checkbox-inline"><input type="checkbox"> Recordar Cuenta</p>
             </label>
           </div>
           </form>

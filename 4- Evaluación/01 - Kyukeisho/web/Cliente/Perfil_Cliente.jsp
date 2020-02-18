@@ -1,3 +1,10 @@
+<%@page import="Conexion.Conexion"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="modelo.usuarios"%>
+<%@page import="modelo.usuarios_DAO"%>
 <%@page import="modelo.Persona"%>
 <html>
      <%
@@ -170,7 +177,6 @@
                   </div>
                   <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item active"><a href="Administrador_inicio.html" class="nav-link">Administraci�n</a></li>
                       </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right ml-auto">
@@ -278,31 +284,62 @@
                 </div>
                 <h2 class="text-center">Editar Perfil</h2>   
 
-                <div class="form-group">
-                    <input type="text" class="form-control" name="Editar Nombre Perfil" placeholder="Editar Nombre Perfil">
-                </div>
-                <div class="form-group">
-                        <input type="text" class="form-control" name="Editar Nombre Usuario" placeholder="Editar Nombre Usuario">
-                    </div>
-                    <div class="form-group">
-                            <input type="text" class="form-control" name="Editar Correo Eléctronico" placeholder="Editar Correo Eléctronico">
-                        </div>
-                        <div class="form-group">
-                                <input type="text" class="form-control" name="Editar Número Telefono" placeholder="Editar Número telefono">
-                            </div>
-                            <div class="form-group">
-                                    <input type="text" class="form-control" name="Editar Dirección" placeholder="Editar Dirección">
+ <%
+            String cod = request.getParameter("doc");
+            
+
+             Connection conn = null;
+            ResultSet rs = null;
+            Statement sta = null;
+            
+            finally{
+             
+                Class.forName("com.mysql.jdbc.Driver");
+                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Kyukeisho?user=root&password=");   
+                
+            sta = conn.createStatement();
+            rs = sta.executeQuery("select * from usuario where id_usuario = '"+cod+"'");
+            
+            while(rs.next()){
+              
+
+        %>
+                        <form action="">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Primer nombre</label>
+                                    <input type="text" class="form-control" required value="<%= ma2.getprimer_nombre_usuario()%>" name="pnom2">
+                                    <label>segundo nombre</label>
+                                    <input  type="text" class="form-control" value="<%= ma2.getsegundo_nombre_usuario() %>" name="snom2">
+                                    <label>Primer apellido</label>
+                                    <input  type="text" class="form-control" required value="<%= ma2.getprimer_apellido_usuario() %>" name="pape2">
+                                    <label>Segundo apellido</label>
+                                    <input  type="text" class="form-control" value="<%= ma2.getsegundo_apellido_usuario() %>" name="sape2">
+                                    <label>Correo</label>
+                                    <input  type="text" class="form-control" required value="<%= ma2.getcorreo_usuario() %>" name="cor2">
+                                    <label>Telefono</label>
+                                    <input  type="text" class="form-control" value="<%= ma2.gettelefono_usuario()%>" name="tel2">
+                                    <label>Direccion</label>
+                                    <input  type="text" class="form-control" value="<%= ma2.getdireccion() %>" name="dir2">
+                                    <label>Contrase�a</label>
+                                    <input  type="text" class="form-control" value="<%= ma2.getcontrase�a_usuario()%>" name="con2">
+
+                                    <label>Estado</label>
+                                    <select class="p-2 mb-2 form-control" required="required" value="<%= ma2.getid_estado_cliente() %>" name="es2">
+                                     <option value="0">seleccione Estado</option>
+                                     <option value="1">Activo</option>
+                                     <option value="2">Desactivo</option>
+                                    </select> 
+                                     
+                                    <input type="hidden" class="form-control" required value="<%= ma2.getid_usuario() %>" name="id_usuario2">
+                                    
                                 </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" name="Cambiar Contraseña" placeholder="Cambiar Contraseña">
-                </div>   
-                <div class="form-group">
-                        <input type="password" class="form-control" name="Verificar Contraseña" placeholder="Verificar Contraseña">
-                    </div>             
-                <div class="form-group">
+                            </div>
+                                            <div class="form-group">
                     <button type="submit" class="btn btn-warning btn-lg btn-block">Guardar</button>
                 </div>
-            </form>
+                        </form>       
+
         </div>
 
         <br>

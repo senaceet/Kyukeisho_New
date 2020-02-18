@@ -3,15 +3,26 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="javax.mail.Session"%>
+<%@page import="modelo.Admin"%>
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
+    
+    <%
+        Admin a = (Admin)session.getAttribute("administrador");
+        if(a==null){
+        request.getRequestDispatcher("Administrador/Inicio_Sesion_Administrador.jsp").forward(request, response);
+    }  
+        response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        response.setDateHeader("Expires",0); 
+    %>
+    
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Usuario</title>
+    <title>Usuarios</title>
     
     <link rel="stylesheet" href="css/styles.css" media="all">
 
@@ -239,11 +250,18 @@
                       </b>
                   </a>
                   <ul class="dropdown-menu" style="background-color: #343a40">
-                    <li><a href="../Perfil_Administrador.html" style="color: rgb(255, 255, 255)" class="dropdown-item"><i class="fa fa-user-o"></i> Perfil</a></li>
-                    <li class="divider dropdown-divider"></li>
-                    <li><a href="../../index.html" style="color: rgb(255, 255, 255)" class="dropdown-item"><i class="material-icons"></i> Cerrar Sesión</a></li>
-                  </ul>
-                </li>
+                      <li>
+                       <a href="../Perfil_Administrador.html" style="color: rgb(255, 255, 255)" class="dropdown-item"><i class="fa fa-user-o"></i> Perfil</a></li>
+                      </li>
+                      <li>
+                    <form action="ControladorAdmin" method="post">           
+                        <div class="form-group">
+                <div align="center">
+                    <input style="width: 10rem;" class="btn btn-dark btn-block" type="submit" name="accion" value="Cerrar Sesion"> 
+                </div>               
+                </div>
+                 </form>
+                      </li>
               </ul>
             </div>
           </nav>
@@ -740,6 +758,7 @@
                 
                 <div class="modal-dialog">
                     <div class="modal-content">
+                        
                         <%
               usuarios_DAO dao2=new usuarios_DAO();
               usuarios ma2= new usuarios();
@@ -770,8 +789,8 @@
                                     <input  type="text" class="form-control" value="<%= ma2.gettelefono_usuario()%>" name="tel2">
                                     <label>Direccion</label>
                                     <input  type="text" class="form-control" value="<%= ma2.getdireccion() %>" name="dir2">
-                                    <label>contraseña_usuario</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getcontraseña_usuario() %>" name="con2" disabled="<%= ma2.getcontraseña_usuario() %>">
+                                    <label>Contraseña</label>
+                                    <input  type="text" class="form-control" value="<%= ma2.getcontraseña_usuario()%>" name="con2">
 
                                     <label>Estado</label>
                                     <select class="p-2 mb-2 form-control" required="required" value="<%= ma2.getid_estado_cliente() %>" name="es2">

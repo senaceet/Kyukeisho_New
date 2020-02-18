@@ -47,7 +47,9 @@ public class ControladorAdmin extends HttpServlet {
             HttpSession session = request.getSession();
             session.removeAttribute("administrador");
             request.getSession().invalidate();
-            response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp");    
+            response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp"); 
+            
+            
         }
     }
     
