@@ -81,11 +81,6 @@ public final class Recuperar_005fcontrasena_005f3_jsp extends org.apache.jasper.
       out.write("                <div class=\"collapse navbar-collapse \" id=\"navbarSupportedContent\">\r\n");
       out.write("                  <ul class=\"navbar-nav mr-auto\">\r\n");
       out.write("                  </ul>\r\n");
-      out.write("                  <ul class=\"navbar-nav \">\r\n");
-      out.write("                      <li class=\"nav-item disable\">\r\n");
-      out.write("                          <a class=\"nav-link\" href=\"#\" style=\"color: #ffffff\">Ayuda<span class=\"sr-only\"></span></a>\r\n");
-      out.write("                        </li>\r\n");
-      out.write("                  </ul>\r\n");
       out.write("                </div>\r\n");
       out.write("              </nav>\r\n");
       out.write("            </div>\r\n");

@@ -38,11 +38,6 @@
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                   </ul>
-                  <ul class="navbar-nav ">
-                      <li class="nav-item disable">
-                          <a class="nav-link" href="#" style="color: #ffffff">Ayuda<span class="sr-only"></span></a>
-                        </li>
-                  </ul>
                 </div>
               </nav>
             </div>
@@ -80,7 +75,7 @@
             <div class="col-lg-2">
                 <div class="login-form">
                     <h4 class="text-center">
-                        <p style="color:rgb(255, 255, 255)" >Recuperar Contraseña</p>
+                        <p style="color:rgb(255, 255, 255)" >Modificar Contraseña</p>
                     </h4>
                     <hr>
                     <form  method="post" action="../../recuperar_contraseña">

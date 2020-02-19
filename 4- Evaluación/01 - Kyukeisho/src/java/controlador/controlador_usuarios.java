@@ -59,7 +59,7 @@ String listar="/CRUD_usuarios.jsp";
 
         
         else if(action.equalsIgnoreCase("editar")){
-            request.setAttribute("correo",request.getParameter("correo"));
+            request.setAttribute("id_usuario",request.getParameter("id_usuario"));
             request.setAttribute("a",1);
             acceso=listar;
         }

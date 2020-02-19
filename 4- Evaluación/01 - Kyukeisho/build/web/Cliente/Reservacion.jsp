@@ -1,5 +1,17 @@
+<%@page import="modelo.Persona"%>
 <!DOCTYPE html>
 <html lang="en">
+
+    <%
+        Persona p = (Persona)session.getAttribute("persona");
+        if(p==null){
+        request.getRequestDispatcher("Inicio_Sesion_Cliente.jsp").forward(request, response);
+    
+    }
+        response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        response.setDateHeader("Expires",0);    
+    
+    %>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,44 +35,43 @@
 <body >
         <font style="color:rgb(255, 145, 0)">
                 <div class="header fixed-top">
-                  <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
-                        <a href="../index.html">
-                            <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
-                            </a>                    
-                    <div class="col-xl-1 text-center" >
-                    <button class="navbar-toggler" style="background-color: rgb(255, 251, 0)" type="button" data-toggle="collapse"
-                      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                      aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    </div>
-                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                      <ul class="navbar-nav mr-auto">
-                      </ul>
-                      <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2 width:8rem" type="search" placeholder="Buscar" aria-label="Search">
-                        <button class="btn btn-outline-warning my-2 my-sm-0 mr-sm-2" type="submit"><i class="fa fa-search"
-                            aria-hidden="true"></i> Buscar </button>
-                      </form>
-                      <ul class="navbar-nav ">
-                            <li class="nav-item dropdown mr-2">
-                              <a class="nav-link dropdown-toggle navbar-DARK" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgb(255, 217, 0)">
-                                ${correo}
-                              </a>
-                                <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="width:15rem; background-color: #343a40">
-                                 <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">Mis favoritos</a>
-                                 <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">Mis reservaciones</a>
-                                 <a class="dropdown-item" href="/Cliente/Perfil_Cliente.html" style="color:rgb(255, 217, 0)">Perfil</a>
-                                 <a class="dropdown-item" href="/Cliente/Ajustes_Cliente.html" style="color:rgb(255, 217, 0)">Ajustes</a>
-                                 <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">¿Necesitas ayuda?</a>
-                                 <hr>
-                                 <a class="dropdown-item" href="../index.html" style="color:rgb(255, 217, 0)">Cerrar Sesion</a>
-                                </div>
-                            </li>
-                          </ul>
-                    </div>
-                  </nav>
+                     <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
+        <a href="../index.html">
+          <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
+          </a>      
+      <div class="col-xl-1 text-center" >
+      <button class="navbar-toggler" style="background-color: rgb(255, 251, 0)" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      </div>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+
+        <ul class="navbar-nav ">
+            <li class="nav-item dropdown mr-2">
+              <a class="nav-link dropdown-toggle navbar-DARK" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgb(255, 217, 0)">
+                    ${correo}
+              </a>
+                <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="width:15rem; background-color: #343a40">
+                 <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">Mis reservaciones</a>
+                 <a class="dropdown-item" href="Perfil_Cliente.jsp" style="color:rgb(255, 217, 0)">Perfil</a>
+                 <hr>
+                 <form action="../Controlador" method="post">
+                 <div class="form-group">
+                <div align="center">
+                    <input style="width: 14rem;" class="btn btn-warning btn-block" type="submit" name="accion" value="Cerrar Sesion"> 
+                </div>               
+                </div>
+                 </form>
+                </div>
+            </li>
+          </ul>
+      </div>
+    </nav>
                   
                   <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #fffb00">
                     <div class="col-xl-1 text-center" style="background-color: rgb(255, 251, 0)">

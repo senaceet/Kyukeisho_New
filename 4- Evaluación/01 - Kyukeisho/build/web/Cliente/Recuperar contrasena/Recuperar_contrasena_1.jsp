@@ -37,22 +37,6 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent" >
               <ul class="navbar-nav mr-auto">
               </ul>
-              <ul class="navbar-nav ">
-                  <li class="nav-item disable">
-                      <a class="nav-link" href="#" style="color: #ffffff">Ayuda<span class="sr-only"></span></a>
-                    </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false" style="color: #ffffff">
-                        ¿Como Registrarme?
-                      </a>
-                      <a href="">
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:13rem; background-color: #343a40">
-                        <a class="dropdown-item" href="../../Administrador/Inicio_Sesion_Administrador.jsp" style="color: #ffffff">Administrador</a>
-                        <a class="dropdown-item" href="../Inicio_Sesion_Cliente.jsp" style="color: #ffffff">Cliente</a>
-                      </div>
-                </li>
-              </ul>
             </div>
           </nav>
         </div>

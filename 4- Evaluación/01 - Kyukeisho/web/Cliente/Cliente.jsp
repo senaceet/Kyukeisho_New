@@ -194,7 +194,6 @@
                 <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="width:15rem; background-color: #343a40">
                  <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">Mis reservaciones</a>
                  <a class="dropdown-item" href="Perfil_Cliente.jsp" style="color:rgb(255, 217, 0)">Perfil</a>
-                 <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">¿Necesitas ayuda?</a>
                  <hr>
                  <form action="../Controlador" method="post">
                  <div class="form-group">

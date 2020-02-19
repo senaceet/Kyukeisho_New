@@ -1,3 +1,4 @@
+<%@page import="modelo.Encriptacion_MD5"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="modelo.usuarios"%>
@@ -191,7 +192,6 @@
                 <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="width:15rem; background-color: #343a40">
                  <a class="dropdown-item" href="Cliente.jsp" style="color:rgb(255, 255, 255)">Inicio</a>
                  <a class="dropdown-item" href="#" style="color:rgb(255, 255, 255)">Mis reservaciones</a>
-                 <a class="dropdown-item" href="#" style="color:rgb(255, 255, 255)">¿Necesitas ayuda?</a>
                  <hr>
                  <form action="../Controlador" method="post">
                  <div class="form-group">
@@ -331,21 +331,24 @@
                                     <input  type="text" class="form-control" required value="<%=rs.getString(4)%>" name="pape">
                                     <label>Segundo apellido</label>
                                     <input  type="text" class="form-control" value="<%=rs.getString(5)%>" name="sape">
-                                    <label>Correo</label>
-                                    <input  type="text" class="form-control" required value="<%=rs.getString(6)%>" name="cor">
                                     <label>Telefono</label>
                                     <input  type="text" class="form-control" value="<%=rs.getString(7)%>" name="tel">
-                                    <label>Direccion</label>
+                                    <label>Dirección</label>
                                     <input  type="text" class="form-control" value="<%=rs.getString(8)%>" name="dir">
-                                    <label>Contraseña</label>
-                                    <input  type="text" class="form-control" value="<%=rs.getString(9)%>" name="con">
+
 
                                      <br>
                          <input class="btn btn-ligth btn-block" type="submit" name="btngrabar" value="Guardar">
                </div>
               </div>
         </form>
-                                    
+           <center>
+            <a href="Recuperar contrasena/Recuperar_contrasena_3.jsp">
+            <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-ligth btn-block">
+              <h5><strong>Modificar contraseña</strong></h5>
+            </button>
+          </a>      
+          </center>
         <%
             }
         }catch(Exception e){} 
@@ -356,15 +359,14 @@
         String snom2 = request.getParameter("snom");
         String pape2 = request.getParameter("pape");
         String sape2 = request.getParameter("sape");
-        String cor2 = request.getParameter("cor");
         String tel2 = request.getParameter("tel");// posible error
         String dir2 = request.getParameter("dir");
-
-
-        sta.executeUpdate("update usuario set primer_nombre_usuario='"+ pnom2 +"',segundo_nombre_usuario='"+ snom2 +"',primer_apellido_usuario='"+ pape2 +"',segundo_apellido_usuario='"+ sape2 +"',correo_usuario='"+ cor2 +"',telefono_usuario="+ tel2 +",direccion='"+ dir2 +"',id_estado_cliente="+ es2 +" where correo_usuario ='"+ correo +"' ");
+        
+        sta.executeUpdate("update usuario set primer_nombre_usuario='"+ pnom2 +"',segundo_nombre_usuario='"+ snom2 +"',primer_apellido_usuario='"+ pape2 +"',segundo_apellido_usuario='"+ sape2 +"',telefono_usuario="+ tel2 +",direccion='"+ dir2 +"' where correo_usuario ='"+ correo +"' ");
 
         response.sendRedirect("Perfil_Cliente.jsp");         
         }
+
         %>
 
         </div>

@@ -77,32 +77,7 @@ public class usuarios_DAO implements CRUD_usuarios {
     }
     
     
-        @Override
-    public usuarios list2(int correo_usuario) {
-        String sql="select  id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario,correo_usuario,telefono_usuario,direccion,contraseña_usuario,estado_cliente.estado_cliente"
-                  +" from usuario"
-                  +" inner join estado_cliente"
-                  +" on usuario.id_estado_cliente = estado_cliente.id_estado_cliente where correo_usuario=" + correo_usuario;
-        try {
-            con=cn.getConnection();
-            ps=con.prepareStatement(sql);
-            rs=ps.executeQuery();
-            while(rs.next()){                
-                CJ.setid_usuario(rs.getInt("id_usuario"));
-                CJ.setprimer_nombre_usuario(rs.getString("primer_nombre_usuario"));
-                CJ.setsegundo_nombre_usuario(rs.getString("segundo_nombre_usuario"));
-                CJ.setprimer_apellido_usuario(rs.getString("primer_apellido_usuario"));
-                CJ.setsegundo_apellido_usuario(rs.getString("segundo_apellido_usuario"));
-                CJ.setcorreo_usuario(rs.getString("correo_usuario"));
-                CJ.settelefono_usuario(rs.getLong("telefono_usuario"));
-                CJ.setdireccion(rs.getString("direccion"));
-                CJ.setcontraseña_usuario(rs.getString("contraseña_usuario"));
-                CJ.setestado_cliente(rs.getString("estado_cliente"));
-            }
-        } catch (Exception e) {
-        }
-        return CJ;
-    }
+      
 
     @Override
     public boolean add(usuarios ma) {

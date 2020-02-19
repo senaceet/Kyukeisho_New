@@ -6,7 +6,6 @@ import modelo.usuarios;
 public interface CRUD_usuarios {
     public List listar();
     public usuarios list(int id_usuario);
-    public usuarios list2 (int correo_usuario);
     public boolean add(usuarios ma);
     public boolean edit(usuarios ma);
 }

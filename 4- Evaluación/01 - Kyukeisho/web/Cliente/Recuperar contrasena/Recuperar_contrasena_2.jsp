@@ -38,11 +38,6 @@
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                   </ul>
-                  <ul class="navbar-nav ">
-                      <li class="nav-item disable">
-                          <a class="nav-link" href="#" style="color: #ffffff" >Ayuda<span class="sr-only"></span></a>
-                        </li>
-                  </ul>
                 </div>
               </nav>
             </div>

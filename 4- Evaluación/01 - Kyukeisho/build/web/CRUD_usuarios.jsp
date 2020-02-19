@@ -2,16 +2,16 @@
 <%@page import="modelo.usuarios_DAO"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="javax.mail.Session"%>
 <%@page import="modelo.Admin"%>
-
+<%@page contentType="text/html"%> <%-- para acentos --%> 
+<%@page pageEncoding="UTF-8"%> <%-- para acentos --%> 
 <html>
     
     <%
         Admin a = (Admin)session.getAttribute("administrador");
         if(a==null){
-        request.getRequestDispatcher("Administrador/Inicio_Sesion_Administrador.jsp").forward(request, response);
+        response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp"); 
     }  
         response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
         response.setDateHeader("Expires",0); 
