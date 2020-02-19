@@ -82,7 +82,7 @@ public class usuarios_DAO implements CRUD_usuarios {
         String sql="select  id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario,correo_usuario,telefono_usuario,direccion,contraseña_usuario,estado_cliente.estado_cliente"
                   +" from usuario"
                   +" inner join estado_cliente"
-                  +" on usuario.id_estado_cliente = estado_cliente.id_estado_cliente where id_usuario=" + correo_usuario;
+                  +" on usuario.id_estado_cliente = estado_cliente.id_estado_cliente where correo_usuario=" + correo_usuario;
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);

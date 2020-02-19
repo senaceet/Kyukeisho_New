@@ -63,6 +63,8 @@ String listar="/CRUD_usuarios.jsp";
             request.setAttribute("a",1);
             acceso=listar;
         }
+        
+        
       
         else if(action.equalsIgnoreCase("Actualizar")){
             CJ.setid_usuario(id_usuario=Integer.parseInt(request.getParameter("id_usuario2")));

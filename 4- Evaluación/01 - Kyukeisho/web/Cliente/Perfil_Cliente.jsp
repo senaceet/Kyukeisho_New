@@ -1,19 +1,23 @@
-<%@page import="Conexion.Conexion"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Statement"%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Connection"%>
 <%@page import="modelo.usuarios"%>
 <%@page import="modelo.usuarios_DAO"%>
 <%@page import="modelo.Persona"%>
+<%@page import="Conexion.Conexion"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="modelo.Persona"%>
+
 <html>
-     <%
+    <%
         Persona p = (Persona)session.getAttribute("persona");
         if(p==null){
         request.getRequestDispatcher("Inicio_Sesion_Cliente.jsp").forward(request, response);
     
     }
-    
+        response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        response.setDateHeader("Expires",0);    
     
     %>
 
@@ -163,34 +167,44 @@
               </style>
               </head> 
               <body>
-                <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
-                  <div class="navbar-header d-flex col">
-                      <a href="../index.html">
-                          <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
-                          </a>                    
-                      <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
-                      <span class="navbar-toggler-icon"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>
-                  </div>
-                  <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-                    <ul class="nav navbar-nav">
-                      </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right ml-auto">
-                      <li class="nav-item dropdown">
-                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
-                        ${correo}
-                        <b class="caret"></b></a>
-                        <ul class="dropdown-menu" style="background-color: #343a40">
-                          <li><a href="../index.html" style="color: #ffffff" class="dropdown-item"><i class="material-icons"></i> Cerrar Sesión</a></li>
-                      </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </nav>
+                   <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
+        <a href="../index.html">
+          <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
+          </a>      
+      <div class="col-xl-1 text-center" >
+      <button class="navbar-toggler" style="background-color: rgb(255, 251, 0)" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      </div>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+
+        <ul class="navbar-nav ">
+            <li class="nav-item dropdown mr-2">
+              <a class="nav-link dropdown-toggle navbar-DARK" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgb(255, 255, 255)">
+                    ${correo}
+              </a>
+                <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="width:15rem; background-color: #343a40">
+                 <a class="dropdown-item" href="Cliente.jsp" style="color:rgb(255, 255, 255)">Inicio</a>
+                 <a class="dropdown-item" href="#" style="color:rgb(255, 255, 255)">Mis reservaciones</a>
+                 <a class="dropdown-item" href="#" style="color:rgb(255, 255, 255)">¿Necesitas ayuda?</a>
+                 <hr>
+                 <form action="../Controlador" method="post">
+                 <div class="form-group">
+                <div align="center">
+                    <input style="width: 14rem;" class="btn btn-dark btn-block" type="submit" name="accion" value="Cerrar Sesion"> 
+                </div>               
+                </div>
+                 </form>
+                </div>
+            </li>
+          </ul>
+      </div>
+    </nav>
         <style type="text/css">
             body {
                 color: #fff;
@@ -276,69 +290,81 @@
         </head>
         <body>
         <div class="login-form">
-          <br>
-          <br>
-            <form action="Ajustes.html" method="post">
+
+            <form action="">
                 <div class="avatar">
                     <img src="https://images.vexels.com/media/users/3/137047/isolated/preview/5831a17a290077c646a48c4db78a81bb-perfil-de-usuario-icono-azul-by-vexels.png" alt="Avatar">
                 </div>
                 <h2 class="text-center">Editar Perfil</h2>   
 
- <%
-            String cod = request.getParameter("doc");
+        <%
+         
+        String correo = (String) session.getAttribute("correo_e");
+           
             
 
              Connection conn = null;
             ResultSet rs = null;
             Statement sta = null;
             
-            finally{
+            try{
              
                 Class.forName("com.mysql.jdbc.Driver");
                 conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Kyukeisho?user=root&password=");   
                 
             sta = conn.createStatement();
-            rs = sta.executeQuery("select * from usuario where id_usuario = '"+cod+"'");
+            rs = sta.executeQuery("select * from usuario where correo_usuario ='"+ correo +"'");
             
             while(rs.next()){
               
 
         %>
-                        <form action="">
-                            <div class="modal-body">
+
+            
+              <div class="modal-body">
                                 <div class="form-group">
                                     <label>Primer nombre</label>
-                                    <input type="text" class="form-control" required value="<%= ma2.getprimer_nombre_usuario()%>" name="pnom2">
+                                    <input type="text" class="form-control" required value="<%=rs.getString(2)%>" name="pnom">
                                     <label>segundo nombre</label>
-                                    <input  type="text" class="form-control" value="<%= ma2.getsegundo_nombre_usuario() %>" name="snom2">
+                                    <input  type="text" class="form-control" value="<%=rs.getString(3)%>" name="snom2">
                                     <label>Primer apellido</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getprimer_apellido_usuario() %>" name="pape2">
+                                    <input  type="text" class="form-control" required value="<%=rs.getString(4)%>" name="pape2">
                                     <label>Segundo apellido</label>
-                                    <input  type="text" class="form-control" value="<%= ma2.getsegundo_apellido_usuario() %>" name="sape2">
+                                    <input  type="text" class="form-control" value="<%=rs.getString(5)%>" name="sape2">
                                     <label>Correo</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getcorreo_usuario() %>" name="cor2">
+                                    <input  type="text" class="form-control" required value="<%=rs.getString(6)%>" name="cor2">
                                     <label>Telefono</label>
-                                    <input  type="text" class="form-control" value="<%= ma2.gettelefono_usuario()%>" name="tel2">
+                                    <input  type="text" class="form-control" value="<%=rs.getString(7)%>" name="tel2">
                                     <label>Direccion</label>
-                                    <input  type="text" class="form-control" value="<%= ma2.getdireccion() %>" name="dir2">
+                                    <input  type="text" class="form-control" value="<%=rs.getString(8)%>" name="dir2">
                                     <label>Contraseña</label>
-                                    <input  type="text" class="form-control" value="<%= ma2.getcontraseña_usuario()%>" name="con2">
+                                    <input  type="text" class="form-control" value="<%=rs.getString(9)%>" name="con2">
 
                                     <label>Estado</label>
-                                    <select class="p-2 mb-2 form-control" required="required" value="<%= ma2.getid_estado_cliente() %>" name="es2">
+                                    <select class="p-2 mb-2 form-control" required="required" value="<%=rs.getString(10)%>" name="es2">
                                      <option value="0">seleccione Estado</option>
                                      <option value="1">Activo</option>
                                      <option value="2">Desactivo</option>
-                                    </select> 
-                                     
-                                    <input type="hidden" class="form-control" required value="<%= ma2.getid_usuario() %>" name="id_usuario2">
+                                    </select>  
+                                     <br>
+                         <input class="btn btn-ligth btn-block" type="submit" name="btngrabar" value="Guardar">
+               </div>
+              </div>
+        </form>
                                     
-                                </div>
-                            </div>
-                                            <div class="form-group">
-                    <button type="submit" class="btn btn-warning btn-lg btn-block">Guardar</button>
-                </div>
-                        </form>       
+        <%
+            }
+        }catch(Exception e){} 
+
+        if(request.getParameter("btngrabar")!= null){
+        
+        String pnom2 = request.getParameter("pnom");
+        
+        sta.executeUpdate("update usuario set primer_nombre_usuario='"+ pnom2 +"' where id_usuario=1");
+
+        response.sendRedirect("Perfil_Cliente.jsp");         
+        }
+        %>
 
         </div>
 
