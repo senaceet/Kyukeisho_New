@@ -326,26 +326,20 @@
                                     <label>Primer nombre</label>
                                     <input type="text" class="form-control" required value="<%=rs.getString(2)%>" name="pnom">
                                     <label>segundo nombre</label>
-                                    <input  type="text" class="form-control" value="<%=rs.getString(3)%>" name="snom2">
+                                    <input  type="text" class="form-control" value="<%=rs.getString(3)%>" name="snom">
                                     <label>Primer apellido</label>
-                                    <input  type="text" class="form-control" required value="<%=rs.getString(4)%>" name="pape2">
+                                    <input  type="text" class="form-control" required value="<%=rs.getString(4)%>" name="pape">
                                     <label>Segundo apellido</label>
-                                    <input  type="text" class="form-control" value="<%=rs.getString(5)%>" name="sape2">
+                                    <input  type="text" class="form-control" value="<%=rs.getString(5)%>" name="sape">
                                     <label>Correo</label>
-                                    <input  type="text" class="form-control" required value="<%=rs.getString(6)%>" name="cor2">
+                                    <input  type="text" class="form-control" required value="<%=rs.getString(6)%>" name="cor">
                                     <label>Telefono</label>
-                                    <input  type="text" class="form-control" value="<%=rs.getString(7)%>" name="tel2">
+                                    <input  type="text" class="form-control" value="<%=rs.getString(7)%>" name="tel">
                                     <label>Direccion</label>
-                                    <input  type="text" class="form-control" value="<%=rs.getString(8)%>" name="dir2">
+                                    <input  type="text" class="form-control" value="<%=rs.getString(8)%>" name="dir">
                                     <label>Contraseña</label>
-                                    <input  type="text" class="form-control" value="<%=rs.getString(9)%>" name="con2">
+                                    <input  type="text" class="form-control" value="<%=rs.getString(9)%>" name="con">
 
-                                    <label>Estado</label>
-                                    <select class="p-2 mb-2 form-control" required="required" value="<%=rs.getString(10)%>" name="es2">
-                                     <option value="0">seleccione Estado</option>
-                                     <option value="1">Activo</option>
-                                     <option value="2">Desactivo</option>
-                                    </select>  
                                      <br>
                          <input class="btn btn-ligth btn-block" type="submit" name="btngrabar" value="Guardar">
                </div>
@@ -359,8 +353,15 @@
         if(request.getParameter("btngrabar")!= null){
         
         String pnom2 = request.getParameter("pnom");
-        
-        sta.executeUpdate("update usuario set primer_nombre_usuario='"+ pnom2 +"' where id_usuario=1");
+        String snom2 = request.getParameter("snom");
+        String pape2 = request.getParameter("pape");
+        String sape2 = request.getParameter("sape");
+        String cor2 = request.getParameter("cor");
+        String tel2 = request.getParameter("tel");// posible error
+        String dir2 = request.getParameter("dir");
+
+
+        sta.executeUpdate("update usuario set primer_nombre_usuario='"+ pnom2 +"',segundo_nombre_usuario='"+ snom2 +"',primer_apellido_usuario='"+ pape2 +"',segundo_apellido_usuario='"+ sape2 +"',correo_usuario='"+ cor2 +"',telefono_usuario="+ tel2 +",direccion='"+ dir2 +"',id_estado_cliente="+ es2 +" where correo_usuario ='"+ correo +"' ");
 
         response.sendRedirect("Perfil_Cliente.jsp");         
         }
