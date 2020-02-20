@@ -7,6 +7,9 @@ import modelo.Categorias_juegos;
 import modelo.Categorias_juegos_DAO;
 import java.util.Iterator;
 import java.util.List;
+import modelo.Admin;
+import modelo.Productos_vendidos;
+import modelo.Productos_vendidos_DAO;
 
 public final class Categorias_005f1_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -51,8 +54,24 @@ public final class Categorias_005f1_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
+      out.write("\r\n");
+      out.write(" ");
+      out.write(" \r\n");
+      out.write(" ");
+      out.write(" \r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html lang=\"en\">\r\n");
+      out.write("    \r\n");
+      out.write("    ");
+
+        Admin a = (Admin)session.getAttribute("administrador");
+        if(a==null){
+        response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp"); 
+    }  
+        response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        response.setDateHeader("Expires",0); 
+    
       out.write("\r\n");
       out.write("<head>\r\n");
       out.write("    <meta charset=\"utf-8\">\r\n");
@@ -258,9 +277,9 @@ public final class Categorias_005f1_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("          </style>\r\n");
       out.write("          </head> \r\n");
       out.write("          <body>\r\n");
-      out.write("          <nav class=\"navbar navbar-default navbar-expand-xl navbar-dark bg-dark\">\r\n");
+      out.write("           <nav class=\"navbar navbar-default navbar-expand-xl navbar-dark bg-dark\">\r\n");
       out.write("            <div class=\"navbar-header d-flex col\">\r\n");
-      out.write("                <a href=\"../../index.html\">\r\n");
+      out.write("                <a href=\"index.html\">\r\n");
       out.write("                    <img width=\"380\" height=\"70\" src=\"https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png\" class=\"img-fluid\" alt=\"Responsive image\">\r\n");
       out.write("                    </a>            \r\n");
       out.write("             <button type=\"button\" data-target=\"#navbarCollapse\" data-toggle=\"collapse\" class=\"navbar-toggle navbar-toggler ml-auto\">\r\n");
@@ -272,27 +291,35 @@ public final class Categorias_005f1_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("            </div>\r\n");
       out.write("            <div id=\"navbarCollapse\" class=\"collapse navbar-collapse justify-content-start\">\r\n");
       out.write("              <ul class=\"nav navbar-nav\">\r\n");
-      out.write("                <li class=\"nav-item active\"><a href=\"Administrador/Inicio_Administrador.jsp\" class=\"nav-link\">Página de administración</a></li>\r\n");
-      out.write("                <li class=\"nav-item\"><a href=\"#\" class=\"nav-link\">Ayuda</a></li>\r\n");
+      out.write("                <li class=\"nav-item active\">\r\n");
+      out.write("                    <a href=\"Administrador/Inicio_Administrador.jsp\" class=\"nav-link\"></a>\r\n");
+      out.write("                </li>\r\n");
       out.write("                </li>\r\n");
       out.write("              </ul>\r\n");
       out.write("              <form class=\"navbar-form form-inline\">\r\n");
       out.write("                <div class=\"input-group search-box\">\t\t\t\t\t\t\t\t\r\n");
-      out.write("                  <input type=\"text\" id=\"search\" class=\"form-control\" placeholder=\"Buscar\">\r\n");
-      out.write("                  <span class=\"input-group-addon\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i></span>\r\n");
+      out.write("                    <a href=\"Administrador/Inicio_Administrador.jsp\" class=\"nav-link\"><h6 style=\"color: white\">Página de administración</h6></a>\r\n");
       out.write("                </div>\r\n");
       out.write("              </form>\r\n");
       out.write("              <ul class=\"nav navbar-nav navbar-right ml-auto\">\r\n");
-      out.write("                <li class=\"nav-item\"><a href=\"#\" class=\"nav-link notifications\"><i class=\"fa fa-bell-o\"></i><span class=\"badge\">10</span></a></li>\r\n");
-      out.write("                <li class=\"nav-item\"><a href=\"#\" class=\"nav-link messages\"><i class=\"fa fa-envelope-o\"></i><span class=\"badge\">100</span></a></li>\r\n");
       out.write("                <li class=\"nav-item dropdown\" >\r\n");
-      out.write("                  <a href=\"#\" data-toggle=\"dropdown\" class=\"nav-link dropdown-toggle user-action\"><img src=\"https://miro.medium.com/max/1024/1*Age2mlAUaGBPNWcLvQPEUA.jpeg\" class=\"avatar\" alt=\"Avatar\"> Andres Olaya <b class=\"caret\"></b></a>\r\n");
+      out.write("                  <a href=\"#\" data-toggle=\"dropdown\" class=\"nav-link dropdown-toggle user-action\">\r\n");
+      out.write("                      <b class=\"caret\">\r\n");
+      out.write("                        ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${correo}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\r\n");
+      out.write("                      </b>\r\n");
+      out.write("                  </a>\r\n");
       out.write("                  <ul class=\"dropdown-menu\" style=\"background-color: #343a40\">\r\n");
-      out.write("                    <li><a href=\"../Perfil_Administrador.html\" style=\"color: rgb(255, 255, 255)\" class=\"dropdown-item\"><i class=\"fa fa-user-o\"></i> Perfil</a></li>\r\n");
-      out.write("                    <li class=\"divider dropdown-divider\"></li>\r\n");
-      out.write("                    <li><a href=\"../../index.html\" style=\"color: rgb(255, 255, 255)\" class=\"dropdown-item\"><i class=\"material-icons\"></i> Cerrar Sesión</a></li>\r\n");
-      out.write("                  </ul>\r\n");
-      out.write("                </li>\r\n");
+      out.write("                      <li>\r\n");
+      out.write("                    <form action=\"ControladorAdmin\" method=\"post\">           \r\n");
+      out.write("                        <div class=\"form-group\">\r\n");
+      out.write("                <div align=\"center\">\r\n");
+      out.write("                    <input style=\"width: 10rem;\" class=\"btn btn-dark btn-block\" type=\"submit\" name=\"accion\" value=\"Cerrar Sesion\"> \r\n");
+      out.write("                </div>               \r\n");
+      out.write("                </div>\r\n");
+      out.write("                 </form>\r\n");
+      out.write("                      </li>\r\n");
       out.write("              </ul>\r\n");
       out.write("            </div>\r\n");
       out.write("          </nav>\r\n");

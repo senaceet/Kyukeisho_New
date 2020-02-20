@@ -1,19 +1,24 @@
+<%@page import="modelo.usuarios"%>
+<%@page import="modelo.usuarios_DAO"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.List"%>
+<%@page import="javax.mail.Session"%>
 <%@page import="modelo.Admin"%>
 <%@page import="modelo.Productos_vendidos"%>
 <%@page import="modelo.Productos_vendidos_DAO"%>
-<%@page import="java.util.Iterator"%>
-<%@page import="java.util.List"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-/
+<%@page contentType="text/html"%> <%-- para acentos --%> 
+<%@page pageEncoding="UTF-8"%> <%-- para acentos --%> 
+
 <!DOCTYPE html>
 <html lang="en">
-<%
-        Admin p = (Admin)session.getAttribute("administrador");
-        if(p==null){
-        response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp");
     
-    }
-    
+    <%
+        Admin a = (Admin)session.getAttribute("administrador");
+        if(a==null){
+        response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp"); 
+    }  
+        response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        response.setDateHeader("Expires",0); 
     %>
 <head>
 
@@ -218,7 +223,7 @@
           <body>
           <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
             <div class="navbar-header d-flex col">
-                <a href="../../index.html">
+                <a href="index.html">
                     <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
                     </a>            
              <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
@@ -230,33 +235,33 @@
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
               <ul class="nav navbar-nav">
-                <li class="nav-item active"><a href="Administrador/Inicio_Administrador.jsp" class="nav-link">Página de administración</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Ayuda</a></li>
+                <li class="nav-item active">
+                    <a href="Administrador/Inicio_Administrador.jsp" class="nav-link"></a>
+                </li>
                 </li>
               </ul>
               <form class="navbar-form form-inline">
                 <div class="input-group search-box">								
-                  <input type="text" id="search" class="form-control" placeholder="Buscar">
-                  <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    <a href="Administrador/Inicio_Administrador.jsp" class="nav-link"><h6 style="color: white">Página de administración</h6></a>
                 </div>
               </form>
               <ul class="nav navbar-nav navbar-right ml-auto">
-                <li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"></i><span class="badge">10</span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge">100</span></a></li>
                 <li class="nav-item dropdown" >
-                  <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://miro.medium.com/max/1024/1*Age2mlAUaGBPNWcLvQPEUA.jpeg" class="avatar" alt="Avatar"> Andres Olaya <b class="caret"></b></a>
+                  <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
+                      <b class="caret">
+                        ${correo}
+                      </b>
+                  </a>
                   <ul class="dropdown-menu" style="background-color: #343a40">
-                    <li><a href="../Perfil_Administrador.html" style="color: rgb(255, 255, 255)" class="dropdown-item"><i class="fa fa-user-o"></i> Perfil</a></li>
-                    <li class="divider dropdown-divider"></li>
-                    
-                    <form action="../Controlador" method="post">
-                 <div class="form-group">
+                      <li>
+                    <form action="ControladorAdmin" method="post">           
+                        <div class="form-group">
                 <div align="center">
-                    <input style="width: 14rem;" class="btn btn-warning btn-block" type="submit" name="accion" value="cerrar"> 
+                    <input style="width: 10rem;" class="btn btn-dark btn-block" type="submit" name="accion" value="Cerrar Sesion"> 
+                </div>               
                 </div>
-                     
-                  </ul>
-                </li>
+                 </form>
+                      </li>
               </ul>
             </div>
           </nav>

@@ -251,9 +251,6 @@
                   </a>
                   <ul class="dropdown-menu" style="background-color: #343a40">
                       <li>
-                       <a href="../Perfil_Administrador.html" style="color: rgb(255, 255, 255)" class="dropdown-item"><i class="fa fa-user-o"></i> Perfil</a></li>
-                      </li>
-                      <li>
                     <form action="ControladorAdmin" method="post">           
                         <div class="form-group">
                 <div align="center">

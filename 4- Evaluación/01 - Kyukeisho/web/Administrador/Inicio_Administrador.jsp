@@ -231,7 +231,7 @@
                             src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4312-NPEB00474_00-AVSMOBILET000488/1550735582000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000"
                             width="100" height="100"></center>
                     <div class="card-body">
-                        <center><a href="CRUD Productos\Consolas\Consolas.jsp" class="btn btn-Light btn-sm active" role="button"
+                        <center><a href="../CRUD_Consolas.jsp" class="btn btn-Light btn-sm active" role="button"
                                 aria-pressed="true">
                                 <h5>Consolas</h5></i>
                             </a></center>
@@ -252,7 +252,8 @@
                             src="https://s3.amazonaws.com/w3-cache.content-blog/wp-content/uploads/2018/01/13181645/videojuegos.png"
                             width="100" height="100"></center>
                     <div class="card-body">
-                        <center><a href="CRUD Productos\Juegos\Todos_Juegos_1.jsp" class="btn btn-Light btn-sm active" role="button"
+                        <center>
+                            <a href="../Crud_Juegos.jsp" class="btn btn-Light btn-sm active" role="button"
                                 aria-pressed="true">
                                 <h5>Juegos</h5></i>
                             </a></center>
@@ -271,7 +272,7 @@
                     <div class="card-body">
                         <center><a href="CRUD Citas\Crud_Citas_Activas.jsp" class="btn btn-Light btn-sm active" role="button"
                                 aria-pressed="true">
-                                <H5>Citas</h5>
+                                <H5>Reservaciones</h5>
                             </a></center>
                         <br>
                         <center>
@@ -285,6 +286,7 @@
                 </div>
         </div>
         <br>
+        
             <div class="card-group">
                 <div class="card" style="background-color: transparent">
                     <center><img
@@ -296,10 +298,13 @@
                                 <h5>Productos</h5></i>
                             </a></center>
                         <br>
+                        
                         <center>
                             <p style="color: white" class="card-text">Aqui puede visualizar todos los Productos que
-                                puede ofrecer la tienda.</p>
+                                puede ofrecer la tienda.
+                            </p>
                         </center>
+                    
                     </div>
                 </div>
                 <div class="card" style="background-color: transparent">
