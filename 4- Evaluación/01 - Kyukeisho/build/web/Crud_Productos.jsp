@@ -693,24 +693,6 @@
             </div>
                      
                    
-            <div id="gReporte" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form>
-                            <div class="modal-header">
-                                <h4 class="modal-title">¿Que desea hacer?</h4>
-                                <button type="button" class="close" data-dismiss="modal"
-                                    aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-footer">
-                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                                <a href="#guardarR" class="btn btn-primary" data-toggle="modal"> Guardar</a>
-                                <a href="#dReporte" class="btn btn-primary" data-toggle="modal"> Descargar</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
             <!-- Añadir atributo -->
             <div id="addcate" class="modal fade">
                 <div class="modal-dialog">

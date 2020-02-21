@@ -40,6 +40,7 @@ String listar="/Crud_Juegos.jsp";
       
         else if(action.equalsIgnoreCase("Agregar")){
             PV.setnombre_juego(request.getParameter("nombre"));
+            PV.setid_categoria_juegos(Integer.parseInt(request.getParameter("id_c")));
             dao.add(PV);
             acceso=listar;
         }
@@ -53,6 +54,7 @@ String listar="/Crud_Juegos.jsp";
         else if(action.equalsIgnoreCase("Actualizar")){
             PV.setcodigo_juego(codigo_juego=Integer.parseInt(request.getParameter("codigo_juego2")));
             PV.setnombre_juego(request.getParameter("nombre2"));
+            PV.setid_categoria_juegos(Integer.parseInt(request.getParameter("id_c2")));
             dao.edit(PV);
             acceso=listar;
         }

@@ -13,10 +13,6 @@
         <servlet-class>controlador.controlador_Categorias_juegos</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>controlador_productos_no_tan_vendidos</servlet-name>
-        <servlet-class>controlador.controlador_productos_no_tan_vendidos</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>controlador_productos_vendidos</servlet-name>
         <servlet-class>controlador.controlador_productos_vendidos</servlet-class>
     </servlet>
@@ -83,10 +79,6 @@
     <servlet-mapping>
         <servlet-name>controlador_Categorias_juegos</servlet-name>
         <url-pattern>/controlador_Categorias_juegos</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>controlador_productos_no_tan_vendidos</servlet-name>
-        <url-pattern>/controlador_productos_no_tan_vendidos</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>controlador_productos_vendidos</servlet-name>

@@ -63,6 +63,7 @@ PRIMARY KEY (id_factura)
 CREATE TABLE Kyukeisho.juegos(
 codigo_juego INT (5) AUTO_INCREMENT,
 nombre_juego VARCHAR (100) NULL,
+id_categoria_juegos INT (10) NOT NULL,
 PRIMARY KEY (codigo_juego)
 );
 
@@ -74,26 +75,20 @@ nombre_categoria_juegos VARCHAR (50) NULL,
 PRIMARY KEY (id_categoria_juegos)
 );
 
-
--- JUEGOS_CATEGORIA_JUEGOS --
-CREATE TABLE Kyukeisho.juegos_categoria_juegos(
-codigo_juego INT (5) NOT NULL,
-id_categoria_juegos INT (10) NOT NULL
-);
  
 -- Consolas disponibles
 CREATE TABLE Kyukeisho.consola(
 id_consola INT (2) NOT NULL,
-nombre_consola VARCHAR (100) NULL,
+nombre_consola VARCHAR (100) NOT NULL,
 precio_hora VARCHAR (10) NOT NULL,
-id_estado_consola INT (10) NULL,
+id_estado_consola INT (10) NOT NULL,
 PRIMARY KEY (id_consola)
 );
  
 -- ESTADO CONSOLA --
 CREATE TABLE Kyukeisho.estado_consola(
 id_estado_consola INT (10) NOT NULL,
-estado_consola VARCHAR (30) NULL,
+estado_consola VARCHAR (30) NOT NULL,
 PRIMARY KEY (id_estado_consola)
 ); 
  
@@ -165,16 +160,9 @@ ALTER TABLE kyukeisho.usuario ADD CONSTRAINT fk_usuario_estado_cliente FOREIGN K
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--- juegos_categoria_juegos/Juegos 
+-- juegos/categoria_juegos
+ALTER TABLE Kyukeisho.juegos ADD CONSTRAINT fk_juegos_categoria_juegos_id_categoria_juegos FOREIGN KEY (id_categoria_juegos) REFERENCES Kyukeisho.categoria_juegos (id_categoria_juegos) ON UPDATE CASCADE ON DELETE CASCADE;
 
-ALTER TABLE Kyukeisho.juegos_categoria_juegos ADD CONSTRAINT fk_juegos_categoria_juegos_codigo_juego FOREIGN KEY (codigo_juego) REFERENCES Kyukeisho.juegos (codigo_juego) ON UPDATE CASCADE ON DELETE CASCADE;
-ALTER TABLE Kyukeisho.juegos_categoria_juegos ADD INDEX fk_juegos_categoria_juegos_codigo_juego_idx (codigo_juego);
-
--- juegos_categoria_juegos/categoria_juegos
-ALTER TABLE Kyukeisho.juegos_categoria_juegos ADD CONSTRAINT fk_juegos_categoria_juegos_id_categoria_juegos FOREIGN KEY (id_categoria_juegos) REFERENCES Kyukeisho.categoria_juegos (id_categoria_juegos) ON UPDATE CASCADE ON DELETE CASCADE;
-ALTER TABLE Kyukeisho.juegos_categoria_juegos ADD INDEX fk_juegos_categoria_juegos_id_categoria_juegos_idx (id_categoria_juegos);
-
-ALTER TABLE Kyukeisho.juegos_categoria_juegos ADD PRIMARY KEY (codigo_juego, id_categoria_juegos);
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Reservaciones/consolas 

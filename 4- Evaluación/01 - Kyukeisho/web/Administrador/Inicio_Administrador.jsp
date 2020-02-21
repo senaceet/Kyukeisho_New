@@ -248,9 +248,8 @@
         <div class="container">
             <div class="card-group">
                 <div class="card" style="background-color: transparent">
-                    <center><img
-                            src="https://s3.amazonaws.com/w3-cache.content-blog/wp-content/uploads/2018/01/13181645/videojuegos.png"
-                            width="100" height="100"></center>
+                    <center>
+                        <img src="../IMG/Mario.png" width="100" height="100"></center>
                     <div class="card-body">
                         <center>
                             <a href="../Crud_Juegos.jsp" class="btn btn-Light btn-sm active" role="button"
@@ -289,11 +288,11 @@
         
             <div class="card-group">
                 <div class="card" style="background-color: transparent">
-                    <center><img
-                            src="https://d50xhnwqnrbqk.cloudfront.net/images/products/large/Combos-papas-onduladas.png"
-                            width="100" height="100"></center>
+                    <center>
+                        <img src="../IMG/productos.png" width="100" height="100"/>
+                    </center>
                     <div class="card-body">
-                        <center><a href="../Crud_Productos_Vendidos.jsp" class="btn btn-Light btn-sm active" role="button"
+                        <center><a href="../Crud_Productos.jsp" class="btn btn-Light btn-sm active" role="button"
                                 aria-pressed="true">
                                 <h5>Productos</h5></i>
                             </a></center>

@@ -33,42 +33,42 @@ VALUES 		(1, "Vladimir", "Alberto", "Buitrago", "Rodriguez", "vabuitrago18@misen
         
 -- CATEGORIA_JUEGOS --
 INSERT INTO Kyukeisho.categoria_juegos (id_categoria_juegos, nombre_categoria_juegos)
-VALUES     	(001, "Acción"),
-			(002, "Lucha"),
-			(003, "Arcade"),
-			(004, "Estrategia"),
-			(005, "Simuladores"),
-			(006, "Deporte"),
-			(007, "Aventura"),
-			(008, "Rol - RPG"),
-			(009, "Sandbox"),
-			(010, "Musical"),
-			(011, "Puzzle"),
-			(012, "Educación"),
-			(013, "Terror"),
-			(014, "Artísticos"),
-			(015, "Infantil"),
-			(016, "Carreras"),
-			(017, "Supervivencia"),
-			(018, "Lucha"),
-			(019, "Guerra"),
-			(020, "Agilidad Mental"),
-			(021, "Aventuras De Rol"),
-			(022, "Cartas"),
-			(023, "Construcción"),
-			(024, "Cooperación"),
-			(025, "Cyberpunk"),
-			(026, "Shooter"),
-			(027, "Interactivos"),
-			(028, "Pinball"),
-			(029, "Antología"),
-			(030, "Tablero"),
-			(031, "Multijugador"),
-			(032, "Batalla En Línea"),
-			(033, "Simulación Social Y De Vida"),
-			(034, "Plataformas"),
-            (035, "Sociales"),
-            (036, "Conducción");
+VALUES     	(1, "Acción"),
+			(2, "Lucha"),
+			(3, "Arcade"),
+			(4, "Estrategia"),
+			(5, "Simuladores"),
+			(6, "Deporte"),
+			(7, "Aventura"),
+			(8, "Rol - RPG"),
+			(9, "Sandbox"),
+			(10, "Musical"),
+			(11, "Puzzle"),
+			(12, "Educación"),
+			(13, "Terror"),
+			(14, "Artísticos"),
+			(15, "Infantil"),
+			(16, "Carreras"),
+			(17, "Supervivencia"),
+			(18, "Lucha"),
+			(19, "Guerra"),
+			(20, "Agilidad Mental"),
+			(21, "Aventuras De Rol"),
+			(22, "Cartas"),
+			(23, "Construcción"),
+			(24, "Cooperación"),
+			(25, "Cyberpunk"),
+			(26, "Shooter"),
+			(27, "Interactivos"),
+			(28, "Pinball"),
+			(29, "Antología"),
+			(30, "Tablero"),
+			(31, "Multijugador"),
+			(32, "Batalla En Línea"),
+			(33, "Simulación Social Y De Vida"),
+			(34, "Plataformas"),
+            (35, "Sociales"),
+            (36, "Conducción");
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -81,7 +81,7 @@ VALUES 						(1, "Disponible"),
 -- SERVICIOS --
 INSERT INTO Kyukeisho.consola (id_consola, nombre_consola, precio_hora,id_estado_consola)
 VALUES 		(01, "Xbox 360", 200, 1),
-            (02, "PS2", 300, 1),
+            (02, "PS2", 300, 2),
             (03, "PS3", 100, 1),
             (04, "PS4", 300, 1),
             (05, "Pc", 400, 1),
@@ -148,98 +148,50 @@ VALUES	(1, '2019-10-01 05:29:00', 100000),
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         
 -- JUEGOS --        
-INSERT INTO Kyukeisho.juegos (codigo_juego, nombre_juego)
+INSERT INTO Kyukeisho.juegos (codigo_juego, nombre_juego,id_categoria_juegos)
 VALUES  
 		-- Pc --
-        (1, "Euro Truck Simulator 2"),
-		(2, "American Truck Simulator 2"),
-		(3, "Pes 2019"),
-		(4, "Assassin’s Creed Odyssey Gold Edition"),
-		(5, "Grand Theft Auto V"),
+        (1, "Euro Truck Simulator 2",36),
+		(2, "American Truck Simulator 2",36),
+		(3, "Pes 2019",6),
+		(4, "Assassin’s Creed Odyssey Gold Edition",1),
+		(5, "Grand Theft Auto V",7),
         
 	-- PS4 --
-		(6,"Call of Duty 4: Modern Warfare"),
-		(7,"God of War"),
-		(8,"Battlefield 4"),
-		(9,"Spider-Man"),	
-		(10,"FIFA 19"),
+		(6,"Call of Duty 4: Modern Warfare",26),
+		(7,"God of War",1),
+		(8,"Battlefield 4",26),
+		(9,"Spider-Man",1),	
+		(10,"FIFA 19",6),
         
 	-- Xbox 360 --
-		(11,"Resident Evil 4"),
-		(12,"NBA2K18"),
-		(13,"Rise of the Tomb Raider"),
-		(14, "WWE 2K17"),
-		(15, "Call Of Duty Black Ops III"),
+		(11,"Resident Evil 4",13),
+		(12,"NBA2K18",6),
+		(13,"Rise of the Tomb Raider",7),
+		(14, "WWE 2K17",6),
+		(15, "Call Of Duty Black Ops III",26),
         
 	-- Xbox One --
-		(16, "Minecraft"),
-		(17, "Fortnite"),
-		(18, "Roblox"),
-		(19, "The Elder Scrolls Online"),
-		(20, "Anthem"),
+		(16, "Minecraft",7),
+		(17, "Fortnite",31),
+		(18, "Roblox",31),
+		(19, "The Elder Scrolls Online",31),
+		(20, "Anthem",31),
         
 	-- Nintendo --
-		(21, "The Legend of Zelda"),
-		(22, "Mario Kart 8 Deluxe"),
-		(23, "Mario Bros"),
-		(24, "Kirby"),
-		(25, "Splatoon 2"),
+		(21, "The Legend of Zelda",7),
+		(22, "Mario Kart 8 Deluxe",16),
+		(23, "Mario Bros",1),
+		(24, "Kirby",1),
+		(25, "Splatoon 2",1),
         
 	-- Wii-
-		(26, "Wall e"),
-		(27, "Just Dance 17"),
-		(28, "Fatal Frame 4"),
-		(29, "The Voice"),
-		(30, "Wii Fit U");
+		(26, "Wall e",7),
+		(27, "Just Dance 17",10),
+		(28, "Fatal Frame 4",1),
+		(29, "The Voice",1),
+		(30, "Wii Fit U",7);	
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	
--- JUEGOS_CATEGORIA_JUEGOS --
-INSERT INTO Kyukeisho.juegos_categoria_juegos (codigo_juego, id_categoria_juegos)
-VALUES 	
-		-- Pc --
-        (1, 005),
-		(2, 005),
-		(3, 006),
-		(4, 001),
-		(5, 001),
-        
-	-- PS4 --
-		(6, 001),
-		(7, 017),
-		(8, 017),
-		(9, 004),	
-		(10, 006),
-        
-	-- Xbox 360 --
-		(11, 017),
-		(12, 006),
-		(13, 001),
-		(14, 002),
-		(15, 001),
-        
-	-- Xbox One --
-		(16, 023),
-		(17, 017),
-		(18, 017),
-		(19, 031),
-		(20, 001),
-        
-	-- Nintendo --
-		(21, 004),
-		(22, 036),
-		(23, 004),
-		(24, 001),
-		(25, 021),
-        
-	-- Wii-
-		(26, 003),
-		(27, 010),
-		(28, 001),
-		(29, 004),
-		(30, 002);
-
-        
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         
 -- SERVICIOS_FACTURA -- 

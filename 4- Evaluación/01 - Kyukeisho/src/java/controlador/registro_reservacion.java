@@ -37,9 +37,10 @@ public class registro_reservacion extends HttpServlet {
         Conexion c = new Conexion();
         Connection conn = c.getConnection();
         
+        
         Statement st = null;
         st = conn.createStatement();
-        String sql = "insert into reservaciones (fecha_incio,hora_incio,id_consola,correo_usuario) values('" + fecha + "','" + hora + "'," + consola + ",'" + correo_e + "')";
+        String sql = "insert into reservaciones (fecha_incio,hora_incio,id_consola,correo_usuario)  values('" + fecha + "','" + hora + "'," + consola + ",'" + correo_e + "')";
         st.executeUpdate(sql);
         
         response.sendRedirect("Cliente/Reservacion.jsp");

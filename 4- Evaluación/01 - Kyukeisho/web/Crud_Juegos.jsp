@@ -628,6 +628,8 @@
                                 </th>
                                 <th>Codigo Juego</th>
                                 <th>Nombre Juego</th>
+                                <th>Categoria Juego</th>
+                                
                                 <th>Acciones</th>
 
                             </tr>
@@ -651,6 +653,7 @@
                                 
                                 <td><%= ma.getcodigo_juego()%></td>
                                 <td><%= ma.getnombre_juego()%></td>
+                                <td><%= ma.getnombre_categoria_juegos()%></td>
                                 <td>
                                     <a href="controlador_juegos?accion=editar&codigo_juego=<%= ma.getcodigo_juego() %>" class="edit"><i
                                             style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>                                            
@@ -686,24 +689,6 @@
             </div>
                      
                    
-            <div id="gReporte" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form>
-                            <div class="modal-header">
-                                <h4 class="modal-title">¿Que desea hacer?</h4>
-                                <button type="button" class="close" data-dismiss="modal"
-                                    aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-footer">
-                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                                <a href="#guardarR" class="btn btn-primary" data-toggle="modal"> Guardar</a>
-                                <a href="#dReporte" class="btn btn-primary" data-toggle="modal"> Descargar</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
             <!-- Añadir atributo -->
             <div id="addcate" class="modal fade">
                 <div class="modal-dialog">
@@ -718,6 +703,47 @@
                                 <div class="form-group">
                                     <label>Nombre Juego</label>
                                     <input name="nombre" type="text" class="form-control" required>
+                                    
+                            <label>Categoria Juego</label>        
+                            <select name="id_c" class="p-2 mb-2 form-control" required="required">
+                             <option value="0">seleccione la categoria del juego</option>
+                             <option value="1">Acción</option>
+                             <option value="2">Lucha</option>
+                             <option value="3">Arcade</option>
+                             <option value="4">Estrategia</option>
+                             <option value="5">Simuladores</option>
+                             <option value="6">Deporte</option>
+                             <option value="7">Aventura</option>
+                             <option value="8">Rol - RPG</option>
+                             <option value="9">Sandbox</option>
+                             <option value="10">Musical</option>
+                             <option value="11">Puzzle</option>
+                             <option value="12">Educación</option>
+                             <option value="13">Terror</option>
+                             <option value="14">Artísticos</option>
+                             <option value="15">Infantil</option>
+                             <option value="16">Carreras</option>
+                             <option value="17">Supervivencia</option>
+                             <option value="18">Lucha</option>
+                             <option value="19">Guerra</option>
+                             <option value="20">Agilidad mental</option>
+                             <option value="21">Aventuras de rol</option>
+                             <option value="22">Cartas</option>
+                             <option value="23">Construccion</option>
+                             <option value="24">Cooperación</option>
+                             <option value="25">Cyberpunk</option>
+                             <option value="26">Shooter</option>
+                             <option value="27">Interactivos</option>
+                             <option value="28">Pinball</option>
+                             <option value="29">Antologia</option>
+                             <option value="30">Tablero</option>
+                             <option value="31">Multijugador</option>
+                             <option value="32">Batalla en linea</option>
+                             <option value="33">Simulación social y de vida</option>
+                             <option value="34">Plataformas</option>
+                             <option value="35">Sociales</option>
+                             <option value="36">Conducción</option>
+                            </select>
                                     
                             </div>
                             </div>
@@ -754,8 +780,50 @@
                                 <div class="form-group">
 
 
-                                    <label>Nombre Juego</label>
-                                    <input type="text" class="form-control" required value="<%= ma2.getnombre_juego() %>" name="nombre2">
+                            <label>Nombre Juego</label>
+                            <input type="text" class="form-control" required value="<%= ma2.getnombre_juego() %>" name="nombre2">
+                           
+                            <label>Categoria Juego</label>        
+                            <select name="id_c2" class="p-2 mb-2 form-control" required="required">
+                             <option value="0">seleccione la categoria del juego</option>
+                             <option value="1">Acción</option>
+                             <option value="2">Lucha</option>
+                             <option value="3">Arcade</option>
+                             <option value="4">Estrategia</option>
+                             <option value="5">Simuladores</option>
+                             <option value="6">Deporte</option>
+                             <option value="7">Aventura</option>
+                             <option value="8">Rol - RPG</option>
+                             <option value="9">Sandbox</option>
+                             <option value="10">Musical</option>
+                             <option value="11">Puzzle</option>
+                             <option value="12">Educación</option>
+                             <option value="13">Terror</option>
+                             <option value="14">Artísticos</option>
+                             <option value="15">Infantil</option>
+                             <option value="16">Carreras</option>
+                             <option value="17">Supervivencia</option>
+                             <option value="18">Lucha</option>
+                             <option value="19">Guerra</option>
+                             <option value="20">Agilidad mental</option>
+                             <option value="21">Aventuras de rol</option>
+                             <option value="22">Cartas</option>
+                             <option value="23">Construccion</option>
+                             <option value="24">Cooperación</option>
+                             <option value="25">Cyberpunk</option>
+                             <option value="26">Shooter</option>
+                             <option value="27">Interactivos</option>
+                             <option value="28">Pinball</option>
+                             <option value="29">Antologia</option>
+                             <option value="30">Tablero</option>
+                             <option value="31">Multijugador</option>
+                             <option value="32">Batalla en linea</option>
+                             <option value="33">Simulación social y de vida</option>
+                             <option value="34">Plataformas</option>
+                             <option value="35">Sociales</option>
+                             <option value="36">Conducción</option>
+                            </select>
+                                    
                                     <input type="hidden" class="form-control" required value="<%= ma2.getcodigo_juego() %>" name="codigo_juego2">
 
                                 </div>
