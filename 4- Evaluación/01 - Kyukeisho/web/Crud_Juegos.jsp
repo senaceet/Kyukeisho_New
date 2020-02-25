@@ -5,6 +5,8 @@
 <%@page import="modelo.Admin"%>
 <%@page import="modelo.Productos_vendidos"%>
 <%@page import="modelo.Productos_vendidos_DAO"%>
+<%@page import="modelo.Categorias_juegos"%>
+<%@page import="modelo.Categorias_juegos_DAO"%>
 <%@page contentType="text/html"%> <%-- para acentos --%> 
 <%@page pageEncoding="UTF-8"%> <%-- para acentos --%> 
 
@@ -705,45 +707,19 @@
                                     <input name="nombre" type="text" class="form-control" required>
                                     
                             <label>Categoria Juego</label>        
-                            <select name="id_c" class="p-2 mb-2 form-control" required="required">
-                             <option value="0">seleccione la categoria del juego</option>
-                             <option value="1">Acción</option>
-                             <option value="2">Lucha</option>
-                             <option value="3">Arcade</option>
-                             <option value="4">Estrategia</option>
-                             <option value="5">Simuladores</option>
-                             <option value="6">Deporte</option>
-                             <option value="7">Aventura</option>
-                             <option value="8">Rol - RPG</option>
-                             <option value="9">Sandbox</option>
-                             <option value="10">Musical</option>
-                             <option value="11">Puzzle</option>
-                             <option value="12">Educación</option>
-                             <option value="13">Terror</option>
-                             <option value="14">Artísticos</option>
-                             <option value="15">Infantil</option>
-                             <option value="16">Carreras</option>
-                             <option value="17">Supervivencia</option>
-                             <option value="18">Lucha</option>
-                             <option value="19">Guerra</option>
-                             <option value="20">Agilidad mental</option>
-                             <option value="21">Aventuras de rol</option>
-                             <option value="22">Cartas</option>
-                             <option value="23">Construccion</option>
-                             <option value="24">Cooperación</option>
-                             <option value="25">Cyberpunk</option>
-                             <option value="26">Shooter</option>
-                             <option value="27">Interactivos</option>
-                             <option value="28">Pinball</option>
-                             <option value="29">Antologia</option>
-                             <option value="30">Tablero</option>
-                             <option value="31">Multijugador</option>
-                             <option value="32">Batalla en linea</option>
-                             <option value="33">Simulación social y de vida</option>
-                             <option value="34">Plataformas</option>
-                             <option value="35">Sociales</option>
-                             <option value="36">Conducción</option>
-                            </select>
+                                    <select class="form-control" name="id_c">
+                                     <option>-- Seleccione categoria juego --</option>
+                                     <%
+                                         Categorias_juegos_DAO ca= new Categorias_juegos_DAO();
+                                         List<Categorias_juegos> listciu = ca.listar();
+                                         Iterator<Categorias_juegos> iterciu = listciu.iterator();
+                                         Categorias_juegos cat = null;
+                                         while (iterciu.hasNext()) {
+                                             cat = iterciu.next();
+                                     %>
+                                     <option value="<%= cat.getid_categoria_juegos() %>"><%= cat.getnombre_categoria_juegos()%></option>
+                                     <%}%>
+                                 </select>
                                     
                             </div>
                             </div>
@@ -783,46 +759,20 @@
                             <label>Nombre Juego</label>
                             <input type="text" class="form-control" required value="<%= ma2.getnombre_juego() %>" name="nombre2">
                            
-                            <label>Categoria Juego</label>        
-                            <select name="id_c2" class="p-2 mb-2 form-control" required="required">
-                             <option value="0">seleccione la categoria del juego</option>
-                             <option value="1">Acción</option>
-                             <option value="2">Lucha</option>
-                             <option value="3">Arcade</option>
-                             <option value="4">Estrategia</option>
-                             <option value="5">Simuladores</option>
-                             <option value="6">Deporte</option>
-                             <option value="7">Aventura</option>
-                             <option value="8">Rol - RPG</option>
-                             <option value="9">Sandbox</option>
-                             <option value="10">Musical</option>
-                             <option value="11">Puzzle</option>
-                             <option value="12">Educación</option>
-                             <option value="13">Terror</option>
-                             <option value="14">Artísticos</option>
-                             <option value="15">Infantil</option>
-                             <option value="16">Carreras</option>
-                             <option value="17">Supervivencia</option>
-                             <option value="18">Lucha</option>
-                             <option value="19">Guerra</option>
-                             <option value="20">Agilidad mental</option>
-                             <option value="21">Aventuras de rol</option>
-                             <option value="22">Cartas</option>
-                             <option value="23">Construccion</option>
-                             <option value="24">Cooperación</option>
-                             <option value="25">Cyberpunk</option>
-                             <option value="26">Shooter</option>
-                             <option value="27">Interactivos</option>
-                             <option value="28">Pinball</option>
-                             <option value="29">Antologia</option>
-                             <option value="30">Tablero</option>
-                             <option value="31">Multijugador</option>
-                             <option value="32">Batalla en linea</option>
-                             <option value="33">Simulación social y de vida</option>
-                             <option value="34">Plataformas</option>
-                             <option value="35">Sociales</option>
-                             <option value="36">Conducción</option>
-                            </select>
+                             <label>Categoria Juego</label>        
+                                    <select class="form-control" name="id_c2">
+                                     <option>-- Seleccione categoria juego --</option>
+                                     <%
+                                         Categorias_juegos_DAO ca2= new Categorias_juegos_DAO();
+                                         List<Categorias_juegos> listciu2 = ca2.listar();
+                                         listciu2.iterator();
+                                         Categorias_juegos cat2 = null;
+                                         while (iterciu.hasNext()) {
+                                             cat2 = iterciu.next();
+                                     %>
+                                     <option value="<%= cat.getid_categoria_juegos() %>"><%= cat.getnombre_categoria_juegos()%></option>
+                                     <%}%>
+                                 </select>
                                     
                                     <input type="hidden" class="form-control" required value="<%= ma2.getcodigo_juego() %>" name="codigo_juego2">
 
