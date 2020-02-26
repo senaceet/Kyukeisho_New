@@ -14,7 +14,7 @@ import modelo.Productos_vendidos;
 
 @WebServlet(name = "controlador_productos_vendidos", urlPatterns = {"/controlador_productos_vendidos"})
 public class controlador_productos_vendidos extends HttpServlet {
-String listar="/Crud_Productos_Vendidos.jsp";
+String listar="/Crud_Productos.jsp";
 
     Productos_vendidos PV = new Productos_vendidos();
     Productos_vendidos_DAO dao=new Productos_vendidos_DAO();

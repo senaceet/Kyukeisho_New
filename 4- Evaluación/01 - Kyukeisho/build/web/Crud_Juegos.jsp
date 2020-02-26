@@ -759,23 +759,21 @@
                             <label>Nombre Juego</label>
                             <input type="text" class="form-control" required value="<%= ma2.getnombre_juego() %>" name="nombre2">
                            
-                             <label>Categoria Juego</label>        
+                            <label>Categoria Juego</label>        
                                     <select class="form-control" name="id_c2">
-                                     <option>-- Seleccione categoria juego --</option>
+                                     <option value="<%= ma2.getid_categoria_juegos() %>"><%= ma2.getnombre_categoria_juegos() %></option>
                                      <%
                                          Categorias_juegos_DAO ca2= new Categorias_juegos_DAO();
                                          List<Categorias_juegos> listciu2 = ca2.listar();
-                                         listciu2.iterator();
+                                         Iterator<Categorias_juegos> iterciu2 = listciu2.iterator();
                                          Categorias_juegos cat2 = null;
-                                         while (iterciu.hasNext()) {
-                                             cat2 = iterciu.next();
+                                         while (iterciu2.hasNext()) {
+                                             cat2 = iterciu2.next();
                                      %>
-                                     <option value="<%= cat.getid_categoria_juegos() %>"><%= cat.getnombre_categoria_juegos()%></option>
+                                     <option value="<%= cat2.getid_categoria_juegos() %>"><%= cat2.getnombre_categoria_juegos()%></option>
                                      <%}%>
                                  </select>
-                                    
                                     <input type="hidden" class="form-control" required value="<%= ma2.getcodigo_juego() %>" name="codigo_juego2">
-
                                 </div>
                             </div>
                             <div class="modal-footer" style="background-color: rgb(216, 211, 40)">

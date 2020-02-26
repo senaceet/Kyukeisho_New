@@ -164,7 +164,6 @@ ALTER TABLE kyukeisho.usuario ADD CONSTRAINT fk_usuario_estado_cliente FOREIGN K
 ALTER TABLE Kyukeisho.juegos ADD CONSTRAINT fk_juegos_categoria_juegos_id_categoria_juegos FOREIGN KEY (id_categoria_juegos) REFERENCES Kyukeisho.categoria_juegos (id_categoria_juegos) ON UPDATE CASCADE ON DELETE CASCADE;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 -- Reservaciones/consolas 
 
 ALTER TABLE kyukeisho.reservaciones ADD CONSTRAINT fk_reservaciones_consola FOREIGN KEY (id_consola) REFERENCES Kyukeisho.consola(id_consola) ON UPDATE CASCADE ON DELETE CASCADE;
