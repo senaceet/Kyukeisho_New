@@ -1,24 +1,94 @@
-<html>
+<%@page import="modelo.consolas"%>
+<%@page import="modelo.consolas_DAO"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.List"%>
+<%@page import="modelo.Admin"%>
+<%@page contentType="text/html"%> <%-- para acentos --%> 
+<%@page pageEncoding="UTF-8"%> <%-- para acentos --%> 
+
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%
+        Admin a = (Admin)session.getAttribute("administrador");
+        if(a==null){
+        response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp"); 
+    }  
+        response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        response.setDateHeader("Expires",0); 
+    %>
 
 <head>
-
-    <link rel="shortcut icon" href="https://fotos.subefotos.com/9f07d19705d6bde4351c7e17c87c4d7fo.png">
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Consolas</title>
+    
+    <link rel="stylesheet" href="css/styles.css" media="all">
 
-    <title>
-        Kyukeisho_Consolas
-    </title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://fotos.subefotos.com/e296fe07575583952d4e106565eb2181o.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+
+    <script type="text/javascript">
+         a=0;
+         a1=0;
+        $(document).ready(function () {
+            // Activate tooltip
+            $('[data-toggle="tooltip"]').tooltip();
+            a='${a}';
+            a1='${a1}';
+            
+            if(a==1){
+        $("#editcate").modal('show');
+        
+             }
+             else{
+                 
+             }
+             if(a1==1){
+        $("#elimicate").modal('show');
+        
+             }
+             else{
+                 
+             }
+
+            // Select/Deselect checkboxes
+            var checkbox = $('table tbody input[type="checkbox"]');
+            $("#selectAll").click(function () {
+                if (this.checked) {
+                    checkbox.each(function () {
+                        this.checked = true;
+                    });
+                } else {
+                    checkbox.each(function () {
+                        this.checked = false;
+                    });
+                }
+            });
+            checkbox.click(function () {
+                if (!this.checked) {
+                    $("#selectAll").prop("checked", false);
+                }
+            });
+        });
+    </script>
+</head>
 
 <body>
-
-        <style type="text/css">
+    <style type="text/css">
             body{
               background: #eeeeee;
             }
@@ -148,92 +218,96 @@
           </style>
           </head> 
           <body>
-            <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
-                <div class="navbar-header d-flex col">
-                    <a href="../../../index.html">
-                        <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
-                        </a>                    
-                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
+                    <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
+            <div class="navbar-header d-flex col">
+                <a href="index.html">
+                    <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
+                    </a>            
+             <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+                <span class="navbar-toggler-icon"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+              <ul class="nav navbar-nav">
+                <li class="nav-item active">
+                    <a href="Administrador/Inicio_Administrador.jsp" class="nav-link"></a>
+                </li>
+                </li>
+              </ul>
+              <form class="navbar-form form-inline">
+                <div class="input-group search-box">								
+                    <a href="Administrador/Inicio_Administrador.jsp" class="nav-link"><h6 style="color: white">Página de administración</h6></a>
                 </div>
-                <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-                  <ul class="nav navbar-nav">
-                        <li class="nav-item active"><a href="../../Administrador_inicio.html" class="nav-link">Página de administración</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Ayuda</a></li>
-                    </li>
-                  </ul>
-                  <form class="navbar-form form-inline">
-                    <div class="input-group search-box">								
-                      <input type="text" id="search" class="form-control" placeholder="Buscar">
-                      <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                    </div>
-                  </form>
-                  <ul class="nav navbar-nav navbar-right ml-auto">
-                    <li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"></i><span class="badge">10</span></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge">100</span></a></li>
-                    <li class="nav-item dropdown">
-                      <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://miro.medium.com/max/1024/1*Age2mlAUaGBPNWcLvQPEUA.jpeg" class="avatar" alt="Avatar"> Andres Olaya <b class="caret"></b></a>
-                      <ul class="dropdown-menu" style="background-color: #343a40">
-                            <li><a href="../../Perfil_Administrador.html" style="color: #ffffff" class="dropdown-item"><i class="fa fa-user-o"></i> Perfil</a></li>
-                        <li class="divider dropdown-divider"></li>
-                        <li><a href="../../../index.html" style="color: #ffffff" class="dropdown-item"><i class="material-icons"></i> Cerrar Sesión</a></li>
-                    </ul>
-                    </li>
-                  </ul>
+              </form>
+              <ul class="nav navbar-nav navbar-right ml-auto">
+                <li class="nav-item dropdown" >
+                  <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
+                      <b class="caret">
+                        ${correo}
+                      </b>
+                  </a>
+                  <ul class="dropdown-menu" style="background-color: #343a40">
+                      <li>
+                    <form action="ControladorAdmin" method="post">           
+                        <div class="form-group">
+                <div align="center">
+                    <input style="width: 10rem;" class="btn btn-dark btn-block" type="submit" name="accion" value="Cerrar Sesion"> 
+                </div>               
                 </div>
-              </nav>
-              <br>
-        <center>
+                 </form>
+                      </li>
+              </ul>
+            </div>
+          </nav>
+          <br>
+    <center>
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Productos
+            </button>
+            <div class="dropdown-menu">
+                    <a class="dropdown-item" href="Crud_Productos_No_Tan_Vendidos.jsp">Productos No Tan Vendidos</a>
+                  </div>
+                </div>
                 <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Productos
-                        </button>
-                        <div class="dropdown-menu">
-                                <a class="dropdown-item" href="../../CRUD Productos/Crud_Productos_Vendidos.jsp">Productos Vendidos</a>
-                                <a class="dropdown-item" href="../../CRUD Productos/Crud_Productos_Vendidos.jsp">Productos No Tan Vendidos</a>
+                      <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Juegos
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="Juegos/Juegos_Mas_Pedidos.jsp">Juegos Mas Pedidos</a>
+                        <a class="dropdown-item" href="Juegos/Crud_Juegos_No_Tan_Pedidos.jsp">Juegos No Tan Pedidos</a>
+                        <a class="dropdown-item" href="Juegos/Todos_Juegos_1.jsp">Todos los juegos</a>
+                      </div>
+                    </div>
+                    <div class="btn-group">
+                          <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Consolas
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Consolas/Consolas.jsp">Consolas</a>
+                            <a class="dropdown-item" href="Consolas/Crud_Consolas_Mas_Pedidas.jsp">Consolas Mas Pedidas</a>
+                            <a class="dropdown-item" href="Consolas/Crud_Consolas_Poco_Pedidas.jsp">Consolas No Tan Pedidas</a>
+                        </div>
+                      </div>
+                        <div class="btn-group">
+                              <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Citas
+                              </button>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Activas.jsp">Citas Activas</a>
+                                <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Inactivas.jsp">Citas Inactivas</a>
                               </div>
                             </div>
-                            <div class="btn-group">
-                                  <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Juegos
-                                  </button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="../Juegos/Juegos_Mas_Pedidos.jsp">Juegos Mas Pedidos</a>
-                                    <a class="dropdown-item" href="../Juegos/Crud_Juegos_No_Tan_Pedidos.jsp">Juegos No Tan Pedidos</a>
-                                    <a class="dropdown-item" href="../Juegos/Todos_Juegos_1.jsp">Todos los juegos</a>
-                                  </div>
-                                </div>
-                                <div class="btn-group">
-                                      <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Consolas
-                                      </button>
-                                      <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="Crud_Consolas_Mas_Pedidas.jsp">Consolas Mas Pedidas</a>
-                                        <a class="dropdown-item" href="Crud_Consolas_Poco_Pedidas.jsp">Consolas No Tan Pedidas</a>
-                                    </div>
-                                  </div>
-                                    <div class="btn-group">
-                                          <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Citas
-                                          </button>
-                                          <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="../../CRUD Citas/Crud_Citas_Activas.jsp">Citas Activas</a>
-                                            <a class="dropdown-item" href="../../CRUD Citas/Crud_Citas_Inactivas.jsp">Citas Inactivas</a>
-                                          </div>
-                                        </div>
-                                             <a href="../../CRUD Clientes/Clientes_Registrados.jsp"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
-                                             <a href="../../CRUD Categorias/Categorias_1.jsp"><button type="button" class="btn btn-outline-info">Categorias</button></a>       
-        </center>
-     <br>
+                                  <a href="CRUD_usuarios.jsp"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
 
-
-    <center>
-        <h3>Consolas</h3>
+                                  <a href="Categorias_1.jsp"><button type="button" class="btn btn-outline-info">Categorias</button></a>
+                      </div>
     </center>
+    <br>
     <br>
     <br>
 
@@ -508,375 +582,282 @@
             font-weight: normal;
         }
     </style>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            // Activate tooltip
-            $('[data-toggle="tooltip"]').tooltip();
+            <div class="container" >
+                <div class="table-wrapper" bgcolor="#088A68">
+                    <div class="table-title" style="background-color: rgb(216, 211, 40)">
+                        <div class="row" ><br></div>
+                        <div class="row" >
+                            <div class="col-lg-4">
+                                <h2> <strong>Consolas</strong></h2>
+                            </div>
+                            <div class="col-lg-7" >
+                                
+                                <form name="form1" action=" " target="_black">
+                                    <input type="submit" class="btn btn-info" value="Generar reporte en PDF" />
+                                </form>
+                                
+                                <a  href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
+                                    <i class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
+                                </i><span> Eliminar consolas</span></a>
+                                
+                                <a href="#addcate" class="btn btn-success"  data-toggle="modal">
+                                 <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                </i><span> Añadir consola</span></a>
+                                
 
-            // Select/Deselect checkboxes
-            var checkbox = $('table tbody input[type="checkbox"]');
-            $("#selectAll").click(function () {
-                if (this.checked) {
-                    checkbox.each(function () {
-                        this.checked = true;
-                    });
-                } else {
-                    checkbox.each(function () {
-                        this.checked = false;
-                    });
-                }
-            });
-            checkbox.click(function () {
-                if (!this.checked) {
-                    $("#selectAll").prop("checked", false);
-                }
-            });
-        });
-    </script>
-    </head>
-
-    <body>
-        <div class="container">
-            <div class="table-wrapper">
-                <div class="table-title">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h2>Consolas</h2>
+                            </div>
+                            
                         </div>
-                        <div class="col-sm-6">
-                            <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i
-                                    class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                </i><span>Añadir Nueva Consola</span></a>
-                            <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i
-                                    class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
-                                </i><span>Eliminar Consola</span></a>
-                        </div>
+                        <div class="row" ><br></div>
                     </div>
+                    <br>
+                    
+        <div class="container" >
+            <div class="row" >
+                <div class="container" style="background-color:#FFFFFF">
+        <table class="table table-striped table-hover "  width="1000">
+            <thead>
+            <tr bgcolor="#C0BB2E">
+                                <th>
+                                    <span class="custom-checkbox">
+                                        <input type="checkbox" id="selectAll">
+                                        <label for="selectAll"></label>
+                                    </span>
+                                </th>
+                                <th>Codigo Juego</th>
+                                <th>Nombre Juego</th>
+                                <th>Categoria Juego</th>
+                                
+                                <th>Acciones</th>
+
+                            </tr>
+                        </thead>
+                        <%
+                    consolas_DAO dao=new consolas_DAO();
+                    List<consolas>list=dao.listar();
+                    Iterator<consolas>iter=list.iterator();
+                    consolas ma=null;
+                    while(iter.hasNext()){
+                        ma=iter.next();
+                %>
+                        
+                            <tr>
+                                <td>
+                                    <span class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                        <label for="checkbox1"></label>
+                                    </span>
+                                </td>
+                                
+                                <td><%= ma.getcodigo_juego()%></td>
+                                <td><%= ma.getnombre_juego()%></td>
+                                <td><%= ma.getnombre_categoria_juegos()%></td>
+                                <td>
+                                    <a href="controlador_juegos?accion=editar&codigo_juego=<%= ma.getcodigo_juego() %>" class="edit"><i
+                                            style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>                                            
+                                    <a href="controlador_juegos?accion=elimi&codigo_juego=<%= ma.getcodigo_juego() %>" class="delete"><i
+                                             style="color:red" class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
+                                </td>   
+                            </tr>
+                            <% 
+                             }
+                            %>
+                       
+                    </table>
                 </div>
-                <table class="table table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <th>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="selectAll">
-                                    <label for="selectAll"></label>
-                                </span>
-                            </th>
-                            <th>Nombre</th>
-                            <th>Precio Por Hora</th>
-                            <th>Juegos</th>
-                            <th>Id Consola</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox3" name="options[]" value="1">
-                                    <label for="checkbox3"></label>
-                                </span>
-                            </td>
-                            <td>Xbox 360</td>
-                            <td>$ 1.200</td>
-                            <td>Resident Evil 4</td>
-                            <td>461</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
-                                </span>
-                            </td>
-                            <td>Xbox One</td>
-                            <td>$ 1.500</td>
-                            <td>Minecraft</td>
-                            <td> 466</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Eliminar"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                    <label for="checkbox1"></label>
-                                </span>
-                            </td>
-                            <td>Play Station 1</td>
-                            <td>$ 1.000</td>
-                            <td>Metal Gear</td>
-                            <td> 489</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
-                                </span>
-                            </td>
-                            <td>Play Station 2</td>
-                            <td>$ 1.000</td>
-                            <td>Need For Speed</td>
-                            <td> 566</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
-                                </span>
-                            </td>
-                            <td>Play Station 3</td>
-                            <td>$ 1.500</td>
-                            <td>Grand Theft Auto V</td>
-                            <td> 895</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
-                                </span>
-                            </td>
-                            <td>Play Station 4</td>
-                            <td>$ 1.500</td>
-                            <td>Pro Evolucion Soccer 2019</td>
-                            <td> 566</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                    <label for="checkbox5"></label>
-                                </span>
-                            </td>
-                            <td>Pc</td>
-                            <td>$ 1.000</td>
-                            <td>Euro Truck Simulator 2</td>
-                            <td>451</td>
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"
-                                            aria-hidden="true"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                        class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        </td>
-                        </tr>
-                    </tbody>
-                    <tr>
-                        <td>
-                            <span class="custom-checkbox">
-                                <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                <label for="checkbox5"></label>
-                            </span>
-                        </td>
-                        <td>Nintendo</td>
-                        <td>$ 1.000</td>
-                        <td>The Legend of Zelda</td>
-                        <td>472</td>
-                        <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"
-                                        aria-hidden="true"></i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Eliminar"><i class="fa fa-trash"
-                                        aria-hidden="true"></i></a>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <span class="custom-checkbox">
-                                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                            <label for="checkbox1"></label>
-                                        </span>
-                                    </td>
-                                    <td>Wii</td>
-                                    <td>$ 1.000</td>
-                                    <td>Wall e</td>
-                                    <td>477</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
-                                                class="material-icons" data-toggle="tooltip" title="Edit"><i
-                                                    class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                                class="material-icons" data-toggle="tooltip" title="Delete"><i
-                                                    class="fa fa-trash" aria-hidden="true"></i></a>
-                                    </td>
-                                </tr>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                <div class="clearfix">
-                    <div class="hint-text">Mostrando 5 de 25 entradas</div>
+            </div>
+            </div>
+              <div class="container" style="background-color: rgb(216, 211, 40)">
+                  <div class="row" ><br></div>
+                 <div class="row"   >
+                 <div class="col-lg-8">
+                   Mostrando 5 de 5 entradas
+                 </div>
+                 <div class="col-lg-4">
                     <ul class="pagination">
-                        <li class="page-item disabled"><a href="#">Anterior</a></li>
-                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
                         <li class="page-item"><a href="#" class="page-link">2</a></li>
-                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">3</a></li>
                         <li class="page-item"><a href="#" class="page-link">4</a></li>
                         <li class="page-item"><a href="#" class="page-link">5</a></li>
                         <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
                     </ul>
+                 </div>
+              </div>
+            </div>
+                     
+                   
+            <!-- Añadir atributo -->
+            <div id="addcate" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form action="controlador_juegos">
+                            <div class="modal-header" style="background-color: rgb(216, 211, 40)">
+                                <h4 class="modal-title">Añadir Juego</h4>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Nombre Juego</label>
+                                    <input name="nombre" type="text" class="form-control" required>
+                                    
+                            <label>Categoria Juego</label>        
+                                    <select class="form-control" name="id_c">
+                                     <option>-- Seleccione categoria juego --</option>
+                                     <%
+                                         Categorias_juegos_DAO ca= new Categorias_juegos_DAO();
+                                         List<Categorias_juegos> listciu = ca.listar();
+                                         Iterator<Categorias_juegos> iterciu = listciu.iterator();
+                                         Categorias_juegos cat = null;
+                                         while (iterciu.hasNext()) {
+                                             cat = iterciu.next();
+                                     %>
+                                     <option value="<%= cat.getid_categoria_juegos() %>"><%= cat.getnombre_categoria_juegos()%></option>
+                                     <%}%>
+                                 </select>
+                                    
+                            </div>
+                            </div>
+                            <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                <input type="submit" class="btn btn-success" value="Agregar" name="accion">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+            <!-- Editar -->    
+            
+            
+            <div id="editcate" class="modal fade">
+                
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <%
+              JuegoDAO dao2=new JuegoDAO();
+              Juegos ma2= new Juegos();
+              if (request.getAttribute("codigo_juego")!= null){
+              int codigo_juego=Integer.parseInt((String)request.getAttribute("codigo_juego"));
+               ma2=(Juegos)dao2.list(codigo_juego);
+              }
+          %>
+                        <form action="controlador_juegos">
+                            <div class="modal-header" style="background-color: rgb(216, 211, 40)">
+                                <h4 class="modal-title">Editar Juego</h4>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
 
-        <div id="addEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h4 class="modal-title">Añadir Producto</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Nombre</label>
-                                <input type="text" class="form-control" required>
+
+                            <label>Nombre Juego</label>
+                            <input type="text" class="form-control" required value="<%= ma2.getnombre_juego() %>" name="nombre2">
+                           
+                            <label>Categoria Juego</label>        
+                                    <select class="form-control" name="id_c2">
+                                     <option value="1"><%= ma2.getid_categoria_juegos() %></option>
+                                     <%
+                                         Categorias_juegos_DAO ca2= new Categorias_juegos_DAO();
+                                         List<Categorias_juegos> listciu2 = ca2.listar();
+                                         Iterator<Categorias_juegos> iterciu2 = listciu2.iterator();
+                                         Categorias_juegos cat2 = null;
+                                         while (iterciu2.hasNext()) {
+                                             cat2 = iterciu2.next();
+                                     %>
+                                     <option value="<%= cat2.getid_categoria_juegos() %>"><%= cat2.getnombre_categoria_juegos()%></option>
+                                     <%}%>
+                                 </select>
+                                    <input type="hidden" class="form-control" required value="<%= ma2.getcodigo_juego() %>" name="codigo_juego2">
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label>Precio Unitario</label>
-                                <input type="email" class="form-control" required>
+                            <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                <input type="submit" class="btn btn-success" value="Actualizar" name="accion">
                             </div>
-                            <div class="form-group">
-                                <label>Fecha Vencimiento</label>
-                                <textarea class="form-control" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Código</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                            <input type="submit" class="btn btn-success" value="Añadir">
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+                                    
+            <!-- eliminar -->
+            <div id="elimicate" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <%
+              JuegoDAO dao3=new JuegoDAO();
+              Juegos ma3= new Juegos();
+              if (request.getAttribute("codigo_juego")!= null){
+              int codigo_juego=Integer.parseInt((String)request.getAttribute("codigo_juego"));
+               ma3=(Juegos)dao3.list(codigo_juego);
+              }
+          %>
+                        <form action="controlador_juegos">
+                            <div class="modal-header" style="background-color: rgb(216, 211, 40)">
+                                <h4 class="modal-title">Eliminar Juego</h4>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            </div>
+                          <input type="hidden" class="form-control" required value="<%= ma3.getcodigo_juego() %>" name="codigo_juego3">
 
-        <div id="editEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h4 class="modal-title">Editar Producto</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
-                                    class="fa fa-times" aria-hidden="true"></i></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Nombre</label>
-                                <input type="text" class="form-control" required>
+                            <div class="modal-body">
+                                
+                               <p>¿Está seguro de que desea eliminar este juego?</p>
                             </div>
-                            <div class="form-group">
-                                <label>Precio Por Hora</label>
-                                <input type="date" class="form-control" required>
+                   
+                            <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
+                                <hr>
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                                <input type="submit"  class="btn btn-danger" value="Eliminar" name="accion">
                             </div>
-                            <div class="form-group">
-                                <label>Juego</label>
-                                <textarea class="form-control" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Id Consola</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                            <input type="submit" class="btn btn-info" value="Guardar">
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div id="deleteEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h4 class="modal-title">Eliminar Producto</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i
-                                    class="fa fa-times" aria-hidden="true"></i></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>¿Seguro Que Desea Eliminar Producto</p>
-                            <p class="text-warning"><small>Esta acción no se puede deshacer.</small></p>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                            <input type="submit" class="btn btn-danger" value="Eliminar">
-                        </div>
-                    </form>
+            <div id="dReporte" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form>
+                            <div class="modal-header">
+                                <h4 class="modal-title">Descargando...</h4>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+                                        style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-danger" data-dismiss="modal" value="Cancelar">
+                                <input type="submit" class="btn btn-default" value="Aceptar">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="copyright text-center  font-weight-bold p-2" style="background-color:transparent">
-            <p style="color:black">Desarrollado por Kyukeisho Copyright<i class="fa fa-copyright"
-                    aria-hidden="true"></i> 2019</p>
+            <div id="guardarR" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form>
+                            <div class="modal-header">
+                                <h4 class="modal-title">Crear copia en...</h4>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                                <input type="submit" class="btn btn-primary" value="Correo">
 
 
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
-                integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-                crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
-                integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-                crossorigin="anonymous"></script>
-    </body>
-
-    </head>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+</body>
 
 </html>

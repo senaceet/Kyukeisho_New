@@ -761,7 +761,7 @@
                            
                             <label>Categoria Juego</label>        
                                     <select class="form-control" name="id_c2">
-                                     <option value="<%= ma2.getid_categoria_juegos() %>"><%= cat2.getnombre_categoria_juegos() %></option>
+                                     <option value="1"><%= ma2.getid_categoria_juegos() %></option>
                                      <%
                                          Categorias_juegos_DAO ca2= new Categorias_juegos_DAO();
                                          List<Categorias_juegos> listciu2 = ca2.listar();

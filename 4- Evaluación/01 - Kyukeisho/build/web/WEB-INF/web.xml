@@ -68,6 +68,10 @@
         <servlet-name>ingresar</servlet-name>
         <servlet-class>controlador.ingresar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>controlador_consolas</servlet-name>
+        <servlet-class>controlador.controlador_consolas</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
@@ -135,6 +139,10 @@
     <servlet-mapping>
         <servlet-name>ingresar</servlet-name>
         <url-pattern>/ingresar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controlador_consolas</servlet-name>
+        <url-pattern>/controlador_consolas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

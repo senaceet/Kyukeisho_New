@@ -622,9 +622,7 @@
                                 </th>
                                 <th >Id</th>
                                 <th >Primer Nombre</th>
-                                <th>Segundo Nombre</th>
                                 <th>Primer Apellido</th>
-                                <th>Segundo Apellido</th>
                                 <th>Correo</th>
                                 <th>Telefono</th>
                                 <th>direccion</th>
@@ -653,9 +651,7 @@
                                 
                                 <td ><%= ma.getid_usuario()%></td>
                                 <td ><%= ma.getprimer_nombre_usuario()%></td>
-                                <td><%= ma.getsegundo_nombre_usuario()%></td>
                                 <td><%= ma.getprimer_apellido_usuario()%></td>
-                                <td><%= ma.getsegundo_apellido_usuario()%></td>
                                 <td><%= ma.getcorreo_usuario()%></td>
                                 <td><%= ma.gettelefono_usuario()%></td>
                                 <td><%= ma.getdireccion()%></td>

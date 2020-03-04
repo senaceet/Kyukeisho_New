@@ -76,9 +76,9 @@ PRIMARY KEY (id_categoria_juegos)
 );
 
  
--- Consolas disponibles
+-- Consolas 
 CREATE TABLE Kyukeisho.consola(
-id_consola INT (2) NOT NULL,
+id_consola INT (2) NOT NULL AUTO_INCREMENT,
 nombre_consola VARCHAR (100) NOT NULL,
 precio_hora VARCHAR (10) NOT NULL,
 id_estado_consola INT (10) NOT NULL,
