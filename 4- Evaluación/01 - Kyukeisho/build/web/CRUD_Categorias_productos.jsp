@@ -1,11 +1,8 @@
-<%@page import="java.util.Iterator"%>
-<%@page import="java.util.List"%>
-<%@page import="javax.mail.Session"%>
-<%@page import="modelo.Admin"%>
-<%@page import="modelo.Productos_vendidos"%>
-<%@page import="modelo.Productos_vendidos_DAO"%>
 <%@page import="modelo.categorias_productos"%>
 <%@page import="modelo.categorias_productos_DAO"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.List"%>
+<%@page import="modelo.Admin"%>
 <%@page contentType="text/html"%> <%-- para acentos --%> 
 <%@page pageEncoding="UTF-8"%> <%-- para acentos --%> 
 
@@ -21,11 +18,10 @@
         response.setDateHeader("Expires",0); 
     %>
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CRUD Productos vendidos</title>
+    <title>CRUD Categorias productos</title>
     
     <link rel="stylesheet" href="css/styles.css" media="all">
 
@@ -221,7 +217,7 @@
           </style>
           </head> 
           <body>
-          <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
+           <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
             <div class="navbar-header d-flex col">
                 <a href="index.html">
                     <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
@@ -266,50 +262,48 @@
             </div>
           </nav>
           <br>
-    <center>
-        <div class="btn-group">
-            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Productos
-            </button>
-            <div class="dropdown-menu">
-                    <a class="dropdown-item" href="Crud_Productos_No_Tan_Vendidos.jsp">Productos No Tan Vendidos</a>
-                  </div>
-                </div>
+ <center>
                 <div class="btn-group">
-                      <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Juegos
-                      </button>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="Juegos/Juegos_Mas_Pedidos.jsp">Juegos Mas Pedidos</a>
-                        <a class="dropdown-item" href="Juegos/Crud_Juegos_No_Tan_Pedidos.jsp">Juegos No Tan Pedidos</a>
-                        <a class="dropdown-item" href="Juegos/Todos_Juegos_1.jsp">Todos los juegos</a>
-                      </div>
-                    </div>
-                    <div class="btn-group">
-                          <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Consolas
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="Consolas/Consolas.jsp">Consolas</a>
-                            <a class="dropdown-item" href="Consolas/Crud_Consolas_Mas_Pedidas.jsp">Consolas Mas Pedidas</a>
-                            <a class="dropdown-item" href="Consolas/Crud_Consolas_Poco_Pedidas.jsp">Consolas No Tan Pedidas</a>
-                        </div>
-                      </div>
-                        <div class="btn-group">
-                              <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Citas
-                              </button>
-                              <div class="dropdown-menu">
-                                <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Activas.jsp">Citas Activas</a>
-                                <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Inactivas.jsp">Citas Inactivas</a>
+                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Productos
+                        </button>
+                        <div class="dropdown-menu">
+                                <a class="dropdown-item" href="Crud_Productos_Vendidos.jsp">Productos Vendidos</a>
+                                <a class="dropdown-item" href="Crud_Productos_No_Tan_Vendidos.jsp">Productos No Tan Vendidos</a>
                               </div>
                             </div>
-                                  <a href="CRUD_usuarios.jsp"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
-
-                                  <a href="Categorias_1.jsp"><button type="button" class="btn btn-outline-info">Categorias</button></a>
-                      </div>
-    </center>
+                            <div class="btn-group">
+                                  <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Juegos
+                                  </button>
+                                  <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Juegos_Mas_Pedidos.jsp">Juegos Mas Pedidos</a>
+                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Crud_Juegos_No_Tan_Pedidos.jsp">Juegos No Tan Pedidos</a>
+                                    <a class="dropdown-item" href="../CRUD Productos/Juegos/Todos_Juegos_1.jsp">Todos los juegos</a>
+                                  </div>
+                                </div>
+                                <div class="btn-group">
+                                      <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Consolas
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Consolas.jsp">Consolas</a>
+                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Crud_Consolas_Mas_Pedidas.jsp">Consolas Mas Pedidas</a>
+                                        <a class="dropdown-item" href="../CRUD Productos/Consolas/Crud_Consolas_Poco_Pedidas.jsp">Consolas No Tan Pedidas</a>
+                                    </div>
+                                  </div>
+                                    <div class="btn-group">
+                                          <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Citas
+                                          </button>
+                                          <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Activas.jsp">Citas Activas</a>
+                                            <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Inactivas.jsp">Citas Inactivas</a>
+                                          </div>
+                                        </div>
+                                             <a href="CRUD_usuarios.jsp"><button type="button" class="btn btn-outline-info">Clientes Registrados</button></a>
+                                  </div>
+        </center>
     <br>
     <br>
     <br>
@@ -590,24 +584,29 @@
                     <div class="table-title" style="background-color: rgb(216, 211, 40)">
                         <div class="row" ><br></div>
                         <div class="row" >
-                            <div class="col-lg-4">
-                                <h2> <strong>Productos</strong></h2>
+                            <div class="col-lg-5">
+                                <h2> <strong>Categorias de productos</strong></h2>
                             </div>
-                            <div class="col-lg-7" >
-                                
-                                <form name="form1" action="PdfProducto.jsp" target="_black">
-                                    <input type="submit" class="btn btn-info" value="Generar reporte en PDF" />
-                                </form>
-                                
+                            <div class="col-lg-6" >
+
+                                <a href="PdfCategoria.jsp" class="btn btn-info"  data-toggle="modal">
+                                 <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                </i><span> Generar reporte</span></a>
+                               
                                 <a  href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
                                     <i class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
-                                </i><span> Eliminar Productos</span></a>
+                                </i><span> Eliminar Categorias</span></a>      
                                 
                                 <a href="#addcate" class="btn btn-success"  data-toggle="modal">
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                </i><span> Añadir Producto</span></a>
+                                </i><span> Añadir Categoria</span></a>
                                 
 
+                                
+
+                                
+
+                                
                             </div>
                             
                         </div>
@@ -627,20 +626,18 @@
                                         <label for="selectAll"></label>
                                     </span>
                                 </th>
-                                <th>Id </th>
-                                <th>Nombre Producto</th>
-                                <th>Cantidad producto</th>
-                                <th>Precio unitario</th>
-                                <th>Tipo producto</th>
+                                <th>Id categoria</th>
+                                <th>Nombre categoria</th>
+                              
                                 <th>Acciones</th>
 
                             </tr>
                         </thead>
                         <%
-                    Productos_vendidos_DAO dao=new Productos_vendidos_DAO();
-                    List<Productos_vendidos>list=dao.listar();
-                    Iterator<Productos_vendidos>iter=list.iterator();
-                    Productos_vendidos ma=null;
+                    categorias_productos_DAO dao=new categorias_productos_DAO();
+                    List<categorias_productos>list=dao.listar();
+                    Iterator<categorias_productos>iter=list.iterator();
+                    categorias_productos ma=null;
                     while(iter.hasNext()){
                         ma=iter.next();
                 %>
@@ -652,17 +649,13 @@
                                         <label for="checkbox1"></label>
                                     </span>
                                 </td>
-                                
-                                <td><%= ma.getid_producto()%></td>
-                                <td><%= ma.getnombre_producto()%></td>
-                                <th><%= ma.getcantidad_producto()%></th>
-                                <th><%= ma.getprecio_unitario_producto()%></th>
-                                <th><%= ma.getnombre_tipo_producto()%></th>
+                                <td><%= ma.getid_tipo_producto()%></td>
+                                <td><%= ma.getnombre_tipo_producto()%></td>
                                 <td>
-                                    
-                                    <a href="controlador_productos_vendidos?accion=editar&id_producto=<%= ma.getid_producto() %>" class="edit"><i
-                                            style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>                                            
-                                    <a href="controlador_productos_vendidos?accion=elimi&id_producto=<%= ma.getid_producto() %>" class="delete"><i
+                                    <a href="controlador_categorias_productos?accion=editar&id_tipo_producto=<%= ma.getid_tipo_producto() %>" class="edit"><i
+                                            style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>
+                                            
+                                    <a href="controlador_categorias_productos?accion=elimi&id_tipo_producto=<%= ma.getid_tipo_producto() %>" class="delete"><i
                                              style="color:red" class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
                                 </td>   
                             </tr>
@@ -694,11 +687,12 @@
             </div>
                      
                    
+
             <!-- Añadir atributo -->
             <div id="addcate" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="controlador_productos_vendidos">
+                        <form action="controlador_categorias_productos">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
                                 <h4 class="modal-title">Añadir Categoria producto</h4>
                                 <button type="button" class="close" data-dismiss="modal"
@@ -706,29 +700,9 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label>nombre_producto</label>
-                                    <input name="Nom_P" type="text" class="form-control" required>
-                                    <label>cantidad_producto</label>
-                                    <input name="Can_P" type="text" class="form-control" required>
-                                    <label>precio_unitario_producto</label>
-                                    <input name="Pre_P" type="text" class="form-control" required>
-                                    
-                                    <label>tipo_producto</label> 
-                                    <select class="form-control" name="tipo_P">
-                                     <option>-- Seleccione categoria juego --</option>
-                                     <%
-                                         categorias_productos_DAO ca= new categorias_productos_DAO();
-                                         List<categorias_productos> listciu = ca.listar();
-                                         Iterator<categorias_productos> iterciu = listciu.iterator();
-                                         categorias_productos cat = null;
-                                         while (iterciu.hasNext()) {
-                                             cat = iterciu.next();
-                                     %>
-                                     <option value="<%= cat.getid_tipo_producto() %>"><%= cat.getnombre_tipo_producto()%></option>
-                                     <%}%>
-                                 </select> 
-                                    
-                            </div>
+                                    <label>Nombre de la categoria</label>
+                                    <input name="nom_c" type="text" class="form-control" required>
+                                </div>
                             </div>
                             <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
                                 <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -746,14 +720,14 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <%
-              Productos_vendidos_DAO dao2=new Productos_vendidos_DAO();
-              Productos_vendidos ma2= new Productos_vendidos();
-              if (request.getAttribute("id_producto")!= null){
-              int id_producto=Integer.parseInt((String)request.getAttribute("id_producto"));
-               ma2=(Productos_vendidos)dao2.list(id_producto);
+              categorias_productos_DAO dao2=new categorias_productos_DAO();
+              categorias_productos ma2= new categorias_productos();
+              if (request.getAttribute("id_tipo_producto")!= null){
+              int id_tipo_producto=Integer.parseInt((String)request.getAttribute("id_tipo_producto"));
+               ma2=(categorias_productos)dao2.list(id_tipo_producto);
               }
           %>
-                        <form action="controlador_productos_vendidos">
+                        <form action="controlador_categorias_productos">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
                                 <h4 class="modal-title">Editar categoria</h4>
                                 <button type="button" class="close" data-dismiss="modal"
@@ -761,32 +735,9 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-
-
-                                    <label>Nombre producto</label>
-                                    <input type="text" class="form-control" required value="<%= ma2.getnombre_producto() %>" name="Nom_P2">
-                                    <label>Cantidad_producto</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getcantidad_producto() %>" name="Can_P2">
-                                    <label>Precio_unitario_producto</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getprecio_unitario_producto() %>" name="Pre_P2">
-                                    
-                             <label>Tipo_producto</label> 
-                                    <select class="form-control" name="Tipo_P2">
-                                     <option>-- Seleccione categoria juego --</option>
-                                     <%
-                                         categorias_productos_DAO ca2= new categorias_productos_DAO();
-                                         listciu = ca2.listar();
-                                         iterciu = listciu.iterator();
-                                         categorias_productos cat2 = null;
-                                         while (iterciu.hasNext()) {
-                                             cat2 = iterciu.next();
-                                     %>
-                                     <option value="<%= cat2.getid_tipo_producto() %>"><%= cat2.getnombre_tipo_producto()%></option>
-                                     <%}%>
-                                 </select> 
-                                    
-                             <input type="hidden" class="form-control" required value="<%= ma2.getid_producto() %>" name="id_producto2">
-                             
+                                    <label>Nombre de categoria</label>
+                                    <input type="text" class="form-control" required value="<%= ma2.getnombre_tipo_producto() %>" name="nom_2">
+                                    <input type="hidden" class="form-control" required value="<%= ma2.getid_tipo_producto() %>" name="id_c2">
                                 </div>
                             </div>
                             <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
@@ -797,26 +748,26 @@
                     </div>
                 </div>
             </div>
-                                    
+                                
             <!-- eliminar -->
             <div id="elimicate" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <%
-              Productos_vendidos_DAO dao3=new Productos_vendidos_DAO();
-              Productos_vendidos ma3= new Productos_vendidos();
-              if (request.getAttribute("id_producto")!= null){
-              int id_producto=Integer.parseInt((String)request.getAttribute("id_producto"));
-               ma3=(Productos_vendidos)dao3.list(id_producto);
+              categorias_productos_DAO dao3=new categorias_productos_DAO();
+              categorias_productos ma3= new categorias_productos();
+              if (request.getAttribute("id_tipo_producto")!= null){
+              int id_tipo_producto=Integer.parseInt((String)request.getAttribute("id_tipo_producto"));
+               ma3=(categorias_productos)dao3.list(id_tipo_producto);
               }
           %>
-                        <form action="controlador_productos_vendidos">
+                        <form action="controlador_categorias_productos">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
                                 <h4 class="modal-title">Eliminar categoria</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
-                          <input type="hidden" class="form-control" required value="<%= ma3.getid_producto() %>" name="id_producto3">
+                          <input type="hidden" class="form-control" required value="<%= ma3.getid_tipo_producto() %>" name="id_c3">
 
                             <div class="modal-body">
                                 

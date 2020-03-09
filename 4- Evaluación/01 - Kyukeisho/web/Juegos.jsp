@@ -2116,7 +2116,7 @@
       <div class="container-fluid">
         <div align="justify" class="card-group ">
           <div class="card mr-2" style="background-color:rgb(0, 0, 0)">
-            <a href="juegos_Xbox_one_pagina_1.html">
+            <a href="Juegos.html">
               <img height="300" src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2019/09/hoy-estrena-uplay-juega-100-juegos-pc-gratis.jpg?itok=WWvKrpud"
                 class="card-img-top">
               <div class="card-body">
@@ -2193,7 +2193,7 @@ aria-hidden="true">
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-danger" data-dismiss="modal">VOLVER</button>
-      <a href="juegos_Xbox_one_pagina_1.html">
+      <a href="Juegos.html">
           <button type="button" class="btn btn-primary">Ver juegos</button>
       </a>
     </div>    

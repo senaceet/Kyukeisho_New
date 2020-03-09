@@ -1,6 +1,6 @@
 package controlador;
 
-import modelo.consolas_DAO;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -9,17 +9,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.consolas;
+import modelo.categorias_productos;
+import modelo.categorias_productos_DAO;
 
 
-@WebServlet(name = "controlador_consolas", urlPatterns = {"/controlador_consolas"})
-public class controlador_consolas extends HttpServlet {
-String listar="/CRUD_Consolas.jsp";
+@WebServlet(name = "controlador_categorias_productos", urlPatterns = {"/controlador_categorias_productos"})
+public class controlador_categorias_productos extends HttpServlet {
+String listar="/CRUD_Categorias_productos.jsp";
 
-    consolas PV = new consolas();
-    consolas_DAO dao=new consolas_DAO();
+    categorias_productos CJ=new categorias_productos();
+    categorias_productos_DAO dao=new categorias_productos_DAO();
     
-    int id_consola;
+    int id_tipo_producto;
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -39,39 +40,35 @@ String listar="/CRUD_Consolas.jsp";
        
       
         else if(action.equalsIgnoreCase("Agregar")){
-            PV.setnombre_consola(request.getParameter("nombre"));
-            PV.setprecio_hora(request.getParameter("precio"));
-            PV.setid_estado_consola(Integer.parseInt(request.getParameter("id_e")));
-            dao.add(PV);
+            CJ.setnombre_tipo_producto(request.getParameter("nom_c"));
+            dao.add(CJ);
             acceso=listar;
         }
         
         else if(action.equalsIgnoreCase("editar")){
-            request.setAttribute("id_consola",request.getParameter("id_consola"));
+            request.setAttribute("id_tipo_producto",request.getParameter("id_tipo_producto"));
             request.setAttribute("a",1);
             acceso=listar;
         }
       
         else if(action.equalsIgnoreCase("Actualizar")){
-            PV.setid_consola(id_consola=Integer.parseInt(request.getParameter("id_consola2")));
-            PV.setnombre_consola(request.getParameter("nombre2"));
-            PV.setprecio_hora(request.getParameter("precio2"));
-            PV.setid_estado_consola(Integer.parseInt(request.getParameter("id_e2")));
-            dao.edit(PV);
+            CJ.setid_tipo_producto(id_tipo_producto=Integer.parseInt(request.getParameter("id_c2")));
+            CJ.setnombre_tipo_producto(request.getParameter("nom_2"));
+            dao.edit(CJ);
             acceso=listar;
         }
         
          else if(action.equalsIgnoreCase("elimi")){
-            request.setAttribute("id_consola",request.getParameter("id_consola"));
+            request.setAttribute("id_tipo_producto",request.getParameter("id_tipo_producto"));
             request.setAttribute("a1",1);
             acceso=listar;
         }
       
         
         else if(action.equalsIgnoreCase("Eliminar")){
-            id_consola=Integer.parseInt(request.getParameter("id_consola3"));
-            PV.setid_consola(id_consola);
-            dao.eliminar(id_consola);
+            id_tipo_producto=Integer.parseInt(request.getParameter("id_c3"));
+            CJ.setid_tipo_producto(id_tipo_producto);
+            dao.eliminar(id_tipo_producto);
             acceso=listar;
         }
 

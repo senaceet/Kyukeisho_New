@@ -158,7 +158,7 @@
                 <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
                   <div class="navbar-header d-flex col">
                       <a href="../index.html">
-                          <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
+                          <img width="380" height="70" src="../IMG/index.png" class="img-fluid" alt="Responsive image">
                           </a>                    
                       <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
                       <span class="navbar-toggler-icon"></span>
@@ -211,7 +211,7 @@
             <br>
             <div class="card-group">
                 <div class="card" style="background-color: transparent">
-                    <center><img src="https://pbs.twimg.com/profile_images/770888805461164032/a_U3VO3G.jpg" width="100"
+                    <center><img src="../IMG/incio admin/cliente.jpg" width="100"
                             height="100"></center>
                     <div class="card-body">
                         <center><a href="../CRUD_usuarios.jsp" class="btn btn-Light btn-sm active" role="button"
@@ -226,30 +226,38 @@
                     </div>
 
                 </div>
+
+                
+                
+              
                 <div class="card" style="background-color: transparent">
-                    <center><img
-                            src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4312-NPEB00474_00-AVSMOBILET000488/1550735582000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000"
-                            width="100" height="100"></center>
+                    <center>
+                        <img src="../IMG/incio admin/reservaciones.png" width="100" height="100"/>
+                    </center>
                     <div class="card-body">
-                        <center><a href="../CRUD_Consolas.jsp" class="btn btn-Light btn-sm active" role="button"
+                        <center><a href="" class="btn btn-Light btn-sm active" role="button"
                                 aria-pressed="true">
-                                <h5>Consolas</h5></i>
+                                <h5>Reservaciones</h5></i>
                             </a></center>
                         <br>
+                        
                         <center>
-                            <p style="color: white" class="card-text">Aqui podras visualizar todas las consolas que
-                                tiene la tienda.</p>
+                            <p style="color: white" class="card-text">Aqui puedes visualizar todas las reservaciones.
+                            </p>
                         </center>
+                    
                     </div>
-                    <div>
-                    </div>
+                </div>
+                
+                
+                  </div>
                 </div>
         <br>
         <div class="container">
             <div class="card-group">
                 <div class="card" style="background-color: transparent">
                     <center>
-                        <img src="../IMG/Mario.png" width="100" height="100"></center>
+                        <img src="../IMG/incio admin/Mario.png" width="100" height="100"></center>
                     <div class="card-body">
                         <center>
                             <a href="../Crud_Juegos.jsp" class="btn btn-Light btn-sm active" role="button"
@@ -265,22 +273,22 @@
                     <div>
                     </div>
                 </div>
-                <div class="card" style="background-color: transparent">
-                    <center><img src="https://www.stickpng.com/assets/images/5ae6cd086554160a79be9f44.png"
-                            width="100" height="100"></center>
+                 <div class="card" style="background-color: transparent">
+                    <center>
+                        <img src="../IMG/incio admin/categorias.png" width="100" height="100"></center>
                     <div class="card-body">
-                        <center><a href="CRUD Citas\Crud_Citas_Activas.jsp" class="btn btn-Light btn-sm active" role="button"
+                        <center><a href="../Categorias_juegos.jsp" class="btn btn-Light btn-sm active" role="button"
                                 aria-pressed="true">
-                                <H5>Reservaciones</h5>
+                                <h5>Categorias juegos</h5></i>
                             </a></center>
                         <br>
                         <center>
-                            <p style="color: white" class="card-text">Aqui podra visualizar todas las citas que se han
-                                realizado en todo el dia.
-                            </p>
+                            <p style="color: white" class="card-text">Aqui podras visualizar todas las categorias como
+                                de juegos y tambien de productos.</p>
                         </center>
                     </div>
                     <div>
+
                     </div>
                 </div>
         </div>
@@ -289,7 +297,7 @@
             <div class="card-group">
                 <div class="card" style="background-color: transparent">
                     <center>
-                        <img src="../IMG/productos.png" width="100" height="100"/>
+                        <img src="../IMG/incio admin/productos.png" width="100" height="100"/>
                     </center>
                     <div class="card-body">
                         <center><a href="../Crud_Productos.jsp" class="btn btn-Light btn-sm active" role="button"
@@ -306,24 +314,60 @@
                     
                     </div>
                 </div>
-                <div class="card" style="background-color: transparent">
-                    <center><img
-                            src="https://s3.amazonaws.com/w3-cache.content-blog/wp-content/uploads/2018/01/13181645/videojuegos.png"
+                  <div class="card" style="background-color: transparent">
+                    <center><img src="../IMG/incio admin/reservaciones.png"
                             width="100" height="100"></center>
                     <div class="card-body">
-                        <center><a href="../Categorias_1.jsp" class="btn btn-Light btn-sm active" role="button"
+                        <center><a href="../CRUD_Categorias_productos.jsp" class="btn btn-Light btn-sm active" role="button"
                                 aria-pressed="true">
-                                <h5>Categorias juegos</h5></i>
+                                <H5>Categorias productos</h5>
                             </a></center>
                         <br>
                         <center>
-                            <p style="color: white" class="card-text">Aqui podras visualizar todas las categorias como
-                                de juegos y tambien de productos.</p>
+                            <p style="color: white" class="card-text">Aqui podra visualizar todas las categorias de los productos
+                            </p>
                         </center>
                     </div>
                     <div>
+
+                    </div>
                 </div>
-            </div>
+        </div>
+        <br>
+        <br>
+
+         <div class="card-group">                
+              <div class="card" style="background-color: transparent">
+                    <center>
+                        <img src="../IMG/incio admin/consola.png" width="100" height="100"></center>
+                    <div class="card-body">
+                        <center><a href="../CRUD_Consolas.jsp" class="btn btn-Light btn-sm active" role="button"
+                                aria-pressed="true">
+                                <h5>Consolas disponibles</h5></i>
+                            </a></center>
+                        <br>
+                        <center>
+                            <p style="color: white" class="card-text">Aqui podras visualizar todas las consolas que
+                                tiene la tienda.</p>
+                        </center>
+                    </div>
+                   <div>
+                                   <div class="card" style="background-color: transparent">
+                    <center>
+                        <img src="../IMG/incio admin/consola.png" width="100" height="100"></center>
+                    <div class="card-body">
+                        <center><a href="../CRUD_Consolas.jsp" class="btn btn-Light btn-sm active" role="button"
+                                aria-pressed="true">
+                                <h5>Consolas disponibles</h5></i>
+                            </a></center>
+                        <br>
+                        <center>
+                            <p style="color: white" class="card-text">Aqui podras visualizar todas las consolas que
+                                tiene la tienda.</p>
+                        </center>
+                    </div>
+                   <div>  
+
         </div>
         </div>
     </div>

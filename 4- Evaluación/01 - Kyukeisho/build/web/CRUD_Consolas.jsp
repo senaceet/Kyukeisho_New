@@ -624,10 +624,10 @@
                                         <label for="selectAll"></label>
                                     </span>
                                 </th>
-                                <th>Codigo Juego</th>
-                                <th>Nombre Juego</th>
-                                <th>Categoria Juego</th>
-                                
+                                <th>Id consola</th>
+                                <th>Nombre consola</th>
+                                <th>Precio hora</th>
+                                <th>Estado consola</th>
                                 <th>Acciones</th>
 
                             </tr>
@@ -649,13 +649,14 @@
                                     </span>
                                 </td>
                                 
-                                <td><%= ma.getcodigo_juego()%></td>
-                                <td><%= ma.getnombre_juego()%></td>
-                                <td><%= ma.getnombre_categoria_juegos()%></td>
+                                <td><%= ma.getid_consola()%></td>
+                                <td><%= ma.getnombre_consola()%></td>
+                                <td><%= ma.getprecio_hora()%></td>
+                                <td><%= ma.getestado_consola()%></td>
                                 <td>
-                                    <a href="controlador_juegos?accion=editar&codigo_juego=<%= ma.getcodigo_juego() %>" class="edit"><i
+                                    <a href="controlador_consolas?accion=editar&id_consola=<%= ma.getid_consola() %>" class="edit"><i
                                             style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>                                            
-                                    <a href="controlador_juegos?accion=elimi&codigo_juego=<%= ma.getcodigo_juego() %>" class="delete"><i
+                                    <a href="controlador_consolas?accion=elimi&id_consola=<%= ma.getid_consola() %>" class="delete"><i
                                              style="color:red" class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
                                 </td>   
                             </tr>
@@ -691,30 +692,28 @@
             <div id="addcate" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="controlador_juegos">
+                        <form action="controlador_consolas">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                <h4 class="modal-title">Añadir Juego</h4>
+                                <h4 class="modal-title">Añadir Consola</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label>Nombre Juego</label>
+                                    
+                                    <label>Nombre consola</label>
                                     <input name="nombre" type="text" class="form-control" required>
                                     
-                            <label>Categoria Juego</label>        
-                                    <select class="form-control" name="id_c">
-                                     <option>-- Seleccione categoria juego --</option>
-                                     <%
-                                         Categorias_juegos_DAO ca= new Categorias_juegos_DAO();
-                                         List<Categorias_juegos> listciu = ca.listar();
-                                         Iterator<Categorias_juegos> iterciu = listciu.iterator();
-                                         Categorias_juegos cat = null;
-                                         while (iterciu.hasNext()) {
-                                             cat = iterciu.next();
-                                     %>
-                                     <option value="<%= cat.getid_categoria_juegos() %>"><%= cat.getnombre_categoria_juegos()%></option>
-                                     <%}%>
+                                    <label>Precio hora</label>
+                                    <input name="precio" type="text" class="form-control" required>
+                                    
+                                    <label>Estado</label>
+                                    <select class="p-2 mb-2 form-control" required="required" value="<%= ma.getid_estado_consola() %>" name="id_e">
+                                     <option value="0">seleccione Estado</option>
+                                     <option value="1">Disponible</option>
+                                     <option value="2">Ocupada</option>
+                                    </select> 
+                                     
                                  </select>
                                     
                             </div>
@@ -735,16 +734,16 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <%
-              JuegoDAO dao2=new JuegoDAO();
-              Juegos ma2= new Juegos();
-              if (request.getAttribute("codigo_juego")!= null){
-              int codigo_juego=Integer.parseInt((String)request.getAttribute("codigo_juego"));
-               ma2=(Juegos)dao2.list(codigo_juego);
+              consolas_DAO dao2=new consolas_DAO();
+              consolas ma2= new consolas();
+              if (request.getAttribute("id_consola")!= null){
+              int id_consola=Integer.parseInt((String)request.getAttribute("id_consola"));
+               ma2=(consolas)dao2.list(id_consola);
               }
           %>
-                        <form action="controlador_juegos">
+                        <form action="controlador_consolas">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                <h4 class="modal-title">Editar Juego</h4>
+                                <h4 class="modal-title">Editar Consola</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
@@ -752,24 +751,21 @@
                                 <div class="form-group">
 
 
-                            <label>Nombre Juego</label>
-                            <input type="text" class="form-control" required value="<%= ma2.getnombre_juego() %>" name="nombre2">
-                           
-                            <label>Categoria Juego</label>        
-                                    <select class="form-control" name="id_c2">
-                                     <option value="1"><%= ma2.getid_categoria_juegos() %></option>
-                                     <%
-                                         Categorias_juegos_DAO ca2= new Categorias_juegos_DAO();
-                                         List<Categorias_juegos> listciu2 = ca2.listar();
-                                         Iterator<Categorias_juegos> iterciu2 = listciu2.iterator();
-                                         Categorias_juegos cat2 = null;
-                                         while (iterciu2.hasNext()) {
-                                             cat2 = iterciu2.next();
-                                     %>
-                                     <option value="<%= cat2.getid_categoria_juegos() %>"><%= cat2.getnombre_categoria_juegos()%></option>
-                                     <%}%>
+                                    <label>Nombre consola</label>
+                                    <input name="nombre2" type="text" class="form-control" VALUE="<%= ma2.getnombre_consola()%>" required>
+                                    
+                                    <label>Precio hora</label>
+                                    <input name="precio2" type="text" class="form-control" VALUE="<%= ma2.getprecio_hora()%>" required>
+                                    
+                                    <label>Estado</label>
+                                    <select class="p-2 mb-2 form-control" required="required" value="<%= ma.getid_estado_consola() %>" name="id_e2">
+                                     <option value="0">seleccione Estado</option>
+                                     <option value="1">Disponible</option>
+                                     <option value="2">Ocupada</option>
+                                    </select> 
+                                                                         
                                  </select>
-                                    <input type="hidden" class="form-control" required value="<%= ma2.getcodigo_juego() %>" name="codigo_juego2">
+                                    <input type="hidden" class="form-control" required value="<%= ma2.getid_consola() %>" name="id_consola2">
                                 </div>
                             </div>
                             <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
@@ -781,29 +777,29 @@
                 </div>
             </div>
                                     
-            <!-- eliminar -->
+ <!-- eliminar -->
             <div id="elimicate" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <%
-              JuegoDAO dao3=new JuegoDAO();
-              Juegos ma3= new Juegos();
-              if (request.getAttribute("codigo_juego")!= null){
-              int codigo_juego=Integer.parseInt((String)request.getAttribute("codigo_juego"));
-               ma3=(Juegos)dao3.list(codigo_juego);
+              consolas_DAO dao3=new consolas_DAO();
+               consolas ma3= new  consolas();
+              if (request.getAttribute("id_consola")!= null){
+              int id_consola=Integer.parseInt((String)request.getAttribute("id_consola"));
+               ma3=( consolas)dao3.list(id_consola);
               }
           %>
-                        <form action="controlador_juegos">
+                        <form action="controlador_consolas">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                <h4 class="modal-title">Eliminar Juego</h4>
+                                <h4 class="modal-title">Eliminar Consola</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
-                          <input type="hidden" class="form-control" required value="<%= ma3.getcodigo_juego() %>" name="codigo_juego3">
+                          <input type="hidden" class="form-control" required value="<%= ma3.getid_consola() %>" name="id_consola    3">
 
                             <div class="modal-body">
                                 
-                               <p>¿Está seguro de que desea eliminar este juego?</p>
+                               <p>¿Está seguro de que desea eliminar esta consola?</p>
                             </div>
                    
                             <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
@@ -815,49 +811,7 @@
                     </div>
                 </div>
             </div>
-            <div id="dReporte" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form>
-                            <div class="modal-header">
-                                <h4 class="modal-title">Descargando...</h4>
-                                <button type="button" class="close" data-dismiss="modal"
-                                    aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
-                                        style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <input type="button" class="btn btn-danger" data-dismiss="modal" value="Cancelar">
-                                <input type="submit" class="btn btn-default" value="Aceptar">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div id="guardarR" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form>
-                            <div class="modal-header">
-                                <h4 class="modal-title">Crear copia en...</h4>
-                                <button type="button" class="close" data-dismiss="modal"
-                                    aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-footer">
-                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                                <input type="submit" class="btn btn-primary" value="Correo">
-
-
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+           
 </body>
 
 </html>

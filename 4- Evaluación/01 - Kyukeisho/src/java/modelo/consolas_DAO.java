@@ -25,7 +25,7 @@ public class consolas_DAO implements CRUD_consolas {
         String sql="select id_consola, nombre_consola,precio_hora,estado_consola"
                     +" from consola"
                     +" inner join estado_consola"
-                    +" on consola.id_estado_consola = estado_consola.id_estado_consola";
+                    +" on consola.id_estado_consola = estado_consola.id_estado_consola where consola.id_estado_consola=1";
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);
@@ -91,7 +91,7 @@ public class consolas_DAO implements CRUD_consolas {
     }
     @Override
     public boolean eliminar(int id_consola) {
-        String sql="delete from consola where id_consola="+id_consola;
+        String sql="delete from consola where id_consola="+ id_consola;
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);

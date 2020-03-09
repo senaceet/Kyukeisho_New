@@ -225,10 +225,8 @@
         </button>
         <div class="dropdown-menu btn-lg " aria-labelledby="dropdownMenuButton"
           style="width:14rem; background-color: rgb(255, 251, 0)">
-          <a href="../juegos_Xbox_one_pagina_1.html" class="dropdown-item" style="color: rgb(0, 0, 0)">Xbox One</a>
-          <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#">Playstation 4</a>
-          <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#">PC</a>
-          <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#">Productos y accesorios</a>
+          <a href="../Juegos.jsp" class="dropdown-item" style="color: rgb(0, 0, 0)">Juegos para consolas</a>
+          <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="../Productos.jsp">Productos y accesorios</a>
         </div>
       </div>
       <div class="col-xl-3 text-left" style="background-color: rgb(255, 251, 0)">

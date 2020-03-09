@@ -3,8 +3,6 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
 <%@page import="modelo.Admin"%>
-<%@page import="modelo.Productos_vendidos"%>
-<%@page import="modelo.Productos_vendidos_DAO"%>
 <%@page contentType="text/html"%> <%-- para acentos --%> 
 <%@page pageEncoding="UTF-8"%> <%-- para acentos --%> 
 
@@ -591,17 +589,24 @@
                             </div>
                             <div class="col-lg-6" >
 
+                                <a href="PdfCategoria.jsp" class="btn btn-info"  data-toggle="modal">
+                                 <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                </i><span> Generar reporte</span></a>
+                               
                                 <a  href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
                                     <i class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
-                                </i><span> Eliminar Categorias</span></a>
+                                </i><span> Eliminar Categorias</span></a>      
                                 
                                 <a href="#addcate" class="btn btn-success"  data-toggle="modal">
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 </i><span> Añadir Categoria</span></a>
                                 
-                                <a href="PdfCategoria.jsp" class="btn btn-info"  data-toggle="modal">
-                                 <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                </i><span> Generar reporte</span></a>
+
+                                
+
+                                
+
+                                
                             </div>
                             
                         </div>

@@ -119,7 +119,7 @@ id_producto INT (10) NOT NULL
 
 -- TIPOS_PRODUCTO --
 CREATE TABLE Kyukeisho.tipo_producto(
-id_tipo_producto INT (10) NOT NULL,
+id_tipo_producto INT (10) NOT NULL auto_increment,
 nombre_tipo_producto VARCHAR (100) NULL,
 PRIMARY KEY (id_tipo_producto)
 );

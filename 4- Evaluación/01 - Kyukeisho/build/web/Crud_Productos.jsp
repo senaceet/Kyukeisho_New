@@ -1,11 +1,11 @@
-<%@page import="modelo.usuarios"%>
-<%@page import="modelo.usuarios_DAO"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
 <%@page import="javax.mail.Session"%>
 <%@page import="modelo.Admin"%>
 <%@page import="modelo.Productos_vendidos"%>
 <%@page import="modelo.Productos_vendidos_DAO"%>
+<%@page import="modelo.categorias_productos"%>
+<%@page import="modelo.categorias_productos_DAO"%>
 <%@page contentType="text/html"%> <%-- para acentos --%> 
 <%@page pageEncoding="UTF-8"%> <%-- para acentos --%> 
 
@@ -629,9 +629,9 @@
                                 </th>
                                 <th>Id </th>
                                 <th>Nombre Producto</th>
-                                <th>Cantidad_producto</th>
-                                <th>Precio_unitario_producto</th>
-                                <th>Tipo_producto</th>
+                                <th>Cantidad producto</th>
+                                <th>Precio unitario</th>
+                                <th>Tipo producto</th>
                                 <th>Acciones</th>
 
                             </tr>
@@ -659,6 +659,7 @@
                                 <th><%= ma.getprecio_unitario_producto()%></th>
                                 <th><%= ma.getnombre_tipo_producto()%></th>
                                 <td>
+                                    
                                     <a href="controlador_productos_vendidos?accion=editar&id_producto=<%= ma.getid_producto() %>" class="edit"><i
                                             style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>                                            
                                     <a href="controlador_productos_vendidos?accion=elimi&id_producto=<%= ma.getid_producto() %>" class="delete"><i
@@ -711,17 +712,21 @@
                                     <input name="Can_P" type="text" class="form-control" required>
                                     <label>precio_unitario_producto</label>
                                     <input name="Pre_P" type="text" class="form-control" required>
-                                    <label>tipo_producto</label> 
                                     
-                           <select name="tipo_P" class="p-2 mb-2 form-control" required="required">
-                             <option value="0">seleccione tipo de producto</option>
-                             <option value="1">Comestibles</option>
-                             <option value="2">Videojuegos</option>
-                             <option value="3">Golosinas</option>
-                             <option value="4">tecnologico</option>
-                             <option value="5">Bebidas</option>
-                             <option value="6">Utiles escolares</option>
-                           </select> 
+                                    <label>tipo_producto</label> 
+                                    <select class="form-control" name="tipo_P">
+                                     <option>-- Seleccione categoria juego --</option>
+                                     <%
+                                         categorias_productos_DAO ca= new categorias_productos_DAO();
+                                         List<categorias_productos> listciu = ca.listar();
+                                         Iterator<categorias_productos> iterciu = listciu.iterator();
+                                         categorias_productos cat = null;
+                                         while (iterciu.hasNext()) {
+                                             cat = iterciu.next();
+                                     %>
+                                     <option value="<%= cat.getid_tipo_producto() %>"><%= cat.getnombre_tipo_producto()%></option>
+                                     <%}%>
+                                 </select> 
                                     
                             </div>
                             </div>
@@ -766,15 +771,19 @@
                                     <input  type="text" class="form-control" required value="<%= ma2.getprecio_unitario_producto() %>" name="Pre_P2">
                                     
                              <label>Tipo_producto</label> 
-                             <select class="p-2 mb-2  form-control" required="required" value="<%= ma2.getid_tipo_producto() %>" name="Tipo_P2">
-                             <option value="0">seleccione tipo de producto</option>
-                             <option value="1">Comestibles</option>
-                             <option value="2">Videojuegos</option>
-                             <option value="3">Golosinas</option>
-                             <option value="4">tecnologico</option>
-                             <option value="5">Bebidas</option>
-                             <option value="6">Utiles escolares</option>
-                             </select> 
+                                    <select class="form-control" name="Tipo_P2">
+                                     <option>-- Seleccione categoria juego --</option>
+                                     <%
+                                         categorias_productos_DAO ca2= new categorias_productos_DAO();
+                                         listciu = ca2.listar();
+                                         iterciu = listciu.iterator();
+                                         categorias_productos cat2 = null;
+                                         while (iterciu.hasNext()) {
+                                             cat2 = iterciu.next();
+                                     %>
+                                     <option value="<%= cat2.getid_tipo_producto() %>"><%= cat2.getnombre_tipo_producto()%></option>
+                                     <%}%>
+                                 </select> 
                                     
                              <input type="hidden" class="form-control" required value="<%= ma2.getid_producto() %>" name="id_producto2">
                              

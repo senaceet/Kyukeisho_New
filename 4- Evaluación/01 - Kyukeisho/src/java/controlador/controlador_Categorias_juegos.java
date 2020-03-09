@@ -14,7 +14,7 @@ import modelo.Categorias_juegos;
 
 @WebServlet(name = "controlador_Categorias_juegos", urlPatterns = {"/controlador_Categorias_juegos"})
 public class controlador_Categorias_juegos extends HttpServlet {
-String listar="/Categorias_1.jsp";
+String listar="/Categorias_juegos.jsp";
 
     Categorias_juegos CJ=new Categorias_juegos();
     Categorias_juegos_DAO dao=new Categorias_juegos_DAO();

@@ -1,4 +1,8 @@
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.List"%>
 <%@page import="modelo.Persona"%>
+<%@page import="modelo.consolas_DAO"%>
+<%@page import="modelo.consolas"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,10 +94,8 @@
                       </button>
                       <div class="dropdown-menu btn-lg " aria-labelledby="dropdownMenuButton"
                       style="width:14rem; background-color: rgb(255, 251, 0)">
-                      <a href="/juegos_Xbox_one_pagina_1.html" class="dropdown-item" style="color: rgb(0, 0, 0)">Xbox One</a>
-                      <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#">Playstation 4</a>
-                      <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#">PC</a>
-                      <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="#">Productos y accesorios</a>
+          <a href="../Juegos.jsp" class="dropdown-item" style="color: rgb(0, 0, 0)">Juegos para consolas</a>
+          <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="../Productos.jsp">Productos y accesorios</a>
                     </div>
                     </div>
                       
@@ -144,22 +146,25 @@
                 <h4 class="card-title mt-3 text-center">RESERVA TU CONSOLA</h4>
                 <br>
                 <p class="text-center">Diligencia el formulario para proceder</p>
+                
                 <form method="post" action="../registro_reservacion">
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-gamepad" aria-hidden="true"></i> </span>
                     </div>
-                           <select name="consola" class="form-control" required="required">
-                             <option value="0">seleccione tipo de producto</option>
-                             <option value="1">Xbox 360</option>
-                             <option value="2">PS2</option>
-                             <option value="3">PS3</option>
-                             <option value="4">PS4</option>
-                             <option value="5">PC</option>
-                             <option value="6">Xbox one</option>
-                             <option value="7">Nintendo</option>
-                             <option value="8">Wii</option>
-                           </select> 
+                                    <select class="form-control" name="consola">
+                                     <option>-- Seleccione categoria juego --</option>
+                                     <%
+                                         consolas_DAO ca= new consolas_DAO();
+                                         List<consolas> listciu = ca.listar();
+                                         Iterator<consolas> iterciu = listciu.iterator();
+                                         consolas cat = null;
+                                         while (iterciu.hasNext()) {
+                                             cat = iterciu.next();
+                                     %>
+                                     <option value="<%= cat.getid_consola() %>"><%= cat.getnombre_consola()%></option>
+                                     <%}%>
+                                 </select>
                     
                 </div> 
 
