@@ -28,7 +28,7 @@
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
-    <link rel="icon" type="image/png" href="https://fotos.subefotos.com/e296fe07575583952d4e106565eb2181o.png">
+    <link rel="icon" type="image/png" href="IMG/GF.png">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -221,7 +221,7 @@
                     <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
             <div class="navbar-header d-flex col">
                 <a href="index.html">
-                    <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
+                    <img width="380" height="70" src="IMG/index.png" class="img-fluid" alt="Responsive image">
                     </a>            
              <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
                 <span class="navbar-toggler-icon"></span>
@@ -795,7 +795,7 @@
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
-                          <input type="hidden" class="form-control" required value="<%= ma3.getid_consola() %>" name="id_consola    3">
+                          <input type="hidden" class="form-control" required value="<%= ma3.getid_consola() %>" name="id_consola3">
 
                             <div class="modal-body">
                                 

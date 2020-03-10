@@ -153,7 +153,7 @@
                         <span class="input-group-text"> <i class="fa fa-gamepad" aria-hidden="true"></i> </span>
                     </div>
                                     <select class="form-control" name="consola">
-                                     <option>-- Seleccione categoria juego --</option>
+                                     <option>-- Seleccione consola --</option>
                                      <%
                                          consolas_DAO ca= new consolas_DAO();
                                          List<consolas> listciu = ca.listar();

@@ -317,7 +317,3 @@ VALUES	(1, 1),
 		(2, 19),
 		(1, 20);
         
-select  id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario,correo_usuario,telefono_usuario,direccion,contraseña_usuario,estado_cliente.estado_cliente
-from usuario
-inner join estado_cliente
-on usuario.id_estado_cliente = estado_cliente.id_estado_cliente where id_estado_cliente=1;        

@@ -2,7 +2,7 @@
 
 <head>
 
-  <link rel="shortcut icon" href="https://fotos.subefotos.com/9f07d19705d6bde4351c7e17c87c4d7fo.png">
+  <link rel="shortcut icon" href="../IMG/GF.png">
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,7 +28,7 @@
     <div class="header fixed-top">
         <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
           <a href="../index.html">
-            <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
+            <img width="380" height="70" src="../IMG/index.png" class="img-fluid" alt="Responsive image">
             </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

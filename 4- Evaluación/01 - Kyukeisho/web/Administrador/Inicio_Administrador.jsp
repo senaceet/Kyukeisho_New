@@ -12,7 +12,7 @@
     %>
     
 <head>
-    <link rel="shortcut icon" href="https://fotos.subefotos.com/9f07d19705d6bde4351c7e17c87c4d7fo.png">
+    <link rel="shortcut icon" href="../IMG/GF.png">
     <title>Administración</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
@@ -315,7 +315,7 @@
                     </div>
                 </div>
                   <div class="card" style="background-color: transparent">
-                    <center><img src="../IMG/incio admin/reservaciones.png"
+                    <center><img src="../IMG/incio admin/categorias_productos.png"
                             width="100" height="100"></center>
                     <div class="card-body">
                         <center><a href="../CRUD_Categorias_productos.jsp" class="btn btn-Light btn-sm active" role="button"
@@ -336,38 +336,41 @@
         <br>
         <br>
 
-         <div class="card-group">                
-              <div class="card" style="background-color: transparent">
+                     <div class="card-group">
+                <div class="card" style="background-color: transparent">
                     <center>
-                        <img src="../IMG/incio admin/consola.png" width="100" height="100"></center>
+                        <img src="../IMG/incio admin/consola.png" width="100" height="100"/>
+                    </center>
                     <div class="card-body">
                         <center><a href="../CRUD_Consolas.jsp" class="btn btn-Light btn-sm active" role="button"
                                 aria-pressed="true">
                                 <h5>Consolas disponibles</h5></i>
                             </a></center>
                         <br>
+                        
                         <center>
-                            <p style="color: white" class="card-text">Aqui podras visualizar todas las consolas que
-                                tiene la tienda.</p>
+                            <p style="color: white" class="card-text">Aqui puede visualizar todos las consolas que
+                                 ofrece la tienda.
+                            </p>
                         </center>
+                    
                     </div>
-                   <div>
-                                   <div class="card" style="background-color: transparent">
-                    <center>
-                        <img src="../IMG/incio admin/consola.png" width="100" height="100"></center>
+                </div>
+                  <div class="card" style="background-color: transparent">
+                    <center><img src="../IMG/incio admin/ocupado.png"
+                            width="100" height="100"></center>
                     <div class="card-body">
-                        <center><a href="../CRUD_Consolas.jsp" class="btn btn-Light btn-sm active" role="button"
+                        <center><a href="../CRUD_Consolas_ocupadas.jsp" class="btn btn-Light btn-sm active" role="button"
                                 aria-pressed="true">
-                                <h5>Consolas disponibles</h5></i>
+                                <H5>Consolas ocupadas</h5>
                             </a></center>
                         <br>
                         <center>
-                            <p style="color: white" class="card-text">Aqui podras visualizar todas las consolas que
-                                tiene la tienda.</p>
+                            <p style="color: white" class="card-text">Aqui podra visualizar todas las categorias de los productos
+                            </p>
                         </center>
                     </div>
-                   <div>  
-
+                    <div>
         </div>
         </div>
     </div>

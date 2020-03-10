@@ -72,6 +72,14 @@
         <servlet-name>controlador_consolas</servlet-name>
         <servlet-class>controlador.controlador_consolas</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>controlador_consolas_ocupadas</servlet-name>
+        <servlet-class>controlador.controlador_consolas_ocupadas</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>controlador_reservaciones</servlet-name>
+        <servlet-class>controlador.controlador_reservaciones</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
@@ -143,6 +151,14 @@
     <servlet-mapping>
         <servlet-name>controlador_consolas</servlet-name>
         <url-pattern>/controlador_consolas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controlador_consolas_ocupadas</servlet-name>
+        <url-pattern>/controlador_consolas_ocupadas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controlador_reservaciones</servlet-name>
+        <url-pattern>/controlador_reservaciones</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

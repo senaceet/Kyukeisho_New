@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import modelo.reservacion_DAO;
+
 
 @WebServlet(name = "registro_reservacion", urlPatterns = {"/registro_reservacion"})
 public class registro_reservacion extends HttpServlet {
@@ -31,8 +31,6 @@ public class registro_reservacion extends HttpServlet {
         HttpSession session=request.getSession();
         String correo_e = (String)session.getAttribute("correo_e");
         
-        reservacion_DAO d = new reservacion_DAO(fecha,hora,consola);
-        String doc1 = d.connection();
         
         Conexion c = new Conexion();
         Connection conn = c.getConnection();
@@ -42,6 +40,11 @@ public class registro_reservacion extends HttpServlet {
         st = conn.createStatement();
         String sql = "insert into reservaciones (fecha_incio,hora_incio,id_consola,correo_usuario)  values('" + fecha + "','" + hora + "'," + consola + ",'" + correo_e + "')";
         st.executeUpdate(sql);
+     
+        Statement st2 = null;
+        st2 = conn.createStatement();
+        String sql2 = "update consola set id_estado_consola=2 where id_consola=" + consola +" ";
+        st.executeUpdate(sql2);
         
         response.sendRedirect("Cliente/Reservacion.jsp");
     }
