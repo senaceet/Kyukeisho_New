@@ -14,7 +14,7 @@ import modelo.reservaciones;
 
 @WebServlet(name = "controlador_reservaciones", urlPatterns = {"/controlador__reservaciones"})
 public class controlador_reservaciones extends HttpServlet {
-String listar="/Crud_reservaciones.jsp";
+String listar="/CRUD_reservaciones.jsp";
 
     reservaciones PV = new reservaciones();
     reservaciones_DAO dao=new reservaciones_DAO();

@@ -730,15 +730,15 @@
                                      <%}%>
                                  </select>
                                  
-                                 <label>tipo consola</label> 
+                                 <label>cliente</label> 
                                     <select class="form-control" name="correo">
-                                     <option>-- Seleccione categoria juego --</option>
+                                     <option>-- Seleccione cliente --</option>
                                      <%
                                          usuarios_DAO ca2= new usuarios_DAO();
                                          List<usuarios> listciu2 = ca2.listar();
                                          Iterator<usuarios> iterciu2 = listciu2.iterator();
                                          usuarios cat2 = null;
-                                         while (iterciu.hasNext()) {
+                                         while (iterciu2.hasNext()) {
                                              cat2 = iterciu2.next();
                                      %>
                                      <option value="<%= cat2.getcorreo_usuario() %>"><%= cat2.getcorreo_usuario()%></option>
@@ -755,8 +755,8 @@
                     </div>
                 </div>
             </div>
+                                 
             <!-- Editar -->    
-            
             
             <div id="editcate" class="modal fade">
                 
@@ -765,9 +765,9 @@
                         <%
               reservaciones_DAO dao2=new reservaciones_DAO();
               reservaciones ma2= new reservaciones();
-              if (request.getAttribute("id_producto")!= null){
-              int id_producto=Integer.parseInt((String)request.getAttribute("id_producto"));
-               ma2=(reservaciones)dao2.list(id_producto);
+              if (request.getAttribute("id_reservacion")!= null){
+              int id_reservacion=Integer.parseInt((String)request.getAttribute("id_reservacion"));
+               ma2=(reservaciones)dao2.list(id_reservacion);
               }
           %>
                         <form action="controlador_reservaciones">
@@ -780,20 +780,20 @@
                                 <div class="form-group">
 
                                 <label >Fecha de inicio</label>
-                                  <input name="fecha_i2" type="date" max="3000-12-31" min="1000-01-01" class="form-control" value="<%= ma2.getfecha_incio() %>">
+                                  <input required PLACEHOLDER="<%= ma2.getfecha_incio() %>" name="fecha_i2" type="date" max="3000-12-31" min="1000-01-01" class="form-control" >
                                     
                                 <label >Hora de inicio</label>
-                                  <input name="hora_i2" class="form-control" type="time" value="<%= ma2.gethora_incio() %>">
+                                  <input required value="<%= ma2.gethora_incio() %>" name="hora_i2" class="form-control" type="time">
                                     
                                     <label>tipo consola</label> 
-                                    <select class="form-control" name="id_c">
+                                    <select class="form-control" name="id_c2">
                                      <option>-- Seleccione la consola --</option>
                                      <%
                                          consolas_DAO ca3= new consolas_DAO();
                                          List<consolas> listciu3 = ca3.listar();
                                          Iterator<consolas> iterciu3 = listciu3.iterator();
                                          consolas cat3 = null;
-                                         while (iterciu.hasNext()) {
+                                         while (iterciu3.hasNext()) {
                                              cat = iterciu3.next();
                                      %>
                                      <option value="<%= cat.getid_consola() %>"><%= cat.getnombre_consola()%></option>
@@ -801,14 +801,14 @@
                                  </select>
                                  
                                  <label>tipo consola</label> 
-                                    <select class="form-control" name="correo">
+                                    <select class="form-control" name="correo2">
                                      <option>-- Seleccione categoria juego --</option>
                                      <%
                                          usuarios_DAO ca4= new usuarios_DAO();
                                          List<usuarios> listciu4 = ca4.listar();
                                          Iterator<usuarios> iterciu4 = listciu4.iterator();
                                          usuarios cat4 = null;
-                                         while (iterciu.hasNext()) {
+                                         while (iterciu4.hasNext()) {
                                              cat2 = iterciu4.next();
                                      %>
                                      <option value="<%= cat2.getcorreo_usuario() %>"><%= cat2.getcorreo_usuario()%></option>
@@ -826,8 +826,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
-                                    
+            </div>                           
           
 </body>
 
