@@ -593,7 +593,7 @@
                         <div class="row" ><br></div>
                         <div class="row" >
                             <div class="col-lg-4">
-                                <h2> <strong>Productos</strong></h2>
+                                <h2> <strong>Reservaciones</strong></h2>
                             </div>
                             <div class="col-lg-7" >
                                 
@@ -601,13 +601,10 @@
                                     <input type="submit" class="btn btn-info" value="Generar reporte en PDF" />
                                 </form>
                                 
-                                <a  href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
-                                    <i class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
-                                </i><span> Eliminar Productos</span></a>
                                 
                                 <a href="#addcate" class="btn btn-success"  data-toggle="modal">
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                </i><span> Añadir Producto</span></a>
+                                </i><span> Añadir reservación</span></a>
                                 
 
                             </div>
@@ -701,7 +698,7 @@
                     <div class="modal-content">
                         <form action="controlador_reservaciones">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                <h4 class="modal-title">Añadir Categoria producto</h4>
+                                <h4 class="modal-title">Añadir reservación</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
@@ -772,7 +769,7 @@
           %>
                         <form action="controlador_reservaciones">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                <h4 class="modal-title">Editar categoria</h4>
+                                <h4 class="modal-title">Editar reservación</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
