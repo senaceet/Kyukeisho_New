@@ -4,6 +4,10 @@
 <%@page import="modelo.Admin"%>
 <%@page import="modelo.reservaciones"%>
 <%@page import="modelo.reservaciones_DAO"%>
+<%@page import="modelo.consolas"%>
+<%@page import="modelo.consolas_DAO"%>
+<%@page import="modelo.usuarios"%>
+<%@page import="modelo.usuarios_DAO"%>
 <%@page contentType="text/html"%> <%-- para acentos --%> 
 <%@page pageEncoding="UTF-8"%> <%-- para acentos --%> 
 
@@ -703,7 +707,7 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-v
+                                    
                                 <label >Fecha de inicio</label>
                                   <input name="fecha_i" type="date" max="3000-12-31" min="1000-01-01" class="form-control">
                                     
@@ -713,7 +717,7 @@ v
 
                                     <label>tipo consola</label> 
                                     <select class="form-control" name="id_c">
-                                     <option>-- Seleccione categoria juego --</option>
+                                     <option>-- Seleccione la consola --</option>
                                      <%
                                          consolas_DAO ca= new consolas_DAO();
                                          List<consolas> listciu = ca.listar();
@@ -725,6 +729,21 @@ v
                                      <option value="<%= cat.getid_consola() %>"><%= cat.getnombre_consola()%></option>
                                      <%}%>
                                  </select>
+                                 
+                                 <label>tipo consola</label> 
+                                    <select class="form-control" name="correo">
+                                     <option>-- Seleccione categoria juego --</option>
+                                     <%
+                                         usuarios_DAO ca2= new usuarios_DAO();
+                                         List<usuarios> listciu2 = ca2.listar();
+                                         Iterator<usuarios> iterciu2 = listciu2.iterator();
+                                         usuarios cat2 = null;
+                                         while (iterciu.hasNext()) {
+                                             cat2 = iterciu2.next();
+                                     %>
+                                     <option value="<%= cat2.getcorreo_usuario() %>"><%= cat2.getcorreo_usuario()%></option>
+                                     <%}%>
+                                 </select> 
                                     
                             </div>
                             </div>
@@ -760,30 +779,43 @@ v
                             <div class="modal-body">
                                 <div class="form-group">
 
-
-                                    <label>Nombre producto</label>
-                                    <input type="text" class="form-control" required value="<%= ma2.getnombre_producto() %>" name="Nom_P2">
-                                    <label>Cantidad_producto</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getcantidad_producto() %>" name="Can_P2">
-                                    <label>Precio_unitario_producto</label>
-                                    <input  type="text" class="form-control" required value="<%= ma2.getprecio_unitario_producto() %>" name="Pre_P2">
+                                <label >Fecha de inicio</label>
+                                  <input name="fecha_i2" type="date" max="3000-12-31" min="1000-01-01" class="form-control" value="<%= ma2.getfecha_incio() %>">
                                     
-                             <label>Tipo_producto</label> 
-                                    <select class="form-control" name="Tipo_P2">
+                                <label >Hora de inicio</label>
+                                  <input name="hora_i2" class="form-control" type="time" value="<%= ma2.gethora_incio() %>">
+                                    
+                                    <label>tipo consola</label> 
+                                    <select class="form-control" name="id_c">
+                                     <option>-- Seleccione la consola --</option>
+                                     <%
+                                         consolas_DAO ca3= new consolas_DAO();
+                                         List<consolas> listciu3 = ca3.listar();
+                                         Iterator<consolas> iterciu3 = listciu3.iterator();
+                                         consolas cat3 = null;
+                                         while (iterciu.hasNext()) {
+                                             cat = iterciu3.next();
+                                     %>
+                                     <option value="<%= cat.getid_consola() %>"><%= cat.getnombre_consola()%></option>
+                                     <%}%>
+                                 </select>
+                                 
+                                 <label>tipo consola</label> 
+                                    <select class="form-control" name="correo">
                                      <option>-- Seleccione categoria juego --</option>
                                      <%
-                                         categorias_productos_DAO ca2= new categorias_productos_DAO();
-                                         listciu = ca2.listar();
-                                         iterciu = listciu.iterator();
-                                         categorias_productos cat2 = null;
+                                         usuarios_DAO ca4= new usuarios_DAO();
+                                         List<usuarios> listciu4 = ca4.listar();
+                                         Iterator<usuarios> iterciu4 = listciu4.iterator();
+                                         usuarios cat4 = null;
                                          while (iterciu.hasNext()) {
-                                             cat2 = iterciu.next();
+                                             cat2 = iterciu4.next();
                                      %>
-                                     <option value="<%= cat2.getid_tipo_producto() %>"><%= cat2.getnombre_tipo_producto()%></option>
+                                     <option value="<%= cat2.getcorreo_usuario() %>"><%= cat2.getcorreo_usuario()%></option>
                                      <%}%>
                                  </select> 
                                     
-                             <input type="hidden" class="form-control" required value="<%= ma2.getid_producto() %>" name="id_producto2">
+                             <input type="hidden" class="form-control" required value="<%= ma2.getid_reservacion() %>" name="id_reservacion2">
                              
                                 </div>
                             </div>

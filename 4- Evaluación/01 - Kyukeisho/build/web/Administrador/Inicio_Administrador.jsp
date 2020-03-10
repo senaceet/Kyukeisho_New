@@ -235,7 +235,7 @@
                         <img src="../IMG/incio admin/reservaciones.png" width="100" height="100"/>
                     </center>
                     <div class="card-body">
-                        <center><a href="" class="btn btn-Light btn-sm active" role="button"
+                        <center><a href="../CRUD_reservaciones.jsp" class="btn btn-Light btn-sm active" role="button"
                                 aria-pressed="true">
                                 <h5>Reservaciones</h5></i>
                             </a></center>

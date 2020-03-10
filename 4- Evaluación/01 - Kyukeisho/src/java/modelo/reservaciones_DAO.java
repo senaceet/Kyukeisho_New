@@ -96,6 +96,5 @@ public class reservaciones_DAO implements CRUD_reservaciones {
     public boolean eliminar(int id_reservacion) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
     
 }
