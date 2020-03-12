@@ -5,7 +5,6 @@ INSERT INTO kyukeisho.estado_cliente(id_estado_cliente,estado_cliente)
 VALUES 						(1, "Activo"),
 							(2, "Desactivo");
                             
-
 -- USUARIO --
 INSERT INTO Kyukeisho.usuario (id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario, correo_usuario, telefono_usuario, direccion,contraseña_usuario, id_estado_cliente)
 VALUES 		(1, "Vladimir", "Alberto", "Buitrago", "Rodriguez", "vabuitrago18@misena.edu.co", 3115698975, "Kra 4 N 45 R Sur","CWlaarcP6EE=", 1),

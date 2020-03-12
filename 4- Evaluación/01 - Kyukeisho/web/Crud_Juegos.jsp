@@ -222,51 +222,51 @@
           </style>
           </head> 
           <body>
-                    <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
-            <div class="navbar-header d-flex col">
-                <a href="index.html">
-                    <img width="380" height="70" src="IMG/index.png" class="img-fluid" alt="Responsive image">
+           <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
+                <div class="navbar-header d-flex col">
+                    <a href="index.html">
+                        <img width="380" height="70" src="IMG/index.png" class="img-fluid" alt="Responsive image">
                     </a>            
-             <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
-                <span class="navbar-toggler-icon"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
+                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                </div>
+               
             <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-              <ul class="nav navbar-nav">
-                <li class="nav-item active">
-                    <a href="Administrador/Inicio_Administrador.jsp" class="nav-link"></a>
-                </li>
-                </li>
-              </ul>
-              <form class="navbar-form form-inline">
-                <div class="input-group search-box">								
-                    <a href="Administrador/Inicio_Administrador.jsp" class="nav-link"><h6 style="color: white">Página de administración</h6></a>
-                </div>
-              </form>
-              <ul class="nav navbar-nav navbar-right ml-auto">
-                <li class="nav-item dropdown" >
-                  <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
-                      <b class="caret">
-                        ${correo}
-                      </b>
-                  </a>
-                  <ul class="dropdown-menu" style="background-color: #343a40">
-                      <li>
-                    <form action="ControladorAdmin" method="post">           
+                <ul class="nav navbar-nav">
+                    <li class="nav-item active">
+                        <a href="Administrador/Inicio_Administrador.jsp" class="nav-link"></a>
+                    </li>
+                </ul>
+                <form class="navbar-form form-inline">
+                    <div class="input-group search-box">								
+                        <a href="Administrador/Inicio_Administrador.jsp" class="nav-link"><h6 style="color: white">Página de administración</h6></a>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav navbar-right ml-auto">
+                    <li class="nav-item dropdown" >
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
+                            <b class="caret">
+                            ${correo}
+                            </b>
+                        </a>
+                    <ul class="dropdown-menu" style="background-color: #343a40">
+                        <li>
+                            <form action="ControladorAdmin" method="post">           
                         <div class="form-group">
-                <div align="center">
-                    <input style="width: 10rem;" class="btn btn-dark btn-block" type="submit" name="accion" value="Cerrar Sesion"> 
-                </div>               
+                            <div align="center">
+                                <input style="width: 10rem;" class="btn btn-dark btn-block" type="submit" name="accion" value="Cerrar Sesion"> 
+                            </div>               
+                        </div>
+                                </form>
+                        </li>
+                    </ul>
                 </div>
-                 </form>
-                      </li>
-              </ul>
-            </div>
-          </nav>
-          <br>
+            </nav>
+            <br>
     <center>
         <div class="btn-group">
             <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown"
@@ -274,19 +274,19 @@
                 Productos
             </button>
             <div class="dropdown-menu">
-                    <a class="dropdown-item" href="Crud_Productos_No_Tan_Vendidos.jsp">Productos No Tan Vendidos</a>
-                  </div>
-                </div>
-                <div class="btn-group">
-                      <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Juegos
-                      </button>
-                      <div class="dropdown-menu">
+                <a class="dropdown-item" href="Crud_Productos_No_Tan_Vendidos.jsp">Productos No Tan Vendidos</a>
+            </div>
+        </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Juegos
+                </button>
+                    <div class="dropdown-menu">
                         <a class="dropdown-item" href="Juegos/Juegos_Mas_Pedidos.jsp">Juegos Mas Pedidos</a>
                         <a class="dropdown-item" href="Juegos/Crud_Juegos_No_Tan_Pedidos.jsp">Juegos No Tan Pedidos</a>
                         <a class="dropdown-item" href="Juegos/Todos_Juegos_1.jsp">Todos los juegos</a>
-                      </div>
                     </div>
+            </div>
                     <div class="btn-group">
                           <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Consolas
