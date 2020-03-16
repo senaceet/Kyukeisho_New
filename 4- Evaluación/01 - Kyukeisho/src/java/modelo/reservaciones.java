@@ -1,7 +1,7 @@
 package modelo;
 
 public class reservaciones {
-    int id_reservacion ;
+    int id_reservacion;
     String fecha_incio;
     String hora_incio;
     int id_consola;
@@ -24,12 +24,12 @@ public class reservaciones {
         this.correo_usuario = correo_usuario;
     }
 
-    public int getid_reservacion () {
-        return id_reservacion ;
+    public int getid_reservacion() {
+        return id_reservacion;
     }
 
-    public void setid_reservacion (int id_reservacion ) {
-        this.id_reservacion  = id_reservacion ;
+    public void setid_reservacion(int id_reservacion) {
+        this.id_reservacion = id_reservacion;
     }
 
     public String getfecha_incio() {

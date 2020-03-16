@@ -587,11 +587,11 @@
                     <div class="table-title" style="background-color: rgb(216, 211, 40)">
                         <div class="row" ><br></div>
                         <div class="row" >
-                            <div class="col-lg-5">
+                            <div class="col-lg-4">
                                 <h2> <strong>Usuario</strong></h2>
                             </div>
-                            <div class="col-lg-6" >
-
+                            <div class="col-lg-7" >
+                                <center>
                                 <form name="form1" action="" target="_black">
                                     <input type="submit" class="btn btn-info" value="Generar reporte en PDF" />
                                 </form>                               
@@ -599,7 +599,7 @@
                                 <a href="#addcate" class="btn btn-success"  data-toggle="modal">
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 </i><span> Añadir Usuarios</span></a>
-                                
+                                </center>
 
                             </div>
          

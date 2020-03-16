@@ -27,7 +27,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CRUD reservaciones</title>
+    <title>CRUD Reservaciones</title>
     
     <link rel="stylesheet" href="css/styles.css" media="all">
 
@@ -601,10 +601,13 @@
                                     <input type="submit" class="btn btn-info" value="Generar reporte en PDF" />
                                 </form>
                                 
+                                <a  href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
+                                    <i class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
+                                </i><span> Eliminar reservacion</span></a>
                                 
                                 <a href="#addcate" class="btn btn-success"  data-toggle="modal">
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                </i><span> Añadir reservación</span></a>
+                                </i><span> Añadir Reservacion</span></a>
                                 
 
                             </div>
@@ -627,10 +630,10 @@
                                     </span>
                                 </th>
                                 <th>Id </th>
-                                <th>Fecha inicio</th>
-                                <th>Hora inicio</th>
-                                <th>Consola</th>
-                                <th>Correo usuario</th>
+                                <th>fecha incio</th>
+                                <th>hora incio</th>
+                                <th>consola</th>
+                                <th>correo usuario</th>
                                 <th>Acciones</th>
 
                             </tr>
@@ -661,7 +664,8 @@
                                     
                                     <a href="controlador_reservaciones?accion=editar&id_reservacion=<%= ma.getid_reservacion() %>" class="edit"><i
                                             style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>                                            
-
+                                    <a href="controlador_reservaciones?accion=elimi&id_reservacion=<%= ma.getid_reservacion() %>" class="delete"><i
+                                             style="color:red" class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
                                 </td>   
                             </tr>
                             <% 
@@ -698,23 +702,23 @@
                     <div class="modal-content">
                         <form action="controlador_reservaciones">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                <h4 class="modal-title">Añadir reservación</h4>
+                                <h4 class="modal-title">Añadir reservacion</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
                                     
-                                <label >Fecha de inicio</label>
-                                  <input name="fecha_i" type="date" max="3000-12-31" min="1000-01-01" class="form-control">
+                                    <label>Fecha de inicio</label>
+                                    <input name="fecha_i" type="date" max="3000-12-31" min="1000-01-01" class="form-control">
                                     
-                                <label >Hora de inicio</label>
-                                  <input name="hora_i" class="form-control" type="time" value="22:00:00">
-                                        
-
-                                    <label>tipo consola</label> 
+                                    <label>Hora de inicio</label>
+                                    <input name="hora_i" class="form-control" type="time" value="22:00:00">
+                                    
+                                    
+                                    <label>Consola</label> 
                                     <select class="form-control" name="id_c">
-                                     <option>-- Seleccione la consola --</option>
+                                     <option>-- Seleccione consola --</option>
                                      <%
                                          consolas_DAO ca= new consolas_DAO();
                                          List<consolas> listciu = ca.listar();
@@ -725,10 +729,10 @@
                                      %>
                                      <option value="<%= cat.getid_consola() %>"><%= cat.getnombre_consola()%></option>
                                      <%}%>
-                                 </select>
+                                     </select>
                                  
-                                 <label>cliente</label> 
-                                    <select class="form-control" name="correo">
+                                    <label>Cliente</label> 
+                                    <select class="form-control" name="correo_u">
                                      <option>-- Seleccione cliente --</option>
                                      <%
                                          usuarios_DAO ca2= new usuarios_DAO();
@@ -740,7 +744,8 @@
                                      %>
                                      <option value="<%= cat2.getcorreo_usuario() %>"><%= cat2.getcorreo_usuario()%></option>
                                      <%}%>
-                                 </select> 
+                                     </select>
+                                 
                                     
                             </div>
                             </div>
@@ -752,8 +757,8 @@
                     </div>
                 </div>
             </div>
-                                 
             <!-- Editar -->    
+            
             
             <div id="editcate" class="modal fade">
                 
@@ -769,48 +774,50 @@
           %>
                         <form action="controlador_reservaciones">
                             <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                <h4 class="modal-title">Editar reservación</h4>
+                                <h4 class="modal-title">Editar reservacion</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
 
-                                <label >Fecha de inicio</label>
-                                  <input required PLACEHOLDER="<%= ma2.getfecha_incio() %>" name="fecha_i2" type="date" max="3000-12-31" min="1000-01-01" class="form-control" >
+
+                                    <label>Fecha de inicio</label>
+                                    <input name="fecha_i2" type="date" max="3000-12-31" min="1000-01-01" class="form-control">
                                     
-                                <label >Hora de inicio</label>
-                                  <input required value="<%= ma2.gethora_incio() %>" name="hora_i2" class="form-control" type="time">
+                                    <label>Hora de inicio</label>
+                                    <input name="hora_i2" class="form-control" type="time" value="22:00:00">
                                     
-                                    <label>tipo consola</label> 
+                                    
+                                    <label>Consola</label> 
                                     <select class="form-control" name="id_c2">
-                                     <option>-- Seleccione la consola --</option>
+                                     <option>-- Seleccione consola --</option>
                                      <%
                                          consolas_DAO ca3= new consolas_DAO();
                                          List<consolas> listciu3 = ca3.listar();
                                          Iterator<consolas> iterciu3 = listciu3.iterator();
                                          consolas cat3 = null;
                                          while (iterciu3.hasNext()) {
-                                             cat = iterciu3.next();
+                                             cat3 = iterciu3.next();
                                      %>
-                                     <option value="<%= cat.getid_consola() %>"><%= cat.getnombre_consola()%></option>
+                                     <option value="<%= cat3.getid_consola() %>"><%= cat3.getnombre_consola()%></option>
                                      <%}%>
-                                 </select>
+                                     </select>
                                  
-                                 <label>tipo consola</label> 
-                                    <select class="form-control" name="correo2">
-                                     <option>-- Seleccione categoria juego --</option>
+                                    <label>Cliente</label> 
+                                    <select class="form-control" name="correo_u2">
+                                     <option>-- Seleccione cliente --</option>
                                      <%
                                          usuarios_DAO ca4= new usuarios_DAO();
                                          List<usuarios> listciu4 = ca4.listar();
                                          Iterator<usuarios> iterciu4 = listciu4.iterator();
                                          usuarios cat4 = null;
                                          while (iterciu4.hasNext()) {
-                                             cat2 = iterciu4.next();
+                                             cat4 = iterciu4.next();
                                      %>
-                                     <option value="<%= cat2.getcorreo_usuario() %>"><%= cat2.getcorreo_usuario()%></option>
+                                     <option value="<%= cat4.getcorreo_usuario() %>"><%= cat4.getcorreo_usuario()%></option>
                                      <%}%>
-                                 </select> 
+                                     </select>
                                     
                              <input type="hidden" class="form-control" required value="<%= ma2.getid_reservacion() %>" name="id_reservacion2">
                              
@@ -823,8 +830,42 @@
                         </form>
                     </div>
                 </div>
-            </div>                           
-          
+            </div>
+                                    
+            <!-- eliminar -->
+            <div id="elimicate" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <%
+              reservaciones_DAO dao3=new reservaciones_DAO();
+              reservaciones ma3= new reservaciones();
+              if (request.getAttribute("id_reservacion")!= null){
+              int id_reservacion=Integer.parseInt((String)request.getAttribute("id_reservacion"));
+               ma3=(reservaciones)dao3.list(id_reservacion);
+              }
+          %>
+                        <form action="controlador_reservaciones">
+                            <div class="modal-header" style="background-color: rgb(216, 211, 40)">
+                                <h4 class="modal-title">Eliminar reservacion</h4>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            </div>
+                          <input type="hidden" class="form-control" required value="<%= ma3.getid_reservacion() %>" name="id_reservacion3">
+
+                            <div class="modal-body">
+                                
+                                <p>¿Está seguro de que desea eliminar esta reservacion?</p>
+                            </div>
+                   
+                            <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
+                                <hr>
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                                <input type="submit"  class="btn btn-danger" value="Eliminar" name="accion">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 </body>
 
 </html>

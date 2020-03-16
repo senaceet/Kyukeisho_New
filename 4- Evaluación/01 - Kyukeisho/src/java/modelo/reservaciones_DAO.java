@@ -31,12 +31,15 @@ public class reservaciones_DAO implements CRUD_reservaciones {
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
             while(rs.next()){
+                
                 reservaciones ma=new reservaciones();
+                
                 ma.setid_reservacion(rs.getInt("id_reservacion"));
                 ma.setfecha_incio(rs.getString("fecha_incio"));
-                ma.sethora_incio(rs.getString("hora_incio"));
+                ma.sethora_incio(rs.getString("hora_incio"));  
                 ma.setnombre_consola(rs.getString("nombre_consola"));
                 ma.setcorreo_usuario(rs.getString("correo_usuario"));
+                
                 list.add(ma);
             }
         } catch (Exception e) {
@@ -49,12 +52,13 @@ public class reservaciones_DAO implements CRUD_reservaciones {
         String sql="select id_reservacion,fecha_incio,hora_incio,consola.nombre_consola,correo_usuario"
                     +" from reservaciones"
                     +" inner join consola"
-                    +" on reservaciones.id_consola = consola.id_consola ORDER BY id_reservacion asc limit 30 where id_reservacion=" + id_reservacion;
+                    +" on reservaciones.id_consola = consola.id_consola where id_reservacion=" + id_reservacion;
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
-            while(rs.next()){                
+            while(rs.next()){            
+                
                 CJ.setid_reservacion(rs.getInt("id_reservacion"));
                 CJ.setfecha_incio(rs.getString("fecha_incio"));
                 CJ.sethora_incio(rs.getString("hora_incio"));
@@ -69,7 +73,7 @@ public class reservaciones_DAO implements CRUD_reservaciones {
 
     @Override
     public boolean add(reservaciones ma) {
-       String sql="insert into reservaciones (fecha_incio,hora_incio,id_consola,correo_usuario)values('"+ma.getfecha_incio()+"',"+ma.gethora_incio()+","+ma.getid_consola()+","+ma.getcorreo_usuario()+")";
+       String sql="insert into reservaciones (fecha_incio,hora_incio,id_consola,correo_usuario)values('"+ma.getfecha_incio()+"','"+ma.gethora_incio()+"',"+ma.getid_consola()+",'"+ma.getcorreo_usuario()+"')";
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);
@@ -82,7 +86,7 @@ public class reservaciones_DAO implements CRUD_reservaciones {
 
     @Override
     public boolean edit(reservaciones ma) {
-        String sql="update reservaciones set fecha_incio= '"+ma.getfecha_incio()+"',hora_incio= "+ma.gethora_incio()+",id_consola= "+ma.getid_consola()+",correo_usuario= "+ma.getcorreo_usuario()+" where id_reservacion="+ma.getid_reservacion();
+        String sql="update reservaciones set fecha_incio= '"+ma.getfecha_incio()+"',hora_incio= '"+ma.gethora_incio()+"',id_consola= "+ma.getid_consola()+",correo_usuario= '"+ma.getcorreo_usuario()+"' where id_reservacion="+ma.getid_reservacion();
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);
@@ -91,10 +95,16 @@ public class reservaciones_DAO implements CRUD_reservaciones {
         }
         return false;
     }
-
     @Override
     public boolean eliminar(int id_reservacion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql="delete from reservaciones where id_reservacion="+id_reservacion;
+        try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+        return false;
     }
     
 }
