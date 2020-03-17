@@ -1,7 +1,5 @@
-<html>
-
+<html lang="es">
 <head>
-
   <link rel="shortcut icon" href="../IMG/GF.png">
 
   <meta charset="utf-8">
@@ -51,18 +49,12 @@
         </div>
       </nav>
     </div>
+    <br><br><br><br><br><br>
 
-<br>
-<br>
-<br>
-<br>
-
-  <br><br><br>
   
   <div class="container">
     <div class="row">
-      <div class="col-xl-12">
-
+      <div class="col-xl-6">
         <style type="text/css">
           .login-form {
             width: 340px;
@@ -98,44 +90,37 @@
           <div class="clearfix">            
               <p style="color:rgb(255, 255, 255)"><label class="pull-left checkbox-inline"><input type="checkbox"> Recordar Cuenta</p>
             </label>
-          </div>
+          </div>              
+            <h6 style="color:red; text-align:center">
+                ${message}
+            <c:remove var="message" scope="session" />
+            </h6> 
           </form>
         </div>
       </center>
-      </div>
-
-      <div class="col-xl-6">
-        <center>
-        <div class="login-form">
-          <div class="col-xl-6">
+      </div>  
+      <center>
+     <div class="row">
+          <div class="col-xl-5">              
             <div class="login-form">
-              <form action="Inicio_Administrador.jsp" method="post">
-
+              <div class="col-lg-1">
+                <div class="login-form">
+                  <form action="" method="post">
+                    <h2 class="text-center">
+                      <p style="color:rgb(255, 255, 255)">Bienvenido</p>
+                    </h2>
+                    <div class="text-center social-btn">                    
+                    <img height="350" src="../IMG/incio admin/1.gif"
+                    class="d-block w-100" alt="...">
+                    </div>
                 </div>
+              </div>
             </div>
           </div>
+        </center>
         </div>
       </div>
-    </center>
-    </div>
-  </div>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
 
   <div class="copyright text-center  font-weight-bold p-2" style="background-color:rgb(0, 0, 0)">
       <p style="color:rgb(255, 217, 0)">Desarrollado por Kyukeisho Copyright<i class="fa fa-copyright"
@@ -150,7 +135,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
     integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
     crossorigin="anonymous"></script>
+    
 </body>
-
-
 </html>
