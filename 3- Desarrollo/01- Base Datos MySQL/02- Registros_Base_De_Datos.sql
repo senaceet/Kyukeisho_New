@@ -8,7 +8,7 @@ VALUES 						(1, "Activo"),
 -- USUARIO --
 INSERT INTO Kyukeisho.usuario (id_usuario, primer_nombre_usuario, segundo_nombre_usuario, primer_apellido_usuario, segundo_apellido_usuario, correo_usuario, telefono_usuario, direccion,contraseña_usuario, id_estado_cliente)
 VALUES 		(1, "Vladimir", "Alberto", "Buitrago", "Rodriguez", "vabuitrago18@misena.edu.co", 3115698975, "Kra 4 N 45 R Sur","CWlaarcP6EE=", 1),
-			(2, "Marcos", "Mateo", "Lopez", "Rodríguez", "marcos@gmail.com", 3205898965, "Kra 4 N 35 z Sur","CWlaarcP6EE=", 1),
+			(2, "Andres", "Felipe", "Olaya", "Cadena", "aolaya79@misena.edu.co", 3205898965, "Kra 4 N 35 z Sur","CWlaarcP6EE=", 1),
             (3, "Daniel", "Alberto", "Gómez", "Gonzáles", "daniel@gmail.com", 3505623648, "Cll 10 N 65 R Sur","CWlaarcP6EE=", 1),
             (4, "Juan", "Pablo", "Martínez", "Sánchez", "juanpa@gmail.com", 3005368754, "Carrera 3 N 18- 49","CWlaarcP6EE=", 1),
             (5, "Álvaro", "Hakim", "Castro", "", "alvaro@gmail.com", 3017696370, "Carrera 7 N 84- 102","CWlaarcP6EE=", 1),
@@ -16,17 +16,7 @@ VALUES 		(1, "Vladimir", "Alberto", "Buitrago", "Rodriguez", "vabuitrago18@misen
             (7, "Henry", "David", "Suárez", "Romero", "henry@gmail.com", 3120008975, "Calle 11 N 4 - 14","CWlaarcP6EE=", 1),
             (8, "Diego", "Fernando", "Herrera", "Valencia", "diego@gmail.com", 1056897485, "Calle 24 N 5-60","CWlaarcP6EE=", 1),
             (9, "Jude", "Javier", "Quintero", "Restrepo", "jude@gmail.com", 3000108975, "Av. Ciudad de Cali No 6C-09","CWlaarcP6EE=", 1),
-            (10, "Ángel", "Gabriel", "Giraldo", "Morales", "angel@gmail.com", 3115690000, "Calle 48b sur No 21-13","CWlaarcP6EE=", 1),
-            (11, "Thiago", "Valentín", "García", "Oliver	", "thiago@gmail.com", 3031230000, "Avenida Kra 60 No 57-60","CWlaarcP6EE=", 1),
-		    (12, "Julián", "Dante", "Jake", "", "julian@gmail.com", 3037896400, "Calle 11 No 4-21 / 93","CWlaarcP6EE=", 1),
-			(13, "Julián", "", "Jake", "", "julianja@gmail.com", 3037896400, "Calle 11 No 4-21 / 93","CWlaarcP6EE=", 1),
-            (14, "Andrea", "", "Noah	", "", "andrea@gmail.com", 3093646414, "Calle 10 No 5-22","CWlaarcP6EE=", 1),
-            (15, "Sophia", "", "Connor", "", "sophia@gmail.com", 3124587986, "Carrera 20 No 37-54","CWlaarcP6EE=", 1),
-            (16, "Emma", "", "Harry", "", "emma@gmail.com", 3201234578, "Av. Calle 19 N 2-49 Centro","CWlaarcP6EE=", 1),
-            (17, "Isabella", "", "Mason", "", "isabella@gmail.com", 3126548795, "Calle 109a N 17-10 Sede Norte","CWlaarcP6EE=", 1),
-            (18, "Olivia", "", "Charlie", "", "olivia@gmail.com", 3002345600, "Cr.8a N 15-63","CWlaarcP6EE=", 1),
-            (19, "Martina", "", "Margaret", "", "martina@gmail.com", 3045687120, "Cr.9 N 74-99","CWlaarcP6EE=", 1),
-            (20, "Giorgia", "", "Michelle", "", "giorgia@gmail.com", 3506584578, "Carrera 1 Este No 17 01","CWlaarcP6EE=", 1);
+            (10, "Ángel", "Gabriel", "Giraldo", "Morales", "angel@gmail.com", 3115690000, "Calle 48b sur No 21-13","CWlaarcP6EE=", 1);
 		
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------        
         
@@ -93,7 +83,7 @@ VALUES 		(01, "Xbox 360", 200, 1),
 -- CITAS -- 
 INSERT INTO Kyukeisho.reservaciones (id_reservacion,fecha_incio,hora_incio, correo_usuario,id_consola)
 VALUES 		(0001, '2019-10-01','04:29:00',"vabuitrago18@misena.edu.co",01),
-			(0002, '2018-12-03','05:45:00',"marcos@gmail.com",02),
+			(0002, '2018-12-03','05:45:00',"aolaya79@misena.edu.co",02),
             (0003, '2016-11-05','01:32:00',"daniel@gmail.com",03),
             (0004, '2017-09-07','02:13:00',"juanpa@gmail.com",04),
             (0005, '2017-10-08','03:45:00',"alvaro@gmail.com",05),
@@ -105,8 +95,8 @@ VALUES 		(0001, '2019-10-01','04:29:00',"vabuitrago18@misena.edu.co",01),
 	
 -- ADMINISTRADOR --
 INSERT INTO Kyukeisho.administrador (id_administrador, primer_nombre_administrador, segundo_nombre_administrador, primer_apellido_administrador, segundo_apellido_administrador, correo_administrador, telefono_administrador,contraseña_administrador)
-VALUES  (1, "Adagny", "Benno", "Fave", "Ferrec", "adagny@gmail.com", 3002356897,"CWlaarcP6EE="), -- =12345
-		(2, "Dafnée", "Denise", "Rossi", "Bianchi", "dafnee@gmail.com", 3052138795,"CWlaarcP6EE=");
+VALUES  (1, "Andres", NULL, "Olaya", NULL, "andres@gmail.com", 3002356897,"CWlaarcP6EE="), -- =12345
+		(2, "Vladimir", NULL, "Buitrago", NULL, "vladimir@gmail.com", 3052138795,"CWlaarcP6EE=");
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             
@@ -279,17 +269,7 @@ VALUES	(1,1),
 		(7,7),
 		(8,8),
 		(9,9),
-		(10,10),
-		(11,11),
-		(12,12),
-		(13,13),
-		(14,14),
-		(15,15),
-		(16,16),
-		(17,17),
-		(18,18),
-		(19,19),
-		(20,20);
+		(10,10);
   
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
 
@@ -304,15 +284,5 @@ VALUES	(1, 1),
 		(1, 7),
 		(1, 8), 
 		(2, 9),
-		(1, 10),
-		(2, 11),
-		(2, 12),
-		(2, 13),
-		(1, 14),
-		(1, 15),
-		(1, 16),
-		(2, 17),
-		(1, 18),
-		(2, 19),
-		(1, 20);
+		(1, 10);
         
