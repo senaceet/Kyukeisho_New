@@ -20,6 +20,7 @@ public class ControladorAdmin extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String accion = request.getParameter("accion");
+        String message_error = "Correo/Contrasena Incorrecto";
         
         if(accion.equals("Ingresar")){
             String correo= request.getParameter("txtcorreo");
@@ -31,23 +32,21 @@ public class ControladorAdmin extends HttpServlet {
             r = dao.ValidarAdmin(a);
             HttpSession session=request.getSession();
             
-            if(r==1){
-                
-                request.getSession().setAttribute("correo", correo);
-                
-                session.setAttribute("administrador", a);
-                
+            if(r==1){                
+                request.getSession().setAttribute("correo", correo);                
+                session.setAttribute("administrador", a);                
                 response.sendRedirect("Administrador/Inicio_Administrador.jsp");                
             }else{
+                request.getSession().setAttribute("message", message_error);
                 response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp");                
             }
         }
         
                if(accion.equals("Cerrar Sesion")){
-            HttpSession session = request.getSession();
-            session.removeAttribute("administrador");
-            request.getSession().invalidate();
-            response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp"); 
+                    HttpSession session = request.getSession();
+                    session.removeAttribute("administrador");
+                    request.getSession().invalidate();
+                    response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp"); 
             
             
         }

@@ -6,8 +6,7 @@
 <%@page import="modelo.Admin"%>
 <%@page contentType="text/html"%> <%-- para acentos --%> 
 <%@page pageEncoding="UTF-8"%> <%-- para acentos --%> 
-<html>
-    
+<html>    
     <%
         Admin a = (Admin)session.getAttribute("administrador");
         if(a==null){
@@ -15,9 +14,7 @@
     }  
         response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
         response.setDateHeader("Expires",0); 
-    %>
-    
-
+    %>   
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,14 +22,11 @@
     <title>Usuarios</title>
     
     <link rel="stylesheet" href="css/styles.css" media="all">
-
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
     <link rel="icon" type="image/png" href="IMG/GF.png">
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -216,26 +210,17 @@
               }
             }
           </style>
-          </head> 
-          <body>
           <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
             <div class="navbar-header d-flex col">
                 <a href="index.html">
                     <img width="380" height="70" src="IMG/index.png" class="img-fluid" alt="Responsive image">
-                    </a>            
-             <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
-                <span class="navbar-toggler-icon"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+                    </a> 
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
               <ul class="nav navbar-nav">
                 <li class="nav-item active">
                     <a href="Administrador/Inicio_Administrador.jsp" class="nav-link"></a>
-                </li>
-                </li>
+                </li>                
               </ul>
               <form class="navbar-form form-inline">
                 <div class="input-group search-box">								
@@ -302,7 +287,6 @@
                                 <a class="dropdown-item" href="../CRUD Citas/Crud_Citas_Inactivas.jsp">Citas Inactivas</a>
                               </div>
                             </div>
-
                                   <a href="Categorias_1.jsp"><button type="button" class="btn btn-outline-info">Categorias</button></a>
                       </div>
     </center>
@@ -320,7 +304,7 @@
         }
         .table-wrapper {
             background: #FFFFFF;
-            width: 1620px;
+            width: 1300px;
             padding: 20px 25px;
             margin: 30px 0;
             border-radius: 3px;
@@ -587,31 +571,29 @@
                     <div class="table-title" style="background-color: rgb(216, 211, 40)">
                         <div class="row" ><br></div>
                         <div class="row" >
-                            <div class="col-lg-4">
+                            <div class="col-lg-5">
                                 <h2> <strong>Usuario</strong></h2>
                             </div>
                             <div class="col-lg-7" >
                                 <center>
-                                <form name="form1" action="" target="_black">
-                                    <input type="submit" class="btn btn-info" value="Generar reporte en PDF" />
+                                <form name="form1" action="ReportesPdf/ReportesUsuarios.jsp" target="_black">
+                                    <input type="submit" class="btn btn-info" value="Generar Reporte PDF" />
                                 </form>                               
                                 
-                                <a href="#addcate" class="btn btn-success"  data-toggle="modal">
+                                <a href="" class="btn btn-success"  data-toggle="modal">
                                  <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 </i><span> Añadir Usuarios</span></a>
                                 </center>
-
-                            </div>
-         
+                            </div>         
                         </div>
                         <div class="row" ><br></div>
                     </div>
                     <br>
                   
         <div class="container-right"  >
-            <div class="row" style="width:110rem">
+            <div class="row" style="width:95rem">
                 <div class="container-right" style="background-color:#FFFFFF">
-        <table class="table table-striped table-hover "  style="width:100rem">
+        <table class="table table-striped table-hover" style="width:80rem">
             <thead>
             <tr bgcolor="#C0BB2E">
                                 <th>
@@ -620,8 +602,8 @@
                                         <label for="selectAll"></label>
                                     </span>
                                 </th>
-                                <th >Id</th>
-                                <th >Primer Nombre</th>
+                                <th>Id</th>
+                                <th>Primer Nombre</th>
                                 <th>Primer Apellido</th>
                                 <th>Correo</th>
                                 <th>Telefono</th>
@@ -639,16 +621,14 @@
                     usuarios ma=null;
                     while(iter.hasNext()){
                         ma=iter.next();
-                %>
-                        
+                %>                        
                             <tr>
                                 <td>
                                     <span class="custom-checkbox">
                                         <input type="checkbox" id="checkbox1" name="options[]" value="1">
                                         <label for="checkbox1"></label>
                                     </span>
-                                </td>
-                                
+                                </td>                                
                                 <td ><%= ma.getid_usuario()%></td>
                                 <td ><%= ma.getprimer_nombre_usuario()%></td>
                                 <td><%= ma.getprimer_apellido_usuario()%></td>
@@ -656,47 +636,36 @@
                                 <td><%= ma.gettelefono_usuario()%></td>
                                 <td><%= ma.getdireccion()%></td>
                                 <td><%= ma.getcontraseña_usuario()%></td>
-                                <td><%= ma.getestado_cliente()%></td>
-
-        
+                                <td><%= ma.getestado_cliente()%></td>       
                         <td>
-                                    <a href="controlador_usuarios?accion=editar&id_usuario=<%= ma.getid_usuario() %>" class="edit"><i
-                                            style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>  
-                                            
-                                </td>   
+                            <a href="controlador_usuarios?accion=editar&id_usuario=<%= ma.getid_usuario() %>" class="edit"><i
+                                style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>  
+                        </td>   
                             </tr>
                             <% 
                              }
-                            %>
-                       
+                            %>                       
                     </table>
-           </div> 
-           </div>
-                            </div>
+                    </div> 
+                    </div>
+                          </div>
                             <br>
-              <div class="container-right" style="background-color: rgb(216, 211, 40); width:99rem" >
+              <div class="container-right" style="background-color: rgb(216, 211, 40); width:75rem" >
                   <div class="row"><br></div>
                  <div class="row ">
-                 <div class="col-lg-8">
-                   Mostrando 5 de 5 entradas
+                 <div class="col-lg-5">
+                   Mostrando 1 de 1 entradas
                  </div>
-                 <div class="col-lg-4">
+                 <div class="col-lg-5">
                     <ul class="pagination">
                         <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                        <li class="page-item"><a href="#" class="page-link">2</a></li>
-                        <li class="page-item"><a href="#" class="page-link">3</a></li>
-                        <li class="page-item"><a href="#" class="page-link">4</a></li>
-                        <li class="page-item"><a href="#" class="page-link">5</a></li>
                         <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
                     </ul>
                  </div>
               </div>
             </div>
-            
-            
-               
-            </center>
-                            
+                                       
+            </center>                            
             <!-- Añadir atributo -->
             <div id="addcate" class="modal fade">
                 <div class="modal-dialog">
@@ -731,9 +700,7 @@
                                      <option value="0">seleccione Estado</option>
                                      <option value="1">Activo</option>
                                      <option value="2">Desactivo</option>
-                                   </select> 
-                                    
-
+                                   </select>                                     
                             </div>
                             </div>
                             <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
@@ -747,11 +714,9 @@
             
             <!-- Editar -->    
             
-            <div id="editcate" class="modal fade">
-                
+            <div id="editcate" class="modal fade">                
                 <div class="modal-dialog">
-                    <div class="modal-content">
-                        
+                    <div class="modal-content">                       
                         <%
               usuarios_DAO dao2=new usuarios_DAO();
               usuarios ma2= new usuarios();
@@ -790,10 +755,8 @@
                                      <option value="0">seleccione Estado</option>
                                      <option value="1">Activo</option>
                                      <option value="2">Desactivo</option>
-                                    </select> 
-                                     
-                                    <input type="hidden" class="form-control" required value="<%= ma2.getid_usuario() %>" name="id_usuario2">
-                                    
+                                    </select>                                      
+                                    <input type="hidden" class="form-control" required value="<%= ma2.getid_usuario() %>" name="id_usuario2">                                    
                                 </div>
                             </div>
                             <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
@@ -804,8 +767,10 @@
                     </div>
                 </div>
             </div>
-                               
-                         
+            
+       <div class="copyright text-center  font-weight-bold p-2" style="background-color: #343a40">
+            <p style="color:rgb(255, 217, 0)">Desarrollado por Kyukeisho Copyright<i class="fa fa-copyright"
+        aria-hidden="true"></i> 2019</p>
+  </div>                             
 </body>
-
 </html>

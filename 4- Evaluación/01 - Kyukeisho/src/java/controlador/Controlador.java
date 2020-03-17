@@ -17,11 +17,11 @@ public class Controlador extends HttpServlet {
     Persona p = new Persona();
     int r;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
         String accion = request.getParameter("accion");
-        String message_error = "Correo u/o contraseña incorrectos.";
+        String message_error = "Correo/Contrasena Incorrecto";
         
         if(accion.equals("Ingresar")){
             String correo= request.getParameter("txtcorreo");
@@ -38,8 +38,7 @@ public class Controlador extends HttpServlet {
             if(r==1){
                 
                 request.getSession().setAttribute("correo", correo);
-                session.setAttribute("persona", p);
-                
+                session.setAttribute("persona", p);                
                 response.sendRedirect("Cliente/Cliente.jsp");                
             }else{
                 request.getSession().setAttribute("message_e", message_error);
@@ -47,8 +46,7 @@ public class Controlador extends HttpServlet {
             }
         }
         
-       if(accion.equals("Cerrar Sesion")){
-           
+       if(accion.equals("Cerrar Sesion")){           
             HttpSession session = request.getSession();
             session.removeAttribute("persona");
             request.getSession().invalidate();

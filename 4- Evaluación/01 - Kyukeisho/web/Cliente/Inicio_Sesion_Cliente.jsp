@@ -1,8 +1,5 @@
-  
-<html>
-
+  <html lang="en">
     <head>
-    
       <link rel="shortcut icon" href="https://fotos.subefotos.com/9f07d19705d6bde4351c7e17c87c4d7fo.png">
     
       <meta charset="utf-8">
