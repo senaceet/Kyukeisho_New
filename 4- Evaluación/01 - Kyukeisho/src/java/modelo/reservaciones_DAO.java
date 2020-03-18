@@ -83,6 +83,17 @@ public class reservaciones_DAO implements CRUD_reservaciones {
        return false;
     }
 
+        @Override
+    public boolean update(reservaciones ma) {
+       String sql="update consola set id_estado_consola=2 where id_consola=" + ma.getid_consola() +" ";
+        try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+       return false;
+    }
 
     @Override
     public boolean edit(reservaciones ma) {
@@ -107,4 +118,15 @@ public class reservaciones_DAO implements CRUD_reservaciones {
         return false;
     }
     
+            @Override
+    public boolean update2(reservaciones ma) {
+       String sql="update consola set id_estado_consola=1 where id_consola=" + ma.getid_consola() +" ";
+        try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+       return false;
+    }
 }

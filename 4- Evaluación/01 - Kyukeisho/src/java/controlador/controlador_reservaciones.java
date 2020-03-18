@@ -43,6 +43,7 @@ String listar="/CRUD_reservaciones.jsp";
             PV.setid_consola(Integer.parseInt(request.getParameter("id_c")));
             PV.setcorreo_usuario(request.getParameter("correo_u"));
             dao.add(PV);
+            dao.update(PV);
             acceso=listar;
         }
         
@@ -73,6 +74,7 @@ String listar="/CRUD_reservaciones.jsp";
             id_reservacion=Integer.parseInt(request.getParameter("id_reservacion3"));
             PV.setid_reservacion(id_reservacion);
             dao.eliminar(id_reservacion);
+            dao.update2(PV);
             acceso=listar;
         }
 
