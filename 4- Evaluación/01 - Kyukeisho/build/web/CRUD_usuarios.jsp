@@ -256,6 +256,7 @@
             </button>
             <div class="dropdown-menu">
                     <a class="dropdown-item" href="Crud_Productos_No_Tan_Vendidos.jsp">Productos No Tan Vendidos</a>
+                    <a class="dropdown-item" href="Crud_Productos.jsp">Productos</a>
                   </div>
                 </div>
                 <div class="btn-group">

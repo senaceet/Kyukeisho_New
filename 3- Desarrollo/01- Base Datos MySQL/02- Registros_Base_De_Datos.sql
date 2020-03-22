@@ -281,3 +281,6 @@ VALUES	(1, 1),
 		(2, 9),
 		(1, 10);
         
+        
+
+select id_producto, nombre_producto, cantidad_producto, precio_unitario_producto from productos;

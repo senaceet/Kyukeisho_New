@@ -9,11 +9,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Usuario</title>
+        <title>Kyukeisho</title>
+        <link rel="icon" type="image/png" href="IMG/GF.png">
     </head>
     <body>       
         <%
-        File reportfile = new File (application.getRealPath("ReporteUsuarios.jarper"));
+        File reportfile = new File (application.getRealPath("ReportesUsuarios.jasper"));
         
         Map<String,Object> parameter = new HashMap<String,Object>();        
         byte[] bytes = JasperRunManager.runReportToPdf(reportfile.getPath(), parameter, con);        

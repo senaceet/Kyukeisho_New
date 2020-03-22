@@ -14,7 +14,7 @@
     </head>
     <body>       
         <%
-        File reportfile = new File (application.getRealPath("ReportesUsuarios.jasper"));
+        File reportfile = new File (application.getRealPath("ReportesProductos.jasper"));
         
         Map<String,Object> parameter = new HashMap<String,Object>();        
         byte[] bytes = JasperRunManager.runReportToPdf(reportfile.getPath(), parameter, con);        
