@@ -282,5 +282,5 @@ VALUES	(1, 1),
 		(1, 10);
         
         
-
+use kyukeisho;
 select id_producto, nombre_producto, cantidad_producto, precio_unitario_producto from productos;
