@@ -152,9 +152,16 @@ hora_error DATETIME,
 PRIMARY KEY (id_error)
 );
 
+-- Preguntas Frecuentes --
+CREATE TABLE kyukeisho.preguntas(
+id_pregunta INT (10) AUTO_INCREMENT NOT NULL,
+correo VARCHAR (30) NOT NULL,
+pregunta VARCHAR (1000) NOT NULL,
+fecha DATETIME NULL,
+PRIMARY KEY (id_pregunta)
+);
 
 -- Creacion de Relaciones ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 -- Estado/Usuario
 ALTER TABLE kyukeisho.usuario ADD CONSTRAINT fk_usuario_estado_cliente FOREIGN KEY (id_estado_cliente) REFERENCES kyukeisho.estado_cliente(id_estado_cliente) ON UPDATE CASCADE ON DELETE CASCADE;
 

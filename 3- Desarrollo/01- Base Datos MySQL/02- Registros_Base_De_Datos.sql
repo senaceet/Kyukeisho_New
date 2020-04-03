@@ -281,6 +281,6 @@ VALUES	(1, 1),
 		(2, 9),
 		(1, 10);
         
-        
-use kyukeisho;
-select id_producto, nombre_producto, cantidad_producto, precio_unitario_producto from productos;
+-- Preguntas -- 
+INSERT INTO kyukeisho.preguntas(id_pregunta, correo, pregunta, fecha)
+VALUES 						   (01, "andres@gmail.com", "Quiero Adquirir Su Servicio",'2020-03-04 01:55:00');        

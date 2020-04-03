@@ -80,6 +80,10 @@
         <servlet-name>controlador_reservaciones</servlet-name>
         <servlet-class>controlador.controlador_reservaciones</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Controlador_Preguntas</servlet-name>
+        <servlet-class>controlador.Controlador_Preguntas</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
@@ -159,6 +163,10 @@
     <servlet-mapping>
         <servlet-name>controlador_reservaciones</servlet-name>
         <url-pattern>/controlador_reservaciones</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controlador_Preguntas</servlet-name>
+        <url-pattern>/Controlador_Preguntas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

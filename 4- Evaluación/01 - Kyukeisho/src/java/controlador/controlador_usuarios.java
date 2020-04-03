@@ -37,9 +37,7 @@ String listar="/CRUD_usuarios.jsp";
         String action=request.getParameter("accion");
         if(action.equalsIgnoreCase("listar")){
             acceso=listar;            
-        }
-       
-      
+        }             
         else if(action.equalsIgnoreCase("Agregar")){
             CJ.setprimer_nombre_usuario(request.getParameter("pnom"));
             CJ.setsegundo_nombre_usuario(request.getParameter("snom"));
