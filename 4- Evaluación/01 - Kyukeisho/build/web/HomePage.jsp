@@ -3,7 +3,7 @@
 <!--------------------------------------------------------------------------------------------------------------------------->        
 <html lang="en">
     <head>
-        <title>HomePage Kyukeisho Only</title>
+        <title>HomePage Kyukeisho Official</title>
         
         <link rel="icon" type="image/png" href="IMG/GF.png">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -21,7 +21,7 @@
             <div class="container">
               <a class="navbar-brand" href="#">
                 <strong>
-                    <p style="font-family:Times New Roman;"> Kyukeisho Only</p> 
+                    <p style="font-family:Times New Roman;"> Kyukeisho Official</p> 
                 </strong>
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,9 +59,9 @@
                 <div class="row">
                   <!--Grid column-->
                   <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
-                      <h1 class="h1-responsive font-weight-bold mt-sm-5"><p style="font-family:Times New Roman;"> Kyukeisho Only Es Una Empresa Desarrolladora De Software </p></h1>
+                      <h1 class="h1-responsive font-weight-bold mt-sm-5"><p style="font-family:Times New Roman;"> Kyukeisho Official Es Una Empresa Desarrolladora De Software </p></h1>
                     <hr class="hr-light">
-                    <h6 class="mb-4"><p style="font-family:Times New Roman;"> Kyukeisho Only, empresa desarrolladora de software de alta cálidad, con el fin de dar a conocer las nuevas tecnologias creando las mejores soluciones para nuestras empresas contratantes </p></h6>
+                    <h6 class="mb-4"><p style="font-family:Times New Roman;"> Kyukeisho Official, empresa desarrolladora de software de alta cálidad, con el fin de dar a conocer las nuevas tecnologias creando las mejores soluciones para nuestras empresas contratantes </p></h6>
                   </div>
                   <!--Grid column-->
                   <!--Grid column-->
@@ -163,11 +163,7 @@
                     <div class="form-group">               
                         <input class="form-control" type="email" name="correo" placeholder="example@gmail.com"
                             style="width: 18rem" required="required">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="number" name="telefono" placeholder="Ingrese Número Telefonico"
-                            style="width: 18rem">                                    
-                    </div>                
+                    </div>               
                     <div class="form-group">
                         <input class="form-control" type="text" name="pregunta" placeholder="Ingrese Su Pregunta, O Sugerencia"
                             style="width: 30rem;" required="required">                       
@@ -177,6 +173,10 @@
                         <input style="width: 10rem;" class="btn btn-dark btn-block" type="submit" name="accion" value="Enviar"> 
                         </div> 
                     </div>
+                    <h6 style="color:red; text-align:center">
+                        ${message1}
+                    <c:remove var="message" scope="session" />
+                    </h6> 
                 </form>
             </div>
          <div class="col-lg-4">                        
@@ -250,7 +250,7 @@
 <!------------------------------------------------------------------------------------------------------------------------->
 <!-- Clase Final De La Página --------------------------------------------------------------------------------------------->    
         <div class="copyright text-center  font-weight-bold p-2" style="background-color: #000">
-          <p style="color: #ffffff">Desarrollado por Kyukeisho Only Copyright<i class="fa fa-copyright"
+          <p style="color: #ffffff">Desarrollado por Kyukeisho Official Copyright<i class="fa fa-copyright"
               aria-hidden="true"></i> 2019</p>
         </div>
     </footer>

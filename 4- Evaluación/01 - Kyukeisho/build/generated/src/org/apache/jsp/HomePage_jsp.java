@@ -202,7 +202,7 @@ public final class HomePage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </h5>             \n");
       out.write("         </div>\n");
       out.write("            <div class=\"col-lg-4\" style=\"background-color: #FFFFFF\">                     \n");
-      out.write("                <form action=\"ControladorComentarios\" method=\"post\">\n");
+      out.write("                <form action=\"Controlador_Preguntas\" method=\"post\">\n");
       out.write("                    <div class=\"form-group\">               \n");
       out.write("                        <input class=\"form-control\" type=\"email\" name=\"correo\" placeholder=\"example@gmail.com\"\n");
       out.write("                            style=\"width: 18rem\" required=\"required\">\n");
