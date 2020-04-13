@@ -172,17 +172,18 @@
                         <div align="center">
                         <input style="width: 10rem;" class="btn btn-dark btn-block" type="submit" name="accion" value="Enviar"> 
                         </div> 
-                    </div>                    
+                    </div>
+                    <h6 style="color:black; text-align:center">
+                        ${message1}
+                        <c:remove var="message1" scope="session" />
+                    </h6>
                 </form>
-            </div>
+            </div>             
          <div class="col-lg-4">                        
         </div>
     </div>
  </div>
  <hr><br>
- <form name="form1" action="ReportesPdf/ReportesProductos.jsp" target="_black">
-                                    <input type="submit" class="btn btn-info" value="Generar reporte en PDF" />
-                    </form>
 <!-------------------------------------------------------------------------------------------------------------------------->
 <!-- Ayuda, Parte Final De La Página --------------------------------------------------------------------------------------->
 <footer class="page-footer font-small indigo" style="background-color: #000"><br>

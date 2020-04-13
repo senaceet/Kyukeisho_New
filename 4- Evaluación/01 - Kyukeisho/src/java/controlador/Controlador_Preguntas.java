@@ -30,10 +30,11 @@ public class Controlador_Preguntas extends HttpServlet {
             dao.add(CJ);
             
             if(r==1){                    
-                response.sendRedirect("HomePage.jsp");  
+                response.sendRedirect("HomePage.jsp");   
+                 request.getSession().setAttribute("message", message);
             }else{
-                response.sendRedirect("HomePage.jsp"); 
-                System.out.print("El Mensaje Se Envio Correctamente, Gracias");
+                response.sendRedirect("HomePage.jsp");
+                request.getSession().setAttribute("message1", message1);
         }
     }
     }
