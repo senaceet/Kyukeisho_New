@@ -46,7 +46,7 @@ public final class HomePage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!--------------------------------------------------------------------------------------------------------------------------->        \n");
       out.write("<html lang=\"en\">\n");
       out.write("    <head>\n");
-      out.write("        <title>HomePage Kyukeisho Only</title>\n");
+      out.write("        <title>HomePage Kyukeisho Official</title>\n");
       out.write("        \n");
       out.write("        <link rel=\"icon\" type=\"image/png\" href=\"IMG/GF.png\">\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
@@ -64,7 +64,7 @@ public final class HomePage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div class=\"container\">\n");
       out.write("              <a class=\"navbar-brand\" href=\"#\">\n");
       out.write("                <strong>\n");
-      out.write("                    <p style=\"font-family:Times New Roman;\"> Kyukeisho Only</p> \n");
+      out.write("                    <p style=\"font-family:Times New Roman;\"> Kyukeisho Official</p> \n");
       out.write("                </strong>\n");
       out.write("              </a>\n");
       out.write("              <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent-7\" aria-controls=\"navbarSupportedContent-7\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n");
@@ -102,9 +102,9 @@ public final class HomePage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"row\">\n");
       out.write("                  <!--Grid column-->\n");
       out.write("                  <div class=\"col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft\" data-wow-delay=\"0.3s\">\n");
-      out.write("                      <h1 class=\"h1-responsive font-weight-bold mt-sm-5\"><p style=\"font-family:Times New Roman;\"> Kyukeisho Only Es Una Empresa Desarrolladora De Software </p></h1>\n");
+      out.write("                      <h1 class=\"h1-responsive font-weight-bold mt-sm-5\"><p style=\"font-family:Times New Roman;\"> Kyukeisho Official Es Una Empresa Desarrolladora De Software </p></h1>\n");
       out.write("                    <hr class=\"hr-light\">\n");
-      out.write("                    <h6 class=\"mb-4\"><p style=\"font-family:Times New Roman;\"> Kyukeisho Only, empresa desarrolladora de software de alta cálidad, con el fin de dar a conocer las nuevas tecnologias creando las mejores soluciones para nuestras empresas contratantes </p></h6>\n");
+      out.write("                    <h6 class=\"mb-4\"><p style=\"font-family:Times New Roman;\"> Kyukeisho Official, empresa desarrolladora de software de alta cálidad, con el fin de dar a conocer las nuevas tecnologias creando las mejores soluciones para nuestras empresas contratantes </p></h6>\n");
       out.write("                  </div>\n");
       out.write("                  <!--Grid column-->\n");
       out.write("                  <!--Grid column-->\n");
@@ -206,11 +206,7 @@ public final class HomePage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <div class=\"form-group\">               \n");
       out.write("                        <input class=\"form-control\" type=\"email\" name=\"correo\" placeholder=\"example@gmail.com\"\n");
       out.write("                            style=\"width: 18rem\" required=\"required\">\n");
-      out.write("                    </div>\n");
-      out.write("                    <div class=\"form-group\">\n");
-      out.write("                        <input class=\"form-control\" type=\"number\" name=\"telefono\" placeholder=\"Ingrese Número Telefonico\"\n");
-      out.write("                            style=\"width: 18rem\">                                    \n");
-      out.write("                    </div>                \n");
+      out.write("                    </div>               \n");
       out.write("                    <div class=\"form-group\">\n");
       out.write("                        <input class=\"form-control\" type=\"text\" name=\"pregunta\" placeholder=\"Ingrese Su Pregunta, O Sugerencia\"\n");
       out.write("                            style=\"width: 30rem;\" required=\"required\">                       \n");
@@ -219,7 +215,7 @@ public final class HomePage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <div align=\"center\">\n");
       out.write("                        <input style=\"width: 10rem;\" class=\"btn btn-dark btn-block\" type=\"submit\" name=\"accion\" value=\"Enviar\"> \n");
       out.write("                        </div> \n");
-      out.write("                    </div>\n");
+      out.write("                    </div>                    \n");
       out.write("                </form>\n");
       out.write("            </div>\n");
       out.write("         <div class=\"col-lg-4\">                        \n");
@@ -227,6 +223,9 @@ public final class HomePage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </div>\n");
       out.write(" </div>\n");
       out.write(" <hr><br>\n");
+      out.write(" <form name=\"form1\" action=\"ReportesPdf/ReportesProductos.jsp\" target=\"_black\">\n");
+      out.write("                                    <input type=\"submit\" class=\"btn btn-info\" value=\"Generar reporte en PDF\" />\n");
+      out.write("                    </form>\n");
       out.write("<!-------------------------------------------------------------------------------------------------------------------------->\n");
       out.write("<!-- Ayuda, Parte Final De La Página --------------------------------------------------------------------------------------->\n");
       out.write("<footer class=\"page-footer font-small indigo\" style=\"background-color: #000\"><br>\n");
@@ -293,7 +292,7 @@ public final class HomePage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!------------------------------------------------------------------------------------------------------------------------->\n");
       out.write("<!-- Clase Final De La Página --------------------------------------------------------------------------------------------->    \n");
       out.write("        <div class=\"copyright text-center  font-weight-bold p-2\" style=\"background-color: #000\">\n");
-      out.write("          <p style=\"color: #ffffff\">Desarrollado por Kyukeisho Only Copyright<i class=\"fa fa-copyright\"\n");
+      out.write("          <p style=\"color: #ffffff\">Desarrollado por Kyukeisho Official Copyright<i class=\"fa fa-copyright\"\n");
       out.write("              aria-hidden=\"true\"></i> 2019</p>\n");
       out.write("        </div>\n");
       out.write("    </footer>\n");
