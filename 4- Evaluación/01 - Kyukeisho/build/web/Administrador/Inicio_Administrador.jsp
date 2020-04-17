@@ -12,11 +12,13 @@
     %>
 
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Kyukeisho</title>
         <link rel="icon" type="image/png" href="IMG/GF.png">
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-              integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
               integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -27,187 +29,47 @@
             }
         </style>
 
-        <style type="text/css">
-            body
-            .form-inline {
-                display: inline-block;
-            }
-            .navbar-header.col {
-                padding: 0 !important;
-            }	
-            .navbar {		
-                background: #0000;
-                padding-left: 16px;
-                padding-right: 16px;
-                border-bottom: 1px solid #d6d6d6;
-                box-shadow: 0 0 4px rgba(0,0,0,.1);
-            }
-            .nav-link img {
-                border-radius: 50%;
-                width: 36px;
-                height: 36px;
-                margin: -8px 0;
-                float: left;
-                margin-right: 10px;
-            }
-            .navbar .navbar-brand {
-                color: #555;
-                padding-left: 0;
-                padding-right: 50px;
-                font-family: 'Merienda One', sans-serif;
-            }
-            .navbar .navbar-brand i {
-                font-size: 20px;
-                margin-right: 5px;
-            }
-            .search-box {
-                position: relative;
-            }	
-            .search-box input {
-                box-shadow: none;
-                padding-right: 35px;
-                border-radius: 3px !important;
-            }
-            .search-box .input-group-addon {
-                min-width: 35px;
-                border: none;
-                background: transparent;
-                position: absolute;
-                right: 0;
-                z-index: 9;
-                padding: 7px;
-                height: 100%;
-            }
-            .search-box i {
-                color: #000000;
-                font-size: 19px;
-            }
-            .navbar .nav-item i {
-                font-size: 18px;
-            }
-            .navbar .dropdown-item i {
-                font-size: 16px;
-                min-width: 22px;
-            }
-            .navbar .nav-item.open > a {
-                background: none !important;
-            }
-            .navbar .dropdown-menu {
-                border-radius: 1px;
-                border-color: #e5e5e5;
-                box-shadow: 0 2px 8px rgba(0,0,0,.05);
-            }
-            .navbar .dropdown-menu li a {
-                color: #777;
-                padding: 8px 20px;
-                line-height: normal;
-            }
-            .navbar .dropdown-menu li a:hover, .navbar .dropdown-menu li a:active {
-                color: #333;
-            }	
-            .navbar .dropdown-item .material-icons {
-                font-size: 21px;
-                line-height: 16px;
-                vertical-align: middle;
-                margin-top: -2px;
-            }
-            .navbar .badge {
-                background: #f44336;
-                font-size: 11px;
-                border-radius: 20px;
-                position: absolute;
-                min-width: 10px;
-                padding: 4px 6px 0;
-                min-height: 18px;
-                top: 5px;
-            }
-            .navbar ul.nav li a.notifications, .navbar ul.nav li a.messages {
-                position: relative;
-                margin-right: 10px;
-            }
-            .navbar ul.nav li a.messages {
-                margin-right: 20px;
-            }
-            .navbar a.notifications .badge {
-                margin-left: -8px;
-            }
-            .navbar a.messages .badge {
-                margin-left: -4px;
-            }	
-            .navbar .active a, .navbar .active a:hover, .navbar .active a:focus {
-                background: transparent !important;
-            }
-            @media (min-width: 1200px){
-                .form-inline .input-group {
-                    width: 300px;
-                    margin-left: 30px;
-                }
-            }
-            @media (max-width: 1199px){
-                .form-inline {
-                    display: block;
-                    margin-bottom: 10px;
-                }
-                .input-group {
-                    width: 100%;
-                }
-            }
-        </style>
-    </head> 
-    <body>
-        <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
-            <div class="navbar-header d-flex col">
-                <a href="../index.html">
-                    <img width="380" height="70" src="../IMG/index.png" class="img-fluid" alt="Responsive image">
-                </a>                    
-                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-
-            <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-                <form class="navbar-form form-inline">
-                </form>
-                <ul class="nav navbar-nav navbar-right ml-auto">
-                    <li class="nav-item dropdown">
-                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
-                            <b class="caret"></b>
-                            ${correo}
-                        </a>
-
-                        <ul class="dropdown-menu dropdown-menu-right" style="background-color: #343a40">
-                            <li class="divider dropdown-divider"></li>
-                            <li>
-
-
-
+        <div class="header fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #000">
+                <img width="380" height="70" src="../IMG/index.png" class="img-fluid" alt="Responsive image">
+                <div class="col-xl-1 text-center" >
+                    <button class="navbar-toggler" style="background-color: rgb(255, 251, 0)" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                    </form>
+                    <ul class="navbar-nav ">
+                        <li class="nav-item dropdown mr-2">
+                            <a class="nav-link dropdown-toggle navbar-DARK" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgb(255, 217, 0)">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                ${correo}
+                            </a>
+                            <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="background-color: #000">
                                 <form action="../ControladorAdmin" method="post">
                                     <div class="form-group">
                                         <div align="center">
-                                            <input style="width: 10rem;" class="btn btn-dark btn-block" type="submit" name="accion" value="Cerrar Sesion"> 
+                                            <input style="width: 10rem;" class="btn btn-dark bnt-outline btn-block" type="submit" name="accion" value="Cerrar Sesion"> 
                                         </div>               
                                     </div>
                                 </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
         <br>
         <div class="container">
 
-            <body
-                background="https://images.unsplash.com/photo-1543328011-1c0d628fae09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80">
+            <body background="https://images.unsplash.com/photo-1543328011-1c0d628fae09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80">
             </body>
-            <center>
-                <strong><h1 align="center" class="display-3" style="color: #ffffff">TUS ACCIONES</h1></strong>
-            </center>
-            <br>
             <br>
             <div class="card-group">
                 <div class="card" style="background-color: transparent">
