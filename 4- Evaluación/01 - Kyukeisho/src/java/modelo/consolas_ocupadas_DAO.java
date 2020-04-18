@@ -26,7 +26,7 @@ public class consolas_ocupadas_DAO implements CRUD_consolas_ocupadas {
         String sql="select id_consola, nombre_consola,precio_hora,estado_consola"
                     +" from consola"
                     +" inner join estado_consola"
-                    +" on consola.id_estado_consola = estado_consola.id_estado_consola where consola.id_estado_consola=2";
+                    +" on consola.id_estado_consola = estado_consola.id_estado_consola where consola.id_estado_consola=2 order by (nombre_consola)";
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);

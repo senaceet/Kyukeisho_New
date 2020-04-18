@@ -25,7 +25,7 @@ public class consolas_DAO implements CRUD_consolas {
         String sql="select id_consola, nombre_consola,precio_hora,estado_consola"
                     +" from consola"
                     +" inner join estado_consola"
-                    +" on consola.id_estado_consola = estado_consola.id_estado_consola where consola.id_estado_consola=1";
+                    +" on consola.id_estado_consola = estado_consola.id_estado_consola where consola.id_estado_consola=1 order by (nombre_consola)";
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);

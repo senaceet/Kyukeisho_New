@@ -21,7 +21,7 @@ public class categorias_productos_DAO implements CRUD_Categorias_productos {
     @Override
     public List listar() {
         ArrayList<categorias_productos>list=new ArrayList<>();
-        String sql="select * from tipo_producto ORDER BY id_tipo_producto asc limit 40";
+        String sql="select * from tipo_producto ORDER BY nombre_tipo_producto";
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);

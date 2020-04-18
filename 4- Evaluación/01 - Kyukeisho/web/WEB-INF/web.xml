@@ -84,6 +84,10 @@
         <servlet-name>Controlador_Preguntas</servlet-name>
         <servlet-class>controlador.Controlador_Preguntas</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>controlador_catalogogo_juegos</servlet-name>
+        <servlet-class>controlador.controlador_catalogogo_juegos</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
@@ -167,6 +171,10 @@
     <servlet-mapping>
         <servlet-name>Controlador_Preguntas</servlet-name>
         <url-pattern>/Controlador_Preguntas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controlador_catalogogo_juegos</servlet-name>
+        <url-pattern>/controlador_catalogogo_juegos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

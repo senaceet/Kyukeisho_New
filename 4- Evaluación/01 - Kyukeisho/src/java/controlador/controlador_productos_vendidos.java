@@ -42,7 +42,10 @@ String listar="/Crud_Productos.jsp";
             PV.setnombre_producto(request.getParameter("Nom_P"));
             PV.setcantidad_producto(Integer.parseInt(request.getParameter("Can_P")));
             PV.setprecio_unitario_producto(Integer.parseInt(request.getParameter("Pre_P")));
+            PV.setespecificaciones(request.getParameter("especificaciones"));
+            PV.setdir_img_producto(request.getParameter("dir_img_producto"));
             PV.setid_tipo_producto(Integer.parseInt(request.getParameter("tipo_P")));
+            
             dao.add(PV);
             acceso=listar;
         }
@@ -58,6 +61,8 @@ String listar="/Crud_Productos.jsp";
             PV.setnombre_producto(request.getParameter("Nom_P2"));
             PV.setcantidad_producto(Integer.parseInt(request.getParameter("Can_P2")));
             PV.setprecio_unitario_producto(Integer.parseInt(request.getParameter("Pre_P2")));
+            PV.setespecificaciones(request.getParameter("especificaciones2"));
+            PV.setdir_img_producto(request.getParameter("dir_img_producto2"));
             PV.setid_tipo_producto(Integer.parseInt(request.getParameter("Tipo_P2")));
             dao.edit(PV);
             acceso=listar;

@@ -262,51 +262,48 @@
                     </div>
                     </nav>
                     <br>
-                <center>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                            Productos
-                        </button>
-                        <div class="dropdown-menu">                    
-                            <a class="dropdown-item" href="Crud_Productos.jsp">Productos</a>
+                    <center>
+                        <div class="btn-group">
+                            <a href="CRUD_usuarios.jsp">
+                            <button type="button" class="btn btn-outline-info">
+                                <i class="fa fa-user" aria-hidden="true"></i> Clientes
+                            </button>
+                            </a>
                         </div>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Juegos
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="Crud_Juegos.jsp">Juegos</a>
+                        <div class="btn-group">
+                            <a href="CRUD_reservaciones.jsp">
+                            <button type="button" class="btn btn-outline-info">
+                                <i class="fa fa-calendar" aria-hidden="true"></i> Reservaciones
+                            </button>
+                            </a>
                         </div>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Consolas
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="CRUD_Consolas.jsp">Consolas</a>
-                            <a class="dropdown-item" href="CRUD_Consolas_ocupadas.jsp">Consolas Ocupadas</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-gamepad" aria-hidden="true"></i> Juegos
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="Crud_Juegos.jsp">Juegos </a>
+                                <a class="dropdown-item" href="Categorias_juegos.jsp">Categorias juegos</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Citas
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="CRUD_reservaciones.jsp">Citas Reservadas</a>                                
-                        </div>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Categoria
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="CRUD_Categorias_productos.jsp">Categoria Productos</a>                                
-                            <a class="dropdown-item" href="Categorias_juegos.jsp">Categoria Juegos</a>                                
-                        </div>
-                    </div>                      
-                </center>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-shopping-basket" aria-hidden="true"></i> Productos
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="Crud_Productos.jsp">Productos</a>  
+                                <a class="dropdown-item" href="CRUD_Categorias_productos.jsp">Categorias Productos</a>                                                         
+                            </div>
+                        </div>    
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-server" aria-hidden="true"></i> Consolas
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="CRUD_Consolas.jsp">Consolas disponibles</a>                                
+                            </div>
+                        </div>                      
+                    </center>
                 <br>
                 <br>
                 <br>

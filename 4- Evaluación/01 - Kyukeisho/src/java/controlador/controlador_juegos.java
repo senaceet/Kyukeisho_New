@@ -1,6 +1,6 @@
 package controlador;
 
-import modelo.JuegoDAO;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import modelo.Juegos;
+import modelo.JuegoDAO;
 
 
 @WebServlet(name = "controlador_juegos", urlPatterns = {"/controlador_juegos"})
@@ -40,7 +41,11 @@ String listar="/Crud_Juegos.jsp";
       
         else if(action.equalsIgnoreCase("Agregar")){
             PV.setnombre_juego(request.getParameter("nombre"));
+            PV.setprecio_juego(request.getParameter("precio_juego"));
+            PV.setcantidad_juegos(Integer.parseInt(request.getParameter("cantidad_juegos")));
+            PV.setdir_img_juego(request.getParameter("dir_img_juego"));
             PV.setid_categoria_juegos(Integer.parseInt(request.getParameter("id_c")));
+            PV.setid_consola(Integer.parseInt(request.getParameter("id_consola")));
             dao.add(PV);
             acceso=listar;
         }
@@ -54,7 +59,11 @@ String listar="/Crud_Juegos.jsp";
         else if(action.equalsIgnoreCase("Actualizar")){
             PV.setcodigo_juego(codigo_juego=Integer.parseInt(request.getParameter("codigo_juego2")));
             PV.setnombre_juego(request.getParameter("nombre2"));
+            PV.setprecio_juego(request.getParameter("precio_juego2"));
+            PV.setcantidad_juegos(Integer.parseInt(request.getParameter("cantidad_juegos2")));
+            PV.setdir_img_juego(request.getParameter("dir_img_juego2"));
             PV.setid_categoria_juegos(Integer.parseInt(request.getParameter("id_c2")));
+            PV.setid_consola(Integer.parseInt(request.getParameter("id_consola2")));
             dao.edit(PV);
             acceso=listar;
         }

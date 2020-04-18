@@ -1,5 +1,7 @@
 <%@page import="modelo.Juegos"%>
 <%@page import="modelo.JuegoDAO"%>
+<%@page import="modelo.consolas"%>
+<%@page import="modelo.t_consolas_DAO"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
 <%@page import="modelo.Admin"%>
@@ -266,51 +268,48 @@
                     </div>
                     </nav>
                     <br>
-                <center>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                            Productos
-                        </button>
-                        <div class="dropdown-menu">                    
-                            <a class="dropdown-item" href="Crud_Productos.jsp">Productos</a>
+                    <center>
+                        <div class="btn-group">
+                            <a href="CRUD_usuarios.jsp">
+                            <button type="button" class="btn btn-outline-info">
+                                <i class="fa fa-user" aria-hidden="true"></i> Clientes
+                            </button>
+                            </a>
                         </div>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Juegos
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="Crud_Juegos.jsp">Juegos</a>
+                        <div class="btn-group">
+                            <a href="CRUD_reservaciones.jsp">
+                            <button type="button" class="btn btn-outline-info">
+                                <i class="fa fa-calendar" aria-hidden="true"></i> Reservaciones
+                            </button>
+                            </a>
                         </div>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Consolas
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="CRUD_Consolas.jsp">Consolas</a>
-                            <a class="dropdown-item" href="CRUD_Consolas_ocupadas.jsp">Consolas Ocupadas</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-gamepad" aria-hidden="true"></i> Juegos
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="Categorias_juegos.jsp">Categorias juegos</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Citas
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="CRUD_reservaciones.jsp">Citas Reservadas</a>                                
-                        </div>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Categoria
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="CRUD_Categorias_productos.jsp">Categoria Productos</a>                                
-                            <a class="dropdown-item" href="Categorias_juegos.jsp">Categoria Juegos</a>                                
-                        </div>
-                    </div>                      
-                </center>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-shopping-basket" aria-hidden="true"></i> Productos
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="Crud_Productos.jsp">Productos</a>  
+                                <a class="dropdown-item" href="CRUD_Categorias_productos.jsp">Categorias Productos</a>                                                         
+                            </div>
+                        </div>    
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-server" aria-hidden="true"></i> Consolas
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="CRUD_Consolas.jsp">Consolas disponibles</a>                                
+                                <a class="dropdown-item" href="CRUD_Consolas_ocupadas.jsp">Consolas ocupadas</a>                                
+                            </div>
+                        </div>                      
+                    </center>
                 <br>
                 <br>
                 <br>
@@ -628,10 +627,13 @@
                                                         <label for="selectAll"></label>
                                                     </span>
                                                 </th>
-                                                <th>Codigo Juego</th>
-                                                <th>Nombre Juego</th>
+                                                
+                                                <th>Nombre Juego</th>                                               
+                                                <th>Caratula</th>
+                                                <th>Precio</th>
+                                                <th>Juegos disponibles</th>
                                                 <th>Categoria Juego</th>
-
+                                                <th>Consola</th>
                                                 <th>Acciones</th>
 
                                             </tr>
@@ -653,9 +655,13 @@
                                                 </span>
                                             </td>
 
-                                            <td><%= ma.getcodigo_juego()%></td>
+                                            
                                             <td><%= ma.getnombre_juego()%></td>
+                                            <td><img width="50" height="50" src="IMG/incio admin/Crud juegos/<%= ma.getdir_img_juego()%>" class="img-fluid" alt="Responsive image"></td>
+                                            <td>$<%= ma.getprecio_juego()%></td>
+                                            <td><%= ma.getcantidad_juegos()%></td>
                                             <td><%= ma.getnombre_categoria_juegos()%></td>
+                                            <td><%= ma.getnombre_consola()%></td>
                                             <td>
                                                 <a href="controlador_juegos?accion=editar&codigo_juego=<%= ma.getcodigo_juego()%>" class="edit"><i
                                                         style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>                                            
@@ -705,6 +711,22 @@
                                             <div class="form-group">
                                                 <label>Nombre Juego</label>
                                                 <input name="nombre" type="text" class="form-control" required>
+                                                
+                                                <label>Precio del Juego</label>
+                                                <input name="precio_juego" type="text" class="form-control" required>
+                                                
+                                                <label>cantidad del Juego</label>
+                                                <input name="cantidad_juegos" type="number" class="form-control" required>
+                                                
+                                                <label>Imagen</label>
+                                                <div class="input-group mb-3">
+                                                  <div class="input-group-prepend">
+                                                  </div>
+                                                  <div class="custom-file">
+                                                  <input name="dir_img_juego" type="file" class="custom-file-input" id="inputGroupFile01">
+                                                  <label class="custom-file-label" for="inputGroupFile01">Elige una imagen del juego</label>
+                                                  </div>
+                                                  </div>
 
                                                 <label>Categoria Juego</label>        
                                                 <select class="form-control" name="id_c">
@@ -718,6 +740,21 @@
                                                             cat = iterciu.next();
                                                     %>
                                                     <option value="<%= cat.getid_categoria_juegos()%>"><%= cat.getnombre_categoria_juegos()%></option>
+                                                    <%}%>
+                                                </select>
+                                                
+                                                <label>Consola</label>        
+                                                <select class="form-control" name="id_consola">
+                                                    <option>-- Seleccione la plataforma del juego --</option>
+                                                    <%
+                                                        t_consolas_DAO ca3 = new t_consolas_DAO();
+                                                        List<consolas> listciu3 = ca3.listar();
+                                                        Iterator<consolas> iterciu3 = listciu3.iterator();
+                                                        consolas cat3 = null;
+                                                        while (iterciu3.hasNext()) {
+                                                            cat3 = iterciu3.next();
+                                                    %>
+                                                    <option value="<%= cat3.getid_consola()%>"><%= cat3.getnombre_consola()%></option>
                                                     <%}%>
                                                 </select>
 
@@ -758,10 +795,26 @@
 
                                                 <label>Nombre Juego</label>
                                                 <input type="text" class="form-control" required value="<%= ma2.getnombre_juego()%>" name="nombre2">
+                                                                                                
+                                                <label>Precio del Juego</label>
+                                                <input value="<%= ma2.getprecio_juego()%>" name="precio_juego2" type="text" class="form-control" required>
+                                                
+                                                <label>cantidad del Juego</label>
+                                                <input value="<%= ma2.getcantidad_juegos()%>" name="cantidad_juegos2" type="number" class="form-control" required>
+                                                
+                                                <label>Imagen</label>
+                                                <div class="input-group mb-3">
+                                                  <div class="input-group-prepend">
+                                                  </div>
+                                                  <div class="custom-file">
+                                                  <input value="<%= ma2.getdir_img_juego()%>" name="dir_img_juego2"  type="file" class="custom-file-input" id="inputGroupFile01">
+                                                  <label class="custom-file-label" for="inputGroupFile01">Elige una imagen del juego</label>
+                                                  </div>
+                                                  </div>
 
                                                 <label>Categoria Juego</label>        
                                                 <select class="form-control" name="id_c2">
-                                                    <option value="1"><%= ma2.getid_categoria_juegos()%></option>
+                                                    <option>-- Seleccione categoria juego --</option>
                                                     <%
                                                         Categorias_juegos_DAO ca2 = new Categorias_juegos_DAO();
                                                         List<Categorias_juegos> listciu2 = ca2.listar();
@@ -773,6 +826,22 @@
                                                     <option value="<%= cat2.getid_categoria_juegos()%>"><%= cat2.getnombre_categoria_juegos()%></option>
                                                     <%}%>
                                                 </select>
+                                                
+                                                <label>Consola</label>        
+                                                <select class="form-control" name="id_consola2">
+                                                    <option>-- Seleccione la plataforma del juego --</option>
+                                                    <%
+                                                        t_consolas_DAO ca4 = new t_consolas_DAO();
+                                                        List<consolas> listciu4 = ca4.listar();
+                                                        Iterator<consolas> iterciu4 = listciu4.iterator();
+                                                        consolas cat4 = null;
+                                                        while (iterciu4.hasNext()) {
+                                                            cat4 = iterciu4.next();
+                                                    %>
+                                                    <option value="<%= cat4.getid_consola()%>"><%= cat4.getnombre_consola()%></option>
+                                                    <%}%>
+                                                </select>
+                                                
                                                 <input type="hidden" class="form-control" required value="<%= ma2.getcodigo_juego()%>" name="codigo_juego2">
                                             </div>
                                         </div>

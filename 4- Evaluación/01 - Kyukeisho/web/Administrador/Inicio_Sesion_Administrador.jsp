@@ -120,11 +120,25 @@
                 </center>
             </div>
         </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+
+                               
 
         <div class="copyright text-center  font-weight-bold p-2" style="background-color:rgb(0, 0, 0)">
             <p style="color:rgb(255, 217, 0)">Desarrollado por Kyukeisho Copyright<i class="fa fa-copyright"
                                                                                      aria-hidden="true"></i> 2019</p>
+        </div>
 
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
                     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

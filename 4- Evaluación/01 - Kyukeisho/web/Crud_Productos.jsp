@@ -264,51 +264,48 @@
                     </div>
                     </nav>
                     <br>
-                <center>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                            Productos
-                        </button>
-                        <div class="dropdown-menu">                    
-                            <a class="dropdown-item" href="Crud_Productos.jsp">Productos</a>
+                    <center>
+                        <div class="btn-group">
+                            <a href="CRUD_usuarios.jsp">
+                            <button type="button" class="btn btn-outline-info">
+                                <i class="fa fa-user" aria-hidden="true"></i> Clientes
+                            </button>
+                            </a>
                         </div>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Juegos
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="Crud_Juegos.jsp">Juegos</a>
+                        <div class="btn-group">
+                            <a href="CRUD_reservaciones.jsp">
+                            <button type="button" class="btn btn-outline-info">
+                                <i class="fa fa-calendar" aria-hidden="true"></i> Reservaciones
+                            </button>
+                            </a>
                         </div>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Consolas
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="CRUD_Consolas.jsp">Consolas</a>
-                            <a class="dropdown-item" href="CRUD_Consolas_ocupadas.jsp">Consolas Ocupadas</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-gamepad" aria-hidden="true"></i> Juegos
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="Crud_Juegos.jsp">Juegos </a>
+                                <a class="dropdown-item" href="Categorias_juegos.jsp">Categorias juegos</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Citas
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="CRUD_reservaciones.jsp">Citas Reservadas</a>                                
-                        </div>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Categoria
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="CRUD_Categorias_productos.jsp">Categoria Productos</a>                                
-                            <a class="dropdown-item" href="Categorias_juegos.jsp">Categoria Juegos</a>                                
-                        </div>
-                    </div>                      
-                </center>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-shopping-basket" aria-hidden="true"></i> Productos
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="CRUD_Categorias_productos.jsp">Categorias Productos</a>                                                         
+                            </div>
+                        </div>    
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-server" aria-hidden="true"></i> Consolas
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="CRUD_Consolas.jsp">Consolas disponibles</a>                                
+                                <a class="dropdown-item" href="CRUD_Consolas_ocupadas.jsp">Consolas ocupadas</a>                                
+                            </div>
+                        </div>                      
+                    </center>
                 <br>
                 <br>
                 <br>
@@ -625,10 +622,11 @@
                                                         <label for="selectAll"></label>
                                                     </span>
                                                 </th>
-                                                <th>Id </th>
+                                                
                                                 <th>Nombre Producto</th>
                                                 <th>Cantidad producto</th>
                                                 <th>Precio unitario</th>
+                                                <th>Imagen</th>
                                                 <th>Tipo producto</th>
                                                 <th>Acciones</th>
 
@@ -651,10 +649,11 @@
                                                 </span>
                                             </td>
 
-                                            <td><%= ma.getid_producto()%></td>
+                                           
                                             <td><%= ma.getnombre_producto()%></td>
                                             <th><%= ma.getcantidad_producto()%></th>
-                                            <th><%= ma.getprecio_unitario_producto()%></th>
+                                            <th>$<%= ma.getprecio_unitario_producto()%></th>
+                                            <td><img width="50" height="50" src="IMG/incio admin/Crud productos/<%= ma.getdir_img_producto()%>" class="img-fluid" alt="Responsive image"></td>                                            
                                             <th><%= ma.getnombre_tipo_producto()%></th>
                                             <td>
 
@@ -710,6 +709,23 @@
                                                 <input name="Can_P" type="text" class="form-control" required>
                                                 <label>precio_unitario_producto</label>
                                                 <input name="Pre_P" type="text" class="form-control" required>
+                                                
+                                                <label>Descripción del producto</label>
+                                                <div class="input-group">
+                                                   <div class="input-group-prepend">
+                                                </div>
+                                                    <textarea name="especificaciones" class="form-control" aria-label="With textarea"></textarea>
+                                                </div>
+                                                
+                                                <label>Imagen</label>
+                                                <div class="input-group mb-3">
+                                                  <div class="input-group-prepend">
+                                                  </div>
+                                                  <div class="custom-file">
+                                                  <input name="dir_img_producto" type="file" class="custom-file-input" id="inputGroupFile01">
+                                                  <label class="custom-file-label" for="inputGroupFile01">Elige una imagen del producto.</label>
+                                                  </div>
+                                                  </div>
 
                                                 <label>tipo_producto</label> 
                                                 <select class="form-control" name="tipo_P">
@@ -767,6 +783,23 @@
                                                 <input  type="text" class="form-control" required value="<%= ma2.getcantidad_producto()%>" name="Can_P2">
                                                 <label>Precio_unitario_producto</label>
                                                 <input  type="text" class="form-control" required value="<%= ma2.getprecio_unitario_producto()%>" name="Pre_P2">
+                                                
+                                                <label>Descripción del producto</label>
+                                                <div class="input-group">
+                                                   <div class="input-group-prepend">
+                                                </div>
+                                                    <textarea value="<%= ma2.getespecificaciones()%>" name="especificaciones2" class="form-control" aria-label="With textarea"></textarea>
+                                                </div>
+                                                
+                                                <label>Imagen</label>
+                                                <div class="input-group mb-3">
+                                                  <div class="input-group-prepend">
+                                                  </div>
+                                                  <div class="custom-file">
+                                                  <input value="<%= ma2.getdir_img_producto()%>" name="dir_img_producto2" type="file" class="custom-file-input" id="inputGroupFile01">
+                                                  <label class="custom-file-label" for="inputGroupFile01">Elige una imagen del producto.</label>
+                                                  </div>
+                                                  </div>
 
                                                 <label>Tipo_producto</label> 
                                                 <select class="form-control" name="Tipo_P2">

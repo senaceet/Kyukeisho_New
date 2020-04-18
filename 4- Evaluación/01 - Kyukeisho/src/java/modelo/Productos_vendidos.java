@@ -5,13 +5,17 @@ public class Productos_vendidos {
     String nombre_producto;
     int cantidad_producto;
     int precio_unitario_producto;
+    String especificaciones;
+    String dir_img_producto;
     int id_tipo_producto;
     String nombre_tipo_producto;
 
-    public Productos_vendidos(String nombre_producto,int cantidad_producto,int precio_unitario_producto, int id_tipo_producto,String nombre_tipo_producto) {
+    public Productos_vendidos(String nombre_producto,int cantidad_producto,int precio_unitario_producto,String especificaciones,String dir_img_producto, int id_tipo_producto,String nombre_tipo_producto) {
         this.nombre_producto = nombre_producto;
         this.cantidad_producto = cantidad_producto;
         this.precio_unitario_producto = precio_unitario_producto;
+        this.especificaciones = especificaciones;
+        this.dir_img_producto = dir_img_producto;
         this.id_tipo_producto = id_tipo_producto;
         this.nombre_tipo_producto = nombre_tipo_producto;
     }
@@ -20,6 +24,8 @@ public class Productos_vendidos {
         this.nombre_producto = nombre_producto;
         this.cantidad_producto = cantidad_producto;
         this.precio_unitario_producto = precio_unitario_producto;
+        this.especificaciones = especificaciones;
+        this.dir_img_producto = dir_img_producto;
         this.id_tipo_producto = id_tipo_producto;
         this.nombre_tipo_producto = nombre_tipo_producto;
     }
@@ -54,6 +60,22 @@ public class Productos_vendidos {
 
     public void setprecio_unitario_producto(int precio_unitario_producto) {
         this.precio_unitario_producto = precio_unitario_producto;
+    }
+    
+        public String getespecificaciones() {
+        return especificaciones;
+    }
+
+    public void setespecificaciones(String especificaciones) {
+        this.especificaciones = especificaciones;
+    }
+    
+    public String getdir_img_producto() {
+        return dir_img_producto;
+    }
+
+    public void setdir_img_producto(String dir_img_producto) {
+        this.dir_img_producto = dir_img_producto;
     }
     
     public int getid_tipo_producto() {

@@ -132,49 +132,49 @@ VALUES	(1, '2019-10-01 05:29:00', 100000),
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         
 -- JUEGOS --        
-INSERT INTO Kyukeisho.juegos (codigo_juego, nombre_juego,id_categoria_juegos)
+INSERT INTO Kyukeisho.juegos (codigo_juego, nombre_juego,precio_juego,cantidad_juegos,dir_img_juego,id_categoria_juegos,id_consola)
 VALUES  
 		-- Pc --
-        (1, "Euro Truck Simulator 2",36),
-		(2, "American Truck Simulator 2",36),
-		(3, "Pes 2019",6),
-		(4, "Assassin’s Creed Odyssey Gold Edition",1),
-		(5, "Grand Theft Auto V",7),
+        (1, "Euro Truck Simulator 2","32000",2,"Euro Truck Simulator 2.jpg",36,05),
+		(2, "American Truck Simulator 2","46000",5,"American Truck Simulator 2.jpg",36,05),
+		(3, "Pes 2019","54900",5,"Pes 2019.jpg",6,05),
+		(4, "Assassin’s Creed Odyssey Gold Edition","89000",8,"Assassin’s Creed Odyssey Gold Edition.jpg",1,05),
+		(5, "Grand Theft Auto V","150000",7,"Grand Theft Auto V.jpg",7,05),
         
 	-- PS4 --
-		(6,"Call of Duty 4: Modern Warfare",26),
-		(7,"God of War",1),
-		(8,"Battlefield 4",26),
-		(9,"Spider-Man",1),	
-		(10,"FIFA 19",6),
+		(6,"Call of Duty Modern Warfare","120000",6,"Call of Duty Modern Warfare.jpg",26,04),
+		(7,"God of War","60000",5,"God of War.jpg",1,04),
+		(8,"Battlefield 4","60000",4,"Battlefield 4.jpg",26,04),
+		(9,"Spider-Man","62000",1,"Spider-Man.jpg",1,04),	
+		(10,"FIFA 19","120000",0,"FIFA 19.jpg",6,04),
          
 	-- Xbox 360 --
-		(11,"Resident Evil 4",13),
-		(12,"NBA2K18",6),
-		(13,"Rise of the Tomb Raider",7),
-		(14, "WWE 2K17",6),
-		(15, "Call Of Duty Black Ops III",26),
+		(11,"Resident Evil 4","50000",1,"Resident Evil 4.jpg",13,01),
+		(12,"NBA2K18","100000",4,"NBA2K18.jpg",6,01),
+		(13,"Rise of the Tomb Raider","33000",5,"Rise of the Tomb Raider.jpg",7,01),
+		(14, "WWE 2K17","115000",6,"WWE 2K17.jpg",6,01),
+		(15, "Call Of Duty Black Ops III","99600",5,"Call Of Duty Black Ops III.jpg",26,01),
         
 	-- Xbox One --
-		(16, "Minecraft",7),
-		(17, "Fortnite",31),
-		(18, "Roblox",31),
-		(19, "The Elder Scrolls Online",31),
-		(20, "Anthem",31),
+		(16, "Minecraft","91000",10,"Minecraft.jpg",7,06),
+		(17, "Need for Speed™ Payback","87900",12,"Need for Speed™ Payback.jpg",16,06),
+        (18, "Resident Evil 2","120000",12,"Resident Evil 2.jpg",13,06),
+		(19, "The Elder Scrolls Online","40000",8,"The Elder Scrolls Online.jpg",31,06),
+		(20, "Anthem","105000",9,"Anthem.jpg",31,06),
         
 	-- Nintendo --
-		(21, "The Legend of Zelda",7),
-		(22, "Mario Kart 8 Deluxe",16),
-		(23, "Mario Bros",1),
-		(24, "Kirby",1),
-		(25, "Splatoon 2",1),
+		(21, "The Legend of Zelda","290000",7,"The Legend of Zelda.jpg",7,07),
+		(22, "Mario Kart 8 Deluxe","232000",6,"Mario Kart 8 Deluxe.jpg",16,07),
+		(23, "Mario Bros","202000",5,"Mario Bros.jpg",1,07),
+		(24, "Kirby","320000",4,"Kirby.jpg",1,07),
+		(25, "Splatoon 2","280000",4,"Splatoon 2.jpg",1,07),
         
 	-- Wii-
-		(26, "Wall e",7),
-		(27, "Just Dance 17",10),
-		(28, "Fatal Frame 4",1),
-		(29, "The Voice",1),
-		(30, "Wii Fit U",7);	
+		(26, "Wall e","180000",5,"Wall e.jpg",7,08),
+		(27, "Just Dance 17","282000",6,"Just Dance 17.jpg",10,08),
+		(28, "Fatal Frame 4","232000",4,"Fatal Frame 4.jpg",1,08),
+		(29, "The Voice","35000",4,"The Voice.jpg",1,08),
+		(30, "Wii Fit U","140000",6,"Wii Fit U.jpg",7,08);	
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         
@@ -204,27 +204,27 @@ VALUES (01,1),
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- PRODUCTOS --
-INSERT INTO Kyukeisho.productos (id_producto, nombre_producto, cantidad_producto, precio_unitario_producto, id_tipo_producto)
-VALUES (1, "Cheetos", 12, 1200, 1),
-	   (2, "Bom Bom Bum", 3, 250, 1),
-       (3, "Ponque Ramo", 10, 3500, 1),
-       (4, "Tricopollos", 5, 800, 1),
-       (5, "Chocorramo", 14, 1200, 1),
-       (6, "PS4 - Infinite Warfare Legacy Edition", 1, 59900, 4),
-       (7, "Xbox OnE - Crash Bandicoot N. Sane Trigoly", 2, 169900, 4),
-       (8, "PS4 - FIFA 20 Edition Deluxe", 1, 319000, 4),
-       (9, "Xbox 360 - PES 2017", 5, 30000, 4),
-       (10, "Wii - Pack Juegos Digitales", 4, 49990, 4),
-       (11, "Audífonos Spirit", 8, 49990, 4),
-       (12, "Cargador Bateria Power Bank 4000 mAh Blanco", 25, 9990, 4),
-       (13, "Gaseosa Coca Cola sin azúcar x 2 und", 6, 8990, 5),
-       (14, "Agua Cristal x 24 und", 10, 9990, 5),
-       (15, "Bebida Gasificada Limonada", 14, 2790, 5),
-       (16, "Jugo Hit x 12 und", 13, 9190, 5),
-       (17, "Pony Malta Sixpack", 10, 5590, 5),
-       (18, "Resaltadores x 20 und", 50, 3337, 6),
-       (19, "Portafolio Pokémon", 15, 44991, 6),
-       (20, "Xtime", 60, 200, 1);
+INSERT INTO Kyukeisho.productos (id_producto, nombre_producto, cantidad_producto, precio_unitario_producto,dir_img_producto, id_tipo_producto)
+VALUES (1, "Cheetos", 12, 1200,"Cheetos.jpg", 1),
+	   (2, "Bom Bom Bum", 3, 250,"Bom Bom Bum.jpg", 1),
+       (3, "Ponque Ramo", 10, 3500,"Ponque Ramo.jpg", 1),
+       (4, "Trocipollos", 5, 800,"Trocipollos.jpg", 1),
+       (5, "Chocorramo", 14, 1200,"Chocorramo.png", 1),
+       (6, "PS4", 1, 1400000,"PS4.jpg", 4),
+       (7, "Xbox One", 2, 1799000,"Xbox One.jpg", 4),
+       (8, "PS3", 1, 519000,"PS3.jpg", 4),
+       (9, "Xbox 360", 5, 600000,"Xbox 360.jpg", 4),
+       (10, "Wii", 4, 250000,"Wii.jpg", 4),
+       (11, "Audífonos Spirit", 8, 49990,"Audífonos Spirit.jpg", 4),
+       (12, "Cargador Bateria Power Bank 4000 mAh Blanco", 25, 9990,"Cargador Bateria Power Bank 4000 mAh Blanco.jpg", 4),
+       (13, "Gaseosa Coca Cola sin azúcar x 2 und", 6, 8990,"Gaseosa Coca Cola sin azúcar x 2 und.jpg", 5),
+       (14, "Agua Cristal x 24 und", 10, 9990,"Agua Cristal x 24 und.png", 5),
+       (15, "Bebida Gasificada Limonada", 14, 2790,"Bebida Gasificada Limonada.jpg", 5),
+       (16, "Jugo Hit x 12 und", 13, 9190,"Jugo Hit x 12 und.jpg", 5),
+       (17, "Pony Malta Sixpack", 10, 5590,"Pony Malta Sixpack.jpg", 5),
+       (18, "Resaltadores x 20 und", 50, 3337,"Resaltadores x 20 und.jpg", 6),
+       (19, "Portafolio Pokémon", 15, 44991,"Portafolio Pokémon.jpg", 6),
+       (20, "Xtime", 60, 200,"Xtime.jpg", 1);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -247,47 +247,39 @@
                         </nav>
                         <br>
                     <center>
+
                         <div class="btn-group">
-                            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                Productos
+                            <a href="CRUD_reservaciones.jsp">
+                            <button type="button" class="btn btn-outline-info">
+                                <i class="fa fa-calendar" aria-hidden="true"></i> Reservaciones
                             </button>
-                            <div class="dropdown-menu">                    
-                                <a class="dropdown-item" href="Crud_Productos.jsp">Productos</a>
+                            </a>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-gamepad" aria-hidden="true"></i> Juegos
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="Crud_Juegos.jsp">Juegos </a>
+                                <a class="dropdown-item" href="Categorias_juegos.jsp">Categorias juegos</a>
                             </div>
                         </div>
                         <div class="btn-group">
                             <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Juegos
+                            <i class="fa fa-shopping-basket" aria-hidden="true"></i> Productos
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="Crud_Juegos.jsp">Juegos</a>
+                                <a class="dropdown-item" href="Crud_Productos.jsp">Productos</a>  
+                                <a class="dropdown-item" href="CRUD_Categorias_productos.jsp">Categorias Productos</a>                                                         
                             </div>
-                        </div>
+                        </div>    
                         <div class="btn-group">
                             <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Consolas
+                            <i class="fa fa-server" aria-hidden="true"></i> Consolas
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="CRUD_Consolas.jsp">Consolas</a>
-                                <a class="dropdown-item" href="CRUD_Consolas_ocupadas.jsp">Consolas Ocupadas</a>
-                            </div>
-                        </div>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Citas
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="CRUD_reservaciones.jsp">Citas Reservadas</a>                                
-                            </div>
-                        </div>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Categoria
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="CRUD_Categorias_productos.jsp">Categoria Productos</a>                                
-                                <a class="dropdown-item" href="Categorias_juegos.jsp">Categoria Juegos</a>                                
+                                <a class="dropdown-item" href="CRUD_Consolas.jsp">Consolas disponibles</a>                                
+                                <a class="dropdown-item" href="CRUD_Consolas_ocupadas.jsp">Consolas ocupadas</a>                                
                             </div>
                         </div>                      
                     </center>
@@ -581,7 +573,7 @@
                                                     <input type="submit" class="btn btn-info" value="Generar Reporte PDF" />
                                                 </form>                               
 
-                                                <a href="" class="btn btn-success"  data-toggle="modal">
+                                                <a href="#addcate" class="btn btn-success"  data-toggle="modal">
                                                     <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                                     </i><span> Añadir Usuarios</span></a>
                                             </center>
@@ -597,15 +589,10 @@
                                             <table class="table table-striped table-hover" style="width:80rem">
                                                 <thead>
                                                     <tr bgcolor="#C0BB2E">
-                                                        <th>
-                                                            <span class="custom-checkbox">
-                                                                <input type="checkbox" id="selectAll">
-                                                                <label for="selectAll"></label>
-                                                            </span>
-                                                        </th>
-                                                        <th>Id</th>
-                                                        <th>Primer Nombre</th>
-                                                        <th>Primer Apellido</th>
+
+                                                        
+                                                        <th>Nombre</th>
+                                                        <th>Apellido</th>
                                                         <th>Correo</th>
                                                         <th>Telefono</th>
                                                         <th>direccion</th>
@@ -624,13 +611,8 @@
                                                         ma = iter.next();
                                                 %>                        
                                                 <tr>
-                                                    <td>
-                                                        <span class="custom-checkbox">
-                                                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                                            <label for="checkbox1"></label>
-                                                        </span>
-                                                    </td>                                
-                                                    <td ><%= ma.getid_usuario()%></td>
+                          
+                                                    
                                                     <td ><%= ma.getprimer_nombre_usuario()%></td>
                                                     <td><%= ma.getprimer_apellido_usuario()%></td>
                                                     <td><%= ma.getcorreo_usuario()%></td>

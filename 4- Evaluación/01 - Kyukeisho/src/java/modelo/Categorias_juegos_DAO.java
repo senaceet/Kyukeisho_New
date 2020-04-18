@@ -20,7 +20,7 @@ public class Categorias_juegos_DAO implements CRUD_Categoria_juegos {
     @Override
     public List listar() {
         ArrayList<Categorias_juegos>list=new ArrayList<>();
-        String sql="select * from categoria_juegos ORDER BY id_categoria_juegos asc limit 40";
+        String sql="select * from categoria_juegos ORDER BY nombre_categoria_juegos";
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);

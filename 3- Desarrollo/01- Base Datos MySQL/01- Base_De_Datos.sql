@@ -62,8 +62,12 @@ PRIMARY KEY (id_factura)
 -- JUEGOS --
 CREATE TABLE Kyukeisho.juegos(
 codigo_juego INT (5) AUTO_INCREMENT,
-nombre_juego VARCHAR (100) NULL,
+nombre_juego VARCHAR (100) NOT NULL,
+precio_juego VARCHAR (6) NOT NULL,
+cantidad_juegos INT (6) NOT NULL,
+dir_img_juego VARCHAR (50) NOT NULL,
 id_categoria_juegos INT (10) NOT NULL,
+id_consola INT (2) NOT NULL,
 PRIMARY KEY (codigo_juego)
 );
 
@@ -71,7 +75,7 @@ PRIMARY KEY (codigo_juego)
 -- CATEGORIA_JUEGOS --
 CREATE TABLE Kyukeisho.categoria_juegos(
 id_categoria_juegos INT (10) AUTO_INCREMENT NOT NULL,
-nombre_categoria_juegos VARCHAR (50) NULL,
+nombre_categoria_juegos VARCHAR (50) NOT NULL,
 PRIMARY KEY (id_categoria_juegos)
 );
 
@@ -102,9 +106,11 @@ id_factura INT (10) NOT NULL
 -- PRODUCTOS --
 CREATE TABLE Kyukeisho.productos(
 id_producto INT (10) AUTO_INCREMENT NOT NULL,
-nombre_producto VARCHAR (100) NULL,
-cantidad_producto INT (10) NULL,
+nombre_producto VARCHAR (50) NOT NULL,
+cantidad_producto INT (10) NOT NULL,
 precio_unitario_producto INT (10) NULL,
+especificaciones VARCHAR (100) NULL,
+dir_img_producto VARCHAR (50) NOT NULL,
 id_tipo_producto INT (10) NOT NULL,
 PRIMARY KEY (id_producto)
 );
@@ -120,7 +126,7 @@ id_producto INT (10) NOT NULL
 -- TIPOS_PRODUCTO --
 CREATE TABLE Kyukeisho.tipo_producto(
 id_tipo_producto INT (10) NOT NULL auto_increment,
-nombre_tipo_producto VARCHAR (100) NULL,
+nombre_tipo_producto VARCHAR (100) NOT NULL,
 PRIMARY KEY (id_tipo_producto)
 );
 
@@ -130,8 +136,8 @@ CREATE TABLE Kyukeisho.reservaciones(
 id_reservacion INT (10) AUTO_INCREMENT NOT NULL,
 fecha_incio DATE,
 hora_incio TIME,
-id_consola INT (2) NULL,
-correo_usuario VARCHAR (30) NULL,
+id_consola INT (2) NOT NULL,
+correo_usuario VARCHAR (30) NOT NULL,
 PRIMARY KEY (id_reservacion)
 );
 
@@ -169,6 +175,9 @@ ALTER TABLE kyukeisho.usuario ADD CONSTRAINT fk_usuario_estado_cliente FOREIGN K
 
 -- juegos/categoria_juegos
 ALTER TABLE Kyukeisho.juegos ADD CONSTRAINT fk_juegos_categoria_juegos_id_categoria_juegos FOREIGN KEY (id_categoria_juegos) REFERENCES Kyukeisho.categoria_juegos (id_categoria_juegos) ON UPDATE CASCADE ON DELETE CASCADE;
+
+-- juegos/consola
+ALTER TABLE Kyukeisho.juegos ADD CONSTRAINT fk_juegos_CONSOLA FOREIGN KEY (id_consola) REFERENCES Kyukeisho.consola (id_consola) ON UPDATE CASCADE ON DELETE CASCADE;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Reservaciones/consolas 
