@@ -49,34 +49,23 @@
                 </div>
             </nav>
             <br><br>
-            <!-- Full Page Intro -->
+            <!-- Contenedor Imagen -->
             <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-                <!-- Mask & flexbox options-->
                 <div class="mask rgba-gradient align-items-center">
-                    <!-- Content -->
                     <div class="container">
-                        <!--Grid row-->
-                        <div class="row">
-                            <!--Grid column-->
+                        <div class="row">                            
                             <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
                                 <h1 class="h1-responsive font-weight-bold mt-sm-5"><p style="font-family:Times New Roman;"> Kyukeisho Official Es Una Empresa Desarrolladora De Software </p></h1>
                                 <hr class="hr-light">
                                 <h6 class="mb-4"><p style="font-family:Times New Roman;"> Kyukeisho Official, empresa desarrolladora de software de alta cálidad, con el fin de dar a conocer las nuevas tecnologias creando las mejores soluciones para nuestras empresas contratantes </p></h6>
                             </div>
-                            <!--Grid column-->
-                            <!--Grid column-->
                             <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
                                 <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png" alt="" class="img-fluid">
                             </div>
-                            <!--Grid column-->
                         </div>
-                        <!--Grid row-->
                     </div>
-                    <!-- Content -->
                 </div>
-                <!-- Mask & flexbox options-->
             </div>
-            <!-- Full Page Intro -->
         </header>
     </body>
     <hr><br><br>    
@@ -154,7 +143,7 @@
             <div class="col-lg-4">
                 <h5>
                     <p style="font-family:Times New Roman; color: #000">
-                        Ingresa Tus Preguntas Juntos Con Tus Datos Y Trataremos De Darte Respuesta Lo Mas Rapido Posible
+                        Ingresa Tus Preguntas Juntos Co Tu Correo Electrónico Y Trataremos De Darte Respuesta Lo Mas Rapido Posible
                     </p>
                 </h5>             
             </div>
@@ -183,7 +172,7 @@
             </div>
         </div>
     </div>
-    <hr><br>
+    <hr><hr><br>
     <!-------------------------------------------------------------------------------------------------------------------------->
     <!-- Ayuda, Parte Final De La Página --------------------------------------------------------------------------------------->
     <footer class="page-footer font-small indigo" style="background-color: #000"><br>
@@ -212,8 +201,8 @@
                             <i class="fa fa-globe" aria-hidden="true"></i> Idioma
                         </button>
                         <div class="dropdown-menu" style="background-color: #FFFFFF" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Español</a>
-                            <a class="dropdown-item" href="#">Ingles</a>
+                            <a class="dropdown-item" href="HomePage.jsp">Español</a>
+                            <a class="dropdown-item" href="">Ingles</a>
                         </div>
                     </div>
                     <br>
