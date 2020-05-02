@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="java" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cefc8df3-23ff-43cb-9e68-74f4371439f5">
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     consola.`id_consola` AS consola_id_consola,
+     consola.`nombre_consola` AS consola_nombre_consola,
+     consola.`precio_hora` AS consola_precio_hora,
+     consola.`id_estado_consola` AS consola_id_estado_consola,
+     estado_consola.`id_estado_consola` AS estado_consola_id_estado_consola,
+     estado_consola.`estado_consola` AS estado_consola_estado_consola
+FROM
+     `estado_consola` estado_consola INNER JOIN `consola` consola ON estado_consola.`id_estado_consola` = consola.`id_estado_consola`
+where estado_consola.id_estado_consola = 1]]>
+	</queryString>
+	<field name="consola_id_consola" class="java.lang.Integer"/>
+	<field name="consola_nombre_consola" class="java.lang.String"/>
+	<field name="consola_precio_hora" class="java.lang.String"/>
+	<field name="consola_id_estado_consola" class="java.lang.Integer"/>
+	<field name="estado_consola_id_estado_consola" class="java.lang.Integer"/>
+	<field name="estado_consola_estado_consola" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<image>
+				<reportElement x="643" y="2" width="159" height="106" uuid="5af099d8-4fa5-48eb-b80c-3f8d05564fbf"/>
+				<imageExpression><![CDATA["C:\\Andres_Olaya\\Proyecto_Formativo\\Kyukeisho_New\\Kyukeisho_New\\1- Analisis\\9- Logo_Kyukeisho\\Kyukeisho.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="SubTitle" x="297" y="72" width="178" height="22" uuid="39bd1ef2-d72e-4a63-b62f-120555ffbf7a"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Tienda De Videojuegos ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="94" width="178" height="14" uuid="43bdcf55-593d-4189-924a-d799043d5e3e"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Reporte Consolas Disponibles]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="256" y="10" width="263" height="62" uuid="097e63ae-ed33-463c-abe8-f00b0ae24adf"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Kyukeisho]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="046ec40a-86c7-453c-90ea-dca02f1cdf20"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="25" y="1" width="107" height="15" forecolor="#736343" uuid="7c26234b-1f38-4606-911f-30d5a698f1a8"/>
+				<text><![CDATA[Nombre Consola]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="256" y="1" width="108" height="15" forecolor="#736343" uuid="fc4cfafe-f466-4dc5-977b-3762d05fb569"/>
+				<text><![CDATA[Precio Hora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="498" y="1" width="133" height="15" forecolor="#736343" uuid="50e5eb51-6287-42fb-8866-1842509ce693"/>
+				<text><![CDATA[Estado Consola]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="5ee9b119-41ad-4628-8008-92e104b590b6"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="25" y="0" width="107" height="15" uuid="cc52e384-6a52-4acb-a17a-16f967de2317"/>
+					<textFieldExpression><![CDATA[$F{consola_nombre_consola}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="256" y="0" width="108" height="15" uuid="e6470d8c-42f8-43a1-b892-d2311d8b8f88"/>
+					<textFieldExpression><![CDATA[$F{consola_precio_hora}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="498" y="0" width="133" height="15" uuid="59f91d93-243e-46a8-9331-e7b4cdca3e27"/>
+					<textFieldExpression><![CDATA[$F{estado_consola_estado_consola}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="1d20706f-480b-4978-ba8c-b2e26a768ef9"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="aa9e1dfc-1ba5-4c70-b44f-e534d50d359c"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="381ad9f1-ace8-4f79-9371-aa9620b61234"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="33b06a76-565f-430f-bcb7-5c1abdfd4bf9"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="cd9f61f9-3567-43ed-b37d-7bbb85129dff"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement x="355" y="4" width="100" height="20" uuid="ec3b4b95-c7f9-4ecc-9a7e-e4ec685c3013"/>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

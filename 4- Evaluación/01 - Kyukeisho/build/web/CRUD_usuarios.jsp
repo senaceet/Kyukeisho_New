@@ -569,7 +569,7 @@
                                         </div>
                                         <div class="col-lg-7" >
                                             <center>
-                                                <form name="form1" action="ReportesPdf/ReportesUsuarios.jsp" target="_black">
+                                                <form name="form1" action="ReporteUsuarios.jsp" target="_black">
                                                     <input type="submit" class="btn btn-info" value="Generar Reporte PDF" />
                                                 </form>                               
 

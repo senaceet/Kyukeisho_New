@@ -186,7 +186,7 @@ public final class HomePage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div class=\"col-lg-4\">\r\n");
       out.write("                <h5>\r\n");
       out.write("                    <p style=\"font-family:Times New Roman; color: #000\">\r\n");
-      out.write("                        Ingresa Tus Preguntas Juntos Con Tus Datos Y Trataremos De Darte Respuesta Lo Mas Rapido Posible\r\n");
+      out.write("                        Ingresa Tus Preguntas Juntos Co Tu Correo Electrónico Y Trataremos De Darte Respuesta Lo Mas Rapido Posible\r\n");
       out.write("                    </p>\r\n");
       out.write("                </h5>             \r\n");
       out.write("            </div>\r\n");
@@ -246,8 +246,8 @@ public final class HomePage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <i class=\"fa fa-globe\" aria-hidden=\"true\"></i> Idioma\r\n");
       out.write("                        </button>\r\n");
       out.write("                        <div class=\"dropdown-menu\" style=\"background-color: #FFFFFF\" aria-labelledby=\"dropdownMenuButton\">\r\n");
-      out.write("                            <a class=\"dropdown-item\" href=\"#\">Español</a>\r\n");
-      out.write("                            <a class=\"dropdown-item\" href=\"#\">Ingles</a>\r\n");
+      out.write("                            <a class=\"dropdown-item\" href=\"HomePage.jsp\">Español</a>\r\n");
+      out.write("                            <a class=\"dropdown-item\" href=\"\">Ingles</a>\r\n");
       out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("                    <br>\r\n");

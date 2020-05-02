@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="java" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7c826431-720d-4ff9-b72e-a85d8e62b696">
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     juegos.`codigo_juego` AS juegos_codigo_juego,
+     juegos.`nombre_juego` AS juegos_nombre_juego,
+     juegos.`precio_juego` AS juegos_precio_juego,
+     juegos.`cantidad_juegos` AS juegos_cantidad_juegos,
+     juegos.`dir_img_juego` AS juegos_dir_img_juego,
+     juegos.`id_categoria_juegos` AS juegos_id_categoria_juegos,
+     juegos.`id_consola` AS juegos_id_consola,
+     categoria_juegos.`id_categoria_juegos` AS categoria_juegos_id_categoria_juegos,
+     categoria_juegos.`nombre_categoria_juegos` AS categoria_juegos_nombre_categoria_juegos,
+     consola.`id_consola` AS consola_id_consola,
+     consola.`nombre_consola` AS consola_nombre_consola,
+     consola.`precio_hora` AS consola_precio_hora,
+     consola.`id_estado_consola` AS consola_id_estado_consola
+FROM
+     `categoria_juegos` categoria_juegos INNER JOIN `juegos` juegos ON categoria_juegos.`id_categoria_juegos` = juegos.`id_categoria_juegos`
+     INNER JOIN `consola` consola ON juegos.`id_consola` = consola.`id_consola`]]>
+	</queryString>
+	<field name="juegos_nombre_juego" class="java.lang.String"/>
+	<field name="juegos_precio_juego" class="java.lang.String"/>
+	<field name="juegos_cantidad_juegos" class="java.lang.Integer"/>
+	<field name="categoria_juegos_nombre_categoria_juegos" class="java.lang.String"/>
+	<field name="consola_nombre_consola" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="263" y="2" width="263" height="62" uuid="71e8b853-5fe9-48ea-80c0-845077a88067"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Kyukeisho]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="292" y="64" width="178" height="22" uuid="0d237b4d-aa83-4e76-b4e0-1d45b478768b"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Tienda De Videojuegos ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="643" y="2" width="159" height="106" uuid="9e4d6334-201c-4c4b-b016-a8a2dc84b9f1"/>
+				<imageExpression><![CDATA["C:\\Andres_Olaya\\Proyecto_Formativo\\Kyukeisho_New\\Kyukeisho_New\\1- Analisis\\9- Logo_Kyukeisho\\Kyukeisho.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="320" y="86" width="97" height="14" uuid="8f02a24f-b952-4f89-8eb8-67a2bc41589b"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Reporte Productos ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="33d8ab59-03bb-4bbf-90cd-b324ce59470d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="134" height="15" forecolor="#736343" uuid="aa9ba46a-87ae-4c5b-9b72-8d16f7f236fb"/>
+				<text><![CDATA[Nombre Juego]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="160" y="0" width="132" height="15" forecolor="#736343" uuid="3cf70151-459d-4181-a2c0-eb4bfc573d23"/>
+				<text><![CDATA[Precio Juego]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="320" y="0" width="139" height="15" forecolor="#736343" uuid="0c6c910d-7c55-4060-9bdb-3867516a6b55"/>
+				<text><![CDATA[Cantidad Juegos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="480" y="0" width="145" height="15" forecolor="#736343" uuid="98b9d481-bb96-41cc-91a1-d0b68081026c"/>
+				<text><![CDATA[Nombre Categoria]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="640" y="0" width="146" height="15" forecolor="#736343" uuid="984f1a1f-2671-460e-8f47-32c23f157c0b"/>
+				<text><![CDATA[Nombre Consola]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="6f16c341-0fea-4c97-b189-2734f17cdfc0"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="134" height="15" uuid="f4a1b748-b481-4ece-8ac6-4c4ab39a947a"/>
+					<textFieldExpression><![CDATA[$F{juegos_nombre_juego}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="160" y="0" width="132" height="15" uuid="5d771c84-bac9-46db-8127-f73d1ab27617"/>
+					<textFieldExpression><![CDATA[$F{juegos_precio_juego}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="320" y="0" width="139" height="15" uuid="2d024a65-24bb-40a4-806f-d833e818b3dd"/>
+					<textFieldExpression><![CDATA[$F{juegos_cantidad_juegos}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="480" y="0" width="145" height="15" uuid="cfa2eae4-3260-4bfa-b280-253e47a56a48"/>
+					<textFieldExpression><![CDATA[$F{categoria_juegos_nombre_categoria_juegos}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="640" y="0" width="146" height="15" uuid="9af7327b-8085-4f0c-a435-7b4bf7dd2b9b"/>
+					<textFieldExpression><![CDATA[$F{consola_nombre_consola}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="25b32512-2feb-4928-8e09-5ed15a3ace4e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="de674a42-69bd-4928-8d3c-37eddba10192"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="8a3282b8-b304-4544-805a-6b9e568284f7"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="102a70e8-ea72-4d0b-91b8-e84b82526327"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="bd4d8bb9-11d9-415e-af9c-1fe6c4220360"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement x="341" y="4" width="100" height="20" uuid="08aaa942-3669-4202-9a09-9b1595b438d9"/>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

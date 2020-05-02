@@ -587,26 +587,14 @@
                                 </div>
                                 <div class="col-lg-6" >
 
-                                    <a href="PdfCategoria.jsp" class="btn btn-info"  data-toggle="modal">
-                                        <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                        </i><span> Generar reporte</span></a>
-
-                                    <a  href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
-                                        <i class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
-                                        </i><span> Eliminar Categorias</span></a>      
+                                    <form name="form1" action="ReporteCategoriaJuegos.jsp" target="_black">
+                                        <input type="submit" class="btn btn-info" value="Generar Reporte PDF" />
+                                    </form>       
 
                                     <a href="#addcate" class="btn btn-success"  data-toggle="modal">
                                         <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                         </i><span> Añadir Categoria</span></a>
-
-
-
-
-
-
-
                                 </div>
-
                             </div>
                             <div class="row" ><br></div>
                         </div>

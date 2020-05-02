@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b8a51ed0-84e8-4efe-a63d-90239d79dae5">
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     categoria_juegos.`id_categoria_juegos` AS categoria_juegos_id_categoria_juegos,
+     categoria_juegos.`nombre_categoria_juegos` AS categoria_juegos_nombre_categoria_juegos
+FROM
+     `categoria_juegos` categoria_juegos]]>
+	</queryString>
+	<field name="categoria_juegos_id_categoria_juegos" class="java.lang.Integer"/>
+	<field name="categoria_juegos_nombre_categoria_juegos" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement x="149" y="84" width="178" height="14" uuid="94c2f9a6-4726-4f21-897f-44f6fd754f98"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Reporte Categoria Juegos]]></text>
+			</staticText>
+			<image>
+				<reportElement x="396" y="0" width="159" height="106" uuid="9dfe779b-5dee-4c79-8069-7faf67616c92"/>
+				<imageExpression><![CDATA["C:\\Andres_Olaya\\Proyecto_Formativo\\Kyukeisho_New\\Kyukeisho_New\\1- Analisis\\9- Logo_Kyukeisho\\Kyukeisho.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="SubTitle" x="149" y="62" width="178" height="22" uuid="b416cec1-8478-4aaf-8fc5-2bbce894a312"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Tienda De Videojuegos ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="112" y="0" width="263" height="62" uuid="e6fd6f52-35fe-476d-bb8b-ccbc3c52a006"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Kyukeisho]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="d1984742-ac03-4c52-99c8-dc25559a8637"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="26" y="0" width="198" height="15" forecolor="#736343" uuid="6cf51d55-e43f-41a4-ad59-28dc0cd5dc9c"/>
+				<text><![CDATA[Id Categoria ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="277" y="0" width="212" height="15" forecolor="#736343" uuid="575fa71e-42d4-4762-96fc-799e60f1e720"/>
+				<text><![CDATA[Nombre Categoria]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="15" uuid="952f6f32-7eef-4949-a6e9-b2b871cf6a99"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="277" y="0" width="212" height="15" uuid="c1810899-b5a2-46c1-ac39-b6df8ae97644"/>
+					<textFieldExpression><![CDATA[$F{categoria_juegos_nombre_categoria_juegos}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="26" y="0" width="198" height="15" uuid="17255e39-c75e-45bb-9150-3d24f4954efe"/>
+					<textFieldExpression><![CDATA[$F{categoria_juegos_id_categoria_juegos}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="1992741c-db39-4cc4-880d-2bf23f836d96"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="597" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="d7899c89-523c-4ac6-b20d-850de786e957"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="533" y="0" width="40" height="20" forecolor="#736343" uuid="ed149609-2b30-4c9d-a389-a3a025667631"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="453" y="0" width="80" height="20" forecolor="#736343" uuid="f1ec2f23-c8a5-4dab-a8a6-d9b2232acf90"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="998aaaaa-f527-4235-9574-79bcc09c7643"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement x="219" y="4" width="100" height="20" uuid="0ede505b-1ad1-4572-95d4-abfd9c916dfb"/>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

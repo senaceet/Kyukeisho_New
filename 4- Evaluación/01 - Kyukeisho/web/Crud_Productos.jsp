@@ -590,7 +590,7 @@
                                     <h2> <strong>Productos</strong></h2>
                                 </div>
                                 <div class="col-lg-7" >
-                                    <form name="form1" action="ReportesPdf/ReporteProductos.jsp" target="_black">
+                                    <form name="form1" action="ReporteProductos.jsp" target="_black">
                                         <input type="submit" class="btn btn-info" value="Generar reporte en PDF" />
                                     </form>
 

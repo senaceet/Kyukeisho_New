@@ -283,4 +283,6 @@ VALUES	(1, 1),
         
 -- Preguntas -- 
 INSERT INTO kyukeisho.preguntas(id_pregunta, correo, pregunta, fecha)
-VALUES 						   (01, "andres@gmail.com", "Quiero Adquirir Su Servicio",'2020-03-04 01:55:00');        
+VALUES 						   (01, "andres@gmail.com", "Quiero Adquirir Su Servicio",'2020-03-04 01:55:00');       
+
+--

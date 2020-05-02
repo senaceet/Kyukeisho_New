@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="65a5d600-d41b-4d89-b633-fe662fdf047c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     reservaciones.`id_reservacion` AS reservaciones_id_reservacion,
+     reservaciones.`fecha_incio` AS reservaciones_fecha_incio,
+     reservaciones.`hora_incio` AS reservaciones_hora_incio,
+     reservaciones.`id_consola` AS reservaciones_id_consola,
+     reservaciones.`correo_usuario` AS reservaciones_correo_usuario,
+     consola.`id_consola` AS consola_id_consola,
+     consola.`nombre_consola` AS consola_nombre_consola,
+     consola.`precio_hora` AS consola_precio_hora,
+     consola.`id_estado_consola` AS consola_id_estado_consola
+FROM
+     `consola` consola INNER JOIN `reservaciones` reservaciones ON consola.`id_consola` = reservaciones.`id_consola`]]>
+	</queryString>
+	<field name="reservaciones_fecha_incio" class="java.sql.Date"/>
+	<field name="reservaciones_hora_incio" class="java.sql.Time"/>
+	<field name="reservaciones_correo_usuario" class="java.lang.String"/>
+	<field name="consola_nombre_consola" class="java.lang.String"/>
+	<field name="consola_precio_hora" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement x="302" y="98" width="178" height="14" uuid="e76f354a-e80d-4b32-9bc3-d3dd79a2ec41"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Reporte Reservaciones]]></text>
+			</staticText>
+			<image>
+				<reportElement x="643" y="0" width="159" height="106" uuid="8b51f712-56e2-4b97-994f-755f10a72381"/>
+				<imageExpression><![CDATA["C:\\Andres_Olaya\\Proyecto_Formativo\\Kyukeisho_New\\Kyukeisho_New\\1- Analisis\\9- Logo_Kyukeisho\\Kyukeisho.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="SubTitle" x="302" y="76" width="178" height="22" uuid="1bf97776-62ed-45c9-aa68-acce9b78e086"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Tienda De Videojuegos ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="271" y="14" width="263" height="62" uuid="39d94170-6832-47bc-a75a-e2d93a0df7a2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Kyukeisho]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="7eeb4bd0-a493-4725-b503-195bbdf7e138"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="1" y="0" width="138" height="15" forecolor="#736343" uuid="cca365f7-0702-493e-8534-500c53eeca65"/>
+				<text><![CDATA[Fecha Reservación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="160" y="0" width="129" height="15" forecolor="#736343" uuid="01b2f316-eee5-4e45-8309-caa7e9a96bab"/>
+				<text><![CDATA[Hora Reservación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="320" y="0" width="160" height="15" forecolor="#736343" uuid="5ebde143-15f6-4fe0-8b26-71bd77f33f78"/>
+				<text><![CDATA[Correo Usuario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="480" y="0" width="160" height="15" forecolor="#736343" uuid="0e8d8c90-3321-4202-86f3-7d8df1a328a5"/>
+				<text><![CDATA[Nombre Consola]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="640" y="0" width="160" height="15" forecolor="#736343" uuid="e2f6fa90-8af3-4f83-928b-e45ec4100f4a"/>
+				<text><![CDATA[Precio Consola Por Hora]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="aa3f9785-60f3-4321-9d64-0b6844951522"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="138" height="15" uuid="ad71e1bb-bfbc-4f92-9ace-8bd3b978b182"/>
+					<textFieldExpression><![CDATA[$F{reservaciones_fecha_incio}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="160" y="0" width="160" height="15" uuid="db05cf4f-9d29-4ff6-a210-1d45d46dad00"/>
+					<textFieldExpression><![CDATA[$F{reservaciones_hora_incio}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="320" y="0" width="160" height="15" uuid="fcf2740c-8acf-4488-bffa-bc57fd8107bf"/>
+					<textFieldExpression><![CDATA[$F{reservaciones_correo_usuario}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="480" y="0" width="160" height="15" uuid="872b2a31-f28e-437f-9302-a76714ff2a74"/>
+					<textFieldExpression><![CDATA[$F{consola_nombre_consola}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="640" y="0" width="160" height="15" uuid="c071884f-57c5-4a37-b6ec-0c89c618a0ab"/>
+					<textFieldExpression><![CDATA[$F{consola_precio_hora}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="07d710b6-942a-43b2-b05d-7774de4fcf34"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="ccdf67e0-09e4-492a-b9ad-43b310dd9458"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="32219ec9-83f6-44a8-a142-881f6e4400ad"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="31bbc863-b8f3-440a-8eb1-929149cb0bd7"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="43251baa-3471-4501-bec5-88f8e8bbf793"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement x="346" y="1" width="100" height="20" uuid="6695602d-c1de-4780-be15-0121a3d0283b"/>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

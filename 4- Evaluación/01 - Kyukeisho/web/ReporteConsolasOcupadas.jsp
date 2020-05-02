@@ -8,12 +8,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" type="image/png" href="IMG/GF.png">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Kuykeisho</title>
     </head>
     <body>
         <%
-            File reportfile = new File (application.getRealPath("ReporteProductos.jasper"));
+            File reportfile = new File (application.getRealPath("ReportesPdf/ReporteConsolasOcupadas.jasper"));
             Map<String, Object> parameter = new HashMap<String, Object>();
             byte[] bytes = JasperRunManager.runReportToPdf(reportfile.getPath(), parameter, con);
             
