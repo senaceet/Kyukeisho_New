@@ -68,13 +68,13 @@
                     </ul>
                 </div>
             </nav>
-
+        </div>
+    
         <br>
         <div class="container">
-
             <body background="https://images.unsplash.com/photo-1543328011-1c0d628fae09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80">
             </body>
-            <br>
+            <br><br><br>
             <div class="card-group">
                 <div class="card" style="background-color: transparent">
                     <center><img src="../IMG/incio admin/cliente.jpg" width="100"
