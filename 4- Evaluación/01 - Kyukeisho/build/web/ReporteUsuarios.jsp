@@ -5,12 +5,13 @@
 <%@page import="net.sf.jasperreports.view.JasperViewer"%>
 <%@page import="javax.servlet.ServletResponse"%>
 <%@include file="Conexion.jsp"%>
+<link rel="icon" type="image/png" href="IMG/GF.png">
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="icon" type="image/png" href="IMG/GF.png">
+    <head>        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Kuykeisho</title>
+        <link rel="icon" type="image/png" href="IMG/GF.png">
     </head>
     <body>
         <%

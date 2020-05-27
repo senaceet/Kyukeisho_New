@@ -8,9 +8,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="icon" type="image/png" href="IMG/GF.png">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Kuykeisho</title>
+        <link rel="icon" type="image/png" href="IMG/GF.png">
     </head>
     <body>
         <%
