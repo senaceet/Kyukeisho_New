@@ -240,7 +240,7 @@
         <!-- Clase Final De La Página --------------------------------------------------------------------------------------------->    
         <div class="copyright text-center  font-weight-bold p-2" style="background-color: #000">
             <p style="color: #ffffff">Desarrollado por Kyukeisho Official Copyright<i class="fa fa-copyright"
-                                                                                      aria-hidden="true"></i> 2019</p>
+                aria-hidden="true"></i> 2020</p>
         </div>
     </footer>
     <!--------------------------------------------------------------------------------------------------------------------------->                        
