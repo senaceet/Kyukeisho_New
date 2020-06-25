@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<%@page contentType="text/html"%> <%-- para acentos --%> 
+<%@page pageEncoding="UTF-8"%> <%-- para acentos --%> 
+<%@page import="modelo.Persona"%>
+<%@page import="modelo.Admin"%>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -154,7 +157,7 @@
         <font style="color:rgb(255, 145, 0)">
         <div class="header fixed-top">
             <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #000">
-                <a href="index.html">
+                <a href="index.jsp">
                     <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
                 </a>
                 <div class="col-xl-1 text-center" >
@@ -167,7 +170,13 @@
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                     </ul>
-                    <ul class="navbar-nav ">
+                     
+                        <%
+        Persona p = (Persona) session.getAttribute("persona");
+        Admin a = (Admin) session.getAttribute("administrador");
+        if (p == null && a == null) {
+                        %>
+                                <ul class="navbar-nav ">
                         <li class="nav-item dropdown mr-2">
                             <a class="nav-link dropdown-toggle navbar-DARK" href="#" id="navbarDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgb(255, 217, 0)">
@@ -182,20 +191,18 @@
                             </div>
                         </li>
                     </ul>
-                </div>
+                                                </div>
             </nav>
-
             <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #fffb00">
                 <div class="col-xl-1 text-center" style="background-color: rgb(255, 251, 0)">
                     <button class="navbar-toggler" style="background-color: rgb(255, 251, 0)" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false"
                             aria-label="Toggle navigation">
-                        MENU<span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent2">
-
-                    <div class="col-xl-3 text-left" style="background-color: rgb(255, 251, 0)">
+                    <div class="col-xl-2 text-left" style="background-color: rgb(255, 251, 0)">
                         <button class="btn text-right btn-lg dropdown-toggle" style="border-color: rgba(133, 133, 133, 0)" type="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-bars" aria-hidden="true"></i><strong> Categorias</strong>
@@ -207,15 +214,123 @@
                         </div>
                     </div>
                     <div class="col-xl-3 text-left" style="background-color: rgb(255, 251, 0)">
-                        <a href="Reservacion_sin_inicar_sesion.html">
+                        <a href="Reservacion_sin_inicar_sesion.jsp">
                             <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
-                                <h5><strong><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> Reservaciones</strong></h5>
+                                <h5><strong><i class="fa fa-gamepad" aria-hidden="true"></i> Reservaciones</strong></h5>
                             </button>
                         </a>
                     </div>
+    <%
+        }else if(p!= null && a == null){
+ %>
+
+<ul class="navbar-nav ">
+                        <li class="nav-item dropdown mr-2">
+                            <a class="nav-link dropdown-toggle navbar-DARK" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgb(255, 217, 0)">
+                               ${correo} <%-- Cliente --%> 
+                            </a>
+                            <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="width:15rem; background-color: #343a40">
+                                <a class="dropdown-item" href="Cliente/Cliente.jsp" style="color:rgb(255, 217, 0)">Inicio</a>
+                                <a class="dropdown-item" href="Cliente/Perfil_Cliente.jsp" style="color:rgb(255, 217, 0)">Perfil</a>
+                                <hr>
+                                <form action="Controlador" method="post">
+                                    <div class="form-group">
+                                        <div align="center">
+                                            <input style="width: 14rem;" class="btn btn-warning btn-block" type="submit" name="accion" value="Cerrar Sesion"> 
+                                        </div>               
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+           </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #fffb00">
+                <div class="col-xl-1 text-center" style="background-color: rgb(255, 251, 0)">
+                    <button class="navbar-toggler" style="background-color: rgb(255, 251, 0)" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent2">
+                    <div class="col-xl-2 text-left" style="background-color: rgb(255, 251, 0)">
+                        <button class="btn text-right btn-lg dropdown-toggle" style="border-color: rgba(133, 133, 133, 0)" type="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-bars" aria-hidden="true"></i><strong> Categorias</strong>
+                        </button>
+                        <div class="dropdown-menu btn-lg " aria-labelledby="dropdownMenuButton"
+                             style="width:14rem; background-color: rgb(255, 251, 0)">
+                            <a href="Juegos.jsp" class="dropdown-item" style="color: rgb(0, 0, 0)">Juegos para consolas</a>
+                            <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="Productos.jsp">Productos y accesorios</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 text-left" style="background-color: rgb(255, 251, 0)">
+                        <a href="Cliente/Reservacion.jsp">
+                            <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
+                                <h5><strong><i class="fa fa-gamepad" aria-hidden="true"></i> Reservaciones</strong></h5>
+                            </button>
+                        </a>
+                    </div>
+    <%
+        }else if(a!= null && p == null){
+ %>
+
+<ul class="navbar-nav ">
+                        <li class="nav-item dropdown mr-2">
+                            <a class="nav-link dropdown-toggle navbar-DARK" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgb(255, 217, 0)">
+                                ${correo} <%-- Admin --%> 
+                            </a>
+                            <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="width:15rem; background-color: #343a40">
+                                <a class="dropdown-item" href="Administrador/Inicio_Administrador.jsp" style="color:rgb(255, 217, 0)">Inicio de administración</a>
+                                <hr>
+                                <form action="ControladorAdmin" method="post">
+                                    <div class="form-group">
+                                        <div align="center">
+                                            <input style="width: 10rem;" class="btn btn-dark bnt-outline btn-block" type="submit" name="accion" value="Cerrar Sesion"> 
+                                        </div>               
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+           </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #fffb00">
+                <div class="col-xl-1 text-center" style="background-color: rgb(255, 251, 0)">
+                    <button class="navbar-toggler" style="background-color: rgb(255, 251, 0)" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent2">
+                    <div class="col-xl-2 text-left" style="background-color: rgb(255, 251, 0)">
+                        <button class="btn text-right btn-lg dropdown-toggle" style="border-color: rgba(133, 133, 133, 0)" type="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-bars" aria-hidden="true"></i><strong> Categorias</strong>
+                        </button>
+                        <div class="dropdown-menu btn-lg " aria-labelledby="dropdownMenuButton"
+                             style="width:14rem; background-color: rgb(255, 251, 0)">
+                            <a href="Juegos.jsp" class="dropdown-item" style="color: rgb(0, 0, 0)">Juegos para consolas</a>
+                            <a class="dropdown-item" style="color: rgb(0, 0, 0)" href="Productos.jsp">Productos y accesorios</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 text-left" style="background-color: rgb(255, 251, 0)">
+                        <a href="Reservacion_sin_inicar_sesion.jsp">
+                            <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
+                                <h5><strong><i class="fa fa-gamepad" aria-hidden="true"></i> Reservaciones</strong></h5>
+                            </button>
+                        </a>
+                    </div>
+    <%
+        }
+ %>
 
                     <div class="col-xl-3 text-left" style="background-color: rgb(255, 251, 0)">
-                        <a href="contactenos.html">
+                        <a href="contactenos.jsp">
                             <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
                                 <h5><strong><i class="fa fa-phone" aria-hidden="true"></i> Contactenos</strong></h5>
                             </button>
@@ -264,7 +379,7 @@
                             <div class="card-header" id="headingTwo">
                                 <h2 class="mb-0">
                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: white">
-                                        <h3>Mision</h3>
+                                        <h3>Misión</h3>
                                     </button>
                                 </h2>
                             </div>
@@ -298,8 +413,37 @@
                             </div>
                             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                                 <div class="card-body">
-                                    <p><strong>POLÍTICA DE PRIVACIDAD</strong></p><p>&nbsp;</p><p>El presente Política de Privacidad establece los términos en que Kyukeisho usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.</p><p><strong>Información que es recogida</strong></p><p>Nuestro sitio web podrá recoger información personal por ejemplo: Nombre,&nbsp; información de contacto como&nbsp; su dirección de correo electrónico. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.</p><p><strong>Uso de la información recogida</strong></p><p>Nuestro sitio web emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios, de pedidos en caso que aplique, y mejorar nuestros productos y servicios. &nbsp;Es posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales, nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.</p><p>Kyukeisho está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.</p><p><strong>Cookies</strong></p><p>Una cookie se refiere a un fichero que es enviado con la finalidad de solicitar permiso para almacenarse en su ordenador, al aceptar dicho fichero se crea y la cookie sirve entonces para tener información respecto al tráfico web, y también facilita las futuras visitas a una web recurrente. Otra función que tienen las cookies es que con ellas las web pueden reconocerte individualmente y por tanto brindarte el mejor servicio personalizado de su web.</p><p>Nuestro sitio web emplea las cookies para poder identificar las páginas que son visitadas y su frecuencia. Esta información es empleada únicamente para análisis estadístico y después la información se elimina de forma permanente. Usted puede eliminar las cookies en cualquier momento desde su ordenador. Sin embargo las cookies ayudan a proporcionar un mejor servicio de los sitios web, estás no dan acceso a información de su ordenador ni de usted, a menos de que usted así lo quiera y la proporcione directamente. Usted puede aceptar o negar el uso de cookies, sin embargo la mayoría de navegadores aceptan cookies automáticamente pues sirve para tener un mejor servicio web. También usted puede cambiar la configuración de su ordenador para declinar las cookies. Si se declinan es posible que no pueda utilizar algunos de nuestros servicios.</p><p><strong>Enlaces a Terceros</strong></p><p>Este sitio web pudiera contener en laces a otros sitios que pudieran ser de su interés. Una vez que usted de clic en estos enlaces y abandone nuestra página, ya no tenemos control sobre al sitio al que es redirigido y por lo tanto no somos responsables de los términos o privacidad ni de la protección de sus datos en esos otros sitios terceros. Dichos sitios están sujetos a sus propias políticas de privacidad por lo cual es recomendable que los consulte para confirmar que usted está de acuerdo con estas.</p><p><strong>Control de su información personal</strong></p><p>En cualquier momento usted puede restringir la recopilación o el uso de la información personal que es proporcionada a nuestro sitio web.&nbsp; Cada vez que se le solicite rellenar un formulario, como el de alta de usuario, puede marcar o desmarcar la opción de recibir información por correo electrónico. &nbsp;En caso de que haya marcado la opción de recibir nuestro boletín o publicidad usted puede cancelarla en cualquier momento.</p><p>Esta compañía no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento, salvo que sea requerido por un juez con un orden judicial.</p><p>Kyukeisho Se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.
-                                </div>
+
+<p><strong>POLÍTICA DE PRIVACIDAD</strong></p>
+<p align="justify">
+El presente Política de Privacidad establece los términos en los que Endeavor España usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que solo se emplearán de acuerdo con los términos de este documento. Sin embargo, esta Política de Privacidad puede cambiar con el tiempo o ser actualizada, por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse de que está de acuerdo con dichos cambios.
+</p>
+<p><strong>Información que es recogida</strong></p>
+<p align="justify">
+Nuestro sitio web podrá recoger información personal como por ejemplo su nombre, su información de contacto (como su dirección de correo electrónico) e información demográfica. Así mismo, cuando sea necesario, podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.
+</p>
+<p><strong>Uso de la información recogida</strong></p>
+<p align="justify">
+Nuestro sitio web emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios, de pedidos en caso que aplique, y mejorar nuestros productos y servicios. Es posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales, nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.
+</p>
+<p align="justify">
+Endeavor España está altamente comprometido con cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.
+</p>
+<p><strong>Cookies</strong></p>
+<p align="justify">
+Una cookie se refiere a un fichero que es enviado con la finalidad de solicitar permiso para almacenarse en su ordenador. Al aceptar dicho fichero este se crea y la cookie sirve entonces para tener información respecto al tráfico web y también facilita las futuras visitas a una web recurrente. Otra función que tienen las cookies es que con ellas la web pueden reconocerte individualmente y por tanto brindarte el mejor servicio personalizado de su web.
+</p>
+<p align="justify">
+Nuestro sitio web emplea las cookies para poder identificar las páginas que son visitadas y su frecuencia. Esta información es empleada únicamente para análisis estadístico y después la información se elimina de forma permanente. Usted puede eliminar las cookies en cualquier momento desde su ordenador. Sin embargo, las cookies ayudan a proporcionar un mejor servicio de los sitios web. Estas no dan acceso a información de su ordenador ni de usted, a menos que usted así lo quiera y la proporcione directamente. Usted puede aceptar o negar el uso de cookies. Sin embargo, la mayoría de navegadores aceptan cookies automáticamente pues sirve para tener un mejor servicio web. También usted puede cambiar la configuración de su ordenador para declinar las cookies. Si se declinan es posible que no pueda utilizar algunos de nuestros servicios.
+</p>
+<p><strong>Enlaces a Terceros</strong></p>
+<p align="justify">
+Este sitio web pudiera contener enlaces a otros sitios que pudieran ser de su interés. Una vez que usted de clic en estos enlaces y abandone nuestra página, ya no tendremos control sobre al sitio al que es redirigido y por lo tanto no somos responsables de los términos o privacidad ni de la protección de sus datos en esos otros sitios terceros. Dichos sitios están sujetos a sus propias políticas de privacidad por lo cual es recomendable que los consulte para confirmar que usted está de acuerdo con estas.
+</p>
+<p><strong>Control de su información personal</strong></p>
+<p align="justify">
+En cualquier momento usted puede restringir la recopilación o el uso de la información personal que es proporcionada a nuestro sitio web. Cada vez que se le solicite rellenar un formulario, como el de alta de usuario, puede marcar o desmarcar la opción de recibir información por correo electrónico. En caso de que haya marcado la opción de recibir nuestro boletín o publicidad usted puede cancelarla en cualquier momento.                                </div>
+</p>                            
                             </div>
                         </div>
                     </div>
@@ -308,72 +452,71 @@
             <hr style="background-color: green">
             <br>
             <br>
-            <footer class="page-footer font-small indigo" style="background-color:rgba(180, 180, 180, 0)">
-                <div class="container">
-                    <div class="row">
-                        <h5 style="color:rgb(255, 230, 0)">¿Preguntas? Llama al ** *** *** ****</h5>
-                    </div>
-                    <div class="row">
-                    </div>
-                </div>
-                <div class="container text-center text-md-left">
-                    <div class="row">
-                        <div class="col-md-3 mx-auto">
-                            <br>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="#!" style="color:rgb(255, 230, 0)">Preguntas frecuentes</a>
-                                    <br>
-                                    <a href="#!" style="color:rgb(255, 230, 0)">Preferencias de cookies</a>
-                                </li>
-                            </ul>
-                            <br>
-                            <div class="dropdown">
-                                <button class="btn btn-outline-warning dropdown-toggle" type="button" id="dropdownMenuButton"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-globe" aria-hidden="true"></i> Idioma
-                                </button>
-                                <div class="dropdown-menu" style="background-color:rgb(255, 208, 0)" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Español</a>
-                                    <a class="dropdown-item" href="#">Ingles</a>
-                                </div>
-                            </div>
-                            <br>
-                            </ul>
-                        </div>
-                        <hr class="clearfix w-100 d-md-none">
-                        <div class="col-md-3 mx-auto">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <br>
-                                    <a href="#!" style="color:rgb(255, 230, 0)">Centro de ayuda</a>
-                                    <br>
-                                    <a href="#!" style="color:rgb(255, 230, 0)">Información corporativa</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <hr class="clearfix w-100 d-md-none">
-                        <div class="col-md-3 mx-auto">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <br>
-                                    <a href="#!"style="color:rgb(255, 230, 0)">Términos de uso</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <hr class="clearfix w-100 d-md-none">
-                        <div class="col-md-3 mx-auto">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <br>
-                                    <a href="#!" style="color:rgb(255, 230, 0)">Privacidad</a>
-                                </li>
-                            </ul>
-                        </div>
+<footer class="page-footer font-small indigo" style="background-color:rgba(180, 180, 180, 0)">
+    <div class="container">
+        <div class="row">
+            <h5 style="color:rgb(255, 230, 0)">¿Preguntas? Llama al ** *** *** ****</h5>
+        </div>
+        <div class="row">
+        </div>
+    </div>
+    <div class="container text-center text-md-left">
+        <div class="row">
+            <div class="col-md-3 mx-auto">
+                <br>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!" style="color:rgb(255, 230, 0)">Preguntas frecuentes</a>
+                        <br>
+                        <a href="#!" style="color:rgb(255, 230, 0)">Preferencias de cookies</a>
+                    </li>
+                </ul>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-outline-warning dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-globe" aria-hidden="true"></i> Idioma
+                    </button>
+                    <div class="dropdown-menu" style="background-color:rgb(255, 208, 0)" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Español</a>
+                        <a class="dropdown-item" href="#">Ingles</a>
                     </div>
                 </div>
                 <br>
-            </footer>
+                </ul>
+            </div>
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-3 mx-auto">
+                <ul class="list-unstyled">
+                    <li>
+                        <br>
+                        <a href="#!" style="color:rgb(255, 230, 0)">Centro de ayuda</a>
+                        <br>
+                        <a href="#!" style="color:rgb(255, 230, 0)">Información corporativa</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-3 mx-auto">
+                <ul class="list-unstyled">
+                    <li>
+                        <br>
+                        <a href="#!"style="color:rgb(255, 230, 0)">Terminos de uso</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-3 mx-auto">
+                <ul class="list-unstyled">
+                    <li>
+                        <br>
+                        <a href="#!" style="color:rgb(255, 230, 0)">Privacidad</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 
             <div class="copyright text-center  font-weight-bold p-2" style="background-color: #000">
                 <p style="font-family: Times New Roman; color:rgb(255, 217, 0)">Desarrollado por Kyukeisho Copyright<i class="fa fa-copyright"

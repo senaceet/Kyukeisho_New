@@ -210,7 +210,7 @@
         </style>
         <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
             <div class="navbar-header d-flex col">
-                <a href="index.html">
+                <a href="index.jsp">
                     <img width="380" height="70" src="IMG/index.png" class="img-fluid" alt="Responsive image">
                 </a> 
             </div>

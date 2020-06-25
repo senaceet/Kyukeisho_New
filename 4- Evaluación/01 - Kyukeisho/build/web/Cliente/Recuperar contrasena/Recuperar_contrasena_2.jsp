@@ -27,7 +27,7 @@
 
         <div class="header fixed-top" >
             <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
-                <a href="../../index.html">
+                <a href="../../index.jsp">
                     <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

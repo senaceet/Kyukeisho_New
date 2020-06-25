@@ -35,7 +35,9 @@
 
         <div class="header fixed-top">
             <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #000">
+                <a href="../index.jsp">
                 <img width="380" height="70" src="../IMG/index.png" class="img-fluid" alt="Responsive image">
+                </a>
                 <div class="col-xl-1 text-center" >
                     <button class="navbar-toggler" style="background-color: rgb(255, 251, 0)" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"

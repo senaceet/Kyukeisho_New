@@ -217,7 +217,7 @@
 <body>
     <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
         <div class="navbar-header d-flex col">
-            <a href="index.html">
+            <a href="index.jsp">
                 <img width="380" height="70" src="IMG/index.png" class="img-fluid" alt="Responsive image">
             </a>            
             <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">

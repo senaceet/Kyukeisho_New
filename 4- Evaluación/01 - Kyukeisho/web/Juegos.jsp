@@ -7,6 +7,8 @@
 <%@page import="modelo.catalogo_juegos_nuevos_xbox_one_DAO"%>
 <%@page import="modelo.catalogo_juegos_nuevos_PS4_DAO"%>
 <%@page import="modelo.catalogo_juegos_nuevos_PC_DAO"%>
+<%@page import="modelo.Persona"%>
+<%@page import="modelo.Admin"%>
 <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -242,7 +244,7 @@
         <font style="color:rgb(255, 145, 0)">
         <div class="header fixed-top">
             <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
-                <a href="index.html">
+                <a href="index.jsp">
                     <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png"
                          class="img-fluid" alt="Responsive image">
                 </a>
@@ -257,25 +259,35 @@
                     <ul class="navbar-nav mr-auto">
                     </ul>
 
-                    <ul class="navbar-nav ">
+                        <%
+        Persona p = (Persona) session.getAttribute("persona");
+        Admin a = (Admin) session.getAttribute("administrador");
+        if (p == null && a == null) {
+                        %>
+<p>
 
+  <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    <i class="fa fa-user" aria-hidden="true"></i> Mi cuenta
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body" style="background-color: #000">
                                 <a class="dropdown-item" href="Cliente/Inicio_Sesion_Cliente.jsp"
-                                   style="color:rgb(255, 217, 0)"><i class="fa fa-user" aria-hidden="true"></i> Iniciar sesión</a>
-
-                    </ul>
-                </div>
+                                   style="color:rgb(255, 217, 0)">Cliente</a>
+                                <a class="dropdown-item" href="Administrador/Inicio_Sesion_Administrador.jsp"
+                                   style="color:rgb(255, 217, 0)">Administrador</a>
+  </div>
+</div>
+            </div>
             </nav>
-
             <nav class="navbar navbar-expand-lg navbar-light " style="background-color: rgb(77, 204, 19)">
                 <div class="col-xl-1 text-center" style="background-color: rgb(77, 204, 19)">
                     <button class="navbar-toggler" style="background-color: rgb(77, 204, 19)" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false"
                             aria-label="Toggle navigation">
-                        MENU<span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
-                <div class="collapse navbar-collapse " id="navbarSupportedContent2">
-
                     <div class="col-xl-3 text-left" style="background-color: rgb(77, 204, 19)">
                         <a href="Productos.jsp">
                             <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
@@ -284,22 +296,117 @@
                         </a>
                     </div>
                     <div class="col-xl-3 text-left" style="background-color: rgb(77, 204, 19)">
-                        <a href="Reservacion_sin_inicar_sesion.html">
+                        <a href="Reservacion_sin_inicar_sesion.jsp">
                             <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
-                                <h5><strong><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> Reservaciones</strong></h5>
+                                <h5><strong><i class="fa fa-gamepad" aria-hidden="true"></i> Reservaciones</strong></h5>
                             </button>
                         </a>
                     </div>
+    <%
+        }else if(p!= null && a == null){
+ %>
+  <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    ${correo}
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body" style="background-color: #000">
+                                <a class="dropdown-item" href="Cliente/Cliente.jsp" style="color:rgb(255, 217, 0)">Inicio</a>
+                                <a class="dropdown-item" href="Cliente/Perfil_Cliente.jsp" style="color:rgb(255, 217, 0)">Perfil</a>
+                                <hr>
+                                <form action="Controlador" method="post">
+                                    <div class="form-group">
+                                        <div align="center">
+                                            <input style="width: 14rem;" class="btn btn-warning btn-block" type="submit" name="accion" value="Cerrar Sesion"> 
+                                        </div>               
+                                    </div>
+                                </form>
+  </div>
+</div>
 
+           </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg navbar-light " style="background-color: rgb(77, 204, 19)">
+                <div class="col-xl-1 text-center" style="background-color: rgb(77, 204, 19)">
+                    <button class="navbar-toggler" style="background-color: rgb(77, 204, 19)" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
                     <div class="col-xl-3 text-left" style="background-color: rgb(77, 204, 19)">
-                        <a href="Conocenos.html">
+                        <a href="Productos.jsp">
+                            <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
+                                <h5><strong><i class="fa fa-shopping-basket" aria-hidden="true"></i> Productos</strong></h5>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-xl-3 text-left" style="background-color: rgb(77, 204, 19)">
+                        <a href="Cliente/Reservacion.jsp">
+                            <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
+                                <h5><strong><i class="fa fa-gamepad" aria-hidden="true"></i> Reservaciones</strong></h5>
+                            </button>
+                        </a>
+                    </div>
+    <%
+        }else if(a!= null && p == null){
+ %>
+   <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    ${correo}
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body" style="background-color: #000">
+<a class="dropdown-item" href="Administrador/Inicio_Administrador.jsp" style="color:rgb(255, 217, 0)">Inicio de administración</a>
+                                <hr>
+                                <form action="ControladorAdmin" method="post">
+                                    <div class="form-group">
+                                        <div align="center">
+                                            <input style="width: 10rem;" class="btn btn-dark bnt-outline btn-block" type="submit" name="accion" value="Cerrar Sesion"> 
+                                        </div>               
+                                    </div>
+                                </form>
+  </div>
+</div>
+
+           </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg navbar-light " style="background-color: rgb(77, 204, 19)">
+                <div class="col-xl-1 text-center" style="background-color: rgb(77, 204, 19)">
+                    <button class="navbar-toggler" style="background-color: rgb(77, 204, 19)" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                    <div class="col-xl-3 text-left" style="background-color: rgb(77, 204, 19)">
+                        <a href="Productos.jsp">
+                            <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
+                                <h5><strong><i class="fa fa-shopping-basket" aria-hidden="true"></i> Productos</strong></h5>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-xl-3 text-left" style="background-color: rgb(77, 204, 19)">
+                        <a href="Reservacion_sin_inicar_sesion.jsp">
+                            <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
+                                <h5><strong><i class="fa fa-gamepad" aria-hidden="true"></i> Reservaciones</strong></h5>
+                            </button>
+                        </a>
+                    </div>
+    <%
+        }
+ %>
+
+ 
+                    <div class="col-xl-3 text-left" style="background-color: rgb(77, 204, 19)">
+                        <a href="Conocenos.jsp">
                             <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
                                 <h5><strong><i class="fa fa-users" aria-hidden="true"></i> Conocenos</strong></h5>
                             </button>
                         </a>
                     </div>
                     <div class="col-xl-2 text-left" style="background-color: rgb(77, 204, 19)">
-                        <a href="contactenos.html">
+                        <a href="contactenos.jsp">
                             <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
                                 <h5><strong><i class="fa fa-phone" aria-hidden="true"></i> Contactanos</strong></h5>
                             </button>
@@ -323,7 +430,8 @@
 <br>
 <br>
 <br>
-<BR>
+<br>
+<br>
 <!-- JUEGOS DE LA SEMANA -->
 <div class="container-fluid">
     <div class="row">
@@ -344,7 +452,7 @@
                         </div>
                         <div class="row">
                             <!-- JUEGOS DE LA SEMANA XBOX ONE -->
-                                                                                                <%
+                                        <%
                                             catalogo_juegos_nuevos_xbox_one_DAO dao5 = new catalogo_juegos_nuevos_xbox_one_DAO();
                                             List<Juegos> list5 = dao5.listar();
                                             Iterator<Juegos> iter5 = list5.iterator();

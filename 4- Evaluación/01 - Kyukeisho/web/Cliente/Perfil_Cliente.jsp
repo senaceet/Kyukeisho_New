@@ -168,7 +168,7 @@
     </head> 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
-        <a href="../index.html">
+        <a href="../index.jsp">
             <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
         </a>      
         <div class="col-xl-1 text-center" >
@@ -190,7 +190,6 @@
                     </a>
                     <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="width:15rem; background-color: #343a40">
                         <a class="dropdown-item" href="Cliente.jsp" style="color:rgb(255, 255, 255)">Inicio</a>
-                        <a class="dropdown-item" href="#" style="color:rgb(255, 255, 255)">Mis reservaciones</a>
                         <hr>
                         <form action="../Controlador" method="post">
                             <div class="form-group">

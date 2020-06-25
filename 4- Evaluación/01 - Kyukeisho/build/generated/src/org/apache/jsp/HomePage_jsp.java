@@ -285,7 +285,7 @@ public final class HomePage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <!-- Clase Final De La Página --------------------------------------------------------------------------------------------->    \r\n");
       out.write("        <div class=\"copyright text-center  font-weight-bold p-2\" style=\"background-color: #000\">\r\n");
       out.write("            <p style=\"color: #ffffff\">Desarrollado por Kyukeisho Official Copyright<i class=\"fa fa-copyright\"\r\n");
-      out.write("                                                                                      aria-hidden=\"true\"></i> 2019</p>\r\n");
+      out.write("                aria-hidden=\"true\"></i> 2020</p>\r\n");
       out.write("        </div>\r\n");
       out.write("    </footer>\r\n");
       out.write("    <!--------------------------------------------------------------------------------------------------------------------------->                        \r\n");

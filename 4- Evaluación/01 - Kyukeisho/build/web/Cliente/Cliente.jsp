@@ -172,7 +172,7 @@
         <font style="color:rgb(255, 145, 0)">
         <div class="header fixed-top">
             <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #343a40">
-                <a href="../index.html">
+                <a href="../index.jsp">
                     <img width="380" height="70" src="https://fotos.subefotos.com/105fb41d255ed1489a748b723f448441o.png" class="img-fluid" alt="Responsive image">
                 </a>      
                 <div class="col-xl-1 text-center" >
@@ -193,7 +193,6 @@
                                 ${correo}
                             </a>
                             <div class="dropdown-menu mr-sm-2 " aria-labelledby="navbarDropdown" style="width:15rem; background-color: #343a40">
-                                <a class="dropdown-item" href="#" style="color:rgb(255, 217, 0)">Mis reservaciones</a>
                                 <a class="dropdown-item" href="Perfil_Cliente.jsp" style="color:rgb(255, 217, 0)">Perfil</a>
                                 <hr>
                                 <form action="../Controlador" method="post">
@@ -238,14 +237,14 @@
                         </a>
                     </div>
                     <div class="col-xl-3 text-left" style="background-color: rgb(255, 251, 0)">
-                        <a href="../Conocenos.html">
+                        <a href="../Conocenos.jsp">
                             <button type="button" style="border-color: rgba(133, 133, 133, 0)" class="btn btn-outline-dark">
                                 <h5><strong><i class="fa fa-users" aria-hidden="true"></i> Conocenos</strong></h5>
                             </button>
                         </a>
                     </div>
                     <div class="col-xl-2 text-left" style="background-color: rgb(255, 251, 0)">
-                        <a href="../contactenos.html">
+                        <a href="../contactenos.jsp">
                             <button type="button" style="border-color: rgba(133, 133, 133, 0)"
                                     class="btn btn-outline-dark">
                                 <h5><strong><i class="fa fa-phone" aria-hidden="true"></i> Contactanos</strong></h5>
@@ -308,7 +307,7 @@
                         <br>
                         <br>
                         <center>
-                            <a href="/Cliente/Cliente_sin_iniciar_sesion.html#juegos">             
+                            <a href="../Juegos.jsp">             
                                 <button type="button" class="btn btn-warning">VER</button>                </a>
                         </center> 
                     </div>
@@ -321,7 +320,7 @@
                         <br>
                         <br>
                         <center>
-                            <a href="Productos_1.html">             
+                            <a href="../Productos.jsp">             
                                 <button type="button" class="btn btn-warning">VER</button>                </a>
                         </center> 
                     </div>

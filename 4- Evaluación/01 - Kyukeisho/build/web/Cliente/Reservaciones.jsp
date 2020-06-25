@@ -1,8 +1,13 @@
-<%@page import="modelo.consolas_ocupadas"%>
-<%@page import="modelo.consolas_ocupadas_DAO"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
-<%@page import="modelo.Admin"%>
+<%@page import="javax.mail.Session"%>
+<%@page import="modelo.Persona"%>
+<%@page import="modelo.reservaciones"%>
+<%@page import="modelo.reservaciones_DAO"%>
+<%@page import="modelo.consolas"%>
+<%@page import="modelo.consolas_DAO"%>
+<%@page import="modelo.usuarios"%>
+<%@page import="modelo.usuarios_DAO"%>
 <%@page contentType="text/html"%> <%-- para acentos --%> 
 <%@page pageEncoding="UTF-8"%> <%-- para acentos --%> 
 
@@ -10,20 +15,22 @@
 <html lang="en">
 
     <%
-        Admin a = (Admin) session.getAttribute("administrador");
-        if (a == null) {
-            response.sendRedirect("Administrador/Inicio_Sesion_Administrador.jsp");
+        Persona p = (Persona) session.getAttribute("persona");
+        if (p == null) {
+            request.getRequestDispatcher("Inicio_Sesion_Cliente.jsp").forward(request, response);
+
         }
         response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
         response.setDateHeader("Expires", 0);
-    %>
 
+    %>
     <head>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Kyukeisho</title>
-        <link rel="icon" type="image/png" href="IMG/GF.png">  
+        <link rel="icon" type="image/png" href="IMG/GF.png">
 
         <link rel="stylesheet" href="css/styles.css" media="all">
 
@@ -219,7 +226,7 @@
 <body>
     <nav class="navbar navbar-default navbar-expand-xl navbar-dark bg-dark">
         <div class="navbar-header d-flex col">
-            <a href="index.jsp">
+            <a href="index.html">
                 <img width="380" height="70" src="IMG/index.png" class="img-fluid" alt="Responsive image">
             </a>            
             <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
@@ -271,13 +278,6 @@
                             </a>
                         </div>
                         <div class="btn-group">
-                            <a href="CRUD_reservaciones.jsp">
-                            <button type="button" class="btn btn-outline-info">
-                                <i class="fa fa-calendar" aria-hidden="true"></i> Reservaciones
-                            </button>
-                            </a>
-                        </div>
-                        <div class="btn-group">
                             <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-gamepad" aria-hidden="true"></i> Juegos
                             </button>
@@ -301,6 +301,7 @@
                             </button>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="CRUD_Consolas.jsp">Consolas disponibles</a>                                
+                                <a class="dropdown-item" href="CRUD_Consolas_ocupadas.jsp">Consolas ocupadas</a>                                
                             </div>
                         </div>                      
                     </center>
@@ -585,21 +586,21 @@
                             <div class="row" ><br></div>
                             <div class="row" >
                                 <div class="col-lg-4">
-                                    <h2> <strong>Consolas</strong></h2>
+                                    <h2> <strong>Reservaciones</strong></h2>
                                 </div>
                                 <div class="col-lg-7" >
 
-                                    <form name="form1" action="ReporteConsolasOcupadas.jsp" target="_black">
+                                    <form name="form1" action="ReporteReservaciones.jsp" target="_black">
                                         <input type="submit" class="btn btn-info" value="Generar reporte en PDF" />
                                     </form>
 
                                     <a  href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
                                         <i class="material-icons"><i class="fa fa-trash" aria-hidden="true"></i>
-                                        </i><span> Eliminar consolas</span></a>
+                                        </i><span> Eliminar reservacion</span></a>
 
                                     <a href="#addcate" class="btn btn-success"  data-toggle="modal">
                                         <i class="material-icons"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                        </i><span> Añadir consola</span></a>
+                                        </i><span> Añadir Reservacion</span></a>
 
 
                                 </div>
@@ -621,19 +622,20 @@
                                                         <label for="selectAll"></label>
                                                     </span>
                                                 </th>
-                                                <th>Id consola</th>
-                                                <th>Nombre consola</th>
-                                                <th>Precio hora</th>
-                                                <th>Estado consola</th>
+                                                <th>Id </th>
+                                                <th>fecha incio</th>
+                                                <th>hora incio</th>
+                                                <th>consola</th>
+                                                <th>correo usuario</th>
                                                 <th>Acciones</th>
 
                                             </tr>
                                         </thead>
                                         <%
-                                            consolas_ocupadas_DAO dao = new consolas_ocupadas_DAO();
-                                            List<consolas_ocupadas> list = dao.listar();
-                                            Iterator<consolas_ocupadas> iter = list.iterator();
-                                            consolas_ocupadas ma = null;
+                                            reservaciones_DAO dao = new reservaciones_DAO();
+                                            List<reservaciones> list = dao.listar();
+                                            Iterator<reservaciones> iter = list.iterator();
+                                            reservaciones ma = null;
                                             while (iter.hasNext()) {
                                                 ma = iter.next();
                                         %>
@@ -646,14 +648,16 @@
                                                 </span>
                                             </td>
 
-                                            <td><%= ma.getid_consola()%></td>
-                                            <td><%= ma.getnombre_consola()%></td>
-                                            <td><%= ma.getprecio_hora()%></td>
-                                            <td><%= ma.getestado_consola()%></td>
+                                            <td><%= ma.getid_reservacion()%></td>
+                                            <td><%= ma.getfecha_incio()%></td>
+                                            <th><%= ma.gethora_incio()%></th>
+                                            <th><%= ma.getnombre_consola()%></th>
+                                            <th><%= ma.getcorreo_usuario()%></th>
                                             <td>
-                                                <a href="controlador_consolas_ocupadas?accion=editar&id_consola=<%= ma.getid_consola()%>" class="edit"><i
+
+                                                <a href="controlador_reservaciones?accion=editar&id_reservacion=<%= ma.getid_reservacion()%>" class="edit"><i
                                                         style="color:rgb(245, 221, 9)" class="material-icons" data-toggle="tooltip" title="Editar" value="">&#xE254;</i></a>                                            
-                                                <a href="controlador_consolas_ocupadas?accion=elimi&id_consola=<%= ma.getid_consola()%>" class="delete"><i
+                                                <a href="controlador_reservaciones?accion=elimi&id_reservacion=<%= ma.getid_reservacion()%>" class="delete"><i
                                                         style="color:red" class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
                                             </td>   
                                         </tr>
@@ -689,29 +693,52 @@
                         <div id="addcate" class="modal fade">
                             <div class="modal-dialog">
                                 <div class="modal-content">
-                                    <form action="controlador_consolas_ocupadas">
+                                    <form action="controlador_reservaciones">
                                         <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                            <h4 class="modal-title">Añadir Consola</h4>
+                                            <h4 class="modal-title">Añadir reservacion</h4>
                                             <button type="button" class="close" data-dismiss="modal"
                                                     aria-hidden="true">&times;</button>
                                         </div>
                                         <div class="modal-body">
                                             <div class="form-group">
 
-                                                <label>Nombre consola</label>
-                                                <input name="nombre" type="text" class="form-control" required>
+                                                <label>Fecha de inicio</label>
+                                                <input name="fecha_i" type="date" max="3000-12-31" min="1000-01-01" class="form-control">
 
-                                                <label>Precio hora</label>
-                                                <input name="precio" type="text" class="form-control" required>
+                                                <label>Hora de inicio</label>
+                                                <input name="hora_i" class="form-control" type="time" value="22:00:00">
 
-                                                <label>Estado</label>
-                                                <select class="p-2 mb-2 form-control" required="required" value="<%= ma.getid_estado_consola()%>" name="id_e">
-                                                    <option value="0">seleccione Estado</option>
-                                                    <option value="1">Disponible</option>
-                                                    <option value="2">Ocupada</option>
-                                                </select> 
 
+                                                <label>Consola</label> 
+                                                <select class="form-control" name="id_c">
+                                                    <option>-- Seleccione consola --</option>
+                                                    <%
+                                                        consolas_DAO ca = new consolas_DAO();
+                                                        List<consolas> listciu = ca.listar();
+                                                        Iterator<consolas> iterciu = listciu.iterator();
+                                                        consolas cat = null;
+                                                        while (iterciu.hasNext()) {
+                                                            cat = iterciu.next();
+                                                    %>
+                                                    <option value="<%= cat.getid_consola()%>"><%= cat.getnombre_consola()%></option>
+                                                    <%}%>
                                                 </select>
+
+                                                <label>Cliente</label> 
+                                                <select class="form-control" name="correo_u">
+                                                    <option>-- Seleccione cliente --</option>
+                                                    <%
+                                                        usuarios_DAO ca2 = new usuarios_DAO();
+                                                        List<usuarios> listciu2 = ca2.listar();
+                                                        Iterator<usuarios> iterciu2 = listciu2.iterator();
+                                                        usuarios cat2 = null;
+                                                        while (iterciu2.hasNext()) {
+                                                            cat2 = iterciu2.next();
+                                                    %>
+                                                    <option value="<%= cat2.getcorreo_usuario()%>"><%= cat2.getcorreo_usuario()%></option>
+                                                    <%}%>
+                                                </select>
+
 
                                             </div>
                                         </div>
@@ -731,16 +758,16 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <%
-                                        consolas_ocupadas_DAO dao2 = new consolas_ocupadas_DAO();
-                                        consolas_ocupadas ma2 = new consolas_ocupadas();
-                                        if (request.getAttribute("id_consola") != null) {
-                                            int id_consola = Integer.parseInt((String) request.getAttribute("id_consola"));
-                                            ma2 = (consolas_ocupadas) dao2.list(id_consola);
+                                        reservaciones_DAO dao2 = new reservaciones_DAO();
+                                        reservaciones ma2 = new reservaciones();
+                                        if (request.getAttribute("id_reservacion") != null) {
+                                            int id_reservacion = Integer.parseInt((String) request.getAttribute("id_reservacion"));
+                                            ma2 = (reservaciones) dao2.list(id_reservacion);
                                         }
                                     %>
-                                    <form action="controlador_consolas_ocupadas">
+                                    <form action="controlador_reservaciones">
                                         <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                            <h4 class="modal-title">Editar Consola</h4>
+                                            <h4 class="modal-title">Editar reservacion</h4>
                                             <button type="button" class="close" data-dismiss="modal"
                                                     aria-hidden="true">&times;</button>
                                         </div>
@@ -748,21 +775,45 @@
                                             <div class="form-group">
 
 
-                                                <label>Nombre consola</label>
-                                                <input name="nombre2" type="text" class="form-control" VALUE="<%= ma2.getnombre_consola()%>" required>
+                                                <label>Fecha de inicio</label>
+                                                <input name="fecha_i2" type="date" max="3000-12-31" min="1000-01-01" class="form-control">
 
-                                                <label>Precio hora</label>
-                                                <input name="precio2" type="text" class="form-control" VALUE="<%= ma2.getprecio_hora()%>" required>
+                                                <label>Hora de inicio</label>
+                                                <input name="hora_i2" class="form-control" type="time" value="22:00:00">
 
-                                                <label>Estado</label>
-                                                <select class="p-2 mb-2 form-control" required="required" value="<%= ma.getid_estado_consola()%>" name="id_e2">
-                                                    <option value="0">seleccione Estado</option>
-                                                    <option value="1">Disponible</option>
-                                                    <option value="2">Ocupada</option>
-                                                </select> 
 
+                                                <label>Consola</label> 
+                                                <select class="form-control" name="id_c2">
+                                                    <option>-- Seleccione consola --</option>
+                                                    <%
+                                                        consolas_DAO ca3 = new consolas_DAO();
+                                                        List<consolas> listciu3 = ca3.listar();
+                                                        Iterator<consolas> iterciu3 = listciu3.iterator();
+                                                        consolas cat3 = null;
+                                                        while (iterciu3.hasNext()) {
+                                                            cat3 = iterciu3.next();
+                                                    %>
+                                                    <option value="<%= cat3.getid_consola()%>"><%= cat3.getnombre_consola()%></option>
+                                                    <%}%>
                                                 </select>
-                                                <input type="hidden" class="form-control" required value="<%= ma2.getid_consola()%>" name="id_consola2">
+
+                                                <label>Cliente</label> 
+                                                <select class="form-control" name="correo_u2">
+                                                    <option>-- Seleccione cliente --</option>
+                                                    <%
+                                                        usuarios_DAO ca4 = new usuarios_DAO();
+                                                        List<usuarios> listciu4 = ca4.listar();
+                                                        Iterator<usuarios> iterciu4 = listciu4.iterator();
+                                                        usuarios cat4 = null;
+                                                        while (iterciu4.hasNext()) {
+                                                            cat4 = iterciu4.next();
+                                                    %>
+                                                    <option value="<%= cat4.getcorreo_usuario()%>"><%= cat4.getcorreo_usuario()%></option>
+                                                    <%}%>
+                                                </select>
+
+                                                <input type="hidden" class="form-control" required value="<%= ma2.getid_reservacion()%>" name="id_reservacion2">
+
                                             </div>
                                         </div>
                                         <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
@@ -779,24 +830,24 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <%
-                                        consolas_ocupadas_DAO dao3 = new consolas_ocupadas_DAO();
-                                        consolas_ocupadas ma3 = new consolas_ocupadas();
-                                        if (request.getAttribute("id_consola") != null) {
-                                            int id_consola = Integer.parseInt((String) request.getAttribute("id_consola"));
-                                            ma3 = (consolas_ocupadas) dao3.list(id_consola);
+                                        reservaciones_DAO dao3 = new reservaciones_DAO();
+                                        reservaciones ma3 = new reservaciones();
+                                        if (request.getAttribute("id_reservacion") != null) {
+                                            int id_reservacion = Integer.parseInt((String) request.getAttribute("id_reservacion"));
+                                            ma3 = (reservaciones) dao3.list(id_reservacion);
                                         }
                                     %>
-                                    <form action="controlador_consolas_ocupadas">
+                                    <form action="controlador_reservaciones">
                                         <div class="modal-header" style="background-color: rgb(216, 211, 40)">
-                                            <h4 class="modal-title">Eliminar Consola</h4>
+                                            <h4 class="modal-title">Eliminar reservacion</h4>
                                             <button type="button" class="close" data-dismiss="modal"
                                                     aria-hidden="true">&times;</button>
                                         </div>
-                                        <input type="hidden" class="form-control" required value="<%= ma3.getid_consola()%>" name="id_consola3">
+                                        <input type="hidden" class="form-control" required value="<%= ma3.getid_reservacion()%>" name="id_reservacion3">
 
                                         <div class="modal-body">
 
-                                            <p>¿Está seguro de que desea eliminar esta consola?</p>
+                                            <p>¿Está seguro de que desea eliminar esta reservacion?</p>
                                         </div>
 
                                         <div class="modal-footer" style="background-color: rgb(216, 211, 40)">
@@ -808,7 +859,6 @@
                                 </div>
                             </div>
                         </div>
-
                         </body>
 
                         </html>
