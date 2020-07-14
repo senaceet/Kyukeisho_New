@@ -286,3 +286,13 @@ INSERT INTO kyukeisho.preguntas(id_pregunta, correo, pregunta, fecha)
 VALUES 						   (01, "andres@gmail.com", "Quiero Adquirir Su Servicio",'2020-03-04 01:55:00');       
 
 --
+SELECT
+     consola.`id_consola` AS consola_id_consola,
+     consola.`nombre_consola` AS consola_nombre_consola,
+     consola.`precio_hora` AS consola_precio_hora,
+     consola.`id_estado_consola` AS consola_id_estado_consola,
+     estado_consola.`id_estado_consola` AS estado_consola_id_estado_consola,
+     estado_consola.`estado_consola` AS estado_consola_estado_consola
+FROM
+     `estado_consola` estado_consola INNER JOIN `consola` consola ON estado_consola.`id_estado_consola` = consola.`id_estado_consola`
+where estado_consola.id_estado_consola = 2     
