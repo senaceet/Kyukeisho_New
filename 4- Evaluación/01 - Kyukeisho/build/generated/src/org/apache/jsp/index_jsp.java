@@ -479,7 +479,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <br>\r\n");
       out.write("                        <br>\r\n");
       out.write("                        <center>\r\n");
-      out.write("                            <a href=\"Productos.jsp  \">             \r\n");
+      out.write("                            <a href=\"Productos.jsp\">             \r\n");
       out.write("                                <button type=\"button\" class=\"btn btn-warning\">VER</button>\r\n");
       out.write("                            </a>\r\n");
       out.write("                        </center> \r\n");
@@ -583,7 +583,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\r\n");
       out.write("            <div class=\"modal-footer\">\r\n");
       out.write("                <button type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">VOLVER</button>\r\n");
-      out.write("                <a href=\"Juegos.html\">\r\n");
+      out.write("                <a href=\"Juegos.jsp\">\r\n");
       out.write("                    <button type=\"button\" class=\"btn btn-primary\">Ver juegos</button>\r\n");
       out.write("                </a>\r\n");
       out.write("            </div>    \r\n");
@@ -618,7 +618,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\r\n");
       out.write("            <div class=\"modal-footer\">\r\n");
       out.write("                <button type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">VOLVER</button>\r\n");
+      out.write("                <a href=\"Productos.jsp\">\r\n");
       out.write("                <button type=\"button\" class=\"btn btn-primary\">Ver Productos</button>\r\n");
+      out.write("                </a>\r\n");
       out.write("            </div>\r\n");
       out.write("        </div>\r\n");
       out.write("    </div>\r\n");
@@ -657,8 +659,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\r\n");
       out.write("            <div class=\"modal-footer\">\r\n");
       out.write("                <button type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">VOLVER</button>\r\n");
-      out.write("                <a href=\"Cliente/Inicio_Sesion_Cliente.jsp\">\r\n");
-      out.write("                    <button type=\"button\" class=\"btn btn-primary\">Inicia sesion</button>\r\n");
+      out.write("                <a href=\"Cliente/Reservacion.jsp\">\r\n");
+      out.write("                    <button type=\"button\" class=\"btn btn-primary\">Reservar</button>\r\n");
       out.write("                </a>    \r\n");
       out.write("            </div>\r\n");
       out.write("        </div>\r\n");
